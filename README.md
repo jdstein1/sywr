@@ -4,6 +4,8 @@
 
 ## Authors
 
+Who made this?  These guys:
+
 * Jeff Stein (html, css, js)
 * John Mitchell (php, api, js)
 
@@ -22,6 +24,8 @@ Tracking system for video game players that:
   * player character gear & weapons
 
 ## Dependencies
+
+We use these 3rd party libs:
 
 * JS Libraries:
   * AngularJS
