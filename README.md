@@ -1,13 +1,17 @@
 # Strike Your Way Raiders
 
-* Init date:  2015-01-08
+### a tool for video game players
+
+* Start:  2015-01-08
 
 ## Authors
 
-Who made this?  These guys:
+Created by the Social Degenerate Nerds crew:
 
 * Jeff Stein (html, css, js)
 * John Mitchell (php, api, js)
+* Kras Bonchev
+* Tanner Wilson
 
 ## About
 
