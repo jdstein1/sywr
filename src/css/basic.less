@@ -1,0 +1,60 @@
+/*basic.less*/
+
+html {}
+body {
+	font: 1em sans-serif;
+}
+
+header,
+nav,
+section,
+aside,
+footer {padding: 0; margin: 0; width: 100%; clear: both;}
+
+header {}
+nav {}
+header *,
+nav *,
+footer * {text-align: center;}
+section,
+aside {float: left;}
+section {width: 60%;}
+aside {width: 40%; clear: none;}
+footer {}
+
+h1, h2, h3, h4, h5, h6 {}
+h1 {font-size: 3em}
+h2 {font-size: 2em}
+h3 {font-size: 1.5em}
+h4 {font-size: 1.25em}
+h5 {font-size: 1em}
+h6 {font-size: 0.875em}
+
+article {
+	padding: 1em;
+	h1, h2, h3, h4, h5, h6 {padding: 0.5em 0 0.25em;}
+}
+
+ul {
+	margin-left: 1em;
+	ul {}
+}
+nav {
+	ul {
+		line-height: 1.5;
+		li {
+			float: left; position: relative; padding: 1em;
+			span:after {content: "\25b6"; padding-left: 0.25em;}
+		}
+		ul {
+			display: none; position: absolute; padding: 0; background: #fff; box-shadow: 0 0.5em 1em rgba(0,0,0,0.5);
+			li {float: none; position: relative; padding: 0.5em 1em;}
+		}
+		li:hover {
+			background: yellow;
+			ul {display: block;}
+		}
+	}
+}
+
+.helper {font-size: 0.875em; color: rgba(0,0,0,0.5); background: rgba(0,0,0,0.125);}

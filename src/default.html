@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Strike Your Way Raiders</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/test.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/basic.css"> -->
+	<link rel="stylesheet/less" type="text/css" href="css/basic.less" />
+
+	<style>
+	/* custom styles */
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Strike Your Way Raiders</h1>
+		<h3>social degenerate nerds</h3>
+		<h4>Since 2014</h4>
+	</header>
+	<nav ng-include="'includes/nav.html'"></nav>
+	<section ng-view></section>
+	<aside>
+		<article>
+			<p class="helper">Side content goes here</p>
+			<h2>Feedback</h2>
+			<p>What should go here?</p>
+		</article>
+	</aside>
+	<footer>
+		<article>
+			<h5>&copy; 2015 by Strike Your Way Raiders</h5>
+			<p>all rights reserved</p>
+		</article>
+	</footer>
+
+<!-- CDN:  jQuery -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+<!-- CDN:  AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-resource.min.js"></script>
+<script src="js/app.js"></script>
+
+<!-- set options before less.js script -->
+<script>
+  less = {
+    env: "development",
+    async: true
+  };
+</script>
+<!-- CDN:  LessCSS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>
+
+<!-- CDN:  Angular Material -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.js"></script> -->
+
+<!-- CDN:  ThreeJS -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/threejs/r69/three.min.js"></script> -->
+
+</body>
+</html>

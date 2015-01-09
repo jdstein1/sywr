@@ -1,0 +1,46 @@
+/*basic.css*/
+
+html {}
+body {
+	font: 1em sans-serif;
+}
+
+header,
+nav,
+section,
+aside,
+footer {padding: 0; margin: 0; width: 100%; clear: both;}
+
+header {}
+nav {}
+header *,
+nav *,
+footer * {text-align: center;}
+section,
+aside {float: left;}
+section {width: 60%;}
+aside {width: 40%; clear: none;}
+footer {}
+
+article {padding: 1em;}
+
+ul {margin-left: 1em;}
+ul ul {}
+
+nav ul {line-height: 1.5;}
+nav ul li {float: left; position: relative; padding: 1em;}
+nav ul ul {display: none; position: absolute; padding: 1em; background: #fff; box-shadow: 0 0.5em 1em rgba(0,0,0,0.5);}
+nav ul li span:after {content: "\25b6"; padding-left: 0.25em;}
+nav ul ul li {float: left; position: relative; padding: 0;}
+nav ul li:hover ul {display: block;}
+
+h1, h2, h3, h4, h5, h6 {padding: 1em 0;}
+h1, h2, h3, h4, h5, h6 {padding: 1em 0;}
+h1 {font-size: 3em}
+h2 {font-size: 2em}
+h3 {font-size: 1.5em}
+h4 {font-size: 1.25em}
+h5 {font-size: 1em}
+h6 {font-size: 0.875em}
+
+.helper {font-size: 0.875em; color: rgba(0,0,0,0.5); background: rgba(0,0,0,0.125);}
