@@ -37,9 +37,17 @@ We use these 3rd party libs:
   * Angular Material (coming soon)
   * ThreeJS (coming soon)
 
-## Build
+## TODO
 
-We will soon use a build system (Grunt or Gulp) to compile:
+### Build
 
-* JS Dependencies
-* LESS ==> CSS
+We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) ) to do the following:
+
+* Run JSHint/JSLint on scripts
+* Minify JS
+* Convert LessCSS to CSS
+
+### Icons
+
+Create a set of icons for specific games and their symbols for character classes, acheivements, mission types, etc.
+

@@ -1,0 +1,103 @@
+/*destiny.less*/
+
+/* variables */
+// example:
+// @nice-blue: #5B83AD;
+
+/* mixins */
+// example:
+// .border {
+//   border-bottom: solid 2px black;
+// }
+
+/* operations */
+// example:
+// color: #888 / 4;
+// background-color: @base-color + #111;
+// height: 100% / 2 + @filler;
+
+/* functions */
+// example:
+// @link-color:        #428bca; // sea blue
+// @link-color-hover:  darken(@link-color, 10%);
+
+/* elementals */
+@kinetic:"kinetic";
+@arc:"arc";
+@solar:"solar";
+@void:"void";
+
+/* elemental colors */
+.kinetic() {background:lightgrey; color:black;}
+.arc() {background:cyan; color:black;}
+.solar() {background:orange; color:black;}
+.void() {background:violet; color:black;}
+
+/* character classes */
+@warlock:"warlock";
+@hunter:"hunter";
+@titan:"titan";
+
+/* character races */
+@exo:"exo";
+@human:"human";
+@awoken:"awoken";
+
+/* rarity colors */
+.basic {background:lightgrey; color:black;}
+.uncommon {background:green; color:white;}
+.rare {background:blue; color:white;}
+.legendary {background:purple; color:white;}
+.exotic {background:yellow; color:black;}
+
+/* character classes */
+.warlock {
+	content:"warlock";
+/* subclasses */
+	// &.arc {.arc()}
+	&.solar, &.sunsinger {.solar()}
+	&.void, &.voidwalker {.void()}
+}
+.hunter {
+	content:"hunter";
+/* subclasses */
+	&.arc, &.bladedancer {.arc()}
+	&.solar, &.gunslinger {.solar()}
+	// &.void {.void()}
+}
+.titan {
+	content:"titan";
+/* subclasses */
+	&.arc, &.striker {.arc()}
+	// &.solar {.solar()}
+	&.void, &.defender {.void()}
+}
+
+/* weapon types */
+.primary {
+	&.autorifle {}
+	&.scoutrifle {}
+	&.handcannon {}
+	&.pulserifle {}
+}
+.special {
+	&.shotgun {}
+	&.fusionrifle {}
+	&.sniperrifle {}
+}
+.heavy {
+	&.rocketlauncher {}
+	&.machinegun {}
+}
+
+/* armor types */
+.helmet .head, .helm {content:"helmet";}
+.gloves, .hand, .arm, .gauntlets {content:"gauntlets";}
+.chest, .cuirass {content:"chest";}
+.boots, .leg, .greaves {content:"leg";}
+
+/* consumables */
+
+/* mission types */
+
+/* patrol types */
