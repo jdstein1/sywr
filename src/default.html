@@ -1,38 +1,22 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
-	<meta charset="UTF-8">
-	<title>Strike Your Way Raiders</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>{{apptitle}}</title>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/test.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/basic.css"> -->
 	<link rel="stylesheet/less" type="text/css" href="css/basic.less" />
-
 	<style>
 	/* custom styles */
 	</style>
 </head>
 <body>
-	<header>
-		<h1>Strike Your Way Raiders</h1>
-		<h3>social degenerate nerds</h3>
-		<h4>Since 2014</h4>
-	</header>
+	<header ng-include="'includes/header.html'"></header>
 	<nav ng-include="'includes/nav.html'"></nav>
-	<section ng-view></section>
-	<aside>
-		<article>
-			<p class="helper">Side content goes here</p>
-			<h2>Feedback</h2>
-			<p>What should go here?</p>
-		</article>
-	</aside>
-	<footer>
-		<article>
-			<h5>&copy; 2015 by Strike Your Way Raiders</h5>
-			<p>all rights reserved</p>
-		</article>
-	</footer>
+	<section ng-view><p class="helper">Main content goes here</p></section>
+	<footer ng-include="'includes/footer.html'"></footer>
 
 <!-- CDN:  jQuery -->
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
@@ -41,7 +25,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-resource.min.js"></script>
+
+<!-- AngularJS Custom App -->
 <script src="js/app.js"></script>
+<script src="js/common.js"></script>
+<script src="js/blog.js"></script>
+<script src="js/clan.js"></script>
+<script src="js/games.js"></script>
+<script src="js/members.js"></script>
 
 <!-- set options before less.js script -->
 <script>
