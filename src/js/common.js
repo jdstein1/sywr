@@ -23,6 +23,17 @@
 	}
 	// console.log('test sBungieUrl:', angular.module('app').service('sBungieUrl'));
 
+	app.service('sDataDestiny', sDataDestiny)
+	function sDataDestiny() {
+		var stitle = 'sDataDestiny';
+		console.log('START', stitle);
+
+		var DataDestiny = ['test1', 'test2', 'test3']
+
+		return DataDestiny;
+	}
+	// console.log('test sDataDestiny:', angular.module('app').service('sDataDestiny'));
+
 	app.controller('cMain', cMain)
 	function cMain($scope, sDataDestiny) {
 		$scope.ctitle = 'cMain';
