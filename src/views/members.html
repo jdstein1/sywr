@@ -1,8 +1,22 @@
 <article>
 	<h1>{{title}}</h1>
+	<table class="sorting" ng-model="sortClass">
+		<tr>
+		<th>Sort by:</th>
+		<!-- <td class="{{sortClass.name}}" ng-click="myMemberOrder = 'name'; reverse=!reverse">Name</td> -->
+		<td class="{{sortClass.name}}" ng-click="myMemberOrderToggle('name')">Name</td>
+		<td class="{{sortClass.handle}}" ng-click="myMemberOrderToggle('handle')">Handle</td>
+		<td class="{{sortClass.id}}" ng-click="myMemberOrderToggle('id')">ID</td>
+		</tr>
+	</table>
 	<ul>
-		<li ng-repeat="item in myMemberData | orderBy:handle"><span>{{item.name}}</span> "<strong>{{item.handle}}</strong>" <small>({{item.id}})</small>
-		<p class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></p>
+		<li ng-repeat="item in myMemberData | orderBy:myMemberOrder:reverse">
+			<span class="label">Name:</span><span>{{item.name}}</span>
+			<ul>
+				<li><span class="label">Handle:</span><span>{{item.handle}}</span></li>
+				<li><span class="label">Account ID:</span><span>({{item.id}})</span></li>
+				<li><span class="label">Link:</span><span class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></span></li>
+			</ul>
 		</li>
 	</ul>
 </article>

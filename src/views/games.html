@@ -1,4 +1,21 @@
 <article>
 	<h1>{{title}}</h1>
-	<p>TEST fdg;lkh;lfk;l gf;lhk f;lgk h;lfgk ;lh gfk; fgk</p>
+	<table class="sorting">
+		<tr>
+		<th>Sort by:</th>
+		<td class="{{sortClass}}" ng-click="myGameOrder = 'name'">Name</td>
+		<td class="{{sortClass}}" ng-click="myGameOrder = 'handle'">Handle</td>
+		<td class="{{sortClass}}" ng-click="myGameOrder = 'id'">ID</td>
+		</tr>
+	</table>
+	<ul>
+		<li ng-repeat="item in myGameData | orderBy:myGameOrder">
+			<span class="label">Name:</span><span>{{item.name}}</span>
+			<ul>
+				<li><span class="label">Handle:</span><span>{{item.handle}}</span></li>
+				<li><span class="label">Account ID:</span><span>({{item.id}})</span></li>
+				<li><span class="label">Link:</span><span class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></span></li>
+			</ul>
+		</li>
+	</ul>
 </article>
