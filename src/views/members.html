@@ -15,11 +15,12 @@
 	<ul>
 		<li ng-repeat="item in myMemberData | orderBy:sortOrder:reverse">
 			<span class="label">Name:</span><span>{{item.name}}</span>
+			<a href="#/members/{{item.api}}">Details</a>
 			<ul>
-				<li><span class="label">API:</span><span><a href="members/{{item.api}}" target="_blank">{{item.api}}</a></span></li>
+				<li><span class="label">API:</span><span><a href="data/{{item.api}}.php" target="_blank">{{item.api}}</a></span></li>
 				<li><span class="label">Handle:</span><span>{{item.handle}}</span></li>
 				<li><span class="label">Account ID:</span><span>({{item.id}})</span></li>
-				<li><span class="label">Link:</span><span class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></span></li>
+				<li><span class="label">Profile Link:</span><span class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></span></li>
 			</ul>
 		</li>
 	</ul>

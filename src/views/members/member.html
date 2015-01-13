@@ -1,2 +1,38 @@
-<h1>Members: Member</h1>
-<p>TEST fdg;lkh;lfk;l gf;lhk f;lgk h;lfgk ;lh gfk; fgk</p>
+<article>
+	<h1>Member: {{member}}</h1>
+	<h3>{{details.clanName}} ({{details.clanTag}})</h3>
+	<h2>details:</h2>
+	<table>
+		<tr ng-repeat="(key,value) in details">
+			<th>{{key}}</th>
+			<td>{{value}}</td>
+		</tr>
+	</table>
+	<table>
+		<thead>
+		<tr>
+			<th>Characters</th>
+			<th>Details</th>
+		</tr>
+		</thead>
+		<tbody ng-repeat="character in details.characters">
+		<tr>
+			<th>Character {{$index}}</th>
+			<td style="background:url( {{character.backgroundPath}} );"><img ng-src="{{character.emblemPath}}">
+				<h4>Level Progression</h4>
+				<dl>
+					<dt>Level:<dd>{{character.characterLevel}}</dd></dt>
+					<dt>Base Level:<dd>{{character.baseCharacterLevel}}</dd></dt>
+					<dt>To Next Level:<dd>{{character.percentToNextLevel}}</dd></dt>
+				</dl>
+			</td>
+		</tr>
+		<tr>
+			<th>Character Base</th>
+			<td>{{character.characterBase}}</td>
+		</tr>
+		</tbody>
+		<tfoot>
+		</tfoot>
+	</table>
+</article>

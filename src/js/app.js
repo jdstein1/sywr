@@ -22,9 +22,11 @@
 				when('/feedback', {templateUrl: 'views/feedback.html', controller: 'cFeedback'}).
 				when('/clan', {templateUrl: 'views/clan.html', controller: 'cClan'}).
 				when('/members', {templateUrl: 'views/members.html', controller: 'cMembers'}).
-				when('/members/:name', {templateUrl: 'views/members/member.html', controller: 'cMembers'}).
+				when('/members/:member', {templateUrl: 'views/members/member.html', controller: 'cMembers'}).
 				when('/games', {templateUrl: 'views/games.html', controller: 'cGames'}).
 				when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGames'}).
+				when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).
+				when('/items/:item', {templateUrl: 'views/items/item.html', controller: 'cItems'}).
 				otherwise({redirectTo: '/'});
 		}
 	]);

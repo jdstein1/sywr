@@ -1,42 +1,9 @@
-/*members.js*/
-// (function() {
-// 	'use strict';
-
-	app.service('sDataMembers', sDataMembers)
-	function sDataMembers() {
-		var stitle = 'sDataMembers';
-		console.log('START', stitle);
-
-		var myMemberData = [{
-			"id":"8310647",
-			"handle":"SarcasticWatchr",
-			"name":"Jeff"
-		},{
-			"id":"7037048",
-			"handle":"Spacewolf 024",
-			"name":"John"
-		},{
-			"id":"7666141",
-			"handle":"kras07",
-			"name":"Kras"
-		},{
-			"id":"3892477",
-			"handle":"Tanman2391",
-			"name":"Tanner"
-		}];
-		for (var i = 0; i < myMemberData.length; i++) {
-			myMemberData[i].api = '' + myMemberData[i].name.toLowerCase() + '.php';
-
-		};
-		console.log('myMemberData: ', myMemberData);
-
-		return myMemberData;
-	}
-	// console.log('test sDataMembers:', angular.module('app').service('sDataMembers'));
+/*c-members.js*/
+(function() {
+	'use strict';
 
 	app.controller('cMembers', cMembers)
-	function cMembers($scope, constProtocol, constBungieUrl, sDataMembers) {
-	// function cMembers($scope, sBungieUrl, sDataMembers) {
+	function cMembers($scope, $http, $route, $location, constProtocol, constBungieUrl, sDataMembers) {
 		$scope.ctitle = 'cMembers';
 		$scope.title = 'Members';
 		console.log('START', $scope.ctitle);
@@ -46,6 +13,10 @@
 		$scope.sortClass.handle = "def";
 		$scope.sortClass.id = "def";
 		console.log('$scope.sortClass: ', $scope.sortClass);
+
+  		console.log('$route.current.params',$route.current.params );
+		$scope.member = $route.current.params.member;
+  		console.log('$scope.member',$scope.member );
 
 		$scope.sortOrder = '-name';
 		$scope.reverse = false;
@@ -60,8 +31,8 @@
 			console.log('sortOrderToggle:', type +'; type:'+ $scope.sortClass[type]);
 
 			// for (var i = 0; i < $scope.sortClass.length; i++) {
-			// 	console.log('$scope.sortClass[i]: ', $scope.sortClass[i]);
-			// 	$scope.sortClass[i] = 'def';
+			// console.log('$scope.sortClass[i]: ', $scope.sortClass[i]);
+			// $scope.sortClass[i] = 'def';
 			// };
 
 			if (type === 'all') {
@@ -87,7 +58,24 @@
 			$scope.myMemberData[i].url = myMemberUrl;
 		};
 		// console.log('$scope.myMemberData: ', $scope.myMemberData);
+
+		// $http.get('data/api2.php')
+		$http.get('data/'+$scope.member+'.php')
+			.success(function (data) {
+			console.log('sDataMemberDetails.getMember -- success');
+			$scope.details = data.Response.data;
+			console.log('$scope.details: ', $scope.details);
+		}).error(function () {
+			console.log('sDataMemberDetails.getMember -- error');
+			$scope.details = 'no data';
+			console.log('$scope.details: ', $scope.details);
+		});
+
+		// $scope.details = sDataMemberDetails;
+		// $scope.details = sDataMemberDetails.getMember();
+		// console.log('$scope.details[1]: ', $scope.details[1]);
+
 	}
 	// console.log('test cMembers:', angular.module('app').controller('cMembers'));
 
-// })();
+})();

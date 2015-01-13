@@ -1,5 +1,7 @@
 <article>
 	<h1>{{title}}</h1>
+	<!-- <d-sorting>test</d-sorting> -->
+	<!-- <d-sorting options="['name','handle','id']"></d-sorting> -->
 	<table class="sorting" ng-model="sortClass">
 		<tr>
 		<th>Sort by:</th>
@@ -11,13 +13,14 @@
 		</tr>
 	</table>
 	<ul>
-		<li ng-repeat="item in myGameData | orderBy:sortOrder:reverse">
+		<li ng-repeat="item in myItemData | orderBy:sortOrder:reverse">
 			<span class="label">Name:</span><span>{{item.name}}</span>
-			<a href="#/games/{{item.api}}">Details</a>
+			<a href="#/members/{{item.api}}">Details</a>
 			<ul>
+				<li><span class="label">API:</span><span><a href="members/{{item.api}}.php" target="_blank">{{item.api}}</a></span></li>
 				<li><span class="label">Handle:</span><span>{{item.handle}}</span></li>
 				<li><span class="label">Account ID:</span><span>({{item.id}})</span></li>
-				<li><span class="label">Link:</span><span class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></span></li>
+				<li><span class="label">Profile Link:</span><span class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></span></li>
 			</ul>
 		</li>
 	</ul>

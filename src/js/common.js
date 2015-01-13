@@ -2,14 +2,6 @@
 (function() {
 	'use strict';
 
-	app.service('sBungieUrl', sBungieUrl)
-	function sBungieUrl(bungieUrl) {
-		var stitle = 'sBungieUrl';
-		console.log('START', stitle);
-		return bungieUrl;
-	}
-	// console.log('test sBungieUrl:', angular.module('app').service('sBungieUrl'));
-
 	app.service('sDataDestiny', sDataDestiny)
 	function sDataDestiny() {
 		var stitle = 'sDataDestiny';
