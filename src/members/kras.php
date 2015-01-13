@@ -1,14 +1,12 @@
-<html>
- <head>
-  <title>Clan:SYWR - Game:Destiny - Member:Kras</title>
- </head>
- <body>
- <h3>Clan:SYWR - Game:Destiny - Member:Kras</h3>
- <?php echo '<h2>Destiny Stats</h2>'; ?> 
- </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Clan:SYWR - Game:Destiny - Member:Kras</title>
+</head>
+<body>
+	<?php echo ''; ?> 
+</body>
 </html>
-
-
 
 <?php
 

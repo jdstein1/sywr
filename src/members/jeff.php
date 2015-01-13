@@ -1,13 +1,12 @@
-<html>
- <head>
-  <title>PHP API PAGE</title>
- </head>
- <body>
- <?php echo '<h2>Destiny Stats</h2>'; ?> 
- </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Clan:SYWR - Game:Destiny - Member:Jeff</title>
+</head>
+<body>
+	<?php echo ''; ?> 
+</body>
 </html>
-
-
 
 <?php
 
