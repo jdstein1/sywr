@@ -24,6 +24,10 @@
 			"handle":"Tanman2391",
 			"name":"Tanner"
 		}];
+		for (var i = 0; i < myMemberData.length; i++) {
+			myMemberData[i].api = '' + myMemberData[i].name.toLowerCase() + '.php';
+
+		};
 		console.log('myMemberData: ', myMemberData);
 
 		return myMemberData;
@@ -41,38 +45,41 @@
 		$scope.sortClass.name = "def";
 		$scope.sortClass.handle = "def";
 		$scope.sortClass.id = "def";
+		console.log('$scope.sortClass: ', $scope.sortClass);
 
-		$scope.myMemberData = sDataMembers;
-		// console.log('$scope.myMemberData: ', $scope.myMemberData);
-		// console.log('$scope.myMemberData[1]: ', $scope.myMemberData[1]);
-
-		$scope.myMemberOrder = '-name';
+		$scope.sortOrder = '-name';
 		$scope.reverse = false;
 
-		if ($scope.myMemberOrder) {
-			console.log('$scope.myMemberOrder');
+		if ($scope.sortOrder) {
+			console.log('$scope.sortOrder');
 		} else {
-			console.log('$scope.myMemberOrder');
+			console.log('$scope.sortOrder');
 		}
 
-		$scope.myMemberOrderToggle = function (type) {
-			console.log('myMemberOrderToggle:', type +'; type:'+ $scope.sortClass[type]);
+		$scope.sortOrderToggle = function (type) {
+			console.log('sortOrderToggle:', type +'; type:'+ $scope.sortClass[type]);
 
 			// for (var i = 0; i < $scope.sortClass.length; i++) {
 			// 	console.log('$scope.sortClass[i]: ', $scope.sortClass[i]);
 			// 	$scope.sortClass[i] = 'def';
 			// };
 
-			if ($scope.sortClass[type] === 'des') {
-				$scope.sortClass[type] = 'asc';
+			if (type === 'all') {
+				$scope.sortClass = {name: "def", handle: "def", id: "def"};
 			} else {
-				$scope.sortClass[type] = 'des';
+				if ($scope.sortClass[type] === 'des') {
+					$scope.sortClass[type] = 'asc';
+				} else {
+					$scope.sortClass[type] = 'des';
+				}
 			}
 			$scope.reverse=!$scope.reverse;
 			console.log('$scope.sortClass: ', $scope.sortClass);
 		};
 
-		$scope.myMembersUrls = [];
+		$scope.myMemberData = sDataMembers;
+		// console.log('$scope.myMemberData: ', $scope.myMemberData);
+		// console.log('$scope.myMemberData[1]: ', $scope.myMemberData[1]);
 
 		for (var i = 0; i < $scope.myMemberData.length; i++) {
 			var myMemberUrl = constProtocol[0] + '://' + constBungieUrl.domain +'/'+ constBungieUrl.lang +'/'+ constBungieUrl.profile + '/254/' + $scope.myMemberData[i].id;

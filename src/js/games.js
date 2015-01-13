@@ -8,14 +8,19 @@
 		console.log('START', stitle);
 
 		var myGameData = [{
+			"nameDisplay":"Destiny",
+			"nameSeo":"destiny",
 			"type":["rpg","mmo","fps"],
-			"name":"Destiny",
 			"publisher":"Activision",
 			"developer":"Bungie"
+		},{
+			"nameDisplay":"The Crew",
+			"nameSeo":"the-crew",
+			"type":["car","race","mmo"]
 		}];
 		console.log('myGameData: ', myGameData);
 
-		return DataGames;
+		return myGameData;
 	}
 	// console.log('test sDataGames:', angular.module('app').service('sDataGames'));
 
@@ -24,22 +29,54 @@
 		var stitle = 'sDataGameDestiny';
 		console.log('START', stitle);
 
-		var DataDestiny = ['test1', 'test2', 'test3']
+		var DataGameDestiny = ['test1', 'test2', 'test3']
 
-		return DataDestiny;
+		return DataGameDestiny;
 	}
 	// console.log('test sDataGameDestiny:', angular.module('app').service('sDataGameDestiny'));
 
 	app.controller('cGames', cGames)
-	function cGames($scope, sDataGameDestiny) {
+	function cGames($scope, constProtocol, constBungieUrl, sDataGames, sDataGameDestiny) {
 		$scope.ctitle = 'cGames';
 		$scope.title = 'Games';
 		console.log('START', $scope.ctitle);
 
-		$scope.sortClass = "def";
+		$scope.sortClass = {};
+		$scope.sortClass.name = "def";
+		$scope.sortClass.handle = "def";
+		$scope.sortClass.id = "def";
 
-		$scope.DataDestiny = sDataGameDestiny;
-		console.log('$scope.DataDestiny', $scope.DataDestiny);
+		$scope.sortOrder = '-name';
+		$scope.reverse = false;
+
+		if ($scope.sortOrder) {
+			console.log('$scope.sortOrder');
+		} else {
+			console.log('$scope.sortOrder');
+		}
+
+		$scope.sortOrderToggle = function (type) {
+			console.log('sortOrderToggle:', type +'; type:'+ $scope.sortClass[type]);
+
+			// for (var i = 0; i < $scope.sortClass.length; i++) {
+			// 	console.log('$scope.sortClass[i]: ', $scope.sortClass[i]);
+			// 	$scope.sortClass[i] = 'def';
+			// };
+
+			if ($scope.sortClass[type] === 'des') {
+				$scope.sortClass[type] = 'asc';
+			} else {
+				$scope.sortClass[type] = 'des';
+			}
+			$scope.reverse=!$scope.reverse;
+			console.log('$scope.sortClass: ', $scope.sortClass);
+		};
+
+		$scope.DataGames = sDataGames;
+		console.log('$scope.DataGames', $scope.DataGames);
+
+		$scope.DataGameDestiny = sDataGameDestiny;
+		console.log('$scope.DataGameDestiny', $scope.DataGameDestiny);
 	}
 	// console.log('test cGames:', angular.module('app').controller('cGames'));
 

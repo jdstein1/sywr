@@ -1,15 +1,17 @@
 <article>
 	<h1>{{title}}</h1>
-	<table class="sorting">
+	<table class="sorting" ng-model="sortClass">
 		<tr>
 		<th>Sort by:</th>
-		<td class="{{sortClass}}" ng-click="myGameOrder = 'name'">Name</td>
-		<td class="{{sortClass}}" ng-click="myGameOrder = 'handle'">Handle</td>
-		<td class="{{sortClass}}" ng-click="myGameOrder = 'id'">ID</td>
+		<!-- <td class="{{sortClass.name}}" ng-click="myMemberOrder = 'name'; reverse=!reverse">Name</td> -->
+		<td class="{{sortClass.name}}" ng-click="sortOrderToggle('name')">Name</td>
+		<td class="{{sortClass.handle}}" ng-click="sortOrderToggle('handle')">Handle</td>
+		<td class="{{sortClass.id}}" ng-click="sortOrderToggle('id')">ID</td>
+		<th ng-click="sortOrderToggle('all')">Clear</th>
 		</tr>
 	</table>
 	<ul>
-		<li ng-repeat="item in myGameData | orderBy:myGameOrder">
+		<li ng-repeat="item in myGameData | orderBy:sortOrder:reverse">
 			<span class="label">Name:</span><span>{{item.name}}</span>
 			<ul>
 				<li><span class="label">Handle:</span><span>{{item.handle}}</span></li>

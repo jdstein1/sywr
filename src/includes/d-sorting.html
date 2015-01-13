@@ -1,0 +1,10 @@
+<table class="sorting" ng-model="sortClass">
+	<tr>
+		<th>Sort by:</th>
+		<!-- Example -->
+		<!-- <td class="{{sortClass.name}}" ng-click="myMemberOrder = 'name'; reverse=!reverse">Name</td> -->
+		<!-- Example -->
+		<!-- <td class="{{sortClass.name}}" ng-click="sortOrderToggle('name')">Name</td> -->
+		<td ng-repeat="item in sortingOptions" class="{{sortClass.[item.value]}}" ng-click="sortOrderToggle([item.value])">{{item.key}}</td>
+	</tr>
+</table>
