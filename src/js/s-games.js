@@ -16,7 +16,9 @@
 		},{
 			"nameDisplay":"The Crew",
 			"nameSeo":"the-crew",
-			"type":["car","race","mmo"]
+			"type":["car","race","mmo"],
+			"publisher":"Activision",
+			"developer":"Bungie"
 		}];
 		console.log('myGameData: ', myGameData);
 

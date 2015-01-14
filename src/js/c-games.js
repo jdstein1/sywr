@@ -47,4 +47,12 @@
 	}
 	// console.log('test cGames:', angular.module('app').controller('cGames'));
 
+	app.controller('cGameDetail', cGameDetail)
+	function cGameDetail($scope, constProtocol, constBungieUrl, sDataGames, sDataGameDestiny) {
+		$scope.ctitle = 'cGameDetail';
+		$scope.title = 'Game:';
+		console.log('START', $scope.ctitle);
+	}
+	// console.log('test cGameDetail:', angular.module('app').controller('cGameDetail'));
+
 })();

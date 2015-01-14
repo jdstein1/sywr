@@ -5,18 +5,20 @@
 	app.controller('cMembers', cMembers)
 	function cMembers($scope, $http, $route, $location, constProtocol, constBungieUrl, sDataMembers) {
 		$scope.ctitle = 'cMembers';
-		$scope.title = 'Members';
+		$scope.title = 'Clan';
 		console.log('START', $scope.ctitle);
+
+		console.log('constProtocol', constProtocol);
+		console.log('constBungieUrl', constBungieUrl);
+
+		// var myEmblemUrl = constProtocol[0] + '://' + constBungieUrl.domain +'/'+ constBungieUrl.lang +'/'+ constBungieUrl.profile + '/' + $scope.itemHash;
+		// console.log('myEmblemUrl: ', myEmblemUrl);
 
 		$scope.sortClass = {};
 		$scope.sortClass.name = "def";
 		$scope.sortClass.handle = "def";
 		$scope.sortClass.id = "def";
 		console.log('$scope.sortClass: ', $scope.sortClass);
-
-  		console.log('$route.current.params',$route.current.params );
-		$scope.member = $route.current.params.member;
-  		console.log('$scope.member',$scope.member );
 
 		$scope.sortOrder = '-name';
 		$scope.reverse = false;
@@ -59,6 +61,19 @@
 		};
 		// console.log('$scope.myMemberData: ', $scope.myMemberData);
 
+	}
+	// console.log('test cMembers:', angular.module('app').controller('cMembers'));
+
+	app.controller('cMemberDetail', cMemberDetail)
+	function cMemberDetail($scope, $http, $route, $location, constProtocol, constBungieUrl, sDataMembers) {
+		$scope.ctitle = 'cMemberDetail';
+		$scope.title = 'Member:';
+		console.log('START', $scope.ctitle);
+
+  		console.log('$route.current.params',$route.current.params );
+		$scope.member = $route.current.params.member;
+  		console.log('$scope.member',$scope.member );
+
 		// $http.get('data/api2.php')
 		$http.get('data/'+$scope.member+'.php')
 			.success(function (data) {
@@ -76,6 +91,6 @@
 		// console.log('$scope.details[1]: ', $scope.details[1]);
 
 	}
-	// console.log('test cMembers:', angular.module('app').controller('cMembers'));
+	// console.log('test cMemberDetail:', angular.module('app').controller('cMemberDetail'));
 
 })();

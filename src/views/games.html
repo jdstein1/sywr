@@ -11,12 +11,13 @@
 		</tr>
 	</table>
 	<ul>
-		<li ng-repeat="item in myGameData | orderBy:sortOrder:reverse">
-			<span class="label">Name:</span><span>{{item.name}}</span>
+		<li ng-repeat="item in DataGames | orderBy:sortOrder:reverse">
+			<span class="label">Name:</span><span>{{item.nameDisplay}}</span>
 			<a href="#/games/{{item.api}}">Details</a>
 			<ul>
-				<li><span class="label">Handle:</span><span>{{item.handle}}</span></li>
-				<li><span class="label">Account ID:</span><span>({{item.id}})</span></li>
+				<li><span class="label">Type:</span><span ng-repeat="type in item.type">{{type}}</span></li>
+				<li><span class="label">Publisher:</span><span>{{item.publisher}}</span></li>
+				<li><span class="label">Developer:</span><span>{{item.developer}}</span></li>
 				<li><span class="label">Link:</span><span class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></span></li>
 			</ul>
 		</li>

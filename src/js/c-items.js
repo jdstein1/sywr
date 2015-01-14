@@ -78,4 +78,12 @@
 	}
 	// console.log('test cItems:', angular.module('app').controller('cItems'));
 
+	app.controller('cItemDetail', cItemDetail)
+	function cItemDetail($scope, $http, $route, $location, constProtocol, constBungieUrl, sDataItems) {
+		$scope.ctitle = 'cItemDetail';
+		$scope.title = 'Item:';
+		console.log('START', $scope.ctitle);
+	}
+	// console.log('test cItemDetail:', angular.module('app').controller('cItemDetail'));
+
 })();
