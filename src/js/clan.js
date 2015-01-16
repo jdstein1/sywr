@@ -14,10 +14,12 @@
 	// console.log('test sDataClan:', angular.module('app').service('sDataClan'));
 
 	app.controller('cClan', cClan)
-	function cClan($scope, constProtocol, constBungieUrl) {
+	function cClan($scope, constProtocol, constBungieUrl, constMeta) {
 		$scope.ctitle = 'cClan';
 		$scope.title = 'Clan';
 		console.log('START', $scope.ctitle);
+
+		$scope.metaData = constMeta;
 
 		$scope.myClanId = "519979";
 		$scope.myClanUrl = constProtocol[0] + '://' + constBungieUrl.domain + '/' + constBungieUrl.lang + '/' + constBungieUrl.clan + '/' + constBungieUrl.console + '/' + $scope.myClanId;

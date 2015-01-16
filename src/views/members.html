@@ -1,27 +1,56 @@
 <article>
+<md-content class="md-padding">
 	<h1>{{title}}</h1>
+
+	<div ng-controller="cClan">
+		<h3><a href="{{myClanUrl}}" target="_blank">{{metaData.title}}</a> Members</h3>
+		<ul>
+			<li>Clan name:  {{metaData.title}}</li>
+			<li>Clan link:  <a href="{{myClanUrl}}" target="_blank">{{metaData.title}}</a></li>
+			<li>Clan platform:  {{metaData.console}}</li>
+			<li>Clan ID:  {{metaData.id}}</li>
+		</ul>
+		<hr>
+	</div>
+
 	<!-- <d-sorting>test</d-sorting> -->
 	<!-- <d-sorting options="['name','handle','id']"></d-sorting> -->
-	<table class="sorting" ng-model="sortClass">
-		<tr>
-		<th>Sort by:</th>
-		<!-- <td class="{{sortClass.name}}" ng-click="myMemberOrder = 'name'; reverse=!reverse">Name</td> -->
-		<td class="{{sortClass.name}}" ng-click="sortOrderToggle('name')">Name</td>
-		<td class="{{sortClass.handle}}" ng-click="sortOrderToggle('handle')">Handle</td>
-		<td class="{{sortClass.id}}" ng-click="sortOrderToggle('id')">ID</td>
-		<th ng-click="sortOrderToggle('all')">Clear</th>
-		</tr>
-	</table>
-	<ul>
-		<li ng-repeat="item in myMemberData | orderBy:sortOrder:reverse">
-			<span class="label">Name:</span><span>{{item.name}}</span>
-			<a href="#/members/{{item.api}}">Details</a>
-			<ul>
-				<li><span class="label">API:</span><span><a href="data/{{item.api}}.php" target="_blank">{{item.api}}</a></span></li>
-				<li><span class="label">Handle:</span><span>{{item.handle}}</span></li>
-				<li><span class="label">Account ID:</span><span>({{item.id}})</span></li>
-				<li><span class="label">Profile Link:</span><span class="link outbound"><a href="{{item.url}}" target="_blank">{{item.url}}</a></span></li>
-			</ul>
-		</li>
-	</ul>
+	<!-- <table class="sorting" ng-model="sortClass"> -->
+		<div ng-model="sortClass" layout="row" layout-sm="column" layout-align="center center">
+			<div flex>Sort by:</div>
+			<md-button flex class="md-primary {{sortClass.name}}" ng-click="sortOrderToggle('name')">Name</md-button>
+			<md-button flex class="md-primary {{sortClass.handle}}" ng-click="sortOrderToggle('handle')">Handle</md-button>
+			<md-button flex class="md-primary {{sortClass.id}}" ng-click="sortOrderToggle('id')">ID</md-button>
+			<md-button flex class="md-accent" ng-click="sortOrderToggle('all')">Clear</md-button>
+		</div>
+	<!-- </table> -->
+	<md-card ng-repeat="item in myMemberData | orderBy:sortOrder:reverse">
+		<!-- <d-player-bg id="{{item.id}}">player background</d-player-bg> -->
+		<!-- <img ng-src="{{getPlayerBackgroundPath(item.id)}}" /> -->
+		<md-card-content>
+			<md-item-content layout="row">
+				<div class="">
+					<!-- <d-player-avatar id="{{item.id}}">player avatar</d-player-avatar> -->
+					<!-- <img ng-src="{{getPlayerEmblemPath(item.id)}}" /> -->
+				</div>
+				<div flex class="">
+					<h3>{{item.name}}<br />
+					<small>
+						<span class="label">aka</span> <span>{{item.handle}}<br />
+						<span class="label">Account ID</span> <span>{{item.id}}</span>
+					</small>
+					</h3>
+				</div>
+				<div flex class="">
+					<!-- <h4>Links</h4> -->
+					<ul>
+						<li><span><a href="#/members/{{item.api}}">Integrated API Output</a></span></li>
+						<li><span><a href="data/{{item.api}}.php" target="_blank">Raw API Output</a></span></li>
+						<li><span class="link outbound"><a href="{{item.url}}" target="_blank">External Profile Link</a></span></li>
+					</ul>
+				</div>
+			</md-item-content>
+		</md-card-content>
+	</md-card>
+</md-content>
 </article>

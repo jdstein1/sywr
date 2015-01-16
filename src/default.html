@@ -1,61 +1,85 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
+
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>{{apptitle}}</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/test.css">
+
+	<link rel="stylesheet" href="lib/icomoon-free/font.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/test.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/basic.css"> -->
-	<link rel="stylesheet/less" type="text/css" href="css/basic.less" />
+	<!-- <link rel="stylesheet/less" type="text/css" href="css/basic.less" /> -->
+	<!-- <link rel="stylesheet/less" type="text/css" href="css/destiny.less" /> -->
+
+	<!-- CDN:  Angular Material CSS -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.css">
+
 	<style>
 	/* custom styles */
+	.close, .closeLeft {position:absolute; top:1.75em; right:1em;}
+	/*.closeRight {position:absolute; top:1.5em; left:1em;}*/
+	.left {float:left !important;}
+	.right {float:right !important;}
+	/*.label {width:10em; text-align: right;}*/
+	.wide {width:100%;}
 	</style>
+
 </head>
-<body>
+<body ng-controller="cMain">
+
 	<header ng-include="'includes/header.html'"></header>
 	<nav ng-include="'includes/nav.html'"></nav>
+	<nav ng-include="'includes/tray.html'"></nav>
 	<section ng-view><p class="helper">Main content goes here</p></section>
 	<footer ng-include="'includes/footer.html'"></footer>
 
-<!-- CDN:  jQuery -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+	<!-- CDN:  jQuery -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
 
-<!-- CDN:  AngularJS -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-resource.min.js"></script>
+	<!-- CDN:  HammerJS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
 
-<!-- AngularJS Custom App -->
-<script src="js/app.js"></script>
-<script src="js/common.js"></script>
-<script src="js/blog.js"></script>
-<script src="js/clan.js"></script>
-<!-- Games -->
-<script src="js/c-games.js"></script>
-<script src="js/s-games.js"></script>
-<!-- Items -->
-<script src="js/c-items.js"></script>
-<script src="js/s-items.js"></script>
-<!-- Members -->
-<script src="js/c-members.js"></script>
-<script src="js/s-members.js"></script>
+	<!-- CDN:  AngularJS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-aria.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
 
-<!-- set options before less.js script -->
-<script>
-  less = {
-    env: "development",
-    async: true
-  };
-</script>
-<!-- CDN:  LessCSS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>
+	<!-- CDN:  Angular Material JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.js"></script>
 
-<!-- CDN:  Angular Material -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.js"></script> -->
+	<!-- AngularJS Custom App -->
+	<script src="js/app.js"></script>
+	<script src="js/s-common.js"></script>
+	<script src="js/c-common.js"></script>
+	<!-- Blog -->
+	<script src="js/blog.js"></script>
+	<!-- Clan -->
+	<script src="js/clan.js"></script>
+	<!-- Games -->
+	<script src="js/c-games.js"></script>
+	<script src="js/s-games.js"></script>
+	<!-- Items -->
+	<script src="js/c-items.js"></script>
+	<script src="js/s-items.js"></script>
+	<!-- Members -->
+	<script src="js/c-members.js"></script>
+	<script src="js/s-members.js"></script>
 
-<!-- CDN:  ThreeJS -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/threejs/r69/three.min.js"></script> -->
+	<!-- set options before less.js script -->
+	<script>
+	  less = {
+	    env: "development",
+	    async: true
+	  };
+	</script>
+	<!-- CDN:  LessCSS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script>
+
+	<!-- CDN:  ThreeJS -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/threejs/r69/three.min.js"></script> -->
 
 </body>
 </html>

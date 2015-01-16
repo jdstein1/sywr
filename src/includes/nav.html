@@ -1,24 +1,19 @@
-<ul>
-	<li><a href="#/">Home</a></li>
-	<li><a href="#/blog">Blog</a></li>
-	<!-- <li><a href="#/clan">Clan</a></li> -->
-	<li><a href="#/members">Clan</a></li>
-	<!-- <li><span>Members</span> -->
-		<!-- <ul> -->
-			<!-- <li><a href="#/members">All</a></li> -->
-			<!-- <li><a href="members/jeff.php">Jeff</a></li> -->
-			<!-- <li><a href="members/john.php">John</a></li> -->
-			<!-- <li><a href="members/kras.php">Kras</a></li> -->
-			<!-- <li><a href="members/tanner.php">Tanner</a></li> -->
-		<!-- </ul> -->
-	<!-- </li> -->
-	<li><a href="#/games">Games</a></li>
-	<!-- <li><span>Games</span> -->
-		<!-- <ul> -->
-			<!-- <li><a href="#/games">All</a></li> -->
-			<!-- <li><a href="#/games/destiny">Destiny</a></li> -->
-		<!-- </ul> -->
-	<!-- </li> -->
-	<li><a href="#/items">Items</a></li>
-	<li><a href="#/feedback">Feedback</a></li>
-</ul>
+<md-sidenav class="md-sidenav-left" md-component-id="left">
+	<md-toolbar class="" layout="row" layout-align="center center">
+		<h1 flex class="md-toolbar-tools">Menu</h1>
+		<!-- <md-button ng-click="toggleLeft()" class="md-fab md-primary close closeLeft" aria-label="toggle">
+			<span class="icon icon-arrow-left"></span>
+		</md-button> -->
+	</md-toolbar>
+	<md-content class="md-padding" layout="column">
+		<!-- <md-list layout="column"> -->
+			<md-button class="md-primary" ng-repeat="item in menuItems | filter:menuItems.show" ng-click="toggleLeft()" href="#/{{item.path}}">
+				<span class="icon icon-{{item.icon}}"></span>
+				{{item.name}}
+			</md-button>
+			<!-- <md-item ng-repeat="item in menuItems | filter:menuItems.show">
+				<h4 class=""><a ng-click="toggleLeft()" href="#/{{item.path}}">{{item.name}}</a></h4>
+			</md-item> -->
+		<!-- </md-list> -->
+	</md-content>
+</md-sidenav>

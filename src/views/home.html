@@ -1,5 +1,14 @@
-<article>
+<article ng-controller="cTest">
+<md-content class="md-padding">
+
 	<h1>{{title}}</h1>
+
+	<ul>
+		<li>{{constMeta.title}}</li>
+		<li>{{constMeta.description}}</li>
+		<li>{{constMeta.crew}}</li>
+		<li>{{constMeta.since}}</li>
+	</ul>
 
 	<h2>API Test</h2>
 	<p>Test getting data through PHP from Bungie...</p>
@@ -15,6 +24,123 @@
 	<p>Custom directives for extending functionality...</p>
 
 	<h3>Sorting</h3>
-	<!-- <d-sorting options="stuff">sorting directive</d-sorting> -->
+	<!-- <d-sorting options="stuff">Sorting directive</d-sorting> -->
 
+	<h3>Comparing</h3>
+	<!-- <d-comparing options="stuff">Comparing directive</d-comparing> -->
+
+	<h2>Material Design Demos</h2>
+	<p>Testing various directives, themes, options...</p>
+
+  <md-toolbar md-scroll-shrink>
+    <div class="md-toolbar-tools">
+      <h3>
+        <span>MD Content with shrinking toolbar</span>
+      </h3>
+    </div>
+  </md-toolbar>
+
+  <md-content style="height: 600px;">
+    <md-list>
+  	<md-subheader>To Do List</md-subheader>
+      <md-item ng-repeat="item in todos">
+        <md-item-content>
+          <div class="md-tile-left">
+			<md-switch ng-model="item.done" aria-label="Status">
+				{{item.done}}
+			</md-switch>
+          	<!-- img url:  {{item.face}} -->
+            <!-- <img ng-src="{{item.face}}" alt="{{item.who}}" class="face"> -->
+          </div>
+          <div class="md-tile-content">
+            <h3>{{item.what}}</h3>
+            <h4>{{item.who}}</h4>
+            <p>
+              {{item.notes}}
+            </p>
+          </div>
+        </md-item-content>
+        <md-divider inset></md-divider>
+      </md-item>
+    </md-list>
+	<md-subheader>Input, Color</md-subheader>
+	<md-input-container>
+	  <label>Color</label>
+	  <input type="text" ng-model="color" required md-maxlength="10">
+	</md-input-container>
+  </md-content>
+    <hr>
+
+	<md-subheader>Buttons</md-subheader>
+    <section layout="row" layout-sm="column" layout-align="center center">
+      <md-button>{{title1}}</md-button>
+      <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
+      <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
+      <md-button class="md-warn">{{title4}}</md-button>
+    </section>
+    <hr>
+	<md-subheader>Buttons, Raised</md-subheader>
+    <section layout="row" layout-sm="column" layout-align="center center">
+      <md-button class="md-raised">Button</md-button>
+      <md-button class="md-raised md-primary">Primary</md-button>
+      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+      <md-button class="md-raised md-warn">Warn</md-button>
+      <!-- <div class="label">Raised</div> -->
+    </section>
+    <hr>
+	<md-subheader>Buttons, Images</md-subheader>
+    <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button class="md-fab" aria-label="Time">
+            <md-icon icon="/img/icons/ic_access_time_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+        </md-button>
+      <md-button class="md-fab" aria-label="New document">
+        <md-icon icon="/img/icons/ic_insert_drive_file_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+      </md-button>
+        <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
+            <md-icon icon="/img/icons/ic_comment_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+        </md-button>
+        <md-button class="md-fab md-primary" md-theme="cyan" aria-label="Profile">
+            <md-icon icon="/img/icons/ic_people_24px.svg" style="width: 24px; height: 24px;"></md-icon>
+        </md-button>
+      <!-- <div class="label">FAB</div> -->
+    </section>
+    <hr>
+	<md-subheader>Buttons</md-subheader>
+    <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button ng-href="{{googleUrl}}" target="_blank">Go to Google</md-button>
+        <md-button>RSVP</md-button>
+    </section>
+    <hr>
+  <md-subheader>Buttons, Themed</md-subheader>
+    <section layout="row" layout-sm="column" layout-align="center center">
+      <md-button class="md-primary md-hue-1">Primary Hue 1</md-button>
+      <md-button class="md-warn md-raised md-hue-2">Warn Hue 2</md-button>
+      <md-button class="md-accent">Accent</md-button>
+      <md-button class="md-accent md-raised md-hue-3">Accent Hue 3</md-button>
+      <!-- <div class="label">Themed</div> -->
+    </section>
+    <hr>
+
+<section>
+  <md-switch ng-model="data.cb1" aria-label="Switch 1">
+    Switch 1: {{ data.cb1 }}
+  </md-switch>
+  <md-switch ng-model="data.cb2" aria-label="Switch 2" ng-true-value="'yup'" ng-false-value="'nope'" class="md-warn">
+    Switch 2 (md-warn): {{ data.cb2 }}
+  </md-switch>
+  <md-switch ng-disabled="true" aria-label="Disabled switch">
+    Switch (Disabled)
+  </md-switch>
+  <md-switch ng-disabled="true" aria-label="Disabled active switch" ng-model="data.cb4">
+    Switch (Disabled, Active)
+  </md-switch>
+  <md-switch class="md-accent" md-no-ink aria-label="Switch No Ink">
+    Switch (md-accent): No Ink
+  </md-switch>
+  <md-switch ng-model="data.cb5" aria-label="Switch 5" ng-change="onChange(data.cb5)">
+    Switch 5 message: {{ message }}
+  </md-switch>
+</section>
+
+</md-content>
 </article>

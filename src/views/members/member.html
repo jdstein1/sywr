@@ -1,4 +1,5 @@
 <article>
+<md-content class="md-padding">
 	<h1>Member: {{member}}</h1>
 	<h3>{{details.clanName}} ({{details.clanTag}})</h3>
 	<!-- <h2>details:</h2> -->
@@ -24,14 +25,28 @@
 				<th>Character #{{$index+1}}<br>
 					Metadata</th>
 				<td>
+<table>
+	<tr>
+		<td><d-character-bg id="{{item.id}}">character background</d-character-bg></td>
+		<td><img ng-src="{{getCharBackgroundPath(item.id)}}" /></td>
+	</tr>
+	<tr>
+		<td><d-character-emblem id="{{item.id}}">character emblem</d-character-emblem></td>
+		<td><img ng-src="{{getCharEmblemPath(item.id)}}" /></td>
+	</tr>
+	<tr>
+		<td><d-character-avatar id="{{item.id}}">character avatar</d-character-avatar></td>
+		<td><img ng-src="{{getCharAvatarPath(item.id)}}" /></td>
+	</tr>
+</table>
 					<dl>
 						<dt>race: <dd>{{character.characterBase.raceHash}}</dd></dt>
 						<dt>gender: <dd>{{character.characterBase.genderHash}}</dd></dt>
 						<dt>class: <dd>{{character.characterBase.classHash}}</dd></dt>
 						<dt>emblem: <dd>{{character.emblemHash}}</dd></dt>
 					</dl>
-					<!-- <img ng-src="{{character.backgroundPath}}"> -->
-					<!-- <img ng-src="{{character.emblemPath}}"> -->
+					<img ng-src="{{bungieImgPath}}{{character.backgroundPath}}">
+					<img ng-src="{{bungieImgPath}}{{character.emblemPath}}">
 					<dl>
 						<dt>Level: <dd>{{character.characterLevel}}</dd></dt>
 						<dt>Base Level: <dd>{{character.baseCharacterLevel}}</dd></dt>
@@ -56,4 +71,5 @@
 			</tr>
 		</tfoot>
 	</table>
+</md-content>
 </article>

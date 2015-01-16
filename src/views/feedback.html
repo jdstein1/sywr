@@ -1,21 +1,36 @@
-<article>
-	<h2>Feedback</h2>
+<article layout="column">
+<md-content md-theme="docs-dark" class="md-padding">
+	<md-toolbar>
+		<h2>Feedback</h2>
+	</md-toolbar>
 	<form action="">
-		<fieldset>
+		<!-- <fieldset> -->
+		<md-input-container>
 			<label for="added">What should be added?</label>
-			<input name="added" type="text">
-		</fieldset>
-		<fieldset>
+			<input name="added" type="text" class="wide">
+		</md-input-container>
+		<!-- </fieldset> -->
+			<hr>
+		<!-- <fieldset> -->
+		<md-input-container>
 			<label for="removed">What should be removed?</label>
-			<input name="removed" type="text">
-		</fieldset>
-		<fieldset>
+			<input name="removed" type="text" class="wide">
+		</md-input-container>
+		<!-- </fieldset> -->
+			<hr>
+		<!-- <fieldset> -->
+		<md-input-container>
 			<label for="changed">What should be changed?</label>
-			<input name="changed" type="text">
-		</fieldset>
-		<fieldset>
-			<input name="submit" type="submit" disabled>
-			<input name="reset" type="reset" disabled>
-		</fieldset>
+			<input name="changed" type="text" class="wide">
+		</md-input-container>
+		<!-- </fieldset> -->
+			<hr>
+		<!-- <fieldset> -->
+		<md-input-container layout="row" layout-align="end center">
+			<md-button id="submit" ng-click="submit()" class="md-warn" ng-disabled="true">Submit</md-button>
+			<md-button id="reset" ng-click="reset()" class="md-accent" ng-disabled="false">Reset</md-button>
+		</md-input-container>
+		<!-- </fieldset> -->
 	</form>
+</md-content>
 </article>

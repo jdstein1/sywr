@@ -5,7 +5,7 @@
 	app.controller('cMembers', cMembers)
 	function cMembers($scope, $http, $route, $location, constProtocol, constBungieUrl, sDataMembers) {
 		$scope.ctitle = 'cMembers';
-		$scope.title = 'Clan';
+		$scope.title = 'Players';
 		console.log('START', $scope.ctitle);
 
 		console.log('constProtocol', constProtocol);
@@ -13,6 +13,8 @@
 
 		// var myEmblemUrl = constProtocol[0] + '://' + constBungieUrl.domain +'/'+ constBungieUrl.lang +'/'+ constBungieUrl.profile + '/' + $scope.itemHash;
 		// console.log('myEmblemUrl: ', myEmblemUrl);
+
+		$scope.bungieImgPath = constProtocol[0] + '://' + constBungieUrl.domain;
 
 		$scope.sortClass = {};
 		$scope.sortClass.name = "def";
