@@ -7,7 +7,7 @@
 	</md-toolbar>
 	<md-content class="md-padding" layout="column">
 		<!-- <md-list layout="column"> -->
-			<md-button class="md-primary" ng-disabled="true" ng-repeat="item in settingsItems" ng-click="toggleLeft()" href="#/{{item.path}}">
+			<md-button aria-label="{{item.name}}" class="md-primary" ng-disabled="true" ng-repeat="item in settingsItems" ng-click="toggleLeft()" href="#/{{item.path}}">
 				<span class="icon icon-{{item.icon}}"></span>
 				{{item.name}}
 			</md-button>

@@ -18,50 +18,6 @@
 			$mdSidenav('right').toggle()
 		};
 
-$scope.getImgPath = function (type,id) {
-	console.log('START getImgPath');
-	var urlBase = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
-	switch (type) {
-		case 'avatar':
-			var urlPath = 'img/profile/avatars/';
-			break;
-		case 'background':
-			var urlPath = 'img/UserThemes/';
-			break;
-		default:
-			var urlPath = 'img/';
-			break;
-	}
-	return urlBase + urlPath + imgPath;
-};
-
-$scope.getCharBackgroundPath = function (id) {
-	console.log('START getCharBackgroundPath');
-	var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
-	return path;
-};
-$scope.getCharEmblemPath = function (id) {
-	console.log('START getCharEmblemPath');
-	var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
-	return path;
-};
-$scope.getCharAvatarPath = function (id) {
-	console.log('START getCharAvatarPath');
-	var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
-	return path;
-};
-
-$scope.getPlayerBackgroundPath = function (id) {
-	console.log('START getPlayerBackgroundPath');
-	var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
-	return path;
-};
-$scope.getPlayerEmblemPath = function (id) {
-	console.log('START getPlayerEmblemPath');
-	var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
-	return path;
-};
-
 	}
 	// console.log('test cMain:', angular.module('app').controller('cMain'));
 
@@ -70,6 +26,17 @@ $scope.getPlayerEmblemPath = function (id) {
 		$scope.ctitle = 'cFeedback';
 		$scope.title = 'Feedback';
 		console.log('START', $scope.ctitle);
+
+		$scope.formFeedback = {};
+
+		$scope.submit = function () {
+			console.log('START submit');
+			// $scope.formFeedback = {};
+		};
+		$scope.reset = function () {
+			console.log('START reset');
+			$scope.formFeedback = {};
+		};
 
 	}
 	// console.log('test cFeedback:', angular.module('app').controller('cFeedback'));
@@ -111,24 +78,6 @@ $scope.getPlayerEmblemPath = function (id) {
 		$scope.ctitle = 'cMenu';
 		$scope.title = 'Menu';
 		console.log('START', $scope.ctitle);
-
-		$scope.menuItems = [{
-			"name":"Home",
-			"path":"",
-			"action":"menu"
-		},{
-			"name":"Players",
-			"path":"members",
-			"action":"menu"
-		},{
-			"name":"Games",
-			"path":"games",
-			"action":"menu"
-		},{
-			"name":"Feedback",
-			"path":"feedback",
-			"action":"menu"
-		}];
 
 	}
 	// console.log('test cMenu:', angular.module('app').controller('cMenu'));

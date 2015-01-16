@@ -7,13 +7,13 @@
 	</md-toolbar>
 	<md-content class="md-padding" layout="column">
 		<!-- <md-list layout="column"> -->
-			<md-button class="md-primary" ng-repeat="item in menuItems | filter:menuItems.show" ng-click="toggleLeft()" href="#/{{item.path}}">
+			<md-button aria-label="{{item.name}}" class="md-primary" ng-repeat="item in menuItems | filter:menuItems.show | orderBy:menuItems.order" ng-click="toggleLeft()" href="#/{{item.path}}">
 				<span class="icon icon-{{item.icon}}"></span>
-				{{item.name}}
+				{{item.name}} ({{item.order}})
 			</md-button>
 			<!-- <md-item ng-repeat="item in menuItems | filter:menuItems.show">
-				<h4 class=""><a ng-click="toggleLeft()" href="#/{{item.path}}">{{item.name}}</a></h4>
+				<p class="" ng-click="toggleLeft()" href="#/{{item.path}}"><span class="icon icon-{{item.icon}}"></span>{{item.name}}</p>
 			</md-item> -->
-		<!-- </md-list> -->
+		</md-list>
 	</md-content>
 </md-sidenav>

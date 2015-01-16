@@ -18,12 +18,27 @@
 
 	<style>
 	/* custom styles */
+	body {font-weight: 300;text-align: left;}
+	th, td {vertical-align: top; text-align: left;}
+	th, dt {font-weight: 700;}
+	td, dd {font-weight: 300;}
+	dl, dt, dd {width: auto; margin: 0;}
+	dl dt {}
+	dl dd {}
 	.close, .closeLeft {position:absolute; top:1.75em; right:1em;}
 	/*.closeRight {position:absolute; top:1.5em; left:1em;}*/
 	.left {float:left !important;}
 	.right {float:right !important;}
-	/*.label {width:10em; text-align: right;}*/
+	/*.label {width:10em; text-align:right;}*/
 	.wide {width:100%;}
+	.md-sidenav-left .md-button,
+	.md-sidenav-right .md-button {text-align:left;}
+	.md-sidenav-left .md-button span,
+	.md-sidenav-right .md-button span {line-height:2;}
+	.md-sidenav-left p span.icon,
+	.md-sidenav-right p span.icon,
+	.md-sidenav-left .md-button span.icon,
+	.md-sidenav-right .md-button span.icon {top:0; padding-right:0.5em; float:left; line-height:1;}
 	</style>
 
 </head>
@@ -45,6 +60,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-aria.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-messages.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
 
 	<!-- CDN:  Angular Material JS -->

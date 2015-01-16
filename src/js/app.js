@@ -18,7 +18,7 @@ Angular Material dependencies:
 */
 
 	var app = angular.module('app', [ 
-		'ngMaterial', 'ngRoute'
+		'ngMaterial', 'ngRoute', 'ngMessages'
 	]);
 
 	app.constant('constMeta', {
@@ -67,6 +67,9 @@ Angular Material dependencies:
 				when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGameDetail'}).
 				when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).
 				when('/items/:item', {templateUrl: 'views/items/item.html', controller: 'cItemDetail'}).
+				when('/compare', {templateUrl: 'views/compare.html', controller: 'cMembers'}).
+				// when('/compare/:type', {templateUrl: 'views/compare/type.html', controller: 'cCompareDetail'}).
+				when('/compare/quick', {templateUrl: 'views/compare/quick.html', controller: 'cMemberDetail'}).
 				otherwise({redirectTo: '/'});
 		}
 	]);
