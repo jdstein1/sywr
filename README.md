@@ -37,6 +37,21 @@ We use these 3rd party libs:
   * Angular Material (coming soon)
   * ThreeJS (coming soon)
 
+## Developing
+
+### How to run locally
+
+#### Mac OS X:
+
+* for doing FTP:
+  * Install [Transmit](http://www.panic.com/transmit/)
+* for doing version control:
+  * Install [GitHub GUI](http://mac.github.com/)
+* for running a PHP server locally:
+  * Install [MAMP](http://www.mamp.info/)
+* for editing this README:
+  * Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
 ## TODO
 
 ### Build

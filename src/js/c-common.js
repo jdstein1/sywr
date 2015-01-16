@@ -44,7 +44,7 @@
 	app.controller('cTest', cTest)
 	function cTest($scope) {
 		$scope.ctitle = 'cTest';
-		$scope.title = 'Home';
+		$scope.title = 'Test';
 		console.log('START', $scope.ctitle);
 
 		$scope.title1 = 'Button';

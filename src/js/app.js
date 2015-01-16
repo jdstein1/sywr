@@ -57,6 +57,7 @@ Angular Material dependencies:
 	app.config(['$routeProvider', function ($routeProvider) {
 			$routeProvider.
 				when('/', {templateUrl: 'views/home.html', controller: 'cHome'}).
+				when('/test', {templateUrl: 'views/test.html', controller: 'cTest'}).
 				when('/blog', {templateUrl: 'views/blog.html', controller: 'cBlog'}).
 				when('/about', {templateUrl: 'views/about.html', controller: 'cAbout'}).
 				when('/feedback', {templateUrl: 'views/feedback.html', controller: 'cFeedback'}).
