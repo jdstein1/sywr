@@ -41,16 +41,23 @@ We use these 3rd party libs:
 
 ### How to run locally
 
-#### Mac OS X:
+Install these apps to get up and running:
 
-* for doing FTP:
-  * Install [Transmit](http://www.panic.com/transmit/)
-* for doing version control:
-  * Install [GitHub GUI](http://mac.github.com/)
-* for running a PHP server locally:
-  * Install [MAMP](http://www.mamp.info/)
-* for editing this README:
-  * Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+| Purpose                 | Platform   | App      |
+| ----------------------- | ---------- | -------- |
+| for FTP                 | Mac OS X   | Install [Transmit](http://www.panic.com/transmit/) |
+| for version control     | Mac OS X   | Install [GitHub GUI](http://mac.github.com/) |
+| for running PHP         | Mac OS X   | Install [MAMP](http://www.mamp.info/) |
+|                         | Windows    | Install [WAMP](http://www.wampserver.com/) |
+| for editing this README | All        | Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) |
+
+### Writing code
+
+Do what you normally do.
+
+### Contributing code
+
+Push/pull to/from this repo: [jdstein1/sywr](https://github.com/jdstein1/sywr).
 
 ## TODO
 
