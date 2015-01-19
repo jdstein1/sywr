@@ -1,4 +1,4 @@
-/*c-members.js*/
+// c-members.js
 (function() {
 	'use strict';
 

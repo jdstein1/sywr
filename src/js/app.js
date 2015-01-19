@@ -61,7 +61,6 @@ Angular Material dependencies:
 				when('/blog', {templateUrl: 'views/blog.html', controller: 'cBlog'}).
 				when('/about', {templateUrl: 'views/about.html', controller: 'cAbout'}).
 				when('/feedback', {templateUrl: 'views/feedback.html', controller: 'cFeedback'}).
-				when('/clan', {templateUrl: 'views/clan.html', controller: 'cClan'}).
 				when('/members', {templateUrl: 'views/members.html', controller: 'cMembers'}).
 				when('/members/:member', {templateUrl: 'views/members/member.html', controller: 'cMemberDetail'}).
 				when('/games', {templateUrl: 'views/games.html', controller: 'cGames'}).

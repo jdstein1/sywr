@@ -3,11 +3,13 @@
 	'use strict';
 
 	app.controller('cMain', cMain)
-	function cMain($scope, $log, $timeout, $mdSidenav, constMeta, constBungieUrl, constFileTypes, sMenu, sSettings) {
+	function cMain($scope, $log, $timeout, $mdSidenav, constMeta, constBungieUrl, constFileTypes, sMenu, sSettings, sHeaderMenu, sHeaderSettings) {
 		$scope.ctitle = 'cMain';
 		$scope.title = 'Main App';
 		console.log('START', $scope.ctitle);
 
+		$scope.headerMenu = sHeaderMenu;
+		$scope.headerSettings = sHeaderSettings;
 		$scope.menuItems = sMenu;
 		$scope.settingsItems = sSettings;
 

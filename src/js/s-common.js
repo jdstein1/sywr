@@ -11,6 +11,40 @@
 	}
 	// console.log('test sDataDestiny:', angular.module('app').service('sDataDestiny'));
 
+	app.service('sHeaderMenu', sHeaderMenu)
+	function sHeaderMenu() {
+		var stitle = 'sHeaderMenu';
+		console.log('START', stitle);
+
+		var headerMenu = {
+			"name":"Menu",
+			"order":1,
+			"show":true,
+			"icon":"flaticon-menu55",
+			"path":"",
+			"action":"menu"
+		};
+		return headerMenu;
+	}
+	// console.log('test sHeaderMenu:', angular.module('app').service('sHeaderMenu'));
+
+	app.service('sHeaderSettings', sHeaderSettings)
+	function sHeaderSettings() {
+		var stitle = 'sHeaderSettings';
+		console.log('START', stitle);
+
+		var headerSettings = {
+			"name":"Settings",
+			"order":2,
+			"show":false,
+			"icon":"flaticon-settings49",
+			"path":"clan",
+			"action":"menu"
+		};
+		return headerSettings;
+	}
+	// console.log('test sHeaderSettings:', angular.module('app').service('sHeaderSettings'));
+
 	app.service('sMenu', sMenu)
 	function sMenu() {
 		var stitle = 'sMenu';
@@ -20,53 +54,55 @@
 			"name":"Home",
 			"order":1,
 			"show":true,
-			"icon":"home3",
+			"icon":"flaticon-home149",
 			"path":"",
-			"action":"menu"
-		},{
-			"name":"Clan",
-			"order":2,
-			"show":false,
-			"icon":"tree",
-			"path":"clan",
 			"action":"menu"
 		},{
 			"name":"Players",
 			"order":3,
 			"show":true,
-			"icon":"user",
+			"icon":"flaticon-users25",
 			"path":"members",
-			"action":"menu"
-		},{
-			"name":"Games",
-			"order":5,
-			"show":true,
-			"icon":"pacman",
-			"path":"games",
 			"action":"menu"
 		},{
 			"name":"Compare",
 			"order":4,
 			"show":true,
-			"icon":"pacman",
+			"icon":"flaticon-swap3",
 			"path":"compare",
 			"action":"menu"
+		},{
+			"name":"Games",
+			"order":5,
+			"show":true,
+			"icon":"flaticon-gamepad3",
+			"path":"games",
+			"action":"menu"
+		},{
+			"name":"Environments",
+			"order":8,
+			"show":false,
+			"icon":"flaticon-compass106",
+			"path":"items",
+			"action":"menu",
+			"tags":["maps","locations","environments"]
 		},{
 			"name":"Items",
 			"order":6,
 			"show":false,
-			"icon":"pacman",
+			"icon":"flaticon-list88",
 			"path":"items",
-			"action":"menu"
+			"action":"menu",
+			"tags":["items","gear","weapons","armor","consumables"]
 		},{
 			"name":"Feedback",
 			"order":7,
 			"show":true,
-			"icon":"bubbles3",
+			"icon":"flaticon-chat75",
 			"path":"feedback",
-			"action":"menu"
+			"action":"menu",
+			"tags":["form","feedback","gripes","complaints","suggestions"]
 		}];
-
 		return menuItems;
 	}
 	// console.log('test sMenu:', angular.module('app').service('sMenu'));
@@ -80,32 +116,31 @@
 			"name":"Theme",
 			"order":1,
 			"show":true,
-			"icon":"paint-format",
+			"icon":"flaticon-visibility1",
 			"path":"theme",
 			"action":"theme"
 		},{
 			"name":"Colors",
 			"order":2,
 			"show":true,
-			"icon":"eyedropper",
+			"icon":"flaticon-painter14",
 			"path":"colors",
 			"action":"colors"
 		},{
 			"name":"Fonts",
 			"order":3,
 			"show":true,
-			"icon":"font",
+			"icon":"flaticon-underline7",
 			"path":"fonts",
 			"action":"fonts"
 		},{
 			"name":"Icons",
 			"order":4,
 			"show":true,
-			"icon":"happy",
+			"icon":"flaticon-underline6",
 			"path":"icons",
 			"action":"icons"
 		}];
-
 		return menuItems;
 	}
 	// console.log('test sSettings:', angular.module('app').service('sSettings'));

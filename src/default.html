@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>{{apptitle}}</title>
 
-	<link rel="stylesheet" href="lib/icomoon-free/font.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/test.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/basic.css"> -->
@@ -15,6 +14,10 @@
 
 	<!-- CDN:  Angular Material CSS -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.css">
+
+    <!-- Icon Fonts -->
+	<!-- <link rel="stylesheet" href="lib/icomoon-free/font.css"> -->
+	<link rel="stylesheet" href="lib/icons/material-design/flaticon.css">
 
 	<style>
 	/* custom styles */
@@ -31,14 +34,25 @@
 	.right {float:right !important;}
 	/*.label {width:10em; text-align:right;}*/
 	.wide {width:100%;}
+	.label {color:#999;}
+
+	[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+	[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+		font-family:Flaticon;
+		font-size:36px;
+		font-style:normal;
+		margin:0;
+	}
+
 	.md-sidenav-left .md-button,
 	.md-sidenav-right .md-button {text-align:left;}
 	.md-sidenav-left .md-button span,
-	.md-sidenav-right .md-button span {line-height:2;}
-	.md-sidenav-left p span.icon,
-	.md-sidenav-right p span.icon,
+	.md-sidenav-right .md-button span {}
+	.md-sidenav-left .md-button span.text,
+	.md-sidenav-right .md-button span.text {}
 	.md-sidenav-left .md-button span.icon,
-	.md-sidenav-right .md-button span.icon {top:0; padding-right:0.5em; float:left; line-height:1;}
+	.md-sidenav-right .md-button span.icon {}
+
 	</style>
 
 </head>
