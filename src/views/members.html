@@ -1,28 +1,35 @@
-<article>
+<article class="{{ctitle}}">
 <md-content class="md-padding">
-	<h1>{{title}}</h1>
-
-	<div ng-controller="cClan">
-		<h3><a href="{{myClanUrl}}" target="_blank">{{metaData.title}}</a> Members</h3>
-		<ul>
-			<li>Clan name:  {{metaData.title}}</li>
-			<li>Clan link:  <a href="{{myClanUrl}}" target="_blank">{{metaData.title}}</a></li>
-			<li>Clan platform:  {{metaData.console}}</li>
-			<li>Clan ID:  {{metaData.id}}</li>
-		</ul>
-		<hr>
-	</div>
+	<md-card>
+		<!-- <img src="img/destiny/destiny-conceptart-characters-classes.jpg" alt="Destiny Character Classes" width="100%"> -->
+		<md-card-content>
+			<h1>{{title}}</h1>
+			<div ng-controller="cClan">
+				<h3><a href="{{myClanUrl}}" target="_blank">{{metaData.title}}</a> Members</h3>
+				<ul>
+					<li>Clan name:  {{metaData.title}}</li>
+					<li>Clan link:  <a href="{{myClanUrl}}" target="_blank">{{metaData.title}}</a></li>
+					<li>Clan platform:  {{metaData.console}}</li>
+					<li>Clan ID:  {{metaData.id}}</li>
+				</ul>
+			</div>
+		</md-card-content>
+	</md-card>
 
 	<!-- <d-sorting>test</d-sorting> -->
 	<!-- <d-sorting options="['name','handle','id']"></d-sorting> -->
 	<!-- <table class="sorting" ng-model="sortClass"> -->
+	<md-card>
+		<md-card-content>
 		<div ng-model="sortClass" layout="row" layout-align="center center">
 			<div flex>Sort by:</div>
 			<md-button aria-label="{{sortClass.name}}" flex class="md-primary {{sortClass.name}}" ng-click="sortOrderToggle('name')">Name</md-button>
-			<md-button aria-label="{{sortClass.handle}}" flex class="md-primary {{sortClass.handle}}" ng-click="sortOrderToggle('handle')">Handle</md-button>
-			<md-button aria-label="{{sortClass.id}}" flex class="md-primary {{sortClass.id}}" ng-click="sortOrderToggle('id')">ID</md-button>
-			<md-button aria-label="Clear" flex class="md-accent" ng-click="sortOrderToggle('all')">Clear</md-button>
+			<md-button aria-label="{{sortClass.handle}}" flex class="md-accent {{sortClass.handle}}" ng-click="sortOrderToggle('handle')">Handle</md-button>
+			<md-button aria-label="{{sortClass.id}}" flex class="md-warn {{sortClass.id}}" ng-click="sortOrderToggle('id')">ID</md-button>
+			<md-button aria-label="Clear" flex class="md-accent" ng-click="sortOrderToggle('all')">None</md-button>
 		</div>
+		</md-card-content>
+	</md-card>
 	<!-- </table> -->
 	<md-card ng-repeat="item in myMemberData | orderBy:sortOrder:reverse">
 		<!-- <d-player-bg id="{{item.id}}">player background</d-player-bg> -->
@@ -44,9 +51,9 @@
 				<div flex class="">
 					<!-- <h4>Links</h4> -->
 					<ul>
-						<li><span><a href="#/members/{{item.api}}">Integrated API Output</a></span></li>
-						<li><span><a href="data/{{item.api}}.php" target="_blank">Raw API Output</a></span></li>
-						<li><span class="link outbound"><a href="{{item.url}}" target="_blank">External Profile Link</a></span></li>
+						<li><span class="link outbound"><a href="{{item.url}}" target="_blank">Bungie.net Profile</a></span></li>
+						<li><span><a href="data/{{item.api}}.php" target="_blank">Raw API Output (JSON)</a></span></li>
+						<li><span><a href="#/members/{{item.api}}">Integrated API Output (HTML)</a></span></li>
 					</ul>
 				</div>
 			</md-item-content>
