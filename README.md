@@ -46,10 +46,14 @@ Install these apps to get up and running:
 | Purpose                 | Platform   | App      |
 | ----------------------- | ---------- | -------- |
 | for FTP                 | Mac OS X   | Install [Transmit](http://www.panic.com/transmit/) |
+|                         |            | Install [FileZilla](https://filezilla-project.org/) |
 | for version control     | Mac OS X   | Install [GitHub GUI](http://mac.github.com/) |
 | for running PHP         | Mac OS X   | Install [MAMP](http://www.mamp.info/) |
 |                         | Windows    | Install [WAMP](http://www.wampserver.com/) |
 | for editing this README | All        | Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) |
+
+1) Start MAMP
+2) Point browser to:  http://localhost:8888/sywr/src/default.html
 
 ### Writing code
 

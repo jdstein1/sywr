@@ -43,13 +43,23 @@
 			<tr>
 				<th>Character Base</th>
 				<td>
-					<dl ng-repeat="(key, value) in character.characterBase"><dt>{{key}}:  <dd>{{value}}</dd></dt></dl>
+					<ul>
+						<li ng-repeat="(key, value) in character.characterBase">{{key}}:  <b>{{value}}</b>
+							<!-- <ul> -->
+								<li ng-repeat="customiztion in (value)"><i>child:</i> {{key}}:  <b>{{value}}</b>
+								<li ng-repeat="stats in (value)"><i>child:</i> {{key}}:  <b>{{value}}</b>
+								</li>
+							<!-- </ul> -->
+						</li>
+					</ul>
 				</td>
 			</tr>
 			<tr>
 				<th>Level Progression</th>
 				<td>
-					<dl ng-repeat="(key, value) in character.levelProgression"><dt>{{key}}:  <dd>{{value}}</dd></dt></dl>
+					<ul>
+						<li ng-repeat="(key, value) in character.levelProgression">{{key}}:  <b>{{value}}</b></li>
+					</ul>
 				</td>
 			</tr>
 		</tbody>

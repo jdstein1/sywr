@@ -26,6 +26,7 @@ Angular Material dependencies:
 		"description":"a way for friends to enjoy video games while not playing them",
 		"crew":"Social Degenerate Nerds",
 		"since":2014,
+		"console":"Xbox",
 		"id":519979
 	});
 	// URLs that need to be covered:

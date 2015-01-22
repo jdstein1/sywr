@@ -1,0 +1,37 @@
+<md-card>
+	<p>Inside the directive</p>
+	<md-card-content>
+		<ul>
+			<li>items.length:  {{items.length}}</li>
+			<li>sortOrderChoice:  {{sortOrderChoice}}</li>
+			<li>sortReverse:  {{sortReverse}}</li>
+			<li>sortClear:  {{sortClear}}</li>
+			<li>sortOrderToggle2:  {{sortOrderToggle2}}</li>
+		</ul>
+	</md-card-content>
+	<md-card-content ng-repeat="item in items | orderBy:sortOrderChoice:sortReverse" class="">
+		<md-item-content layout="row" class="border-{{item.id}} bg-{{item.id}}">
+			<div flex>
+				id: <b>{{item.id}}</b>
+			</div>
+			<div flex>
+				name: <b>{{item.name}}</b><br>
+				aka: <b>{{item.handle}}</b>
+			</div>
+			<div flex>
+				github: <b><a href="https://www.github.com/{{item.github}}" target="_blank">{{item.github}}</a></b>
+			</div>
+			<!-- <div flex>
+				<ul>
+				<li><big>{{item.name}}</big></li>
+				<li><small><span class="label">aka</span> <b>{{item.handle}}</b></small></li>
+				<li><small><span class="label">Account ID</span> <b>{{item.id}}</b></small></li>
+				</ul>
+			</div> -->
+			<md-button class="md-primary" href="#/members/{{item.api}}">Player</md-button>
+			<md-button class="md-primary link outbound github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
+			<md-button class="md-primary link outbound bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
+			<md-button class="md-primary link json" href="data/{{item.api}}.php" target="_blank">JSON</md-button>
+		</md-item-content>
+	</md-card-content>
+</md-card>

@@ -3,59 +3,61 @@
 	'use strict';
 
 	app.directive('dSorting', dSorting)
-	function dSorting() {
+	function dSorting($route) {
 		// var sortingOptions = [
 		// 	"Name":"name",
 		// 	"Handle":"handle",
 		// 	"Account ID":"id"
 		// ];
 
-		$scope.sortClass = {};
-		$scope.sortClass.name = "def";
-		$scope.sortClass.handle = "def";
-		$scope.sortClass.id = "def";
-		console.log('$scope.sortClass: ', $scope.sortClass);
+		var sortClass = {};
+		sortClass.name = "def";
+		sortClass.handle = "def";
+		sortClass.id = "def";
+		console.log('sortClass: ', sortClass);
 
   		console.log('$route.current.params',$route.current.params );
-		$scope.item = $route.current.params.item;
+		var item = $route.current.params.item;
 
-		$scope.sortOrder = '-name';
-		$scope.reverse = false;
+		var sortOrder = '-name';
+		var reverse = false;
 
-		if ($scope.sortOrder) {
-			console.log('$scope.sortOrder');
+		if (sortOrder) {
+			console.log('sortOrder');
 		} else {
-			console.log('$scope.sortOrder');
+			console.log('sortOrder');
 		}
 
-		$scope.sortOrderToggle = function (type) {
-			console.log('sortOrderToggle:', type +'; type:'+ $scope.sortClass[type]);
+		function sortOrderToggle (type) {
+			console.log('sortOrderToggle:', type +'; type:'+ sortClass[type]);
 
-			// for (var i = 0; i < $scope.sortClass.length; i++) {
-			// console.log('$scope.sortClass[i]: ', $scope.sortClass[i]);
-			// $scope.sortClass[i] = 'def';
+			// for (var i = 0; i < sortClass.length; i++) {
+			// console.log('sortClass[i]: ', sortClass[i]);
+			// sortClass[i] = 'def';
 			// };
 
 			if (type === 'all') {
-				$scope.sortClass = {name: "def", handle: "def", id: "def"};
+				sortClass = {name: "def", handle: "def", id: "def"};
 			} else {
-				if ($scope.sortClass[type] === 'des') {
-					$scope.sortClass[type] = 'asc';
+				if (sortClass[type] === 'des') {
+					sortClass[type] = 'asc';
 				} else {
-					$scope.sortClass[type] = 'des';
+					sortClass[type] = 'des';
 				}
 			}
-			$scope.reverse=!$scope.reverse;
-			console.log('$scope.sortClass: ', $scope.sortClass);
+			reverse=!reverse;
+			console.log('sortClass: ', sortClass);
 		};
 
 		return {
 			restrict:'AE',
 			scope:{
-				options:'='
+				options:'=',
+				sortingOptions:'=',
+				sortClass:'@'
 			},
 			// template: '<table class="sorting" ng-model="sortClass"></table>'
-			templateUrl: 'includes/d-sorting.html'
+			templateUrl: 'tmpl/t-sorting.html'
 		};
 	}
 	// console.log('test dSorting:', angular.module('app').directive('dSorting'));

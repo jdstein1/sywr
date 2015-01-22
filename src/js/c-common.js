@@ -13,6 +13,15 @@
 		$scope.menuItems = sMenu;
 		$scope.settingsItems = sSettings;
 
+		for (var i = $scope.menuItems.length - 1; i >= 0; i--) {
+			console.log('$scope.menuItems[i].order decrement: ', $scope.menuItems[i].order);
+			// $scope.menuItems[i].order;
+		};
+		for (var i = 0; i < $scope.menuItems.length; i++) {
+			console.log('$scope.menuItems[i].order increment: ', $scope.menuItems[i].order);
+			// $scope.menuItems[i];
+		};
+
 		$scope.toggleLeft = function() {
 			$mdSidenav('left').toggle()
 		};

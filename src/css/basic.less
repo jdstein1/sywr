@@ -47,12 +47,12 @@ aside {float: left;}
 footer {}
 
 h1, h2, h3, h4, h5, h6 {}
-h1 {font-size: 3em}
-h2 {font-size: 2em}
-h3 {font-size: 1.5em}
-h4 {font-size: 1.25em}
-h5 {font-size: 1em}
-h6 {font-size: 0.875em}
+// h1 {font-size: 3em}
+// h2 {font-size: 2em}
+// h3 {font-size: 1.5em}
+// h4 {font-size: 1.25em}
+// h5 {font-size: 1em}
+// h6 {font-size: 0.875em}
 
 ul, ol, dl {
 	li, dt, dd {}
@@ -60,16 +60,24 @@ ul, ol, dl {
 }
 
 article {
-	padding: 1em;
-	h1, h2, h3, h4, h5, h6 {padding: 0.5em 0 0.25em;}
+	// padding: 1em;
+	// h1, h2, h3, h4, h5, h6 {padding: 0.5em 0 0.25em;}
 	ul, ol, dl {
 		padding:0.5em 0;
 		margin:0 0 0 1em;
 		li, dt, dd {
+			list-style-type: none;
 			padding:0 0;
-			margin:0em 0;
+			margin:0 0;
 			span {}
-			span.label {color:rgba(0,0,0,0.5); padding-right:0.5em; font-size:0.875em;}
+			span.label {
+				color:rgba(0,0,0,0.5); padding-right:0.5em; font-size:0.875em;
+				width: 4em;
+				height: 1em;
+				line-height: 1em;
+				text-align: right;
+				float: left;
+			}
 		}
 	}
 	ul {list-style-type: disc;
@@ -105,17 +113,42 @@ nav {
 	width:100%;
 	th, td {padding:0.5em 1em;}
 	th {text-align:right;}
-	/*td {background:lightgrey;}*/
+	td {}
 }
-.def {
-	background:#eef;
-	&:after {content:" (default)";}
-}
+
 .asc {
-	background:#fee;
-	&:after {content:" (ascending)";}
+	// background:#fee;
+	&:after {
+		// content:"\2794";
+		// transform: translate(1px) rotate(270deg);
+		// transform: rotate(0.75turn);
+		// content:"\2191";
+		// content:"\ffea";
+		// font-size:3em;
+		// line-height:0.5;
+	}
 }
 .des {
-	background:#efe;
-	&:after {content:" (descending)";}
+	// background:#efe;
+	&:after {
+		// content:"\2794";
+		// transform: translate(1px) rotate(90deg);
+		// transform: rotate(0.25turn);
+		// content:"\2193";
+		// content:"\ffec";
+		// font-size:3em;
+		// line-height:0.5;
+	}
+}
+.link {
+	&.outbound {
+		background: rgba(127, 0, 127, 0.125); border: 1px solid rgba(127, 0, 127, 0.5);
+		&:after {}
+		&.bungie {background: rgba(255, 0, 127, 0.125); border: 1px solid rgba(255, 0, 127, 0.5);;}
+		&.github {background: rgba(127, 0, 255, 0.125); border: 1px solid rgba(127, 0, 255, 0.5);;}
+	}
+	&.json {
+		background: rgba(0, 255, 127, 0.125); border: 1px solid rgba(0, 255, 127, 0.5);
+		&:after {}
+	}
 }

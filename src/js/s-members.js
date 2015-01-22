@@ -2,9 +2,9 @@
 (function() {
 	'use strict';
 
-	app.service('sDataMembers', sDataMembers)
-	function sDataMembers() {
-		var stitle = 'sDataMembers';
+	app.service('sMembers', sMembers)
+	function sMembers() {
+		var stitle = 'sMembers';
 		console.log('START', stitle);
 
 		var myMemberData = [{
@@ -37,38 +37,10 @@
 			myMemberData[i].api = myMemberData[i].name.toLowerCase();
 
 		};
-		console.log('myMemberData: ', myMemberData);
 
+		console.log('myMemberData: ', myMemberData);
 		return myMemberData;
 	}
-	// console.log('test sDataMembers:', angular.module('app').service('sDataMembers'));
-
-	app.service('sDataMemberDetails', sDataMemberDetails)
-	function sDataMemberDetails($http, $route, $scope) {
-		var stitle = 'sDataMemberDetails';
-		console.log('START', stitle);
-
-		// var myData = {};
-
-		//Gets the list of nuclear weapons
-		// $scope.getMember = function() {
-		// 	// $http.get('members/'+$route.current.params.member+'.php')
-		// 	$http.get('api2.php')
-		// 		.success(function (data) {
-		// 			console.log('sDataMemberDetails.getMember -- success');
-		// 			myData = data;
-		// 		}).error(function () {
-		// 			console.log('sDataMemberDetails.getMember -- error');
-		// 			myData = 'no data';
-		// 		});
-		// 	return myData;
-		// };
-		// console.log('sDataMemberDetails', sDataMemberDetails);
-		// return sDataMemberDetails;
-        // return myData;
-		// console.log('myData', myData);
-
-	}
-	// console.log('test sDataMemberDetails:', angular.module('app').service('sDataMemberDetails'));
+	// console.log('test sMembers:', angular.module('app').service('sMembers'));
 
 })();

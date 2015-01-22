@@ -4,6 +4,16 @@
 // example:
 // @nice-blue: #5B83AD;
 
+// @8310647: #831064;
+// @7037048: #703704;
+// @7666141: #766614;
+// @3892477: #389247;
+
+@8310647: #831064;
+@7037048: spin(@8310647, 30);
+@7666141: spin(@8310647, 60);
+@3892477: spin(@8310647, -30);
+
 /* mixins */
 // example:
 // .border {
@@ -23,7 +33,7 @@
 
 /* generic backgrounds */
 .gradient-white-to-trans {
-	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.75) 50%,rgba(255,255,255,1) 100%);
 }
 
 
@@ -33,20 +43,20 @@
 	background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
 }
 .classes-banners {
-.bg-destiny;
-background-image: url('../img/destiny/destiny-banners-classes.png');
+	.bg-destiny;
+	background-image: url('../img/destiny/destiny-banners-classes.png');
 }
 .classes-concepts {
-.bg-destiny;
-background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');
+	.bg-destiny;
+	background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');
 }
 .conceptart-erismorn {
-.bg-destiny;
-background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
+	.bg-destiny;
+	background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
 }
 .weapon-hardlight {
-.bg-destiny;
-background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
+	.bg-destiny;
+	background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
 }
 
 // md-content.md-default-theme {background: #f00;}
@@ -72,3 +82,13 @@ article.cItems {
 	.bg-destiny();
 	.weapon-hardlight();
 }
+
+.border-8310647 {border-left: 0.5em solid @8310647+#999;}
+.border-7037048 {border-left: 0.5em solid @7037048+#999;}
+.border-7666141 {border-left: 0.5em solid @7666141+#999;}
+.border-3892477 {border-left: 0.5em solid @3892477+#999;}
+
+.bg-8310647 {background: @8310647+#ccc;}
+.bg-7037048 {background: @7037048+#ccc;}
+.bg-7666141 {background: @7666141+#ccc;}
+.bg-3892477 {background: @3892477+#ccc;}

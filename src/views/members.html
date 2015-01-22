@@ -1,44 +1,67 @@
 <article class="{{ctitle}}">
 <md-content class="md-padding">
+
+	<!-- START ABOUT THE PLAYERS -->
 	<md-card>
 		<!-- <img src="img/destiny/destiny-conceptart-characters-classes.jpg" alt="Destiny Character Classes" width="100%"> -->
 		<md-card-content>
 			<h1>{{title}}</h1>
 			<div ng-controller="cClan">
-				<h3><a href="{{myClanUrl}}" target="_blank">{{metaData.title}}</a> Members</h3>
+				<h3><a href="{{myClanUrl}}" target="_blank">{{metadata.title}}</a> Members</h3>
 				<ul>
-					<li>Clan name:  {{metaData.title}}</li>
-					<li>Clan link:  <a href="{{myClanUrl}}" target="_blank">{{metaData.title}}</a></li>
-					<li>Clan platform:  {{metaData.console}}</li>
-					<li>Clan ID:  {{metaData.id}}</li>
+					<!-- <li>Clan name:  {{metadata.title}}</li> -->
+					<!-- <li>Clan link:  <a href="{{myClanUrl}}" target="_blank">{{metadata.title}}</a></li> -->
+					<li>Clan platform:  {{metadata.console}}</li>
+					<li>Clan ID:  {{metadata.id}}</li>
 				</ul>
 			</div>
 		</md-card-content>
 	</md-card>
 
+	<!-- START SORTING -->
 	<!-- <d-sorting>test</d-sorting> -->
 	<!-- <d-sorting options="['name','handle','id']"></d-sorting> -->
-	<!-- <table class="sorting" ng-model="sortClass"> -->
 	<md-card>
 		<md-card-content>
-		<div ng-model="sortClass" layout="row" layout-align="center center">
-			<div flex>Sort by:</div>
-			<md-button aria-label="{{sortClass.name}}" flex class="md-primary {{sortClass.name}}" ng-click="sortOrderToggle('name')">Name</md-button>
-			<md-button aria-label="{{sortClass.handle}}" flex class="md-accent {{sortClass.handle}}" ng-click="sortOrderToggle('handle')">Handle</md-button>
-			<md-button aria-label="{{sortClass.id}}" flex class="md-warn {{sortClass.id}}" ng-click="sortOrderToggle('id')">ID</md-button>
-			<md-button aria-label="Clear" flex class="md-accent" ng-click="sortOrderToggle('all')">None</md-button>
+		<div ng-model="sortOrderChoice" layout="row" layout-align="center center">
+			<div>Sort by:</div>
+			<md-button ng-repeat="option in sortOptions" aria-label="{{option.type}}" class="md-primary"ng-class="{'asc':option.asc, 'des':option.des}" ng-click="sortOrderToggle2(option.type, $index)">
+				<span class="flaticon right" ng-class="{'flaticon-drop27':option.asc, 'flaticon-drop25':option.des}"></span>
+				<span>{{option.tag}}</span>
+			</md-button>
+			<md-button aria-label="Clear" class="md-accent" ng-click="sortClear()">Clear</md-button>
 		</div>
 		</md-card-content>
 	</md-card>
-	<!-- </table> -->
-	<md-card ng-repeat="item in myMemberData | orderBy:sortOrder:reverse">
-		<!-- <d-player-bg id="{{item.id}}">player background</d-player-bg> -->
-		<!-- <img ng-src="{{getPlayerBackgroundPath(item.id)}}" /> -->
+
+	<!-- START MEMBERS DIRECTIVE -->
+	<d-members items="members"> put members here </d-members>
+	<!-- START MEMBERS REPEAT -->
+	<md-card>
+		<p>Inside the card-content repeat</p>
+		<md-card-content ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse" class="">
+			<md-item-content layout="row" class="border-{{item.id}} bg-{{item.id}}">
+				<div flex>
+					<ul>
+						<!-- <li ng-repeat="(key,value) in item"><span class="label">{{key}}</span>{{value}}</li> -->
+						<li><span class="label">name</span><big><b>{{item.name}}</b></big></li>
+						<li><span class="label">handle</span><big>{{item.handle}}</big></li>
+						<li><span class="label">id</span>{{item.id}}</li>
+					</ul>
+				</div>
+				<md-button flex class="md-primary" href="#/members/{{item.api}}">Player Page</md-button>
+				<md-button class="md-primary link outbound github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
+				<md-button class="md-primary link outbound bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
+				<md-button class="md-primary link json" href="data/{{item.api}}.php" target="_blank">JSON</md-button>
+			</md-item-content>
+		</md-card-content>
+	</md-card>
+	<!-- START MEMBERS REPEAT -->
+	<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
+		<p>Inside the card repeat</p>
 		<md-card-content>
 			<md-item-content layout="row">
 				<div class="">
-					<!-- <d-player-avatar id="{{item.id}}">player avatar</d-player-avatar> -->
-					<!-- <img ng-src="{{getPlayerEmblemPath(item.id)}}" /> -->
 				</div>
 				<div flex class="">
 					<h3>{{item.name}}<br />
@@ -48,16 +71,13 @@
 					</small>
 					</h3>
 				</div>
-				<div flex class="">
-					<!-- <h4>Links</h4> -->
-					<ul>
-						<li><span class="link outbound"><a href="{{item.url}}" target="_blank">Bungie.net Profile</a></span></li>
-						<li><span><a href="data/{{item.api}}.php" target="_blank">Raw API Output (JSON)</a></span></li>
-						<li><span><a href="#/members/{{item.api}}">Integrated API Output (HTML)</a></span></li>
-					</ul>
-				</div>
+				<md-button class="md-primary" href="#/members/{{item.api}}">Player</md-button>
+				<md-button class="md-primary link outbound github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
+				<md-button class="md-primary link outbound bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
+				<md-button class="md-primary link json" href="data/{{item.api}}.php" target="_blank">JSON</md-button>
 			</md-item-content>
 		</md-card-content>
 	</md-card>
+
 </md-content>
 </article>

@@ -8,10 +8,14 @@
 	<md-content class="md-padding" layout="column">
 	<!-- <dl><dt>menuItems</dt><dd>{{menuItems}}</dd></dl> -->
 		<!-- <md-list layout="column"> -->
-			<md-button aria-label="{{item.name}}" class="md-primary" ng-repeat="item in menuItems | filter : menuItems[$index].show : true | orderBy : menuItems[$index].order : false" ng-click="toggleLeft()" href="#/{{item.path}}">
+		<md-item ng-repeat="item in menuItems | filter : item.show : true | orderBy : item.order : false">
+			<md-button aria-label="{{item.name}}" class="md-primary" ng-click="toggleLeft()" href="#/{{item.path}}">
 				<span class="{{item.icon}}"></span>
+			<!-- </md-button> -->
+			<!-- <md-button aria-label="{{item.name}}" class="md-primary" ng-click="toggleLeft()" href="#/{{item.path}}"> -->
 				{{item.name}} (#{{item.order}}, {{item.show}})
 			</md-button>
+		</md-item>
 			<!-- <md-item ng-repeat="item in menuItems | filter:menuItems.show">
 				<p class="" ng-click="toggleLeft()" href="#/{{item.path}}"><span class="icon icon-{{item.icon}}"></span>{{item.name}}</p>
 			</md-item> -->

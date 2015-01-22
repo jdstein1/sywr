@@ -11,7 +11,7 @@
 
 	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/test.css"> -->
-	<!-- <link rel="stylesheet/less" type="text/css" href="css/basic.less" /> -->
+	<link rel="stylesheet/less" type="text/css" href="css/basic.less" />
 	<link rel="stylesheet/less" type="text/css" href="css/theme.less" />
 	<link rel="stylesheet/less" type="text/css" href="css/destiny.less" />
 
@@ -19,41 +19,7 @@
 	<!-- <link rel="stylesheet" href="lib/icomoon-free/font.css"> -->
 	<link rel="stylesheet" href="lib/icons/material-design/flaticon.css">
 
-	<style>
-	/* custom styles */
-	body {font-weight: 300;text-align: left;}
-	th, td {vertical-align: top; text-align: left;}
-	th, dt {font-weight: 700;}
-	td, dd {font-weight: 300;}
-	dl, dt, dd {width: auto; margin: 0;}
-	dl dt {}
-	dl dd {}
-	.close, .closeLeft {position:absolute; top:1.75em; right:1em;}
-	/*.closeRight {position:absolute; top:1.5em; left:1em;}*/
-	.left {float:left !important;}
-	.right {float:right !important;}
-	/*.label {width:10em; text-align:right;}*/
-	.wide {width:100%;}
-	.label {color:#999;}
-
-	[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-	[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-		font-family:Flaticon;
-		font-size:36px;
-		font-style:normal;
-		margin:0;
-	}
-
-	.md-sidenav-left .md-button,
-	.md-sidenav-right .md-button {text-align:left;}
-	.md-sidenav-left .md-button span,
-	.md-sidenav-right .md-button span {}
-	.md-sidenav-left .md-button span.text,
-	.md-sidenav-right .md-button span.text {}
-	.md-sidenav-left .md-button span.icon,
-	.md-sidenav-right .md-button span.icon {}
-
-	</style>
+	<link rel="stylesheet" href="css/overrides.css">
 
 </head>
 <body ng-controller="cMain">
@@ -97,6 +63,9 @@
 	<!-- Members -->
 	<script src="js/c-members.js"></script>
 	<script src="js/s-members.js"></script>
+	<script src="js/d-members.js"></script>
+	<script src="js/c-member-detail.js"></script>
+	<script src="js/s-member-detail.js"></script>
 
 	<!-- set options before less.js script -->
 	<script>

@@ -20,8 +20,6 @@
 		console.log('START', stitle);
 
 		// var myData = {};
-
-		//Gets the list of nuclear weapons
 		// $scope.getMember = function() {
 		// 	// $http.get('members/'+$route.current.params.member+'.php')
 		// 	$http.get('api2.php')

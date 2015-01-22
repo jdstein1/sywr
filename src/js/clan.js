@@ -19,7 +19,7 @@
 		$scope.title = 'Clan';
 		console.log('START', $scope.ctitle);
 
-		$scope.metaData = constMeta;
+		$scope.metadata = constMeta;
 
 		$scope.myClanId = "519979";
 		$scope.myClanUrl = constProtocol[0] + '://' + constBungieUrl.domain + '/' + constBungieUrl.lang + '/' + constBungieUrl.clan + '/' + constBungieUrl.console + '/' + $scope.myClanId;
