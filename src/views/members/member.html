@@ -25,18 +25,26 @@
 				<th>
 					<img ng-src="{{getCharImgPath(character.emblemPath)}}" /><br>
 					<dl>
-						<dt>race: <dd>{{character.characterBase.raceHash}}</dd></dt>
-						<dt>gender: <dd>{{character.characterBase.genderHash}}</dd></dt>
-						<dt>class: <dd>{{character.characterBase.classHash}}</dd></dt>
-						<dt>emblem: <dd>{{character.emblemHash}}</dd></dt>
+						<dt>race</dt>
+							<dd>{{character.characterBase.raceHash}}</dd>
+						<dt>gender</dt>
+							<dd>{{character.characterBase.genderHash}}</dd>
+						<dt>class</dt>
+							<dd>{{character.characterBase.classHash}}</dd>
+						<dt>emblem</dt>
+							<dd>{{character.emblemHash}}</dd>
 					</dl>
 				<td>
 					<img ng-src="{{getCharImgPath(character.backgroundPath)}}" /><br>
 					<dl>
-						<dt>Level: <dd>{{character.characterLevel}}</dd></dt>
-						<dt>Base Level: <dd>{{character.baseCharacterLevel}}</dd></dt>
-						<dt>Prestige Level: <dd>{{character.isPrestigeLevel}}</dd></dt>
-						<dt>To Next Level: <dd>{{character.percentToNextLevel}}%</dd></dt>
+						<dt>Level</dt>
+							<dd>{{character.characterLevel}}</dd>
+						<dt>Base Level</dt>
+							<dd>{{character.baseCharacterLevel}}</dd>
+						<dt>Prestige Level</dt>
+							<dd>{{character.isPrestigeLevel}}</dd>
+						<dt>To Next Level</dt>
+							<dd>{{character.percentToNextLevel}}%</dd>
 					</dl>
 				</td>
 			</tr>
@@ -45,11 +53,13 @@
 				<td>
 					<ul>
 						<li ng-repeat="(key, value) in character.characterBase">{{key}}:  <b>{{value}}</b>
-							<!-- <ul> -->
-								<li ng-repeat="customiztion in (value)"><i>child:</i> {{key}}:  <b>{{value}}</b>
-								<li ng-repeat="stats in (value)"><i>child:</i> {{key}}:  <b>{{value}}</b>
+							<ul>
+								<li ng-repeat="(key, value) in value"><i>child:</i> {{key}}:  <b>{{value}}</b>
+								<!-- <li ng-repeat="customiztion in (value)"><i>child:</i> customiztion:  <b>{{customiztion}}</b> -->
+								<!-- <li ng-repeat="peerView in (value)"><i>child:</i> peerView:  <b>{{peerView}}</b> -->
+								<!-- <li ng-repeat="stats in (value)"><i>child:</i> stats:  <b>{{stats}}</b> -->
 								</li>
-							<!-- </ul> -->
+							</ul>
 						</li>
 					</ul>
 				</td>

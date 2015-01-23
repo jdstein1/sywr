@@ -9,9 +9,12 @@
 			restrict:'AE',
 			// replace:true,
 			// transclude:true,
-			scope:'=',
+			scope:'=', // sortOrderChoice & sortReverse are connected, NO items
 			// scope:{
-			// 	items:'=',
+			// 	items:'=' // sortOrderChoice & sortReverse are NOT connected, YES items
+			// },
+			// scope:{
+				// items:'='
 			// 	sortOrderChoice:'=',
 			// 	sortReverse:'=',
 			// 	sortClear:'&',
