@@ -45,9 +45,9 @@
 	}
 	// console.log('test sHeaderSettings:', angular.module('app').service('sHeaderSettings'));
 
-	app.service('sMenu', sMenu)
-	function sMenu() {
-		var stitle = 'sMenu';
+	app.service('sNavMenu', sNavMenu)
+	function sNavMenu() {
+		var stitle = 'sNavMenu';
 		console.log('START', stitle);
 
 		var menuItems = [{
@@ -59,17 +59,10 @@
 			"action":"menu"
 		},{
 			"name":"Players",
-			"order":3,
+			"order":2,
 			"show":true,
 			"icon":"flaticon-users25",
 			"path":"members",
-			"action":"menu"
-		},{
-			"name":"Compare",
-			"order":4,
-			"show":true,
-			"icon":"flaticon-swap3",
-			"path":"compare",
 			"action":"menu"
 		},{
 			"name":"Games",
@@ -79,8 +72,15 @@
 			"path":"games",
 			"action":"menu"
 		},{
+			"name":"Compare",
+			"order":3,
+			"show":true,
+			"icon":"flaticon-swap3",
+			"path":"compare",
+			"action":"menu"
+		},{
 			"name":"Environments",
-			"order":8,
+			"order":4,
 			"show":false,
 			"icon":"flaticon-compass106",
 			"path":"items",
@@ -105,27 +105,20 @@
 		}];
 		return menuItems;
 	}
-	// console.log('test sMenu:', angular.module('app').service('sMenu'));
+	// console.log('test sNavMenu:', angular.module('app').service('sNavMenu'));
 
-	app.service('sSettings', sSettings)
-	function sSettings() {
-		var stitle = 'sSettings';
+	app.service('sNavSettings', sNavSettings)
+	function sNavSettings() {
+		var stitle = 'sNavSettings';
 		console.log('START', stitle);
 
-		var menuItems = [{
+		var settingsItems = [{
 			"name":"Theme",
 			"order":1,
 			"show":true,
 			"icon":"flaticon-visibility1",
 			"path":"theme",
 			"action":"theme"
-		},{
-			"name":"Colors",
-			"order":2,
-			"show":true,
-			"icon":"flaticon-painter14",
-			"path":"colors",
-			"action":"colors"
 		},{
 			"name":"Fonts",
 			"order":3,
@@ -134,6 +127,13 @@
 			"path":"fonts",
 			"action":"fonts"
 		},{
+			"name":"Colors",
+			"order":2,
+			"show":true,
+			"icon":"flaticon-painter14",
+			"path":"colors",
+			"action":"colors"
+		},{
 			"name":"Icons",
 			"order":4,
 			"show":true,
@@ -141,8 +141,8 @@
 			"path":"icons",
 			"action":"icons"
 		}];
-		return menuItems;
+		return settingsItems;
 	}
-	// console.log('test sSettings:', angular.module('app').service('sSettings'));
+	// console.log('test sNavSettings:', angular.module('app').service('sNavSettings'));
 
 })();

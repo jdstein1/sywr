@@ -43,37 +43,35 @@ We use these 3rd party libs:
 
 Install these apps to get up and running:
 
-| Purpose                 | Platform   | App      |
-| ----------------------- | ---------- | -------- |
-| for FTP                 | Mac OS X   | Install [Transmit](http://www.panic.com/transmit/) |
-|                         |            | Install [FileZilla](https://filezilla-project.org/) |
-| for version control     | Mac OS X   | Install [GitHub GUI](http://mac.github.com/) |
-| for running PHP         | Mac OS X   | Install [MAMP](http://www.mamp.info/) |
-|                         | Windows    | Install [WAMP](http://www.wampserver.com/) |
-| for editing this README | All        | Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) |
+| Purpose                 | Platform   | App                                                                                |
+| ----------------------- | ---------- | -----------------------------------------------------------------------------------|
+| for FTP                 | Mac OS X   | Install [Transmit](http://www.panic.com/transmit/)                                 |
+|                         | All        | Install [FileZilla](https://filezilla-project.org/download.php?show_all=1)         |
+| ----------------------- | ---------- | -----------------------------------------------------------------------------------|
+| for version control     | Mac OS X   | Install [GitHub GUI](http://mac.github.com/)                                       |
+|                         | Windows    | Install [GitHub GUI](http://windows.github.com/)                                   |
+| ----------------------- | ---------- | -----------------------------------------------------------------------------------|
+| for running a           | Mac OS X   | Install [MAMP](http://www.mamp.info/)                                              |
+| PHP server              | Windows    | Install [WAMP](http://www.wampserver.com/)                                         |
+| ----------------------- | ---------- | -----------------------------------------------------------------------------------|
+| for editing this README | N/A        | Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) |
 
-1) Start MAMP
-2) Point browser to:  http://localhost:8888/sywr/src/default.html
+
+Now you are ready to <s>rock</s> **raid**!
+
+### Running the app
+
+1. Open MAMP
+2. Press "Start Servers"
+3. Point browser to [http://localhost:8888/sywr/src/default.html](http://localhost:8888/sywr/src/default.html)
 
 ### Writing code
 
-Do what you normally do.
+1. Do your thing.
 
 ### Contributing code
 
-Push/pull to/from this repo: [jdstein1/sywr](https://github.com/jdstein1/sywr).
-
-## TODO
-
-### Build
-
-We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) ) to do the following:
-
-* Run JSHint/JSLint on scripts
-* Minify JS
-* Convert LessCSS to CSS
-
-### Icons
-
-Create a set of icons for specific games and their symbols for character classes, acheivements, mission types, etc.
+1. Clone this repo locally: [jdstein1/sywr](https://github.com/jdstein1/sywr)
+1. Push to it to add new code
+1. Pull from it to grab new code
 

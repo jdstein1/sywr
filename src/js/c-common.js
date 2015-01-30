@@ -3,24 +3,13 @@
 	'use strict';
 
 	app.controller('cMain', cMain)
-	function cMain($scope, $log, $timeout, $mdSidenav, constMeta, constBungieUrl, constFileTypes, sMenu, sSettings, sHeaderMenu, sHeaderSettings) {
+	function cMain($scope, $log, $timeout, $mdSidenav, constMeta, constBungieUrl, constFileTypes, sHeaderMenu, sHeaderSettings) {
 		$scope.ctitle = 'cMain';
 		$scope.title = 'Main App';
 		console.log('START', $scope.ctitle);
 
-		$scope.headerMenu = sHeaderMenu;
-		$scope.headerSettings = sHeaderSettings;
-		$scope.menuItems = sMenu;
-		$scope.settingsItems = sSettings;
-
-		for (var i = $scope.menuItems.length - 1; i >= 0; i--) {
-			console.log('$scope.menuItems[i].order decrement: ', $scope.menuItems[i].order);
-			// $scope.menuItems[i].order;
-		};
-		for (var i = 0; i < $scope.menuItems.length; i++) {
-			console.log('$scope.menuItems[i].order increment: ', $scope.menuItems[i].order);
-			// $scope.menuItems[i];
-		};
+		$scope.menuHeader = sHeaderMenu;
+		$scope.settingsHeader = sHeaderSettings;
 
 		$scope.toggleLeft = function() {
 			$mdSidenav('left').toggle()
@@ -85,10 +74,29 @@
 	// console.log('test cTest:', angular.module('app').controller('cTest'));
 
 	app.controller('cMenu', cMenu)
-	function cMenu($scope) {
+	function cMenu($scope, sNavMenu, sNavSettings) {
 		$scope.ctitle = 'cMenu';
 		$scope.title = 'Menu';
 		console.log('START', $scope.ctitle);
+
+		$scope.filterNav = 'show';
+		$scope.comparatorNav = true;
+		$scope.orderNav = 'order';
+		$scope.reverseNav = false;
+
+		$scope.menuItems = sNavMenu;
+		console.log('$scope.menuItems', $scope.menuItems);
+		$scope.settingsItems = sNavSettings;
+		console.log('$scope.settingsItems', $scope.settingsItems);
+
+		for (var i = $scope.menuItems.length - 1; i >= 0; i--) {
+			// console.log('$scope.menuItems[i].order decrement: ', $scope.menuItems[i].order);
+			// $scope.menuItems[i].order;
+		};
+		for (var i = 0; i < $scope.menuItems.length; i++) {
+			// console.log('$scope.menuItems[i].order increment: ', $scope.menuItems[i].order);
+			// $scope.menuItems[i];
+		};
 
 	}
 	// console.log('test cMenu:', angular.module('app').controller('cMenu'));

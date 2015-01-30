@@ -1,0 +1,148 @@
+/*basic.less*/
+/* variables */
+/* mixins */
+/* operations */
+/* functions */
+/* Basic Styles */
+body {
+  font-size: 1em;
+  font-family: "Helvetica Neue", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+}
+header,
+nav,
+section,
+aside,
+footer {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  clear: both;
+}
+header *,
+nav *,
+footer * {
+  text-align: center;
+}
+section,
+aside {
+  float: left;
+}
+ul dt,
+ol dt,
+dl dt {
+  float: left;
+}
+article ul,
+article ol,
+article dl {
+  padding: 0.5em 0;
+  margin: 0 0 0 1em;
+}
+article ul li,
+article ol li,
+article dl li,
+article ul dt,
+article ol dt,
+article dl dt,
+article ul dd,
+article ol dd,
+article dl dd {
+  list-style-type: none;
+  padding: 0 0;
+  margin: 0 0;
+}
+article ul li span.label,
+article ol li span.label,
+article dl li span.label,
+article ul dt span.label,
+article ol dt span.label,
+article dl dt span.label,
+article ul dd span.label,
+article ol dd span.label,
+article dl dd span.label {
+  color: rgba(0, 0, 0, 0.5);
+  padding-right: 0.5em;
+  font-size: 0.875em;
+  width: 4em;
+  height: 1em;
+  line-height: 1em;
+  text-align: right;
+  float: left;
+}
+article ul {
+  list-style-type: disc;
+}
+article ul ul {
+  list-style-type: square;
+  padding: 0 0 0.5em 0;
+}
+article ul ul ul {
+  list-style-type: circle;
+}
+article ol {
+  list-style-type: decimal-leading-zero;
+}
+article dl {
+  list-style-type: square;
+}
+nav ul {
+  line-height: 1.5;
+}
+nav ul li {
+  float: left;
+  position: relative;
+  padding: 1em;
+}
+nav ul li span:after {
+  content: "\25b6";
+  padding-left: 0.25em;
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.5);
+}
+nav ul ul li {
+  float: none;
+  position: relative;
+  padding: 0.5em 1em;
+}
+nav ul li:hover {
+  background: yellow;
+}
+nav ul li:hover ul {
+  display: block;
+}
+.helper {
+  font-size: 0.875em;
+  color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.125);
+}
+.sorting {
+  width: 100%;
+}
+.sorting th,
+.sorting td {
+  padding: 0.5em 1em;
+}
+.sorting th {
+  text-align: right;
+}
+.link.outbound {
+  background: rgba(127, 0, 127, 0.125);
+  border: 1px solid rgba(127, 0, 127, 0.5);
+}
+.link.outbound.bungie {
+  background: rgba(255, 0, 127, 0.125);
+  border: 1px solid rgba(255, 0, 127, 0.5);
+}
+.link.outbound.github {
+  background: rgba(127, 0, 255, 0.125);
+  border: 1px solid rgba(127, 0, 255, 0.5);
+}
+.link.json {
+  background: rgba(0, 255, 127, 0.125);
+  border: 1px solid rgba(0, 255, 127, 0.5);
+}

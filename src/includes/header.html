@@ -1,21 +1,15 @@
 <md-toolbar md-scroll-shrink>
 	<div class="md-toolbar-tools" layout="row" layout-align="center center">
 
-		<md-button aria-label="{{headerMenu.name}}" class="left md-accent" ng-click="toggleLeft()" href="#/{{headerMenu.path}}">
-			<span class="{{headerMenu.icon}}"></span>
+		<md-button aria-label="{{menuHeader.name}}" class="left md-accent" ng-click="toggleLeft()" href="#/{{menuHeader.path}}">
+			<span class="{{menuHeader.icon}}"></span>
 		</md-button>
 
 		<h1 flex><a href="#/">Strike Your Way Raiders</a></h1>
 
-		<md-button aria-label="{{headerSettings.name}}" class="right md-accent" ng-click="toggleRight()" href="#/{{headerSettings.path}}">
-			<span class="{{headerSettings.icon}}"></span>
+		<md-button aria-label="{{settingsHeader.name}}" class="right md-accent" ng-click="toggleRight()" href="#/{{settingsHeader.path}}">
+			<span class="{{settingsHeader.icon}}"></span>
 		</md-button>
 
 	</div>
 </md-toolbar>
-
-<!-- <hgroup>
-	<h1>Strike Your Way Raiders</h1>
-	<h3>social degenerate nerds</h3>
-	<h4>Since 2014</h4>
-</hgroup> -->

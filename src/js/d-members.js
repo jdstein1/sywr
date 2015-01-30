@@ -20,6 +20,13 @@
 			// 	sortClear:'&',
 			// 	sortOrderToggle2:'&'
 			// },
+			controller: function ($scope) {
+				console.log('$scope: ', $scope);
+				$scope.sortOrderChoice = 'name';
+				$scope.sortReverse = '';
+				$scope.sortClear = '';
+				$scope.sortOrderToggle2 = '';
+			},
 			templateUrl: 'tmpl/t-members.html'
 		};
 

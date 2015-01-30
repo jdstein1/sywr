@@ -7,10 +7,13 @@
 	</md-toolbar>
 	<md-content class="md-padding" layout="column">
 		<!-- <md-list layout="column"> -->
-			<md-button aria-label="{{item.name}}" class="md-primary" ng-disabled="true" ng-repeat="item in settingsItems" ng-click="toggleLeft()" href="#/{{item.path}}">
+		<md-item ng-repeat="item in settingsItems | orderBy : orderNav : reverseNav">
+			<md-button aria-label="{{item.name}}" class="md-primary" ng-disabled="true" ng-click="toggleLeft()" href="#/{{item.path}}">
 				<span class="{{item.icon}}"></span>
 				{{item.name}}
 			</md-button>
+			{{item.order}}, {{item.show}}
+		</md-item>
 			<!-- <md-item ng-repeat="item in settingsItems">
 				<h4 class=""><a ng-click="toggleLeft()" href="#/{{item.path}}">{{item.name}}</a></h4>
 			</md-item> -->

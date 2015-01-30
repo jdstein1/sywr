@@ -1,0 +1,94 @@
+/* variables */
+/* mixins */
+/* operations */
+/* functions */
+/* Official Destiny colors */
+/* elementals */
+/* elemental colors */
+/* character classes */
+/* character races */
+/* rarity colors */
+.basic {
+  background: lightgrey;
+  color: black;
+}
+.uncommon {
+  background: green;
+  color: white;
+}
+.rare {
+  background: blue;
+  color: white;
+}
+.legendary {
+  background: purple;
+  color: white;
+}
+.exotic {
+  background: yellow;
+  color: black;
+}
+/* character classes */
+.warlock {
+  content: "warlock";
+  /* subclasses */
+}
+.warlock.solar,
+.warlock.sunsinger {
+  background: orange;
+  color: black;
+}
+.warlock.void,
+.warlock.voidwalker {
+  background: violet;
+  color: black;
+}
+.hunter {
+  content: "hunter";
+  /* subclasses */
+}
+.hunter.arc,
+.hunter.bladedancer {
+  background: cyan;
+  color: black;
+}
+.hunter.solar,
+.hunter.gunslinger {
+  background: orange;
+  color: black;
+}
+.titan {
+  content: "titan";
+  /* subclasses */
+}
+.titan.arc,
+.titan.striker {
+  background: cyan;
+  color: black;
+}
+.titan.void,
+.titan.defender {
+  background: violet;
+  color: black;
+}
+/* weapon types */
+/* armor types */
+.helmet .head,
+.helm {
+  content: "helmet";
+}
+.gloves,
+.hand,
+.arm,
+.gauntlets {
+  content: "gauntlets";
+}
+.chest,
+.cuirass {
+  content: "chest";
+}
+.boots,
+.leg,
+.greaves {
+  content: "leg";
+}

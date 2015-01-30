@@ -9,6 +9,8 @@
 // @7666141: #766614;
 // @3892477: #389247;
 
+@playerRow: #831064;
+
 @8310647: #831064;
 @7037048: spin(@8310647, 30);
 @7666141: spin(@8310647, 60);
@@ -83,12 +85,34 @@ article.cItems {
 	.weapon-hardlight();
 }
 
-.border-8310647 {border-left: 0.5em solid @8310647+#999;}
-.border-7037048 {border-left: 0.5em solid @7037048+#999;}
-.border-7666141 {border-left: 0.5em solid @7666141+#999;}
-.border-3892477 {border-left: 0.5em solid @3892477+#999;}
+// md-card-content .player-row {background: @playerRow+#999}
+// md-card-content:nth-of-type(2) .player-row {background: spin(@playerRow+#999, 90)}
+// md-card-content:nth-of-type(3) .player-row {background: spin(@playerRow+#999, 180)}
+// md-card-content:nth-of-type(4) .player-row {background: spin(@playerRow+#999, 270)}
 
-.bg-8310647 {background: @8310647+#ccc;}
-.bg-7037048 {background: @7037048+#ccc;}
-.bg-7666141 {background: @7666141+#ccc;}
-.bg-3892477 {background: @3892477+#ccc;}
+.row-8310647 {
+	border-left: 0.5em solid spin(@playerRow+#666, 0);
+	// background: @playerRow+#aaa;
+}
+.row-7037048 {
+	border-left: 0.5em solid spin(@playerRow+#666, 90);
+	// background: spin(@playerRow+#aaa, 90);
+}
+.row-7666141 {
+	border-left: 0.5em solid spin(@playerRow+#666, 180);
+	// background: spin(@playerRow+#aaa, 180);
+}
+.row-3892477 {
+	border-left: 0.5em solid spin(@playerRow+#666, 270);
+	// background: spin(@playerRow+#aaa, 270);
+}
+
+// .border-8310647 {border-left: 0.5em solid @8310647+#999;}
+// .border-7037048 {border-left: 0.5em solid @7037048+#999;}
+// .border-7666141 {border-left: 0.5em solid @7666141+#999;}
+// .border-3892477 {border-left: 0.5em solid @3892477+#999;}
+
+// .bg-8310647 {background: @8310647+#ccc;}
+// .bg-7037048 {background: @7037048+#ccc;}
+// .bg-7666141 {background: @7666141+#ccc;}
+// .bg-3892477 {background: @3892477+#ccc;}

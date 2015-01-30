@@ -6,19 +6,17 @@
 		</md-button> -->
 	</md-toolbar>
 	<md-content class="md-padding" layout="column">
-	<!-- <dl><dt>menuItems</dt><dd>{{menuItems}}</dd></dl> -->
 		<!-- <md-list layout="column"> -->
-		<md-item ng-repeat="item in menuItems | filter : item.show : true | orderBy : item.order : false">
+		<md-item ng-repeat="item in menuItems | orderBy : orderNav : reverseNav">
 			<md-button aria-label="{{item.name}}" class="md-primary" ng-click="toggleLeft()" href="#/{{item.path}}">
 				<span class="{{item.icon}}"></span>
-			<!-- </md-button> -->
-			<!-- <md-button aria-label="{{item.name}}" class="md-primary" ng-click="toggleLeft()" href="#/{{item.path}}"> -->
-				{{item.name}} (#{{item.order}}, {{item.show}})
+				{{item.name}}
 			</md-button>
+			{{item.order}}, {{item.show}}
 		</md-item>
 			<!-- <md-item ng-repeat="item in menuItems | filter:menuItems.show">
 				<p class="" ng-click="toggleLeft()" href="#/{{item.path}}"><span class="icon icon-{{item.icon}}"></span>{{item.name}}</p>
 			</md-item> -->
-		</md-list>
+		<!-- </md-list> -->
 	</md-content>
 </md-sidenav>

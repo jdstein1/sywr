@@ -56,6 +56,9 @@
 				sortingOptions:'=',
 				sortClass:'@'
 			},
+			controller: function ($scope) {
+				console.log('$scope: ', $scope);
+			},
 			// template: '<table class="sorting" ng-model="sortClass"></table>'
 			templateUrl: 'tmpl/t-sorting.html'
 		};
