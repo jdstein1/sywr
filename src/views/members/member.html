@@ -1,4 +1,4 @@
-<article>
+<article class="{{ctitle}} bg-destiny">
 <md-content class="md-padding">
 	<h1>Member: {{member}}</h1>
 	<h3>{{details.clanName}} ({{details.clanTag}})</h3>
@@ -51,15 +51,56 @@
 			<tr>
 				<th>Character Base</th>
 				<td>
+<script type="text/ng-template" id="repeater.html">
+<ng-switch on="key">
+	<ul ng-switch-when="stats">{{key}}
+		<li ng-repeat="(key,value) in character.characterBase.stats">
+			<ul>{{key}}
+				<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
+			</ul>
+		</li>
+	</ul>
+	<ul ng-switch-when="peerView">{{key}}
+		<li ng-repeat="(key,value) in character.characterBase.peerView">
+			<ul>child: {{key}}
+				<li ng-repeat="(key,value) in value">
+					<ul>grand-child: {{key}}:
+						<li ng-repeat="(key,value) in value" ng-include="'repeater.html'">
+					<ul>great-grand-child: {{key}}:
+						<li ng-repeat="(key,value) in value" ng-include="'repeater.html'">
+					<ul>great-great-grand-child: {{key}}: <b>{{value}}</b>
+						<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
+					</ul>
+						</li>
+					</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<ul ng-switch-when="customization">{{key}}
+		<li ng-repeat="(key,value) in character.characterBase.customization" ng-include="'repeater.html'">{{key}}: <b>{{value}}</b></li>
+	</ul>
+	<ul ng-switch-default>
+		<li>{{key}}: <b>{{value}}</b></li>
+	</ul>
+<ng-switch>
+</script>
 					<ul>
-						<li ng-repeat="(key, value) in character.characterBase">{{key}}:  <b>{{value}}</b>
-							<ul>
+						<li ng-repeat="(key,value) in character.characterBase" ng-include="'repeater.html'">
+							<!-- <ul>
 								<li ng-repeat="(key, value) in value"><i>child:</i> {{key}}:  <b>{{value}}</b>
-								<!-- <li ng-repeat="customiztion in (value)"><i>child:</i> customiztion:  <b>{{customiztion}}</b> -->
-								<!-- <li ng-repeat="peerView in (value)"><i>child:</i> peerView:  <b>{{peerView}}</b> -->
-								<!-- <li ng-repeat="stats in (value)"><i>child:</i> stats:  <b>{{stats}}</b> -->
+							<ul>
+								<li ng-repeat="(key, value) in value"><i>grandchild:</i> {{key}}:  <b>{{value}}</b>
+							<ul>
+								<li ng-repeat="(key, value) in value"><i>great-grandchild:</i> {{key}}:  <b>{{value}}</b>
 								</li>
 							</ul>
+								</li>
+							</ul>
+								</li>
+							</ul> -->
 						</li>
 					</ul>
 				</td>

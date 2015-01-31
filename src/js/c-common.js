@@ -21,6 +21,15 @@
 	}
 	// console.log('test cMain:', angular.module('app').controller('cMain'));
 
+	app.controller('cTitle', cTitle)
+	function cTitle($scope, constMeta) {
+		$scope.ctitle = 'cTitle';
+		$scope.title = constMeta.dot;
+		console.log('START', $scope.ctitle);
+
+	}
+	// console.log('test cTitle:', angular.module('app').controller('cTitle'));
+
 	app.controller('cFeedback', cFeedback)
 	function cFeedback($scope) {
 		$scope.ctitle = 'cFeedback';

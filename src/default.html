@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-<head>
+<head ng-controller="cTitle">
 
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>{{apptitle}}</title>
+	<title>{{title}}</title>
 
 	<!-- CDN:  Angular Material CSS -->
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.min.css">
@@ -24,7 +24,7 @@
 </head>
 <body ng-controller="cMain">
 
-	<header ng-include="'includes/header.html'"></header>
+	<header ng-include="'includes/header.html'" ng-controller="cTitle"></header>
 	<nav ng-include="'includes/nav-menu.html'" ng-controller="cMenu"></nav>
 	<nav ng-include="'includes/nav-tray.html'" ng-controller="cMenu"></nav>
 	<section ng-view><p class="helper">Main content goes here</p></section>

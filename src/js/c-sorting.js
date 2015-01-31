@@ -4,9 +4,9 @@
 
 	app.controller('cSorting', cSorting)
 	function cSorting($scope, $http, $route, $location) {
-		$scope.ctitle = 'cSorting';
-		$scope.title = 'Sorting';
-		console.log('START', $scope.ctitle);
+		// $scope.ctitle = 'cSorting';
+		// $scope.title = 'Sorting';
+		// console.log('START', $scope.ctitle);
 
 		$scope.sortOptions = [
 			{
@@ -16,16 +16,14 @@
 				'def':true,
 				'asc':false,
 				'des':false
-			},
-			{
+			},{
 				'type':'handle',
 				'tag':'handle',
 				'class':'',
 				'def':true,
 				'asc':false,
 				'des':false
-			},
-			{
+			},{
 				'type':'id',
 				'tag':'account id',
 				'class':'',
@@ -83,29 +81,31 @@
 			$scope.sortOptions[i].asc = !$scope.sortOptions[i].asc;
 		};
 
+		$scope.sortCleared = true;
 		$scope.sortClear = function () {
-			console.log('sortClear');
-			$scope.sortOrderChoice = "";
-			$scope.sortReverse = false;
+			console.log('sortClear: ', $scope.sortCleared);
 			for (var i = 0; i < $scope.sortOptions.length; i++) {
-				console.log('$scope.sortOptions[i]: ', $scope.sortOptions[i]);
+				// console.log('$scope.sortOptions[i]: ', $scope.sortOptions[i]);
 				$scope.sortOptions[i].asc = false;
 				$scope.sortOptions[i].des = false;					
 				$scope.sortOptions[i].def = true;					
 			};
+			$scope.sortOrderChoice = '';
+			$scope.sortReverse = false;
+			$scope.sortCleared = true;
 		};
 
 		$scope.sortOrderToggle2 = function (type, i) {
 			console.log('sortOrderToggle2:', type);
 			if ($scope.sortOptions[i].asc === $scope.sortOptions[i].des) {
-				console.log('sortOrderToggle2:', type +'; both off or on.  sort in ascending.');
+				console.log('sortOrderToggle2:', type +'; both off or both on.  sort in ascending.');
 				$scope.sortOrderChoice = type;
 				$scope.sortOptions[i].asc = !$scope.sortOptions[i].asc;
 				$scope.sortOptions[i].def = false;
 			} else {
 				console.log('sortOrderToggle2:', type +'; flip asc & des.');
-				console.log('$scope.sortOptions[i].asc: ', $scope.sortOptions[i].asc);
-				console.log('$scope.sortOptions[i].des: ', $scope.sortOptions[i].des);
+				// console.log('$scope.sortOptions[i].asc: ', $scope.sortOptions[i].asc);
+				// console.log('$scope.sortOptions[i].des: ', $scope.sortOptions[i].des);
 				$scope.sortOrderChoice = type;
 				$scope.sortOptions[i].asc = !$scope.sortOptions[i].asc;
 				$scope.sortOptions[i].des = !$scope.sortOptions[i].des;
@@ -118,7 +118,7 @@
 				// } else {
 				// 	$scope.sortOptions[i].class = "def";						
 				// }
-			}
+			};
 			$scope.sortReverse=!$scope.sortReverse;
 			// console.log('$scope.sortOptions[i].class: ', $scope.sortOptions[i].class);
 		};

@@ -27,10 +27,10 @@ section,
 aside {
   float: left;
 }
-ul dt,
-ol dt,
-dl dt {
-  float: left;
+ul dd,
+ol dd,
+dl dd {
+  text-indent: 1em;
 }
 article ul,
 article ol,

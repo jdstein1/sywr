@@ -1,19 +1,15 @@
-<article class="{{ctitle}}">
+<article class="{{ctitle}} bg-destiny">
 <md-content class="md-padding">
 	<md-card>
 		<!-- <img src="img/destiny/destiny-banners-classes.png" alt="Destiny Classes" width="100%"> -->
 		<md-card-content>
-
-			<h1>{{title}}</h1>
-
-			<h2>Welcome!</h2>
 			<dl>
 				<dt>{{constMeta.title}}</dt>
-				<dd>{{constMeta.description}}</dd>
-				<dt>{{constMeta.crew}}</dt>
-				<dd>{{constMeta.since}}</dd>
+				<dd>{{constMeta.description}}, since {{constMeta.since}}
+				</dd>
+				<dt>Created by</dt>
+				<dd>{{constMeta.crew}}</dd>
 			</dl>
-
 		</md-card-content>
 	</md-card>
 	<md-card>

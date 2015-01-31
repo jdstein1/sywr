@@ -3,13 +3,17 @@
 	'use strict';
 
 	app.controller('cMembers', cMembers)
-	function cMembers($scope, $http, $route, $location, constProtocol, constBungieUrl, sMembers) {
+	function cMembers($scope, $http, $route, $location, constProtocol, constBungieUrl, sMembers, sNavMenu) {
+		$scope.meta = sNavMenu[1];
 		$scope.ctitle = 'cMembers';
-		$scope.title = 'Players';
+		$scope.title = $scope.meta.name;
 		console.log('START', $scope.ctitle);
 
-		console.log('constProtocol', constProtocol);
-		console.log('constBungieUrl', constBungieUrl);
+
+		console.log('$scope.meta.icon', $scope.meta.icon);
+
+		// console.log('constProtocol', constProtocol);
+		// console.log('constBungieUrl', constBungieUrl);
 
 		// var myEmblemUrl = constProtocol[0] + '://' + constBungieUrl.domain +'/'+ constBungieUrl.lang +'/'+ constBungieUrl.profile + '/' + $scope.itemHash;
 		// console.log('myEmblemUrl: ', myEmblemUrl);

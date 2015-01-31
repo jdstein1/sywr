@@ -19,7 +19,12 @@ Angular Material dependencies:
 		'ngMaterial', 'ngRoute', 'ngMessages'
 	]);
 	app.constant('constMeta', {
+		"abbr":"SYWR",
 		"title":"Strike Your Way Raiders",
+		"camel":"strikeYourWayRaiders",
+		"underscore":"strike_your_way_raiders",
+		"hyphen":"strike-your-way-raiders",
+		"dot":"strike.your.way.raiders",
 		"description":"a way for friends to enjoy video games while not playing them",
 		"crew":"Social Degenerate Nerds",
 		"since":2014,
