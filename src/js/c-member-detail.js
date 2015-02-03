@@ -5,7 +5,7 @@
 	app.controller('cMemberDetail', cMemberDetail)
 	function cMemberDetail($scope, $http, $route, $location, constProtocol, constBungieUrl, sMembers, sMemberDetail) {
 		$scope.ctitle = 'cMemberDetail';
-		$scope.title = 'Member:';
+		$scope.title = 'Player';
 		console.log('START', $scope.ctitle);
 
   		// console.log('$route.current.params',$route.current.params );
@@ -16,12 +16,13 @@
 		$http.get('data/'+$scope.member+'.php')
 			.success(function (data) {
 			console.log('sMemberDetail.getMember -- success');
+			console.log('data: ', data);
 			$scope.details = data.Response.data;
-			console.log('$scope.details: ', $scope.details);
+			// console.log('$scope.details: ', $scope.details);
 		}).error(function () {
 			console.log('sMemberDetail.getMember -- error');
 			$scope.details = 'no data';
-			console.log('$scope.details: ', $scope.details);
+			// console.log('$scope.details: ', $scope.details);
 		});
 
 		$scope.getImgPath = function (type,id) {
@@ -42,7 +43,7 @@
 		};
 
 		$scope.getCharImgPath = function (file) {
-			console.log('START getCharBackgroundPath');
+			// console.log('START getCharBackgroundPath');
 			// var backgroundPath = $scope.details.characters[i].backgroundPath;
 			// Response.data.characters[i].backgroundPath
 			// http://www.bungie.net/common/destiny_content/icons/b491d0f19048e1bb9fa4dbd70c2b4346.jpg

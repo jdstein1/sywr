@@ -71,14 +71,6 @@ article {
 			padding:0 0;
 			margin:0 0;
 			span {}
-			span.label {
-				color:rgba(0,0,0,0.5); padding-right:0.5em; font-size:0.875em;
-				width: 4em;
-				height: 1em;
-				line-height: 1em;
-				text-align: right;
-				float: left;
-			}
 		}
 	}
 	ul {list-style-type: disc;
@@ -106,6 +98,24 @@ nav {
 			background: yellow;
 			ul {display: block;}
 		}
+	}
+}
+
+table, tr, th, td {
+	border-collapse: separate;
+	// border: 1px solid grey;
+}
+
+table {
+	h1, h2, h3, h4, h5, h6 {margin:0 !important;}
+	tbody, thead, tfoot {}
+	tr {
+		th, td {
+			vertical-align: top; overflow: hidden;
+			.label {display: none;}
+		}
+		th {text-align: right;}
+		td {}
 	}
 }
 
@@ -153,3 +163,17 @@ nav {
 		&:after {}
 	}
 }
+.label {
+	color:rgba(0,0,0,0.75);
+	padding-right:0.5em;
+	// font-size:0.875em;
+	width: 8em;
+	height: 1em;
+	line-height: 1em;
+	text-align: right;
+	float: left;
+	&:after {content: ":";}
+}
+.strong, .strong:before, .strong:after {font-weight: 700 !important;}
+.small, .small:before, .small:after {font-size:0.875em !important; line-height: 1 !important; height:1em !important;}
+.normal, .normal:before, .normal:after {font-size:1em !important; line-height: 1 !important; height:1em !important;}

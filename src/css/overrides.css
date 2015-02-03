@@ -1,6 +1,6 @@
 	/* custom styles */
 	body {font-weight: 300;text-align: left;}
-	th, td {vertical-align: top; text-align: left;}
+	th, td {}
 	th, dt {font-weight: 700;}
 	td, dd {font-weight: 300;}
 	dl, dt, dd {width: auto; margin: 0;}

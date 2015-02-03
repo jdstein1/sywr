@@ -51,24 +51,6 @@ article dl dd {
   padding: 0 0;
   margin: 0 0;
 }
-article ul li span.label,
-article ol li span.label,
-article dl li span.label,
-article ul dt span.label,
-article ol dt span.label,
-article dl dt span.label,
-article ul dd span.label,
-article ol dd span.label,
-article dl dd span.label {
-  color: rgba(0, 0, 0, 0.5);
-  padding-right: 0.5em;
-  font-size: 0.875em;
-  width: 4em;
-  height: 1em;
-  line-height: 1em;
-  text-align: right;
-  float: left;
-}
 article ul {
   list-style-type: disc;
 }
@@ -115,6 +97,32 @@ nav ul li:hover {
 nav ul li:hover ul {
   display: block;
 }
+table,
+tr,
+th,
+td {
+  border-collapse: separate;
+}
+table h1,
+table h2,
+table h3,
+table h4,
+table h5,
+table h6 {
+  margin: 0 !important;
+}
+table tr th,
+table tr td {
+  vertical-align: top;
+  overflow: hidden;
+}
+table tr th .label,
+table tr td .label {
+  display: none;
+}
+table tr th {
+  text-align: right;
+}
 .helper {
   font-size: 0.875em;
   color: rgba(0, 0, 0, 0.5);
@@ -145,4 +153,35 @@ nav ul li:hover ul {
 .link.json {
   background: rgba(0, 255, 127, 0.125);
   border: 1px solid rgba(0, 255, 127, 0.5);
+}
+.label {
+  color: rgba(0, 0, 0, 0.75);
+  padding-right: 0.5em;
+  width: 8em;
+  height: 1em;
+  line-height: 1em;
+  text-align: right;
+  float: left;
+}
+.label:after {
+  content: ":";
+}
+.strong,
+.strong:before,
+.strong:after {
+  font-weight: 700 !important;
+}
+.small,
+.small:before,
+.small:after {
+  font-size: 0.875em !important;
+  line-height: 1 !important;
+  height: 1em !important;
+}
+.normal,
+.normal:before,
+.normal:after {
+  font-size: 1em !important;
+  line-height: 1 !important;
+  height: 1em !important;
 }

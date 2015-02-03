@@ -1,0 +1,71 @@
+<ng-switch on="key">
+	<tr ng-switch-when="stats">
+			<!-- <th>stats--{{key}}:</th> -->
+			<th>{{character.characterBase.stats}}</th>
+			<td ng-repeat="(key,value) in character.characterBase.stats">
+			<table>
+				<tr>
+					<td>{{key}}: {{value}}
+			<table>
+				<tr ng-repeat="(key,value) in value">
+					<th>{{key}}:</th>
+					<td>{{value}}</td>
+				</tr>
+			</table>
+					</td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+	<tr ng-switch-when="peerView">
+			<!-- <th>peerView--{{key}}:</th> -->
+			<th>{{character.characterBase.peerView}}</th>
+			<td ng-repeat="(key,value) in character.characterBase.peerView">
+			<table>
+				<tr>
+					<th>child: {{key}}:</th>
+					<td ng-repeat="(key,value) in value">
+						<table>
+							<tr>
+								<th>grand-child: {{key}}:</th>
+								<td ng-repeat="(key,value) in value">
+								<ng-switch on="key">
+									<table ng-switch-when="dyes">
+										<tr>
+											<th>dyes--<br>great-grand-child: {{key}}:</th>
+											<td ng-repeat="(key,value) in value">
+												<table>
+													<tr>
+														<th>great-great-grand-child: {{key}}:</th>
+														<td ng-repeat="(key,value) in value" ng-include="'includes/repeater-table.html'"></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+									</table>
+									<table ng-switch-default>
+										<tr>
+											<th>great-grand-child: {{key}}:</th>
+											<td>{{value}}</td>
+										</tr>
+										<tr ng-repeat="(key,value) in value" ng-include="'includes/repeater-table.html'"></tr>
+									</table>
+								</ng-switch>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</td>
+	</tr>
+	<tr ng-switch-when="customization">
+			<!-- <th>customization--{{key}}:</th> -->
+			<th>{{character.characterBase.customization}}</th>
+			<td ng-repeat="(key,value) in character.characterBase.customization" ng-include="'includes/repeater-table.html'"></td>
+	</tr>
+	<tr ng-switch-default>
+			<th>default--{{key}}:</th>
+			<td>{{value}}</td>
+	</tr>
+<ng-switch>

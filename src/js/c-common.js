@@ -24,7 +24,7 @@
 	app.controller('cTitle', cTitle)
 	function cTitle($scope, constMeta) {
 		$scope.ctitle = 'cTitle';
-		$scope.title = constMeta.dot;
+		$scope.title = constMeta.title.dot;
 		console.log('START', $scope.ctitle);
 
 	}

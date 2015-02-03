@@ -7,6 +7,39 @@
 /* elemental colors */
 /* character classes */
 /* character races */
+.emblemBox {
+  color: white !important;
+}
+.emblemBox img,
+.emblemBox ul,
+.emblemBox ol,
+.emblemBox dl {
+  float: left;
+}
+.emblemBox hr {
+  border: none;
+  height: 0;
+}
+.emblemBox .emblem {
+  border: 1px solid white;
+  padding: 0;
+  margin: 4px;
+}
+.progessBox {
+  height: 1em;
+}
+.progessBox .progressBar {
+  height: 1em;
+}
+.progessBox .progressBar .progressIndicator {
+  height: 1em;
+}
+.prestige .flaticon {
+  float: left !important;
+}
+.grimoire .flaticon {
+  float: right !important;
+}
 /* rarity colors */
 .basic {
   background: lightgrey;

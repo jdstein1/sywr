@@ -10,20 +10,20 @@
 		<md-card-content>
 			<div ng-controller="cClan" layout="row" layout-sm="column" layout-align="center center">
 				<h3 flex>{{metadata.title}}</h3>
-				<div layout="row">
-				<dl>
-					<dt>platform</dt>
-					<dd>{{metadata.console}}</dd>
-				</dl>
-				<dl>
-					<dt>ID</dt>
-					<dd>{{metadata.id}}</dd>
-				</dl>
-				<dl>
-					<dt>link</dt>
-					<dd><a href="{{myClanUrl}}" target="_blank">{{metadata.abbr}}</a></dd>
-				</dl>
-				</div>
+				<ul layout="row">
+					<li>
+						<span class="label">platform</span>
+						<span>{{metadata.console}}</span>
+					</li>
+					<li>
+						<span class="label">ID</span>
+						<span>{{metadata.id}}</span>
+					</li>
+					<li>
+						<span class="label">link</span>
+						<span><a href="{{myClanUrl}}" target="_blank">{{metadata.abbr}}</a></span>
+					</li>
+				</ul>
 			</div>
 		</md-card-content>
 	</md-card>
