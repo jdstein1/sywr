@@ -18,13 +18,15 @@ Angular Material dependencies:
 	var app = angular.module('app', [ 
 		'ngMaterial', 'ngRoute', 'ngMessages'
 	]);
-	app.constant('constMeta', {
+	app.constant('constClan', {
 		"abbr":"SYWR",
-		"title":{"plain":"Strike Your Way Raiders",
-				"camel":"strikeYourWayRaiders",
-				"underscore":"strike_your_way_raiders",
-				"hyphen":"strike-your-way-raiders",
-				"dot":"strike.your.way.raiders"},
+		"title":{
+			"plain":"Strike Your Way Raiders",
+			"camel":"strikeYourWayRaiders",
+			"underscore":"strike_your_way_raiders",
+			"hyphen":"strike-your-way-raiders",
+			"dot":"strike.your.way.raiders"
+		},
 		"description":"a way for friends to enjoy video games while not playing them",
 		"crew":"Social Degenerate Nerds",
 		"since":2014,
@@ -33,19 +35,19 @@ Angular Material dependencies:
 	});
 	app.constant('constProtocol', ['http', 'https']);
 	app.constant('constFileTypes', ['jpg', 'png', 'gif']);
-	// URLs that need to be covered:
-	// URL - Clan:              http://www.bungie.net/en/Clan/Xbox/519979
-	// URL - Member Profile:    http://www.bungie.net/en/Profile/254/3892477
-	// API - Item Hash:         http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170
-	// API - Clan:              http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1
-	// API - Clan:              http://www.bungie.net/Platform/Group/519979/Members/?lc=en&fmt=true&lcin=true&currentPage=1
-	// API - Member Profile:    http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true
-	// Activity History APIs:
-	// API - Story:             http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true
-	// API - Strike:            http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true
-	// API - Raid:              http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true
-	// API - Crucible & Medals: http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true
-	// API - Patrol:            http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true
+// URLs that need to be covered by the constBungieUrl object:
+// * URL - Clan
+//     * http://www.bungie.net/en/Clan/Xbox/519979
+// * URL - Member Profile
+//     * http://www.bungie.net/en/Profile/254/3892477
+// * API - Item Hash
+//     * http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170
+// * API - Clan
+//     * http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1
+// * API - Clan
+//     * http://www.bungie.net/Platform/Group/519979/Members/?lc=en&fmt=true&lcin=true&currentPage=1
+// * API - Member Profile
+//     * http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true
 	app.constant('constBungieUrl', {
 		"protocol": ['http', 'https'],
 		"domain":"www.bungie.net",
@@ -64,13 +66,15 @@ Angular Material dependencies:
 	// ]);
 	app.config(['$routeProvider', function ($routeProvider) {
 			$routeProvider.
+				// Home page
 				when('/', {templateUrl: 'views/home.html', controller: 'cHome'}).
+				// Directive & UI Framework test page
 				when('/test', {templateUrl: 'views/test.html', controller: 'cTest'}).
 				when('/blog', {templateUrl: 'views/blog.html', controller: 'cBlog'}).
 				when('/about', {templateUrl: 'views/about.html', controller: 'cAbout'}).
 				when('/feedback', {templateUrl: 'views/feedback.html', controller: 'cFeedback'}).
-				when('/members', {templateUrl: 'views/members.html', controller: 'cMembers'}).
-				when('/members/:member', {templateUrl: 'views/members/member.html', controller: 'cMemberDetail'}).
+				when('/players', {templateUrl: 'views/players.html', controller: 'cMembers'}).
+				when('/players/:member', {templateUrl: 'views/players/player.html', controller: 'cMemberDetail'}).
 				when('/games', {templateUrl: 'views/games.html', controller: 'cGames'}).
 				when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGameDetail'}).
 				when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).

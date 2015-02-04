@@ -11,6 +11,17 @@
 	}
 	// console.log('test sDataDestiny:', angular.module('app').service('sDataDestiny'));
 
+	app.service('sDataClan', sDataClan)
+	function sDataClan() {
+		var stitle = 'sDataClan';
+		console.log('START', stitle);
+
+		var DataDestiny = ['test1', 'test2', 'test3']
+
+		return DataDestiny;
+	}
+	// console.log('test sDataClan:', angular.module('app').service('sDataClan'));
+
 	app.service('sHeaderMenu', sHeaderMenu)
 	function sHeaderMenu() {
 		var stitle = 'sHeaderMenu';
@@ -62,7 +73,7 @@
 			"order":2,
 			"show":true,
 			"icon":"flaticon-users25",
-			"path":"members",
+			"path":"players",
 			"action":"menu"
 		},{
 			"name":"Games",
