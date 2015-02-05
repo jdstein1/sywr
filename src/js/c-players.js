@@ -2,10 +2,10 @@
 (function() {
 	'use strict';
 
-	app.controller('cMembers', cMembers)
-	function cMembers($scope, $http, $route, $location, constProtocol, constBungieUrl, sMembers, sNavMenu) {
+	app.controller('cPlayers', cPlayers)
+	function cPlayers($scope, $http, $route, $location, constProtocol, constBungieUrl, sMembers, sNavMenu) {
 		$scope.meta = sNavMenu[1];
-		$scope.ctitle = 'cMembers';
+		$scope.ctitle = 'cPlayers';
 		$scope.title = $scope.meta.name;
 		console.log('START', $scope.ctitle);
 
@@ -42,6 +42,6 @@
 		};
 
 	}
-	// console.log('test cMembers:', angular.module('app').controller('cMembers'));
+	// console.log('test cPlayers:', angular.module('app').controller('cPlayers'));
 
 })();

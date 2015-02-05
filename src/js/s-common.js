@@ -2,26 +2,6 @@
 (function() {
 	'use strict';
 
-	app.service('sDataDestiny', sDataDestiny)
-	function sDataDestiny() {
-		var stitle = 'sDataDestiny';
-		console.log('START', stitle);
-		var DataDestiny = ['test1', 'test2', 'test3']
-		return DataDestiny;
-	}
-	// console.log('test sDataDestiny:', angular.module('app').service('sDataDestiny'));
-
-	app.service('sDataClan', sDataClan)
-	function sDataClan() {
-		var stitle = 'sDataClan';
-		console.log('START', stitle);
-
-		var DataDestiny = ['test1', 'test2', 'test3']
-
-		return DataDestiny;
-	}
-	// console.log('test sDataClan:', angular.module('app').service('sDataClan'));
-
 	app.service('sHeaderMenu', sHeaderMenu)
 	function sHeaderMenu() {
 		var stitle = 'sHeaderMenu';
@@ -70,44 +50,81 @@
 			"action":"menu"
 		},{
 			"name":"Players",
-			"order":2,
+			"order":6,
 			"show":true,
 			"icon":"flaticon-users25",
 			"path":"players",
-			"action":"menu"
+			"action":"menu",
+			"submenu":[
+				{"name":"Submenu"}
+			]
 		},{
 			"name":"Games",
-			"order":5,
+			"order":7,
 			"show":true,
 			"icon":"flaticon-gamepad3",
 			"path":"games",
-			"action":"menu"
+			"action":"menu",
+			"submenu":[
+				{"name":"Destiny"}
+			]
 		},{
 			"name":"Compare",
-			"order":3,
+			"order":8,
 			"show":true,
 			"icon":"flaticon-swap3",
 			"path":"compare",
 			"action":"menu"
 		},{
 			"name":"Environments",
-			"order":4,
+			"order":9,
 			"show":false,
 			"icon":"flaticon-compass106",
 			"path":"items",
 			"action":"menu",
-			"tags":["maps","locations","environments"]
+			"tags":["maps","locations","environments"],
+			"submenu":[{
+				"name":"Destiny",
+				"submenu":[
+					{"name":"Earth"},
+					{"name":"Moon"},
+					{"name":"Venus"},
+					{"name":"Mars"},
+					{"name":"Reef"}
+				]}
+			]
 		},{
 			"name":"Items",
-			"order":6,
+			"order":10,
 			"show":false,
 			"icon":"flaticon-list88",
 			"path":"items",
 			"action":"menu",
 			"tags":["items","gear","weapons","armor","consumables"]
 		},{
+			"name":"About",
+			"order":2,
+			"show":true,
+			"icon":"flaticon-users25",
+			"path":"about",
+			"action":"menu"
+		},{
+			"name":"Blog",
+			"order":3,
+			"show":true,
+			"icon":"flaticon-users25",
+			"path":"blog",
+			"action":"menu"
+		},{
+			"name":"Clan",
+			"order":4,
+			"show":true,
+			"icon":"flaticon-users25",
+			"path":"clan",
+			"action":"menu"
+		},{
 			"name":"Feedback",
-			"order":7,
+			"order":5,
 			"show":true,
 			"icon":"flaticon-chat75",
 			"path":"feedback",

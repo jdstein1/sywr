@@ -3,10 +3,15 @@
 	'use strict';
 
 	app.controller('cMain', cMain)
-	function cMain($scope, $log, $timeout, $mdSidenav, constClan, constBungieUrl, constFileTypes, sHeaderMenu, sHeaderSettings) {
+	function cMain($scope, $log, $timeout, $mdSidenav, constClan, constProtocol, constFileTypes, constBungieUrl, sHeaderMenu, sHeaderSettings) {
 		$scope.ctitle = 'cMain';
 		$scope.title = 'Main App';
 		console.log('START', $scope.ctitle);
+
+		$scope.constClan = constClan;
+		$scope.constProtocol = constProtocol;
+		$scope.constFileTypes = constFileTypes;
+		$scope.constBungieUrl = constBungieUrl;
 
 		$scope.menuHeader = sHeaderMenu;
 		$scope.settingsHeader = sHeaderSettings;
@@ -18,37 +23,24 @@
 			$mdSidenav('right').toggle()
 		};
 
-	}
-	// console.log('test cMain:', angular.module('app').controller('cMain'));
-
-	app.controller('cTitle', cTitle)
-	function cTitle($scope, constClan) {
-		$scope.ctitle = 'cTitle';
-		$scope.title = constClan.title.dot;
-		console.log('START', $scope.ctitle);
+		$scope.title = constClan.title.camel;
 
 	}
 	// console.log('test cTitle:', angular.module('app').controller('cTitle'));
 
 	app.controller('cAbout', cAbout)
-	function cAbout($scope, sDataDestiny) {
+	function cAbout($scope) {
 		$scope.ctitle = 'cAbout';
 		$scope.title = 'About';
 		console.log('START', $scope.ctitle);
-
-		$scope.DataDestiny = sDataDestiny;
-		console.log('$scope.DataDestiny', $scope.DataDestiny);
 	}
 	// console.log('test cAbout:', angular.module('app').controller('cAbout'));
 
 	app.controller('cBlog', cBlog)
-	function cBlog($scope, sDataDestiny) {
+	function cBlog($scope) {
 		$scope.ctitle = 'cBlog';
 		$scope.title = 'Blog';
 		console.log('START', $scope.ctitle);
-
-		$scope.DataDestiny = sDataDestiny;
-		console.log('$scope.DataDestiny', $scope.DataDestiny);
 	}
 	// console.log('test cBlog:', angular.module('app').controller('cBlog'));
 
@@ -57,8 +49,6 @@
 		$scope.ctitle = 'cClan';
 		$scope.title = 'Clan';
 		console.log('START', $scope.ctitle);
-
-		$scope.metadata = constClan;
 
 		$scope.myClanId = "519979";
 		$scope.myClanUrl = constProtocol[0] + '://' + constBungieUrl.domain + '/' + constBungieUrl.lang + '/' + constBungieUrl.clan + '/' + constBungieUrl.console + '/' + $scope.myClanId;
@@ -148,7 +138,7 @@
 	// console.log('test cMenu:', angular.module('app').controller('cMenu'));
 
 	app.controller('cHome', cHome)
-	function cHome($scope, sDataDestiny, constClan) {
+	function cHome($scope, constClan) {
 		$scope.ctitle = 'cHome';
 		$scope.title = 'Home';
 		console.log('START', $scope.ctitle);
@@ -158,9 +148,6 @@
 		$scope.options = [
 			"name","id","date"
 		];
-
-		$scope.DataDestiny = sDataDestiny;
-		console.log('$scope.DataDestiny', $scope.DataDestiny);
 	}
 	// console.log('test cHome:', angular.module('app').controller('cHome'));
 

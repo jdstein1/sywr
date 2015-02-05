@@ -10,9 +10,8 @@
 		<md-item ng-repeat="item in menuItems | orderBy : orderNav : reverseNav">
 			<md-button aria-label="{{item.name}}" class="md-primary" ng-click="toggleLeft()" href="#/{{item.path}}">
 				<span class="{{item.icon}}"></span>
-				{{item.name}}
+				{{item.name}}/{{item.show}}
 			</md-button>
-			{{item.order}}, {{item.show}}
 		</md-item>
 			<!-- <md-item ng-repeat="item in menuItems | filter:menuItems.show">
 				<p class="" ng-click="toggleLeft()" href="#/{{item.path}}"><span class="icon icon-{{item.icon}}"></span>{{item.name}}</p>

@@ -65,24 +65,24 @@ Angular Material dependencies:
 	// 	}
 	// ]);
 	app.config(['$routeProvider', function ($routeProvider) {
-			$routeProvider.
-				// Home page
-				when('/', {templateUrl: 'views/home.html', controller: 'cHome'}).
-				// Directive & UI Framework test page
-				when('/test', {templateUrl: 'views/test.html', controller: 'cTest'}).
-				when('/blog', {templateUrl: 'views/blog.html', controller: 'cBlog'}).
-				when('/about', {templateUrl: 'views/about.html', controller: 'cAbout'}).
-				when('/feedback', {templateUrl: 'views/feedback.html', controller: 'cFeedback'}).
-				when('/players', {templateUrl: 'views/players.html', controller: 'cMembers'}).
-				when('/players/:member', {templateUrl: 'views/players/player.html', controller: 'cMemberDetail'}).
-				when('/games', {templateUrl: 'views/games.html', controller: 'cGames'}).
-				when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGameDetail'}).
-				when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).
-				when('/items/:item', {templateUrl: 'views/items/item.html', controller: 'cItemDetail'}).
-				when('/compare', {templateUrl: 'views/compare.html', controller: 'cMembers'}).
-				// when('/compare/:type', {templateUrl: 'views/compare/type.html', controller: 'cCompareDetail'}).
-				when('/compare/quick', {templateUrl: 'views/compare/quick.html', controller: 'cMemberDetail'}).
-				otherwise({redirectTo: '/'});
+		$routeProvider.
+			when('/', {templateUrl: 'views/home.html', controller: 'cHome'}).
+			when('/about', {templateUrl: 'views/about.html', controller: 'cAbout'}).
+			when('/blog', {templateUrl: 'views/blog.html', controller: 'cBlog'}).
+			when('/clan', {templateUrl: 'views/clan.html', controller: 'cClan'}).
+			when('/compare', {templateUrl: 'views/compare.html', controller: 'cPlayers'}).
+			when('/compare/quick', {templateUrl: 'views/compare/quick.html', controller: 'cPlayerDetail'}).
+			// when('/compare/:type', {templateUrl: 'views/compare/type.html', controller: 'cCompareDetail'}).
+			when('/environment', {templateUrl: 'views/environment.html', controller: 'cEnvironment'}).
+			when('/feedback', {templateUrl: 'views/feedback.html', controller: 'cFeedback'}).
+			when('/games', {templateUrl: 'views/games.html', controller: 'cGames'}).
+			when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGameDetail'}).
+			when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).
+			when('/items/:item', {templateUrl: 'views/items/item.html', controller: 'cItemDetail'}).
+			when('/players', {templateUrl: 'views/players.html', controller: 'cPlayers'}).
+			when('/players/:member', {templateUrl: 'views/players/player.html', controller: 'cPlayerDetail'}).
+			when('/test', {templateUrl: 'views/test.html', controller: 'cTest'}).
+			otherwise({redirectTo: '/'});
 		}
 	]);
 	console.log('test app:', angular.module('app'));

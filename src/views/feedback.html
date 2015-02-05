@@ -1,52 +1,51 @@
 <article class="{{ctitle}} bg-destiny">
-<md-content md-theme="docs-dark" class="md-padding">
-	<md-toolbar>
-		<h2>Feedback</h2>
-	</md-toolbar>
+<md-content class="md-padding">
+
+	<h2>Feedback</h2>
+
 	<!-- <form action="get" ng-model="formFeedback"> -->
 	<div ng-model="formFeedback">
-		<!-- <fieldset> -->
-		<md-content layout layout="row" layout-align="center center">
-			<md-input-container flex>
-				<label for="name">Your name</label>
-				<input name="name" type="text" class="wide" ng-model="formFeedback.name">
-			</md-input-container>
-			<md-input-container flex>
-				<label for="email">Your email</label>
-				<input name="email" type="email" class="wide" ng-model="formFeedback.email">
-			</md-input-container>
-		</md-content>
-		<!-- </fieldset> -->
-			<hr>
-		<!-- <fieldset> -->
+		<md-card layout="column">
+			<md-card-content>
+		<fieldset>
+			<legend>Form</legend>
+		<md-input-container>
+			<label for="name">Your name</label>
+			<input name="name" type="text" class="wide" ng-model="formFeedback.name">
+		</md-input-container>
+		<md-input-container>
+			<label for="email">Your email</label>
+			<input name="email" type="email" class="wide" ng-model="formFeedback.email">
+		</md-input-container>
+		</fieldset>
+		<fieldset>
+			<legend>Form</legend>
 		<md-input-container>
 			<label for="added">What should be added?</label>
 			<input name="added" type="text" class="wide" ng-model="formFeedback.added">
 		</md-input-container>
-		<!-- </fieldset> -->
-			<hr>
-		<!-- <fieldset> -->
 		<md-input-container>
 			<label for="removed">What should be removed?</label>
 			<input name="removed" type="text" class="wide" ng-model="formFeedback.removed">
 		</md-input-container>
-		<!-- </fieldset> -->
-			<hr>
-		<!-- <fieldset> -->
 		<md-input-container>
 			<label for="changed">What should be changed?</label>
 			<input name="changed" type="text" class="wide" ng-model="formFeedback.changed">
 		</md-input-container>
-		<!-- </fieldset> -->
-			<hr>
-		<!-- <fieldset> -->
+		</fieldset>
+		<fieldset>
+			<legend>Form</legend>
 		<md-input-container layout="row" layout-align="end center">
 			<md-button aria-label="Submit" id="submit" ng-click="submit()" class="md-warn" ng-disabled="true">Submit</md-button>
 			<md-button aria-label="Reset" id="reset" ng-click="reset()" class="md-accent" ng-disabled="false">Reset</md-button>
 		</md-input-container>
-		<!-- </fieldset> -->
+		</fieldset>
+			</md-card-content>
+		</md-card>
 	</div>
 	<!-- </form> -->
-	<p>form data:  {{formFeedback}}</p>
+
+	<!-- <p>form data:  {{formFeedback}}</p> -->
+
 </md-content>
 </article>
