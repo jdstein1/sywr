@@ -1,10 +1,10 @@
-/*s-members.js*/
+/*s-player-detail.js*/
 (function() {
 	'use strict';
 
-	app.service('sMemberDetail', sMemberDetail)
-	function sMemberDetail() {
-		var stitle = 'sMemberDetail';
+	app.service('sPlayerDetail', sPlayerDetail)
+	function sPlayerDetail() {
+		var stitle = 'sPlayerDetail';
 		console.log('START', stitle);
 
 		var myData = {};
@@ -12,20 +12,20 @@
 			$http.get('data/'+$route.current.params.member+'.php')
 			// $http.get('data/api2.php')
 				.success(function (data) {
-					console.log('sMemberDetail.getMember -- success');
+					console.log('sPlayerDetail.getMember -- success');
 					myData = data;
 				}).error(function () {
-					console.log('sMemberDetail.getMember -- error');
+					console.log('sPlayerDetail.getMember -- error');
 					myData = 'no data';
 				});
 			return myData;
 		};
-		// console.log('sMemberDetail', sMemberDetail);
-		// return sMemberDetail;
-        // return myData;
+		// console.log('sPlayerDetail', sPlayerDetail);
+		// return sPlayerDetail;
+		// return myData;
 		// console.log('myData', myData);
 
 	}
-	// console.log('test sMemberDetail:', angular.module('app').service('sMemberDetail'));
+	// console.log('test sPlayerDetail:', angular.module('app').service('sPlayerDetail'));
 
 })();

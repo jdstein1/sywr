@@ -3,9 +3,19 @@
 Things left to do in order to make this a decent protfolio piece:
 
 
+## Feedback Form
+
+#### Assigned to:  ???
+#### Status: IN PROGRESS
+
+* Make the feedback form submit the data to an email address.
+* Use GDocs form?
+
+
 ## Build Manager
 
-#### [] Assigned to:  ???
+#### Assigned to:  ???
+#### Status: NOT STARTED
 
 We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) ) to do the following:
 
@@ -16,21 +26,37 @@ We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://
 
 ## Custom Icons
 
-#### [] Assigned to:  Jeff
+#### Assigned to:  JEFF
+#### Status: NOT STARTED
 
 Create a set of icons for specific games and their symbols for character classes, acheivements, mission types, etc.
 
+## Better background Images
+
+#### Assigned to:  JEFF
+#### Status: NOT STARTED
+
+Slice up the current background images so they make a more solid-colored field.
+
+## Custom Theme
+
+#### Assigned to:  JEFF
+#### Status: NOT STARTED
+
+Customize the basic Material Design theme to provide a unique look and feel.
 
 ## Multiple API call
 
-#### [] Assigned to:  Kras & John
+#### Assigned to:  Kras & John
+#### Status: NOT STARTED
 
 Pass more than one account ID or character ID in order to populate a player/character comparison page.
 
 
 ## Link to Clan & Profile pages
 
-#### [X] Assigned to Jeff
+#### Assigned to JEFF
+#### Status: DONE
 
 ### Bungie/Destiny URLs
 
@@ -44,7 +70,8 @@ Pass more than one account ID or character ID in order to populate a player/char
 
 ## Use API to populate Clan pages
 
-#### [] Assigned to Jeff
+#### Assigned to JEFF
+#### Status: NOT STARTED
 
 * Clan info API
 	* [http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1](http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1)
@@ -53,7 +80,8 @@ Pass more than one account ID or character ID in order to populate a player/char
 
 ## Use API to populate Player pages
 
-#### [X] Assigned to Jeff
+#### Assigned to: JEFF
+#### Status: DONE
 
 * Player info API
 	* [http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true](http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true)
@@ -61,7 +89,10 @@ Pass more than one account ID or character ID in order to populate a player/char
 
 ## Use API to populate Activity pages
 
-#### [] Assigned to Kras
+#### Assigned to Kras
+#### Status: NOT STARTED
+
+Use Activity APIs to get data like kills, hours played, activities completed.
 
 ### Bungie/Destiny Activity History APIs:
 
@@ -80,7 +111,8 @@ Pass more than one account ID or character ID in order to populate a player/char
 
 ## Hash Converter
 
-#### [] Assigned to:  Tanner
+#### Assigned to:  Tanner
+#### Status: NOT STARTED
 
 Make a local JSON record of most common hash conversions.  For example:
 
@@ -97,7 +129,8 @@ Make a local JSON record of most common hash conversions.  For example:
 
 ## Item Info Lookup
 
-#### [] Assigned to:  John
+#### Assigned to:  John
+#### Status: NOT STARTED
 
 Use this API to look up inventory item data:
 

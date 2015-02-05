@@ -3,7 +3,7 @@
 	'use strict';
 
 	app.controller('cPlayerDetail', cPlayerDetail)
-	function cPlayerDetail($scope, $http, $route, $location, constProtocol, constBungieUrl, sMembers, sMemberDetail) {
+	function cPlayerDetail($scope, $http, $route, $location, constProtocol, constBungieUrl, sPlayers, sPlayerDetail) {
 		$scope.ctitle = 'cPlayerDetail';
 		$scope.title = 'Player';
 		console.log('START', $scope.ctitle);
@@ -15,12 +15,12 @@
 		// $http.get('data/api2.php')
 		$http.get('data/'+$scope.member+'.php')
 			.success(function (data) {
-			console.log('sMemberDetail.getMember -- success');
+			console.log('sPlayerDetail.getMember -- success');
 			console.log('data: ', data);
 			$scope.details = data.Response.data;
 			// console.log('$scope.details: ', $scope.details);
 		}).error(function () {
-			console.log('sMemberDetail.getMember -- error');
+			console.log('sPlayerDetail.getMember -- error');
 			$scope.details = 'no data';
 			// console.log('$scope.details: ', $scope.details);
 		});

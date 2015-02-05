@@ -3,7 +3,7 @@
 	'use strict';
 
 	app.controller('cPlayers', cPlayers)
-	function cPlayers($scope, $http, $route, $location, constProtocol, constBungieUrl, sMembers, sNavMenu) {
+	function cPlayers($scope, $http, $route, $location, constProtocol, constBungieUrl, sPlayers, sNavMenu) {
 		$scope.meta = sNavMenu[1];
 		$scope.ctitle = 'cPlayers';
 		$scope.title = $scope.meta.name;
@@ -16,7 +16,7 @@
 
 		$scope.bungieImgPath = constProtocol[0] + '://' + constBungieUrl.domain;
 
-		$scope.members = sMembers;
+		$scope.members = sPlayers;
 		console.log('$scope.members: ', $scope.members);
 		console.log('$scope.members[1]: ', $scope.members[1]);
 

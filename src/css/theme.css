@@ -9,72 +9,74 @@
 .bg-destiny {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
 }
 .classes-banners {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-banners-classes.png');
 }
 .classes-concepts {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');
 }
 .conceptart-erismorn {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
 }
 .weapon-hardlight {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
 }
 article md-card.md-default-theme {
   background: rgba(255, 255, 255, 0.9);
 }
 article md-content.md-default-theme {
-  background: #fff;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.75) 50%, #ffffff 100%);
+  background: #9cf;
 }
 article.cHome {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-banners-classes.png');
 }
 article.cMembers {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');
 }
 article.cGames {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
 }
 article.cItems {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat-x center top;
+  background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
 }
 .row-8310647 {
   border-left: 0.5em solid #e976ca;
 }
 .row-7037048 {
-  border-left: 0.5em solid #e9cf76;
+  border-left: 0.5em solid #e97876;
 }
 .row-7666141 {
-  border-left: 0.5em solid #76e995;
+  border-left: 0.5em solid #e9cf76;
 }
 .row-3892477 {
-  border-left: 0.5em solid #7691e9;
+  border-left: 0.5em solid #ade976;
+}
+.row-8162353 {
+  border-left: 0.5em solid #76e995;
 }

@@ -8,14 +8,15 @@
 		console.log('START', stitle);
 
 		var myData = {};
-		var getMember = function() {
-			$http.get('data/'+$route.current.params.member+'.php')
+		var getClan = function() {
+			$http.get('data/clan.php')
 			// $http.get('data/api2.php')
 				.success(function (data) {
-					console.log('sPlayerDetail.getMember -- success');
+					console.log('sPlayerDetail.getClan -- success');
 					myData = data;
 				}).error(function () {
-					console.log('sPlayerDetail.getMember -- error');
+					console.log('sPlayerDetail.getClan -- error');
+					// get backup data at /data/backup/clan.json
 					myData = 'no data';
 				});
 			return myData;
@@ -43,12 +44,6 @@
 			"name":"Kras",
 			"github":"Krasio07",
 			"website":"http://kweek13.blogspot.com/"
-		},{
-			"id":"8162353",
-			"handle":"SameMussel62767",
-			"name":"Vikas",
-			"github":"",
-			"website":"http://www.blogspot.com/"
 		},{
 			"id":"3892477",
 			"handle":"Tanman2391",
