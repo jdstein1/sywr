@@ -15,12 +15,13 @@
 
 		$scope.menuHeader = sHeaderMenu;
 		$scope.settingsHeader = sHeaderSettings;
+		$scope.sidenavOpen = false;
 
-		$scope.toggleLeft = function() {
-			$mdSidenav('left').toggle()
-		};
-		$scope.toggleRight = function() {
-			$mdSidenav('right').toggle()
+		$scope.toggleNav = function(type,direction) {
+			console.log('toggle nav', $scope.sidenavOpen);
+			$scope.direction = direction;
+			// $scope.sidenavOpen = !$scope.sidenavOpen;
+			$mdSidenav(type).toggle();
 		};
 
 		$scope.title = constClan.title.camel;
@@ -150,6 +151,42 @@
 		$scope.options = [
 			"name","id","date"
 		];
+		$scope.logo = {
+			"destiny":{
+				"path":"lib/brands/destiny/",
+				"alt":"Destiny Logo",
+				"hz":{
+					"bk":"Destiny_Logo_Horizontal_Black.png",
+					"wh":"Destiny_Logo_Horizontal_White.png"
+				},
+				"st":{
+					"bk":"Destiny_Logo_Stacked_Black.png", 
+					"wh":"Destiny_Logo_Stacked_White.png"
+				}
+			},
+			"bungie":{
+				"path":"lib/brands/bungie/",
+				"alt":"Bungie Logo",
+				"hz":{
+					"bk":"Destiny_Logo_Horizontal_Black.png",
+					"wh":"Destiny_Logo_Horizontal_White.png"
+				},
+				"st":{
+					"bk":"Destiny_Logo_Stacked_Black.png",
+					"wh":"Destiny_Logo_Stacked_White.png"
+				},
+				"iconography":{
+					"carnage":"iconography/Carnage_Zone.png",
+					"lovedark":"iconography/Love_Bungie-dark.png",
+					"lovelight":"iconography/Love_Bungie-light.png",
+					"septagon":"iconography/Septagon.png",
+					"shield":"iconography/Shield_Crest.png",
+					"swordburst":"iconography/Swordburst_Crest.png"
+				}
+			}
+		};
+		console.log('$scope.logo.destiny: ', $scope.logo.destiny);
+		console.log('$scope.logo.bungie: ', $scope.logo.bungie);
 	}
 	// console.log('test cHome:', angular.module('app').controller('cHome'));
 

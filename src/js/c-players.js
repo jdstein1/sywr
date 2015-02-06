@@ -17,8 +17,8 @@
 		$scope.bungieImgPath = constProtocol[0] + '://' + constBungieUrl.domain;
 
 		$scope.members = sPlayers;
-		console.log('$scope.members: ', $scope.members);
-		console.log('$scope.members[1]: ', $scope.members[1]);
+		// console.log('$scope.members: ', $scope.members);
+		// console.log('$scope.members[1]: ', $scope.members[1]);
 
 		for (var i = 0; i < $scope.members.length; i++) {
 			var myMemberUrl = constProtocol[0] + '://' + constBungieUrl.domain +'/'+ constBungieUrl.lang +'/'+ constBungieUrl.profile + '/254/' + $scope.members[i].id;

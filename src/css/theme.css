@@ -65,18 +65,20 @@ article.cItems {
   background: transparent url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
 }
+.player-row,
 .row-8310647 {
+  padding-left: 1em;
   border-left: 0.5em solid #e976ca;
 }
 .row-7037048 {
-  border-left: 0.5em solid #e97876;
+  border-left: 0.5em solid #e99576;
 }
 .row-7666141 {
-  border-left: 0.5em solid #e9cf76;
+  border-left: 0.5em solid #cae976;
 }
 .row-3892477 {
-  border-left: 0.5em solid #ade976;
+  border-left: 0.5em solid #76e995;
 }
 .row-8162353 {
-  border-left: 0.5em solid #76e995;
+  border-left: 0.5em solid #76cae9;
 }

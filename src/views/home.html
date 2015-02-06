@@ -1,26 +1,32 @@
 <article class="{{ctitle}} bg-destiny">
-<md-content class="">
+<md-content>
 
 	<h1><span class="flaticon {{meta.icon}}"></span>{{title}}</h1>
 
 	<div layout="column">
 	<md-card>
-		<md-card-content>
-			<h2>Clan Info</h2>
-			<ul>
-				<li>Details</li>
-			</ul>
+		<md-card-content class="center">
+			<h2>{{constClan.title.plain}}</h2>
+			<h4>a</h4>
+			<img ng-src="{{logo.destiny.path}}{{logo.destiny.hz.bk}}" alt="{{logo.destiny.alt}}" class="" style="width:100%;">
+			<h4>clan</h4>
 		</md-card-content>
 	</md-card>
 	</div>
 
 	<div ng-controller="cClan">
+	<md-card>
+		<md-card-content>
+			<h2>Members / Players</h2>
+		</md-card-content>
+	</md-card>
+	</div>
 	<md-card ng-repeat="item in clan">
 		<md-card-content>
 			<md-item-content layout="row" layout-sm="column" class="row-{{item.id}} player-row">
 				{{item}}
-				<!-- <div class="" flex><h2>{{item.handle}}</h2></div>
-				<div class="">
+				<!-- <div flex><h2>{{item.handle}}</h2></div>
+				<div>
 					<dl>
 						<dt>{{item.name}}</dt>
 						<dd><b>ID:</b> {{item.id}}</dd>
@@ -40,18 +46,20 @@
 	<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
 		<md-card-content>
 			<md-item-content layout="row" layout-sm="column" class="row-{{item.id}} player-row">
-				<div class="" flex><h2>{{item.handle}}</h2></div>
-				<div class="">
+				<div flex>
+					<big><b>{{item.handle}}</b></big><br>
+					<a href="#/members/{{item.api}}">Player Details</a>
+				</div>
+				<div flex>
 					<dl>
 						<dt>{{item.name}}</dt>
 						<dd><b>ID:</b> {{item.id}}</dd>
 					</dl>
 				</div>
-				<md-button flex class="md-primary link inbound" href="#/members/{{item.api}}">Player Details</md-button>
 				<div>
 					<md-button flex class="md-primary link outbound github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
 					<md-button flex class="md-primary link outbound bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
-					<md-button flex class="md-primary link json" href="data/{{item.api}}.php" target="_blank">JSON</md-button>
+					<md-button flex class="md-primary link json" href="data/{{item.api}}.php" target="_blank">Raw JSON</md-button>
 				</div>
 			</md-item-content>
 		</md-card-content>

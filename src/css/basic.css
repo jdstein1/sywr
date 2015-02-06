@@ -192,3 +192,6 @@ table tr th {
 .showMenu span {
   color: red !important;
 }
+.overflowHidden {
+  overflow: hidden;
+}
