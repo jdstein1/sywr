@@ -5,8 +5,9 @@ Things left to do in order to make this a decent protfolio piece:
 
 ## Feedback Form
 
-#### Assigned to:  ???
+#### Assignee:  ???
 #### Status: IN PROGRESS
+#### Priority: 3
 
 * Make the feedback form submit the data to an email address.
 * Use GDocs form?
@@ -14,8 +15,9 @@ Things left to do in order to make this a decent protfolio piece:
 
 ## Build Manager
 
-#### Assigned to:  ???
+#### Assignee:  ???
 #### Status: NOT STARTED
+#### Priority: 3
 
 We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) ) to do the following:
 
@@ -26,37 +28,42 @@ We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://
 
 ## Custom Icons
 
-#### Assigned to:  JEFF
+#### Assignee:  JEFF
 #### Status: NOT STARTED
+#### Priority: 3
 
 Create a set of icons for specific games and their symbols for character classes, acheivements, mission types, etc.
 
 ## Better background Images
 
-#### Assigned to:  JEFF
+#### Assignee:  JEFF
 #### Status: NOT STARTED
+#### Priority: 3
 
 Slice up the current background images so they make a more solid-colored field.
 
 ## Custom Theme
 
-#### Assigned to:  JEFF
+#### Assignee:  JEFF
 #### Status: NOT STARTED
+#### Priority: 3
 
 Customize the basic Material Design theme to provide a unique look and feel.
 
 ## Multiple API call
 
-#### Assigned to:  Kras & John
+#### Assignee:  Kras & John
 #### Status: NOT STARTED
+#### Priority: 3
 
 Pass more than one account ID or character ID in order to populate a player/character comparison page.
 
 
 ## Link to Clan & Profile pages
 
-#### Assigned to JEFF
+#### Assignee: JEFF
 #### Status: DONE
+#### Priority: 3
 
 ### Bungie/Destiny URLs
 
@@ -70,8 +77,9 @@ Pass more than one account ID or character ID in order to populate a player/char
 
 ## Use API to populate Clan pages
 
-#### Assigned to JEFF
+#### Assignee: JEFF
 #### Status: NOT STARTED
+#### Priority: 3
 
 * Clan info API
 	* [http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1](http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1)
@@ -80,8 +88,9 @@ Pass more than one account ID or character ID in order to populate a player/char
 
 ## Use API to populate Player pages
 
-#### Assigned to: JEFF
+#### Assignee: JEFF
 #### Status: DONE
+#### Priority: 3
 
 * Player info API
 	* [http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true](http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true)
@@ -89,30 +98,32 @@ Pass more than one account ID or character ID in order to populate a player/char
 
 ## Use API to populate Activity pages
 
-#### Assigned to Kras
+#### Assignee: Kras
 #### Status: NOT STARTED
+#### Priority: 3
 
 Use Activity APIs to get data like kills, hours played, activities completed.
 
 ### Bungie/Destiny Activity History APIs:
 
-* Story
+* Story (mode=2)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true)
-* Strike
+* Strike (mode=18)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true)
-* Raid
+* Raid (mode=4)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true)
-* Crucible & Medals
+* Crucible & Medals (mode=5)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true)
-* Patrol
+* Patrol (mode=6)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true)
 
 
 
 ## Hash Converter
 
-#### Assigned to:  Tanner
+#### Assignee:  Tanner
 #### Status: NOT STARTED
+#### Priority: 3
 
 Make a local JSON record of most common hash conversions.  For example:
 
@@ -129,8 +140,9 @@ Make a local JSON record of most common hash conversions.  For example:
 
 ## Item Info Lookup
 
-#### Assigned to:  John
+#### Assignee:  John
 #### Status: NOT STARTED
+#### Priority: 3
 
 Use this API to look up inventory item data:
 
