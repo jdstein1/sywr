@@ -69,17 +69,17 @@
 <md-card-content layout="column" layout-sm="column">
 	<h3>Player Characters</h3>
 	<!-- <hr> -->
-	<div layout="row">
-	<table ng-repeat="character in details.characters | orderBy: $index: false">
+	<div layout="column">
+	<table ng-repeat="character in details.characters | orderBy: $index: false" style="width:100%;">
 		<thead>
 			<tr>
 				<td style="background: transparent url({{getCharImgPath(character.backgroundPath)}}) top right no-repeat; background-size:cover;" class="emblemBox">
-					<table>
+					<table style="width:100%;">
 						<tr>
 							<td>
 								<img class="emblem" ng-src="{{getCharImgPath(character.emblemPath)}}" border="0" />
 							</td>
-							<td>
+							<td style="width:100%;">
 								<h2>
 									<span class="label">classHash</span>
 									<span>{{character.characterBase.classHash}}</span>
@@ -90,7 +90,7 @@
 								<span>{{character.characterBase.genderHash}}</span>
 							</td>
 							<td style="text-align:right;">
-								<h1 ng-class="level {'prestige':character.isPrestigeLevel}">
+								<h1 class="level" ng-class="{'prestige':character.isPrestigeLevel}">
 									<span class="flaticon flaticon-rate normal" ng-show="character.isPrestigeLevel"></span>
 									<span class="label">characterLevel</span>
 									<span>{{character.characterLevel}}</span>
@@ -113,128 +113,16 @@
 						</tr>
 					</table>
 				</td>
-			</tr>
-		</thead>
-		<tbody>
-			<!-- <tr ng-repeat="(key, value) in character.characterBase">
-				<th>{{key}}</th>
-				<td>{{value}}</td>
-			</tr>
-			<tr>
-				<td><hr></td>
-				<td><hr></td>
-			</tr> -->
-			<tr>
-				<td layout="column">
-					<ul>
-						<li>
-							<span class="label">powerLevel</span>
-							<span>{{character.characterBase.powerLevel}}</span>
-						</li>
-						<li>
-							<span class="label">characterLevel</span>
-							<span>{{character.characterLevel}}</span>
-						</li>
-						<li>
-							<span class="label">baseCharacterLevel</span>
-							<span>{{character.baseCharacterLevel}}</span>
-						</li>
-						<li>
-							<span class="label">isPrestigeLevel</span>
-							<span>{{character.isPrestigeLevel}}</span>
-						</li>
-						<li>
-							<span class="label">raceHash</span>
-							<span>{{character.characterBase.raceHash}}</span>
-						</li>
-						<li>
-							<span class="label">genderHash</span>
-							<span>{{character.characterBase.genderHash}}</span>
-						</li>
-						<li>
-							<span class="label">classHash</span>
-							<span>{{character.characterBase.classHash}}</span>
-						</li>
-						<li>
-							<span class="label">emblemHash</span>
-							<span>{{character.emblemHash}}</span>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<span class="label">percentToNextLevel</span>
-							<span>{{character.percentToNextLevel}}%</span>
-						</li>
-						<li ng-repeat="(key, value) in character.levelProgression">
-							<span class="label">{{key}}</span>
-							<span>{{value}}</span>
-						</li>
-					</ul>
-					<ul>
-						<li ng-repeat="(key,value) in character.characterBase" ng-include="'repeater.html'">
-						<!-- <li ng-repeat="(key,value) in character.characterBase" ng-include="'includes/repeater-ul.html'"></li> -->
-					</ul>
-
-					<!-- <h4>table repeat</h4>
-					<table>
-						<tbody>
-							<tr ng-repeat="(key,value) in character.characterBase" ng-include="'includes/repeater-table.html'">{{character.characterBase}} :: ({{key}},{{value}})</tr>
-						</tbody>
-					</table> -->
-
+				<td>
+					<md-button ng-disabled="false" ng-click="displayCharacter($index)">View Details</md-button>
+					<md-button ng-disabled="true" ng-click="compareCharacter($index)">Compare</md-button>
+					<md-button ng-disabled="true">More...</md-button>
 				</td>
 			</tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<td><hr></td>
-			</tr>
-		</tfoot>
+		</thead>
 	</table>
 	</div>
 </md-card-content>
 </md-card>
 </md-content>
 </article>
-
-<script type="text/ng-template" id="repeater.html">
-<ng-switch on="key">
-	<ul ng-switch-when="stats">{{key}}
-		<li ng-repeat="(key,value) in character.characterBase.stats">
-			<ul>{{key}}
-				<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
-			</ul>
-		</li>
-	</ul>
-	<ul ng-switch-when="peerView">{{key}}
-		<li ng-repeat="(key,value) in character.characterBase.peerView">
-			<ul>child: {{key}}
-				<li ng-repeat="(key,value) in value">
-					<ul>grand-child: {{key}}:
-						<li ng-repeat="(key,value) in value">
-						<ng-switch on="key">
-							<ul ng-switch-when="dyes">great-grand-child: {{key}}:
-								<li ng-repeat="(key,value) in value">
-									<ul>great-great-grand-child: {{key}}:
-										<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
-									</ul>
-								</li>
-							</ul>
-							<ul ng-switch-default>great-grand-child: {{key}}: <b>{{value}}</b>
-								<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
-							</ul>
-						</ng-switch>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	<ul ng-switch-when="customization">{{key}}
-		<li ng-repeat="(key,value) in character.characterBase.customization" ng-include="'repeater.html'">{{key}}: <b>{{value}}</b></li>
-	</ul>
-	<ul ng-switch-default>
-		<li>{{key}}: <b>{{value}}</b></li>
-	</ul>
-<ng-switch>
-</script>

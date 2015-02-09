@@ -3,17 +3,19 @@
 	'use strict';
 
 	app.controller('cPlayerDetail', cPlayerDetail)
-	function cPlayerDetail($scope, $http, $route, $location, constProtocol, constBungieUrl, sPlayers, sPlayerDetail) {
+	function cPlayerDetail($scope, $http, $route, $location, constProtocol, constBungieUrl) {
 		$scope.ctitle = 'cPlayerDetail';
 		$scope.title = 'Player';
 		console.log('START', $scope.ctitle);
 
   		// console.log('$route.current.params',$route.current.params );
 		$scope.member = $route.current.params.member;
-  		// console.log('$scope.member',$scope.member );
+  		console.log('$scope.member',$scope.member );
+  		console.log('$route.current.params.member',$route.current.params.member );
 
-		// $http.get('data/api2.php')
-		$http.get('data/'+$scope.member+'.php')
+  		// $scope.player = sPlayerDetail.getMember();
+
+		$http.get('data/'+$route.current.params.member+'.php')
 			.success(function (data) {
 			console.log('sPlayerDetail.getMember -- success');
 			console.log('data: ', data);

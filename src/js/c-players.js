@@ -9,7 +9,7 @@
 		$scope.title = $scope.meta.name;
 		console.log('START', $scope.ctitle);
 
-		console.log('$scope.meta.icon', $scope.meta.icon);
+		// console.log('$scope.meta.icon', $scope.meta.icon);
 
 		// var myEmblemUrl = constProtocol[0] + '://' + constBungieUrl.domain +'/'+ constBungieUrl.lang +'/'+ constBungieUrl.profile + '/' + $scope.itemHash;
 		// console.log('myEmblemUrl: ', myEmblemUrl);

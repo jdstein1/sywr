@@ -1,7 +1,7 @@
 <article class="{{ctitle}} bg-destiny">
 <md-content class="md-padding">
 
-	<h1><span class="flaticon {{meta.icon}}"></span>{{title}}: {{member}}</h1>
+	<h1><span class="flaticon {{meta.icon}}"></span>{{title}}: {{member}}: {{character}}</h1>
 
 	<!-- <h3>{{details.clanName}} ({{details.clanTag}})</h3> -->
 	<!-- <h2>details:</h2> -->
@@ -71,50 +71,6 @@
 	<!-- <hr> -->
 	<div layout="row">
 	<table ng-repeat="character in details.characters | orderBy: $index: false">
-		<thead>
-			<tr>
-				<td style="background: transparent url({{getCharImgPath(character.backgroundPath)}}) top right no-repeat; background-size:cover;" class="emblemBox">
-					<table>
-						<tr>
-							<td>
-								<img class="emblem" ng-src="{{getCharImgPath(character.emblemPath)}}" border="0" />
-							</td>
-							<td>
-								<h2>
-									<span class="label">classHash</span>
-									<span>{{character.characterBase.classHash}}</span>
-								</h2>
-								<span class="label">raceHash</span>
-								<span>{{character.characterBase.raceHash}}</span>
-								<span class="label">genderHash</span>
-								<span>{{character.characterBase.genderHash}}</span>
-							</td>
-							<td style="text-align:right;">
-								<h1 ng-class="level {'prestige':character.isPrestigeLevel}">
-									<span class="flaticon flaticon-rate normal" ng-show="character.isPrestigeLevel"></span>
-									<span class="label">characterLevel</span>
-									<span>{{character.characterLevel}}</span>
-								</h1>
-								<hr>
-								<h5 class="grimoire">
-									<span class="flaticon flaticon-copy31 normal" aria-label="Grimoire"></span>
-									<span>{{details.grimoireScore}}</span>
-								</h5>
-							</td>
-						</tr>
-						<tr>
-							<td class="progressBox" colspan="3">
-								<div class="progressBar" style="height:1em;background:rgba(255,255,255,0.25);">
-									<div class="progressIndicator" style="height:1em;background:rgba(255,255,0,1);width:{{character.percentToNextLevel}}%;"></div>
-								</div>
-								<!-- <span class="label">percentToNextLevel</span>
-								<span>{{character.percentToNextLevel}}%</span> -->
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</thead>
 		<tbody>
 			<!-- <tr ng-repeat="(key, value) in character.characterBase">
 				<th>{{key}}</th>
@@ -171,7 +127,7 @@
 						</li>
 					</ul>
 					<ul>
-						<li ng-repeat="(key,value) in character.characterBase" ng-include="'repeater.html'">
+						<li ng-repeat="(key,value) in character.characterBase" ng-include="'includes/repeater-ul.html'">
 						<!-- <li ng-repeat="(key,value) in character.characterBase" ng-include="'includes/repeater-ul.html'"></li> -->
 					</ul>
 
@@ -196,45 +152,3 @@
 </md-card>
 </md-content>
 </article>
-
-<script type="text/ng-template" id="repeater.html">
-<ng-switch on="key">
-	<ul ng-switch-when="stats">{{key}}
-		<li ng-repeat="(key,value) in character.characterBase.stats">
-			<ul>{{key}}
-				<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
-			</ul>
-		</li>
-	</ul>
-	<ul ng-switch-when="peerView">{{key}}
-		<li ng-repeat="(key,value) in character.characterBase.peerView">
-			<ul>child: {{key}}
-				<li ng-repeat="(key,value) in value">
-					<ul>grand-child: {{key}}:
-						<li ng-repeat="(key,value) in value">
-						<ng-switch on="key">
-							<ul ng-switch-when="dyes">great-grand-child: {{key}}:
-								<li ng-repeat="(key,value) in value">
-									<ul>great-great-grand-child: {{key}}:
-										<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
-									</ul>
-								</li>
-							</ul>
-							<ul ng-switch-default>great-grand-child: {{key}}: <b>{{value}}</b>
-								<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
-							</ul>
-						</ng-switch>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</li>
-	</ul>
-	<ul ng-switch-when="customization">{{key}}
-		<li ng-repeat="(key,value) in character.characterBase.customization" ng-include="'repeater.html'">{{key}}: <b>{{value}}</b></li>
-	</ul>
-	<ul ng-switch-default>
-		<li>{{key}}: <b>{{value}}</b></li>
-	</ul>
-<ng-switch>
-</script>

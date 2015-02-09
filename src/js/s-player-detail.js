@@ -3,12 +3,12 @@
 	'use strict';
 
 	app.service('sPlayerDetail', sPlayerDetail)
-	function sPlayerDetail() {
+	function sPlayerDetail($http, $route) {
 		var stitle = 'sPlayerDetail';
 		console.log('START', stitle);
 
 		var myData = {};
-		var getMember = function() {
+		this.getMember = function() {
 			$http.get('data/'+$route.current.params.member+'.php')
 			// $http.get('data/api2.php')
 				.success(function (data) {

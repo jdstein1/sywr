@@ -1,23 +1,23 @@
 <md-toolbar md-scroll-shrink>
 	<div class="md-toolbar-tools" layout="row" layout-align="center center">
 
-		<md-button aria-label="{{menuHeader.name}}" class="left md-accent" ng-click="toggleNav('menu','left')">
+		<md-button aria-label="{{menuHeader.name}}" class="left" ng-click="toggleNav('menu','left')">
 			<span class="{{menuHeader.icon}}"></span>
 		</md-button>
 
-		<md-button aria-label="{{settingsHeader.name}}" class="left md-accent" ng-click="toggleNav('settings','left')">
+		<!-- <md-button aria-label="{{settingsHeader.name}}" class="left" ng-click="toggleNav('settings','left')">
+			<span class="{{settingsHeader.icon}}"></span>
+		</md-button> -->
+
+		<h1 flex><a href="#/">{{constClan.title.plain}}</a></h1>
+
+		<md-button aria-label="{{settingsHeader.name}}" class="right" ng-click="toggleNav('settings','right')">
 			<span class="{{settingsHeader.icon}}"></span>
 		</md-button>
 
-		<h1 flex><a href="#/">{{title}}</a></h1>
-
-		<md-button aria-label="{{settingsHeader.name}}" class="right md-accent" ng-click="toggleNav('settings','right')">
-			<span class="{{settingsHeader.icon}}"></span>
-		</md-button>
-
-		<md-button aria-label="{{menuHeader.name}}" class="right md-accent" ng-click="toggleNav('menu','right')">
+		<!-- <md-button aria-label="{{menuHeader.name}}" class="right" ng-click="toggleNav('menu','right')">
 			<span class="{{menuHeader.icon}}"></span>
-		</md-button>
+		</md-button> -->
 
 	</div>
 </md-toolbar>

@@ -19,8 +19,8 @@ Angular Material dependencies:
 		'ngMaterial', 'ngRoute', 'ngMessages'
 	]);
 	app.constant('constClan', {
-		"abbr":"SYWR",
 		"title":{
+			"abbr":"SYWR",
 			"plain":"Strike Your Way Raiders",
 			"camel":"strikeYourWayRaiders",
 			"underscore":"strike_your_way_raiders",
@@ -79,8 +79,10 @@ Angular Material dependencies:
 			when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGameDetail'}).
 			when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).
 			when('/items/:item', {templateUrl: 'views/items/item.html', controller: 'cItemDetail'}).
-			when('/players', {templateUrl: 'views/players.html', controller: 'cPlayers'}).
-			when('/players/:member', {templateUrl: 'views/players/player.html', controller: 'cPlayerDetail'}).
+			// when('/players', {templateUrl: 'views/players.html', controller: 'cPlayers'}).
+			when('/:member', {templateUrl: 'views/players/player.html', controller: 'cPlayerDetail'}).
+			when('/:member/:character', {templateUrl: 'views/players/character.html', controller: 'cCharacterDetail'}).
+			when('/:member/:activity', {templateUrl: 'views/players/activity.html', controller: 'cActivityDetail'}).
 			when('/test', {templateUrl: 'views/test.html', controller: 'cTest'}).
 			otherwise({redirectTo: '/'});
 		}
