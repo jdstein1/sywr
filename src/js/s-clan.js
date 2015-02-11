@@ -9,14 +9,13 @@
 
 		var myData = {};
 		var getClan = function() {
-			$http.get('data/clan.php')
-			// $http.get('data/api2.php')
+			$http.get('api/clan.php')
 				.success(function (data) {
 					console.log('sPlayerDetail.getClan -- success');
 					myData = data;
 				}).error(function () {
 					console.log('sPlayerDetail.getClan -- error');
-					// get backup data at /data/backup/clan.json
+					// get backup data at /data/clan.json
 					myData = 'no data';
 				});
 			return myData;

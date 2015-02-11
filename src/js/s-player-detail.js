@@ -10,7 +10,6 @@
 		var myData = {};
 		this.getMember = function() {
 			$http.get('data/'+$route.current.params.member+'.php')
-			// $http.get('data/api2.php')
 				.success(function (data) {
 					console.log('sPlayerDetail.getMember -- success');
 					myData = data;

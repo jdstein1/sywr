@@ -21,8 +21,7 @@
 
 		// var myData = {};
 		// $scope.getMember = function() {
-		// 	// $http.get('members/'+$route.current.params.member+'.php')
-		// 	$http.get('api2.php')
+		// 	$http.get('members/'+$route.current.params.member+'.php')
 		// 		.success(function (data) {
 		// 			console.log('sDataItemDetails.getMember -- success');
 		// 			myData = data;

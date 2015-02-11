@@ -33,6 +33,42 @@ Angular Material dependencies:
 		"console":"Xbox",
 		"id":519979
 	});
+
+	app.constant('constLogo', {
+		"destiny":{
+			"path":"lib/brands/destiny/",
+			"alt":"Destiny Logo",
+			"hz":{
+				"bk":"Destiny_Logo_Horizontal_Black.png",
+				"wh":"Destiny_Logo_Horizontal_White.png"
+			},
+			"st":{
+				"bk":"Destiny_Logo_Stacked_Black.png", 
+				"wh":"Destiny_Logo_Stacked_White.png"
+			}
+		},
+		"bungie":{
+			"path":"lib/brands/bungie/",
+			"alt":"Bungie Logo",
+			"hz":{
+				"bk":"Destiny_Logo_Horizontal_Black.png",
+				"wh":"Destiny_Logo_Horizontal_White.png"
+			},
+			"st":{
+				"bk":"Destiny_Logo_Stacked_Black.png",
+				"wh":"Destiny_Logo_Stacked_White.png"
+			},
+			"iconography":{
+				"carnage":"iconography/Carnage_Zone.png",
+				"lovedark":"iconography/Love_Bungie-dark.png",
+				"lovelight":"iconography/Love_Bungie-light.png",
+				"septagon":"iconography/Septagon.png",
+				"shield":"iconography/Shield_Crest.png",
+				"swordburst":"iconography/Swordburst_Crest.png"
+			}
+		}
+	});
+
 	app.constant('constProtocol', ['http', 'https']);
 	app.constant('constFileTypes', ['jpg', 'png', 'gif']);
 // URLs that need to be covered by the constBungieUrl object:
@@ -79,10 +115,11 @@ Angular Material dependencies:
 			when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGameDetail'}).
 			when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).
 			when('/items/:item', {templateUrl: 'views/items/item.html', controller: 'cItemDetail'}).
-			// when('/players', {templateUrl: 'views/players.html', controller: 'cPlayers'}).
+			when('/players', {templateUrl: 'views/players.html', controller: 'cPlayers'}).
 			when('/:member', {templateUrl: 'views/players/player.html', controller: 'cPlayerDetail'}).
-			when('/:member/:character', {templateUrl: 'views/players/character.html', controller: 'cCharacterDetail'}).
-			when('/:member/:activity', {templateUrl: 'views/players/activity.html', controller: 'cActivityDetail'}).
+			when('/:member/characters', {templateUrl: 'views/characters/compare.html', controller: 'cPlayerDetail'}).
+			when('/:member/:character', {templateUrl: 'views/characters/display.html', controller: 'cPlayerDetail'}).
+			when('/:member/:activity', {templateUrl: 'views/players/activity.html', controller: 'cPlayerDetail'}).
 			when('/test', {templateUrl: 'views/test.html', controller: 'cTest'}).
 			otherwise({redirectTo: '/'});
 		}

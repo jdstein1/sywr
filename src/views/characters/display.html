@@ -1,0 +1,155 @@
+<!-- Display one character -->
+<article class="{{ctitle}} bg-destiny">
+<md-content class="md-padding">
+
+	<h1><span class="flaticon {{meta.icon}}"></span>{{title}}: {{member}}: {{character}}</h1>
+
+	<!-- <h3>{{details.clanName}} ({{details.clanTag}})</h3> -->
+	<!-- <h2>details:</h2> -->
+	<!-- <table>
+		<tr ng-repeat="(key,value) in details">
+			<th>{{key}}</th>
+			<td>{{value}}</td>
+		</tr>
+	</table> -->
+
+<md-card>
+<md-card-content layout="column" layout-sm="column">
+	<h3>Player Metadata</h3>
+	<!-- <hr> -->
+	<div layout="row">
+	<ul flex>
+		<li>
+			<span class="label">clanName</span>
+			<span>{{details.clanName}}</span>
+		</li>
+		<li>
+			<span class="label">clanTag</span>
+			<span>{{details.clanTag}}</span>
+		</li>
+	</ul>
+	<ul flex>
+		<li>
+			<span class="strong">misc</span>
+		</li>
+		<li>
+			<span class="label">membershipId</span>
+			<span>{{details.membershipId}}</span>
+		</li>
+		<li>
+			<span class="label">membershipType</span>
+			<span>{{details.membershipType}}</span>
+		</li>
+		<li>
+			<span class="label">grimoireScore</span>
+			<span>{{details.grimoireScore}}</span>
+		</li>
+	</ul>
+	</div>
+	<h3>Player Inventory</h3>
+	<!-- <hr> -->
+	<div layout="row">
+	<ul flex>
+		<li>
+			<span class="strong">buckets</span>
+		</li>
+		<li>{{details.inventory.buckets}}</li>
+		<li ng-repeat="(key,value) in details.inventory.buckets"><span class="label">{{key}}</span> <span>{{value}}</span></li>
+	</ul>
+	<ul flex>
+		<li>
+			<span class="strong">currencies</span>
+		</li>
+		<li>{{details.inventory.currencies}}</li>
+		<li ng-repeat="(key,value) in details.inventory.currencies[0]"><span class="label">{{key}}</span> <span>{{value}}</span></li>
+	</ul>
+	</div>
+</md-card-content>
+</md-card>
+<md-card>
+<md-card-content layout="column" layout-sm="column">
+	<h3>Player Characters</h3>
+	<!-- <hr> -->
+	<div layout="row">
+	<table>
+		<tbody>
+			<!-- <tr ng-repeat="(key, value) in myCharacter.characterBase">
+				<th>{{key}}</th>
+				<td>{{value}}</td>
+			</tr>
+			<tr>
+				<td><hr></td>
+				<td><hr></td>
+			</tr> -->
+			<tr>
+				<td layout="column">
+					<ul>
+						<li>
+							<span class="label">powerLevel</span>
+							<span>{{myCharacter.characterBase.powerLevel}}</span>
+						</li>
+						<li>
+							<span class="label">characterLevel</span>
+							<span>{{myCharacter.characterLevel}}</span>
+						</li>
+						<li>
+							<span class="label">baseCharacterLevel</span>
+							<span>{{myCharacter.baseCharacterLevel}}</span>
+						</li>
+						<li>
+							<span class="label">isPrestigeLevel</span>
+							<span>{{myCharacter.isPrestigeLevel}}</span>
+						</li>
+						<li>
+							<span class="label">raceHash</span>
+							<span>{{myCharacter.characterBase.raceHash}}</span>
+						</li>
+						<li>
+							<span class="label">genderHash</span>
+							<span>{{myCharacter.characterBase.genderHash}}</span>
+						</li>
+						<li>
+							<span class="label">classHash</span>
+							<span>{{myCharacter.characterBase.classHash}}</span>
+						</li>
+						<li>
+							<span class="label">emblemHash</span>
+							<span>{{myCharacter.emblemHash}}</span>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<span class="label">percentToNextLevel</span>
+							<span>{{myCharacter.percentToNextLevel}}%</span>
+						</li>
+						<li ng-repeat="(key, value) in myCharacter.levelProgression">
+							<span class="label">{{key}}</span>
+							<span>{{value}}</span>
+						</li>
+					</ul>
+					<ul>
+						<li ng-repeat="(key,value) in myCharacter.characterBase" ng-include="'includes/repeater-ul.html'">
+						<!-- <li ng-repeat="(key,value) in myCharacter.characterBase" ng-include="'includes/repeater-ul.html'"></li> -->
+					</ul>
+
+					<!-- <h4>table repeat</h4>
+					<table>
+						<tbody>
+							<tr ng-repeat="(key,value) in myCharacter.characterBase" ng-include="'includes/repeater-table.html'">{{myCharacter.characterBase}} :: ({{key}},{{value}})</tr>
+						</tbody>
+					</table> -->
+
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td><hr></td>
+			</tr>
+		</tfoot>
+	</table>
+	</div>
+</md-card-content>
+</md-card>
+</md-content>
+</article>

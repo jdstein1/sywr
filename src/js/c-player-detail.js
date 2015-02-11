@@ -20,11 +20,11 @@
 			console.log('sPlayerDetail.getMember -- success');
 			console.log('data: ', data);
 			$scope.details = data.Response.data;
-			// console.log('$scope.details: ', $scope.details);
+			console.log('$scope.details: ', $scope.details);
 		}).error(function () {
 			console.log('sPlayerDetail.getMember -- error');
 			$scope.details = 'no data';
-			// console.log('$scope.details: ', $scope.details);
+			console.log('$scope.details: ', $scope.details);
 		});
 
 		$scope.getImgPath = function (type,id) {
@@ -52,6 +52,32 @@
 			// http://www.bungie.net/common/destiny_content/icons/780a86ed4beb6022b776490ccd0ffd2f.jpg
 			var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + file;
 			return path;
+		};
+
+		$scope.myCharacter = '';
+		$scope.getMyCharacter = function (c) {
+			console.log('$scope.getMyCharacter');
+			if ($scope.myCharacter === '') {
+				$scope.myCharacter = $scope.details.characters[c];
+				console.log('$scope.myCharacter: ', $scope.myCharacter);
+				return $scope.myCharacter;
+
+			} else {
+				return $scope.myCharacter;
+
+			};
+		};
+
+		$scope.displayCharacter = function (index) {
+			console.log('$scope.displayCharacter: ', index);
+			console.log('$scope.displayCharacter $location: ', $location);
+			console.log('$scope.displayCharacter $location.path(): ', $location.path());
+			$scope.getMyCharacter(index);
+			$location.path( '/' + $scope.member + '/character' + index );
+			// return $location.path();
+		};
+		$scope.compareCharacter = function (index) {
+			console.log('$scope.compareCharacter: ', index);
 		};
 
 	}

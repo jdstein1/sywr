@@ -1,3 +1,4 @@
+<!-- Compare all characters -->
 <article class="{{ctitle}} bg-destiny">
 <md-content class="md-padding">
 
@@ -15,7 +16,6 @@
 <md-card>
 <md-card-content layout="column" layout-sm="column">
 	<h3>Player Metadata</h3>
-	<!-- <hr> -->
 	<div layout="row">
 	<ul flex>
 		<li>
@@ -45,21 +45,24 @@
 		</li>
 	</ul>
 	</div>
+</md-card-content>
+</md-card>
+<md-card>
+<md-card-content layout="column" layout-sm="column">
 	<h3>Player Inventory</h3>
-	<!-- <hr> -->
 	<div layout="row">
 	<ul flex>
 		<li>
 			<span class="strong">buckets</span>
 		</li>
-		<li>{{details.inventory.buckets}}</li>
+		<!-- <li>{{details.inventory.buckets}}</li> -->
 		<li ng-repeat="(key,value) in details.inventory.buckets"><span class="label">{{key}}</span> <span>{{value}}</span></li>
 	</ul>
 	<ul flex>
 		<li>
 			<span class="strong">currencies</span>
 		</li>
-		<li>{{details.inventory.currencies}}</li>
+		<!-- <li>{{details.inventory.currencies}}</li> -->
 		<li ng-repeat="(key,value) in details.inventory.currencies[0]"><span class="label">{{key}}</span> <span>{{value}}</span></li>
 	</ul>
 	</div>

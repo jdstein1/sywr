@@ -60,7 +60,6 @@
 		};
 		// console.log('$scope.myItemData: ', $scope.myItemData);
 
-		// $http.get('api2.php')
 		$http.get('items/'+$scope.item+'.php')
 			.success(function (data) {
 			console.log('sDataItemDetails.getMember -- success');

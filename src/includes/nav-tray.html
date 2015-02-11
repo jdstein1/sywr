@@ -1,12 +1,10 @@
 <md-sidenav class="md-sidenav-{{direction}}" md-component-id="settings" md-is-open="sidenavOpen">
 	<md-toolbar class="" layout="row" layout-align="center center">
 		<h1 flex class="md-toolbar-tools">Settings</h1>
-		<!-- <md-button ng-click="toggleRight()" class="md-fab md-primary close closeRight" aria-label="toggle" style="">
-			<span class="icon icon-arrow-right"></span>
-		</md-button> -->
 	</md-toolbar>
 	<md-content class="md-padding" layout="column">
-		<!-- <md-list layout="column"> -->
+		<md-list layout="column">
+		<!-- <h3>settings</h3> -->
 		<md-item ng-repeat="item in settingsItems | orderBy : orderNav : reverseNav">
 			<md-button aria-label="{{item.name}}" class="md-primary" ng-disabled="true" ng-click="toggleLeft()" href="#/{{item.path}}">
 				<span class="{{item.icon}}"></span>
@@ -16,6 +14,6 @@
 			<!-- <md-item ng-repeat="item in settingsItems">
 				<h4 class=""><a ng-click="toggleLeft()" href="#/{{item.path}}">{{item.name}}</a></h4>
 			</md-item> -->
-		<!-- </md-list> -->
+		</md-list>
 	</md-content>
 </md-sidenav>

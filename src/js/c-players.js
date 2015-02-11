@@ -3,10 +3,8 @@
 	'use strict';
 
 	app.controller('cPlayers', cPlayers)
-	function cPlayers($scope, $http, $route, $location, constProtocol, constBungieUrl, sPlayers, sNavMenu) {
-		$scope.meta = sNavMenu[1];
+	function cPlayers($scope, $http, $route, $location, constProtocol, constBungieUrl, constLogo, sPlayers) {
 		$scope.ctitle = 'cPlayers';
-		$scope.title = $scope.meta.name;
 		console.log('START', $scope.ctitle);
 
 		// console.log('$scope.meta.icon', $scope.meta.icon);
@@ -15,6 +13,8 @@
 		// console.log('myEmblemUrl: ', myEmblemUrl);
 
 		$scope.bungieImgPath = constProtocol[0] + '://' + constBungieUrl.domain;
+
+		$scope.constLogo = constLogo;
 
 		$scope.members = sPlayers;
 		// console.log('$scope.members: ', $scope.members);

@@ -139,52 +139,17 @@
 	// console.log('test cMenu:', angular.module('app').controller('cMenu'));
 
 	app.controller('cHome', cHome)
-	function cHome($scope, constClan) {
+	function cHome($scope, constClan, constLogo) {
 		$scope.ctitle = 'cHome';
 		$scope.title = 'Home';
 		console.log('START', $scope.ctitle);
 
 		$scope.constClan = constClan;
+		$scope.constLogo = constLogo;
 
 		$scope.options = [
 			"name","id","date"
 		];
-		$scope.logo = {
-			"destiny":{
-				"path":"lib/brands/destiny/",
-				"alt":"Destiny Logo",
-				"hz":{
-					"bk":"Destiny_Logo_Horizontal_Black.png",
-					"wh":"Destiny_Logo_Horizontal_White.png"
-				},
-				"st":{
-					"bk":"Destiny_Logo_Stacked_Black.png", 
-					"wh":"Destiny_Logo_Stacked_White.png"
-				}
-			},
-			"bungie":{
-				"path":"lib/brands/bungie/",
-				"alt":"Bungie Logo",
-				"hz":{
-					"bk":"Destiny_Logo_Horizontal_Black.png",
-					"wh":"Destiny_Logo_Horizontal_White.png"
-				},
-				"st":{
-					"bk":"Destiny_Logo_Stacked_Black.png",
-					"wh":"Destiny_Logo_Stacked_White.png"
-				},
-				"iconography":{
-					"carnage":"iconography/Carnage_Zone.png",
-					"lovedark":"iconography/Love_Bungie-dark.png",
-					"lovelight":"iconography/Love_Bungie-light.png",
-					"septagon":"iconography/Septagon.png",
-					"shield":"iconography/Shield_Crest.png",
-					"swordburst":"iconography/Swordburst_Crest.png"
-				}
-			}
-		};
-		console.log('$scope.logo.destiny: ', $scope.logo.destiny);
-		console.log('$scope.logo.bungie: ', $scope.logo.bungie);
 	}
 	// console.log('test cHome:', angular.module('app').controller('cHome'));
 
