@@ -33,7 +33,6 @@ Angular Material dependencies:
 		"console":"Xbox",
 		"id":519979
 	});
-
 	app.constant('constLogo', {
 		"destiny":{
 			"path":"lib/brands/destiny/",
@@ -68,7 +67,6 @@ Angular Material dependencies:
 			}
 		}
 	});
-
 	app.constant('constProtocol', ['http', 'https']);
 	app.constant('constFileTypes', ['jpg', 'png', 'gif']);
 // URLs that need to be covered by the constBungieUrl object:
@@ -115,11 +113,11 @@ Angular Material dependencies:
 			when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGameDetail'}).
 			when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).
 			when('/items/:item', {templateUrl: 'views/items/item.html', controller: 'cItemDetail'}).
-			when('/players', {templateUrl: 'views/players.html', controller: 'cPlayers'}).
-			when('/:member', {templateUrl: 'views/players/player.html', controller: 'cPlayerDetail'}).
-			when('/:member/characters', {templateUrl: 'views/characters/compare.html', controller: 'cPlayerDetail'}).
-			when('/:member/:character', {templateUrl: 'views/characters/display.html', controller: 'cPlayerDetail'}).
-			when('/:member/:activity', {templateUrl: 'views/players/activity.html', controller: 'cPlayerDetail'}).
+			when('/players', {templateUrl: 'views/home.html', controller: 'cHome'}).
+			when('/players/:member', {templateUrl: 'views/players/player.html', controller: 'cPlayerDetail'}).
+			when('/players/:member/characters', {templateUrl: 'views/characters/compare.html', controller: 'cPlayerDetail'}).
+			when('/players/:member/characters/:character', {templateUrl: 'views/characters/display.html', controller: 'cPlayerDetail'}).
+			when('/players/:member/actvity', {templateUrl: 'views/players/activity.html', controller: 'cPlayerDetail'}).
 			when('/test', {templateUrl: 'views/test.html', controller: 'cTest'}).
 			otherwise({redirectTo: '/'});
 		}

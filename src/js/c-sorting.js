@@ -17,6 +17,13 @@
 				'asc':false,
 				'des':false
 			},{
+				'type':'rank',
+				'tag':'rank',
+				'class':'',
+				'def':true,
+				'asc':false,
+				'des':false
+			},{
 				'type':'handle',
 				'tag':'handle',
 				'class':'',
@@ -34,8 +41,10 @@
 		];
 		console.log('$scope.sortOptions:', $scope.sortOptions);
 		console.log('$scope.sortOptions.length:', $scope.sortOptions.length);
-		$scope.sortOrderChoice = "name";
+		$scope.sortOrderChoice = "rank";
 		console.log('$scope.sortOrderChoice:', $scope.sortOrderChoice);
+
+		$scope.rankDefinitions = {2:"Member",3:"Admin",1:"Probie",4:"Founder",0:"Pledge"}
 
 		$scope.sortClass = {};
 		$scope.sortClassAsc = "flaticon-drop25";

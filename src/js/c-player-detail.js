@@ -15,7 +15,7 @@
 
   		// $scope.player = sPlayerDetail.getMember();
 
-		$http.get('data/'+$route.current.params.member+'.php')
+		$http.get('api/'+$route.current.params.member+'.php')
 			.success(function (data) {
 			console.log('sPlayerDetail.getMember -- success');
 			console.log('data: ', data);

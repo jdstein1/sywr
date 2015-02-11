@@ -136,12 +136,6 @@ table tr th {
 .sorting th {
   text-align: right;
 }
-.asc:after {
-  content: "\2191";
-}
-.des:after {
-  content: "\2193";
-}
 .link.outbound {
   background: rgba(127, 0, 127, 0.125);
   border: 1px solid rgba(127, 0, 127, 0.5);

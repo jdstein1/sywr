@@ -27,33 +27,45 @@
 		var myMemberData = [{
 			"id":"8310647",
 			"handle":"SarcasticWatchr",
+			"rank":2,
 			"name":"Jeff",
 			"github":"jdstein1",
-			"website":"http://dragonize.wordpress.com/"
+			"blog":"http://dragonize.wordpress.com/"
 		},{
 			"id":"7037048",
 			"handle":"Spacewolf 024",
+			"rank":3,
 			"name":"John",
 			"github":"spacewolf024",
-			"website":"http://www.blogspot.com/"
+			"blog":"http://www.blogspot.com/"
 		},{
 			"id":"7666141",
 			"handle":"kras07",
+			"rank":3,
 			"name":"Kras",
 			"github":"Krasio07",
-			"website":"http://kweek13.blogspot.com/"
+			"blog":"http://kweek13.blogspot.com/"
 		},{
 			"id":"8162353",
 			"handle":"SameMussel62767",
+			"rank":1,
 			"name":"Vikas",
 			"github":"",
-			"website":"http://www.blogspot.com/"
+			"blog":"http://www.blogspot.com/"
 		},{
 			"id":"3892477",
 			"handle":"Tanman2391",
+			"rank":4,
 			"name":"Tanner",
 			"github":"tanman2391",
-			"website":"http://www.blogspot.com/"
+			"blog":"http://www.blogspot.com/"
+		},{
+			"id":"9856625",
+			"handle":"SassiestLeech10",
+			"rank":0,
+			"name":"Kaleb",
+			"github":"",
+			"blog":"http://www.blogspot.com/"
 		}];
 
 		for (var i = 0; i < myMemberData.length; i++) {

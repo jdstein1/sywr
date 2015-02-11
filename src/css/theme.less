@@ -13,10 +13,11 @@
 @playerRow: #831064;
 
 @8310647: #831064;
-@7037048: spin(@8310647, 30);
-@7666141: spin(@8310647, 60);
-@3892477: spin(@8310647, -30);
-@8162353: spin(@8310647, -60);
+@7037048: spin(@8310647, 60);
+@7666141: spin(@8310647, 120);
+@3892477: spin(@8310647, 180);
+@8162353: spin(@8310647, 240);
+@9856625: spin(@8310647, 300);
 
 /* mixins */
 // example:
@@ -112,6 +113,10 @@ article.cItems {
 }
 .row-8162353 {
 	border-left: 0.5em solid spin(@playerRow+#666, 240);
+	// background: spin(@playerRow+#aaa, 270);
+}
+.row-9856625 {
+	border-left: 0.5em solid spin(@playerRow+#666, 300);
 	// background: spin(@playerRow+#aaa, 270);
 }
 

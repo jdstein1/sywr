@@ -15,22 +15,9 @@
 
 <md-card>
 <md-card-content layout="column" layout-sm="column">
-	<h3>Player Metadata</h3>
+	<!-- <h3>Player Metadata</h3> -->
 	<div layout="row">
 	<ul flex>
-		<li>
-			<span class="label">clanName</span>
-			<span>{{details.clanName}}</span>
-		</li>
-		<li>
-			<span class="label">clanTag</span>
-			<span>{{details.clanTag}}</span>
-		</li>
-	</ul>
-	<ul flex>
-		<li>
-			<span class="strong">misc</span>
-		</li>
 		<li>
 			<span class="label">membershipId</span>
 			<span>{{details.membershipId}}</span>
@@ -47,31 +34,11 @@
 	</div>
 </md-card-content>
 </md-card>
+
+
 <md-card>
 <md-card-content layout="column" layout-sm="column">
-	<h3>Player Inventory</h3>
-	<div layout="row">
-	<ul flex>
-		<li>
-			<span class="strong">buckets</span>
-		</li>
-		<!-- <li>{{details.inventory.buckets}}</li> -->
-		<li ng-repeat="(key,value) in details.inventory.buckets"><span class="label">{{key}}</span> <span>{{value}}</span></li>
-	</ul>
-	<ul flex>
-		<li>
-			<span class="strong">currencies</span>
-		</li>
-		<!-- <li>{{details.inventory.currencies}}</li> -->
-		<li ng-repeat="(key,value) in details.inventory.currencies[0]"><span class="label">{{key}}</span> <span>{{value}}</span></li>
-	</ul>
-	</div>
-</md-card-content>
-</md-card>
-<md-card>
-<md-card-content layout="column" layout-sm="column">
-	<h3>Player Characters</h3>
-	<!-- <hr> -->
+	<h3>Characters</h3>
 	<div layout="column">
 	<table ng-repeat="character in details.characters | orderBy: $index: false" style="width:100%;">
 		<thead>
@@ -117,9 +84,8 @@
 					</table>
 				</td>
 				<td>
-					<md-button ng-disabled="false" ng-click="displayCharacter($index)">View Details</md-button>
-					<md-button ng-disabled="true" ng-click="compareCharacter($index)">Compare</md-button>
-					<md-button ng-disabled="true">More...</md-button>
+					<md-button flex class="md-primary" ng-disabled="false" ng-click="displayCharacter($index)">Display</md-button>
+					<label flex class="md-primary md-button"><input type="checkbox" ng-disabled="true">Select</label>
 				</td>
 			</tr>
 		</thead>
@@ -127,5 +93,37 @@
 	</div>
 </md-card-content>
 </md-card>
+
+
+<md-card>
+<md-card-content layout="row" layout-sm="column">
+	<md-button flex class=" md-primary" href="#/players/{{member}}/characters">Compare All</md-button>
+	<md-button flex class=" md-primary" ng-disabled="true" ng-click="compareCharacter($index)">Compare Selected</md-button>
+</md-card-content>
+</md-card>
+
+
+<md-card>
+<md-card-content layout="column" layout-sm="column">
+	<h3>Inventory</h3>
+	<div layout="row">
+	<ul flex>
+		<li>
+			<span class="strong">buckets</span>
+		</li>
+		<!-- <li>{{details.inventory.buckets}}</li> -->
+		<li ng-repeat="(key,value) in details.inventory.buckets"><span class="label">{{key}}</span> <span>{{value}}</span></li>
+	</ul>
+	<ul flex>
+		<li>
+			<span class="strong">currencies</span>
+		</li>
+		<!-- <li>{{details.inventory.currencies}}</li> -->
+		<li ng-repeat="(key,value) in details.inventory.currencies[0]"><span class="label">{{key}}</span> <span>{{value}}</span></li>
+	</ul>
+	</div>
+</md-card-content>
+</md-card>
+
 </md-content>
 </article>

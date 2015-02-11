@@ -47,12 +47,15 @@ Install these apps to get up and running:
 | ----------------------- | ---------- | -----------------------------------------------------------------------------------|
 | for FTP                 | Mac OS X   | Install [Transmit](http://www.panic.com/transmit/)                                 |
 |                         | All        | Install [FileZilla](https://filezilla-project.org/download.php?show_all=1)         |
+
 | ----------------------- | ---------- | -----------------------------------------------------------------------------------|
 | for version control     | Mac OS X   | Install [GitHub GUI](http://mac.github.com/)                                       |
 |                         | Windows    | Install [GitHub GUI](http://windows.github.com/)                                   |
+
 | ----------------------- | ---------- | -----------------------------------------------------------------------------------|
 | for running a           | Mac OS X   | Install [MAMP](http://www.mamp.info/)                                              |
 | PHP server              | Windows    | Install [WAMP](http://www.wampserver.com/)                                         |
+
 | ----------------------- | ---------- | -----------------------------------------------------------------------------------|
 | for editing this README | N/A        | Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) |
 

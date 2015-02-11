@@ -21,21 +21,22 @@
 		// console.log('$scope.members[1]: ', $scope.members[1]);
 
 		for (var i = 0; i < $scope.members.length; i++) {
+			// Generate URLs for Bungie Profile
 			var myMemberUrl = constProtocol[0] + '://' + constBungieUrl.domain +'/'+ constBungieUrl.lang +'/'+ constBungieUrl.profile + '/254/' + $scope.members[i].id;
+			// Generate URLs for GitHub
+			// var myGithubUrl = constProtocol[0] + '://' + constBungieUrl.domain +'/'+ constBungieUrl.lang +'/'+ constBungieUrl.profile + '/254/' + $scope.members[i].id;
 			$scope.members[i].url = myMemberUrl;
 		};
 		// console.log('$scope.members: ', $scope.members);
 
 		$scope.getPlayerBackgroundPath = function (id) {
 			console.log('START getPlayerBackgroundPath');
-			// http://www.bungie.net/img/UserThemes/Destiny1/header.jpg
 			// http://www.bungie.net/img/UserThemes/Destiny3/header.jpg
 			var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
 			return path;
 		};
 		$scope.getPlayerAvatarPath = function (id) {
 			console.log('START getPlayerAvatarPath');
-			// http://www.bungie.net/img/profile/avatars/bungieday_13.jpg
 			// http://www.bungie.net/img/profile/avatars/bungieday_10.jpg
 			var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
 			return path;
