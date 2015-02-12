@@ -10,22 +10,17 @@ Created by the Social Degenerate Nerds crew:
 
 * Jeff Stein (html, css, js)
 * John Mitchell (php, api, js)
-* Kras Bonchev
-* Tanner Wilson
+* Kras Bonchev (api, js)
+* Tanner Wilson (api, js)
 
 ## About
 
-Tracking system for video game players that:
+Tracking system for video game players that displays and compares data about:
 
-* Displays:
-  * clan data
-  * player data
-  * player character data
-* Compares:
-  * player progress in a game's story (PvE)
-  * player progress in a game's multiplayer (PvP)
-  * player achievements
-  * player character gear & weapons
+* character level progress and attributes
+* character inventory, gear & weapons
+* activity progress in a game's story (PvE) and multiplayer (PvP)
+* achievements in PvE and PvP
 
 ## Dependencies
 
@@ -34,38 +29,48 @@ We use these 3rd party libs:
 * JS Libraries:
   * AngularJS
   * Less CSS
-  * Angular Material (coming soon)
+  * Angular Material
   * ThreeJS (coming soon)
 
-## Developing
-
-### How to run locally
+## Getting Started
 
 Install these apps to get up and running:
 
-| Purpose                 | Platform   | App                                                                                |
-| ----------------------- | ---------- | -----------------------------------------------------------------------------------|
-| for FTP                 | Mac OS X   | Install [Transmit](http://www.panic.com/transmit/)                                 |
-|                         | All        | Install [FileZilla](https://filezilla-project.org/download.php?show_all=1)         |
+#### for Version Control
 
-| ----------------------- | ---------- | -----------------------------------------------------------------------------------|
-| for version control     | Mac OS X   | Install [GitHub GUI](http://mac.github.com/)                                       |
-|                         | Windows    | Install [GitHub GUI](http://windows.github.com/)                                   |
+* Mac OS X // Install [GitHub GUI](http://mac.github.com/)
+* Windows // Install [GitHub GUI](http://windows.github.com/)
 
-| ----------------------- | ---------- | -----------------------------------------------------------------------------------|
-| for running a           | Mac OS X   | Install [MAMP](http://www.mamp.info/)                                              |
-| PHP server              | Windows    | Install [WAMP](http://www.wampserver.com/)                                         |
+#### for running a PHP server
 
-| ----------------------- | ---------- | -----------------------------------------------------------------------------------|
-| for editing this README | N/A        | Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) |
+* Mac OS X // Install [MAMP](http://www.mamp.info/)
+* Windows // Install [WAMP](http://www.wampserver.com/)
 
+#### for FTP
+
+* Mac OS X // Install [Transmit](http://www.panic.com/transmit/)
+* All // Install [FileZilla](https://filezilla-project.org/download.php?show_all=1)
+
+#### for editing this README
+
+* Learn [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) |
 
 Now you are ready to <s>rock</s> **raid**!
 
-### Running the app
+## Developing
+
+### Cloning the repo
+
+1. Open GitHub
+2. Click "+" in upper left corner
+3. Select "Clone" tab
+4. Navigate to your "MAMP/htdocs" directory
+5. Click "Clone" button
+
+### Running the app locally
 
 1. Open MAMP
-2. Press "Start Servers"
+2. Press "Start Servers" button
 3. Point browser to [http://localhost:8888/sywr/src/default.html](http://localhost:8888/sywr/src/default.html)
 
 ### Writing code
