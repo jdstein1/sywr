@@ -27,11 +27,19 @@ section,
 aside {
   float: left;
 }
+body p,
+html p {
+  line-height: 1.4;
+}
+article * {
+  overflow: hidden;
+}
 article ul,
 article ol,
 article dl {
   padding: 0.5em 0;
-  margin: 0 0 0 1em;
+  margin: 0;
+  text-indent: 0;
 }
 article ul li,
 article ol li,
@@ -43,8 +51,9 @@ article ul dd,
 article ol dd,
 article dl dd {
   list-style-type: none;
-  padding: 0 0.5em;
-  margin: 0 0;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
 }
 article ul {
   list-style-type: disc;
@@ -118,6 +127,21 @@ table tr td .label {
 table tr th {
   text-align: right;
 }
+.description ul li {
+  list-style-type: disc;
+}
+.description ul li ul li {
+  list-style-type: square;
+}
+.description ul li ul li ul li {
+  list-style-type: circle;
+}
+.todos li,
+.todos dt,
+.todos dd {
+  padding: 0.25em;
+  border-radius: 0.25em;
+}
 .helper {
   font-size: 0.875em;
   color: rgba(0, 0, 0, 0.5);
@@ -136,6 +160,26 @@ table tr th {
 .sorting th {
   text-align: right;
 }
+.todos b {
+  border-bottom: 2px solid #ddd;
+  text-transform: lowercase;
+}
+.todos span:before,
+.todos span:after {
+  color: #999;
+}
+.todos .priority0 {
+  color: #ff0000;
+}
+.todos .priority1 {
+  color: #ff9900;
+}
+.todos .priority2 {
+  color: #009900;
+}
+.todos .priority3 {
+  color: #9999ff;
+}
 .link.outbound {
   background: rgba(127, 0, 127, 0.125);
   border: 1px solid rgba(127, 0, 127, 0.5);
@@ -153,9 +197,9 @@ table tr th {
   border: 1px solid rgba(0, 255, 127, 0.5);
 }
 .label {
-  color: rgba(0, 0, 0, 0.75);
+  color: #808080;
   padding-right: 0.25em;
-  width: 8em;
+  width: auto;
   height: 1em;
   line-height: 1em;
   text-align: right;

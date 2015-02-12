@@ -1,152 +1,145 @@
-{"todo":{
-
-"description":"Things left to do in order to make this a decent protfolio piece:",
-"items":[{
-		"title":"Feedback Form",
-		"meta":{
+{"todos":{
+	"description":"Things left to do in order to make this a decent protfolio piece:",
+	"items":[{
+			"title":"Feedback Form",
+			"assignee":  "Jeff",
+			"meta":{
+				"status": 1,
+				"priority": 1
+			},
+			"description":[
+				"Make the feedback form submit the data to an email address.",
+				"Use GDocs form?"
+			]
+		},{
+			"title":"Build Manager",
 			"assignee":  "???",
-			"status": "IN PROGRESS",
-			"priority": 3
-		},
-		"description":[
-			"* Make the feedback form submit the data to an email address.",
-			"* Use GDocs form?"
-		]
-	},{
-		"title":"Build Manager",
-		"meta":{
-			"assignee":  "???",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) ) to do the following:",
-			"* Run JSHint/JSLint on scripts",
-			"* Minify JS",
-			"* Convert LessCSS to CSS"
-		]
-	},{
-		"title":"Custom Icons",
-		"meta":{
-			"assignee":  "JEFF",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"Create a set of icons for specific games and their symbols for character classes, acheivements, mission types, etc."
-		]
-	},{
-		"title":"Better background Images",
-		"meta":{
-			"assignee":  "JEFF",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"Slice up the current background images so they make a more solid-colored field."
-		]
-	},{
-		"title":"Custom Theme",
-		"meta":{
-			"assignee":  "JEFF",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"Customize the basic Material Design theme to provide a unique look and feel."
-		]
-	},{
-		"title":"Multiple API call",
-		"meta":{
+			"meta":{
+				"status": 0,
+				"priority": 2
+			},
+			"description":[
+				"We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) ) to do the following:",
+				"* Run JSHint/JSLint on scripts",
+				"* Minify JS",
+				"* Convert LessCSS to CSS"
+			]
+		},{
+			"title":"Custom Icons",
+			"assignee":  "Jeff",
+			"meta":{
+				"status": 2,
+				"priority": 3
+			},
+			"description":[
+				"Create a set of icons for specific games and their symbols for character classes, acheivements, mission types, etc."
+			]
+		},{
+			"title":"Better background Images",
+			"assignee":  "Jeff",
+			"meta":{
+				"status": 0,
+				"priority": 2
+			},
+			"description":[
+				"Slice up the current background images so they make a more solid-colored field."
+			]
+		},{
+			"title":"Custom Theme",
+			"assignee":  "Jeff",
+			"meta":{
+				"status": 0,
+				"priority": 3
+			},
+			"description":[
+				"Customize the basic Material Design theme to provide a unique look and feel."
+			]
+		},{
+			"title":"Multiple API call",
 			"assignee":  "Kras & John",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"Pass more than one account ID or character ID in order to populate a player/character comparison page."
-		]
-	},{
-		"title":"Link to Clan & Profile pages",
-		"meta":{
-			"assignee": "JEFF",
-			"status": "DONE",
-			"priority": 3
-		},
-		"description":[
-			"### Bungie/Destiny URLs",
-			"* Clan",
-			"    * [http://www.bungie.net/en/Clan/Xbox/519979](http://www.bungie.net/en/Clan/Xbox/519979)",
-			"* Member Profile",
-			"    * [http://www.bungie.net/en/Profile/254/3892477](http://www.bungie.net/en/Profile/254/3892477)"
-		]
-	},{
-		"title":"Use API to populate Clan pages",
-		"meta":{
-			"assignee": "JEFF",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"### Bungie/Destiny APIs",
-			"* Clan info API",
-			"    * [http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1](http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1)",
-			"    * [http://www.bungie.net/Platform/Group/519979/Members/?lc=en&fmt=true&lcin=true&currentPage=1](http://www.bungie.net/Platform/Group/519979/Members/?lc=en&fmt=true&lcin=true&currentPage=1)"
-		]
-	},{
-		"title":"Use API to populate Player pages",
-		"meta":{
-			"assignee": "JEFF",
-			"status": "DONE",
-			"priority": 3
-		},
-		"description":[
-			"* Player info API",
-			"    * [http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true](http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true)"
-		]
-	},{
-		"title":"Use API to populate Activity pages",
-		"meta":{
+			"meta":{
+				"status": 1,
+				"priority": 1
+			},
+			"description":[
+				"Pass more than one account ID or character ID in order to populate a player/character comparison page."
+			]
+		},{
+			"title":"Link to Clan & Profile pages",
+			"assignee": "Jeff",
+			"meta":{
+				"status": 3,
+				"priority": 0
+			},
+			"description":[
+				"Example:",
+				"### Bungie/Destiny URLs",
+				"* Clan: [http://www.bungie.net/en/Clan/Xbox/519979](http://www.bungie.net/en/Clan/Xbox/519979)",
+				"* Member Profile: [http://www.bungie.net/en/Profile/254/3892477](http://www.bungie.net/en/Profile/254/3892477)"
+			]
+		},{
+			"title":"Use API to populate Clan pages",
+			"assignee": "Jeff",
+			"meta":{
+				"status": 1,
+				"priority": 0
+			},
+			"description":[
+				"Example:",
+				"### Bungie/Destiny APIs",
+				"* Clan info API (v3): [http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1](http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1)",
+				"* Clan info API (v1): [http://www.bungie.net/Platform/Group/519979/Members/?lc=en&fmt=true&lcin=true&currentPage=1](http://www.bungie.net/Platform/Group/519979/Members/?lc=en&fmt=true&lcin=true&currentPage=1)"
+			]
+		},{
+			"title":"Use API to populate Player pages",
+			"assignee": "Jeff",
+			"meta":{
+				"status": 3,
+				"priority": 0
+			},
+			"description":[
+				"Example:",
+				"### Player info API",
+				"* Player: [http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true](http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true)"
+			]
+		},{
+			"title":"Use API to populate Activity pages",
 			"assignee": "Kras",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"Use Activity APIs to get data like kills, hours played, activities completed.",
-			"### Bungie/Destiny Activity History APIs:",
-			"* Story (mode=2)",
-			"    * [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true)",
-			"* Strike (mode=18)",
-			"    * [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true)",
-			"* Raid (mode=4)",
-			"    * [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true)",
-			"* Crucible & Medals (mode=5)",
-			"    * [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true)",
-			"* Patrol (mode=6)",
-			"    * [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true)"
-		]
-	},{
-		"title":"Hash Converter",
-		"meta":{
+			"meta":{
+				"status": 0,
+				"priority": 1
+			},
+			"description":[
+				"Use Activity APIs to get data like kills, hours played, activities completed.",
+				"### Bungie/Destiny Activity History APIs:",
+				"* Story (mode=2): [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true)",
+				"* Strike (mode=18): [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true)",
+				"* Raid (mode=4): [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true)",
+				"* Crucible & Medals (mode=5): [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true)",
+				"* Patrol (mode=6): [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true)"
+			]
+		},{
+			"title":"Hash Converter",
 			"assignee":  "Tanner",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"Make a local JSON record of most common hash conversions.  For example:"
-		]
+			"meta":{
+				"status": 1,
+				"priority": 1
+			},
+			"description":[
+				"Make a local JSON record of most common hash conversions.  For example:"
+			]
 
-	},{
-		"title":"Item Info Lookup",
-		"meta":{
+		},{
+			"title":"Item Info Lookup",
 			"assignee":  "John",
-			"status": "NOT STARTED",
-			"priority": 3
-		},
-		"description":[
-			"Use this API to look up inventory item data:",
-			"* Item info API",
-			"    * [http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170](http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170)"
-		]
-	}]
-}
+			"meta":{
+				"status": 0,
+				"priority": 2
+			},
+			"description":[
+				"Use this API to look up inventory item data:",
+				"* Item info API: [http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170](http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170)"
+			]
+		}]
+	}
 }

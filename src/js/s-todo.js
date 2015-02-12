@@ -3,23 +3,25 @@
 	'use strict';
 
 	app.service('sTodo', sTodo)
-	function sTodo() {
+	function sTodo($http) {
 		var stitle = 'sTodo';
 		console.log('START', stitle);
 
 		var myTodos = {};
-		var getTodos = function() {
+		// this.getTodos = function() {
 			$http.get('data/todo.json')
 				.success(function (data) {
-					console.log('sTodo.getTodos -- success');
+					console.log('sTodo.getTodos -- success:', data);
 					myTodos = data;
+					// return myTodos;
 				}).error(function () {
 					console.log('sTodo.getTodos -- error');
 					// get backup data at /data/clan.json
 					myTodos = 'no data';
+					// return myTodos;
 				});
-			return myTodos;
-		};
+			// return myTodos;
+		// };
 		// console.log('sTodo', sTodo);
 		// return sTodo;
 		// return myTodos;

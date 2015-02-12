@@ -1,9 +1,25 @@
 <article class="{{ctitle}} bg-destiny">
+<md-content class="md-padding">
+
 	<h1>{{title}}</h1>
-	<p>TEST fdg;lkh;lfk;l gf;lhk f;lgk h;lfgk ;lh gfk; fgk</p>
-	<ul>
-		<li ng-repeat="item in todos">
-			{{item}}
-		</li>
-	</ul>
+	<h4>{{todos.description}}</h4>
+
+	<d-sorting options="todo"> sorting </d-sorting>
+
+	<md-card ng-repeat="item in todos.items | orderBy: sortOrderChoice: sortReverse" class="todos">
+		<md-card-content class="md-padding">
+		<div layout="row">
+			<div flex="65">
+				<h3>{{item.title}}</h3>
+				<span class="description" ng-repeat="line in item.description" ng-bind-html="line | markdown">{{line}}</span>	
+			</div>
+			<ul flex="35">
+				<li class="assignee"><span class="label">assignee</span> <b>{{item.assignee}}</b></li>
+				<li ng-repeat="(key, value) in item.meta" class="{{key}} {{key}}{{value}}"><span class="label">{{key}}</span> <b>{{convertIndex(key,value)}}</b></li>
+			</ul>
+		</div>
+		</md-card-content>
+	</md-card>
+
+</md-content>
 </article>

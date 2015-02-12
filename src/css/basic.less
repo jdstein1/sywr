@@ -4,6 +4,11 @@
 // example:
 // @nice-blue: #5B83AD;
 
+@danger: #f00;
+@warning: #f90;
+@normal: #090;
+@neutral: #99f;
+
 /* mixins */
 // example:
 // .border {
@@ -45,6 +50,8 @@ aside {float: left;}
 //aside {width: 40%; clear: none;}
 footer {}
 
+body p, html p {line-height:1.4;}
+
 h1, h2, h3, h4, h5, h6 {}
 // h1 {font-size: 3em}
 // h2 {font-size: 2em}
@@ -60,15 +67,18 @@ ul, ol, dl {
 }
 
 article {
+	* {overflow:hidden;} // kind of a dangerous global rule...
 	// padding: 1em;
 	// h1, h2, h3, h4, h5, h6 {padding: 0.5em 0 0.25em;}
 	ul, ol, dl {
 		padding:0.5em 0;
-		margin:0 0 0 1em;
+		margin:0;
+		text-indent:0;
 		li, dt, dd {
 			list-style-type: none;
-			padding:0 0.5em;
-			margin:0 0;
+			list-style-position: inside;
+			padding:0;
+			margin:0;
 			span {}
 		}
 	}
@@ -117,7 +127,18 @@ table {
 		td {}
 	}
 }
-
+.description {
+	ul, ol, dl {}
+	li, dt, dd {}
+	ul li {list-style-type: disc;
+		ul li {list-style-type: square;
+			ul li {list-style-type: circle;}
+		}
+	}
+}
+.todos {
+	li, dt, dd {padding:0.25em;border-radius:0.25em;}
+}
 .helper {font-size: 0.875em; color: rgba(0,0,0,0.5); background: rgba(0,0,0,0.125); display: block; width: 100%; text-align: center;}
 .sorting {
 	width:100%;
@@ -125,7 +146,39 @@ table {
 	th {text-align:right;}
 	td {}
 }
-
+.todos {
+	b {border-bottom:2px solid #ddd; text-transform:lowercase;}
+	 span:before, 
+	 span:after {color:#999;}
+	.assignee {
+		// & span:before {content:"\2660";}
+		// & span:after {content:"";}
+	}
+	.status {
+		// & span:before {content:"\2665";}
+		// & span:after {content:"";}
+	}
+	.status0 span:after {
+		// content:"\2606";
+	}
+	.status1 span:after {
+		// content:"\261b";
+	}
+	.status2 span:after {
+		// content:"\2620";
+	}
+	.status3 span:after {
+		// content:"\2605";
+	}
+	.priority {
+		// & span:before {content:"\2666";}
+		// & span:after {content:"";}
+	}
+	.priority0 {color:@danger;}
+	.priority1 {color:@warning;}
+	.priority2 {color:@normal;}
+	.priority3 {color:@neutral;}
+}
 .asc {
 	// background:#fee;
 	&:after {
@@ -153,10 +206,11 @@ table {
 	}
 }
 .label {
-	color:rgba(0,0,0,0.75);
+	color:#808080;
 	padding-right:0.25em;
 	// font-size:0.875em;
-	width: 8em;
+	// width: 8em;
+	width: auto;
 	height: 1em;
 	line-height: 1em;
 	text-align: right;

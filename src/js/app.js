@@ -16,7 +16,7 @@ Angular Material dependencies:
 */
 
 	var app = angular.module('app', [ 
-		'ngMaterial', 'ngRoute', 'ngMessages'
+		'ngMaterial', 'ngRoute', 'ngMessages', 'markdown'
 	]);
 	app.constant('constClan', {
 		"title":{

@@ -6,13 +6,12 @@
 	dl, dt, dd {width: auto; margin: 0;}
 	dl dt {}
 	dl dd {}
+
 	.close, .closeLeft {position:absolute; top:1.75em; right:1em;}
 	/*.closeRight {position:absolute; top:1.5em; left:1em;}*/
 	.left {float:left !important;}
 	.right {float:right !important;}
-	/*.label {width:10em; text-align:right;}*/
 	.wide {width:100%;}
-	.label {color:#999;}
 
 	[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 	[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
