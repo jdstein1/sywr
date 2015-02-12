@@ -1,17 +1,12 @@
 <article class="{{ctitle}} bg-destiny" ng-controller="cSorting">
-<md-content class="md-padding">
+<md-content class="">
 
 	<!-- <d-title> page title directive</d-title> -->
 
 	<div layout="column" class="" style="text-align:center; padding:1em;">
-	<!-- <md-card> -->
-		<!-- <md-card-content class="center"> -->
-			<!-- <h2>{{constClan.title.plain}}</h2> -->
-			<span>a</span>
-			<img ng-src="{{constLogo.destiny.path}}{{constLogo.destiny.hz.bk}}" alt="{{constLogo.destiny.alt}}" class="" style="width:200px; margin:0 auto;">
-			<span>clan</span>
-		<!-- </md-card-content> -->
-	<!-- </md-card> -->
+		<span>a</span>
+		<img ng-src="{{constLogo.destiny.path}}{{constLogo.destiny.hz.bk}}" alt="{{constLogo.destiny.alt}}" class="" style="width:200px; margin:0 auto;">
+		<span>clan</span>
 	</div>
 
 	<!-- START ABOUT THE PLAYERS -->
@@ -19,18 +14,18 @@
 		<!-- <img src="img/destiny/destiny-conceptart-characters-classes.jpg" alt="Destiny Character Classes" width="100%"> -->
 		<md-card-content>
 			<div ng-controller="cClan" layout="row" layout-sm="column" layout-align="center center">
-				<h3 flex>{{metadata.title.plain}}</h3>
+				<!-- <h3 flex>{{metadata.title.plain}}</h3> -->
 				<ul layout="row">
 					<li>
-						<span class="label">platform</span>
+						<span class="label small">platform</span>
 						<span>{{metadata.console}}</span>
 					</li>
 					<li>
-						<span class="label">ID</span>
+						<span class="label small">ID</span>
 						<span>{{metadata.id}}</span>
 					</li>
 					<li>
-						<span class="label">link</span>
+						<span class="label small">link</span>
 						<span><a href="{{myClanUrl}}" target="_blank">{{metadata.title.abbr}}</a></span>
 					</li>
 				</ul>
@@ -38,13 +33,17 @@
 		</md-card-content>
 	</md-card>
 
+<md-divider></md-divider>
+
+
 	<!-- START SORTING -->
 	<!-- <d-sorting>test</d-sorting> -->
 	<!-- <d-sorting options="['name','handle','id']"></d-sorting> -->
 	<md-card>
+		<h3>Players</h3>
 		<md-card-content>
 		<div ng-model="sortOrderChoice" layout="row" layout-sm="column" layout-align="center center">
-			<div>Sort by:</div>
+			<!-- <div>Sort by:</div> -->
 			<md-button ng-repeat="option in sortOptions" aria-label="{{option.type}}" class="md-primary" 
 				ng-class="{'def':option.def, 'asc':option.asc, 'des':option.des}" 
 				ng-click="sortOrderToggle2(option.type, $index)">
@@ -56,17 +55,16 @@
 				ng-click="sortClear()">Clear</md-button>
 		</div>
 		</md-card-content>
-	</md-card>
 
 	<div ng-controller="cPlayers">
 	<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
 		<md-card-content>
-			<md-item-content layout="row" layout-sm="column" class="row-{{item.id}} player-row">
+			<md-item-content layout="row" layout-sm="column" class="row-{{item.id.profile}} player-row">
 				<div flex>
 					<big><b>{{item.handle}}</b></big><br>
 					<ul>
 						<li><big><b>{{item.name}}</b></big></li>
-						<li><b>ID:</b> {{item.id}}</li>
+						<li><b>ID:</b> {{item.id.profile}}</li>
 						<li><b>Status:</b> {{rankDefinitions[item.rank]}}</li>
 					</ul>
 				</div>
@@ -76,12 +74,15 @@
 				<div>
 					<md-button flex class="md-primary link outbound github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
 					<md-button flex class="md-primary link outbound bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
-					<md-button flex class="md-primary link json" href="data/{{item.api}}.php" target="_blank">Raw JSON</md-button>
+					<md-button flex class="md-primary link json" href="api/{{item.api}}.php" target="_blank">Raw JSON</md-button>
 				</div>
 			</md-item-content>
 		</md-card-content>
 	</md-card>
 	</div>
+	</md-card>
+
+<md-divider></md-divider>
 
 	<div layout="row">
 		<md-card flex>

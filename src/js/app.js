@@ -100,25 +100,66 @@ Angular Material dependencies:
 	// ]);
 	app.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.
-			when('/', {templateUrl: 'views/home.html', controller: 'cHome'}).
-			when('/about', {templateUrl: 'views/about.html', controller: 'cAbout'}).
-			when('/blog', {templateUrl: 'views/blog.html', controller: 'cBlog'}).
-			when('/clan', {templateUrl: 'views/clan.html', controller: 'cClan'}).
-			when('/compare', {templateUrl: 'views/compare.html', controller: 'cPlayers'}).
-			when('/compare/quick', {templateUrl: 'views/compare/quick.html', controller: 'cPlayerDetail'}).
-			// when('/compare/:type', {templateUrl: 'views/compare/type.html', controller: 'cCompareDetail'}).
-			when('/environment', {templateUrl: 'views/environment.html', controller: 'cEnvironment'}).
-			when('/feedback', {templateUrl: 'views/feedback.html', controller: 'cFeedback'}).
-			when('/games', {templateUrl: 'views/games.html', controller: 'cGames'}).
-			when('/games/:game', {templateUrl: 'views/games/game.html', controller: 'cGameDetail'}).
-			when('/items', {templateUrl: 'views/items.html', controller: 'cItems'}).
-			when('/items/:item', {templateUrl: 'views/items/item.html', controller: 'cItemDetail'}).
-			when('/players', {templateUrl: 'views/home.html', controller: 'cHome'}).
-			when('/players/:member', {templateUrl: 'views/players/player.html', controller: 'cPlayerDetail'}).
-			when('/players/:member/characters', {templateUrl: 'views/characters/compare.html', controller: 'cPlayerDetail'}).
-			when('/players/:member/characters/:character', {templateUrl: 'views/characters/display.html', controller: 'cPlayerDetail'}).
-			when('/players/:member/actvity', {templateUrl: 'views/players/activity.html', controller: 'cPlayerDetail'}).
-			when('/test', {templateUrl: 'views/test.html', controller: 'cTest'}).
+			when('/', {
+				templateUrl: 'views/home.html', 
+				controller: 'cHome'}).
+			when('/about', {
+				templateUrl: 'views/about.html', 
+				controller: 'cAbout'}).
+			when('/blog', {
+				templateUrl: 'views/blog.html', 
+				controller: 'cBlog'}).
+			when('/clan', {
+				templateUrl: 'views/clan.html', 
+				controller: 'cClan'}).
+			when('/compare', {
+				templateUrl: 'views/compare.html', 
+				controller: 'cPlayers'}).
+			when('/compare/quick', {
+				templateUrl: 'views/compare/quick.html', 
+				controller: 'cPlayerDetail'}).
+			// when('/compare/:type', {
+				// templateUrl: 'views/compare/type.html', 
+				// controller: 'cCompareDetail'}).
+			when('/environment', {
+				templateUrl: 'views/environment.html', 
+				controller: 'cEnvironment'}).
+			when('/feedback', {
+				templateUrl: 'views/feedback.html', 
+				controller: 'cFeedback'}).
+			// GAMES
+			when('/games', {
+				templateUrl: 'views/games.html', 
+				controller: 'cGames'}).
+			when('/games/:game', {
+				templateUrl: 'views/games/game.html', 
+				controller: 'cGameDetail'}).
+			// ITEMS
+			when('/items', {
+				templateUrl: 'views/items.html', 
+				controller: 'cItems'}).
+			when('/items/:item', {
+				templateUrl: 'views/items/item.html', 
+				controller: 'cItemDetail'}).
+			// PLAYERS
+			when('/players', {
+				templateUrl: 'views/players.html', 
+				controller: 'cPlayers'}).
+			when('/players/:member', {
+				templateUrl: 'views/players/player.html', 
+				controller: 'cPlayerDetail'}).
+			when('/players/:member/characters', {
+				templateUrl: 'views/characters/compare.html', 
+				controller: 'cPlayerDetail'}).
+			when('/players/:member/characters/:character', {
+				templateUrl: 'views/characters/display.html', 
+				controller: 'cCharacterDetail'}).
+			// when('/players/:member/actvity', {
+				// templateUrl: 'views/players/activity.html', 
+				// controller: 'cPlayerDetail'}).
+			when('/test', {
+				templateUrl: 'views/test.html', 
+				controller: 'cTest'}).
 			otherwise({redirectTo: '/'});
 		}
 	]);

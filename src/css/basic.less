@@ -67,7 +67,7 @@ article {
 		margin:0 0 0 1em;
 		li, dt, dd {
 			list-style-type: none;
-			padding:0 0;
+			padding:0 0.5em;
 			margin:0 0;
 			span {}
 		}
@@ -154,7 +154,7 @@ table {
 }
 .label {
 	color:rgba(0,0,0,0.75);
-	padding-right:0.5em;
+	padding-right:0.25em;
 	// font-size:0.875em;
 	width: 8em;
 	height: 1em;
@@ -163,6 +163,7 @@ table {
 	float: left;
 	&:after {content: ":";}
 }
+.label.small {width: auto; float: none;}
 .strong, .strong:before, .strong:after {font-weight: 700 !important;}
 .small, .small:before, .small:after {font-size:0.875em !important; line-height: 1 !important; height:1em !important;}
 .normal, .normal:before, .normal:after {font-size:1em !important; line-height: 1 !important; height:1em !important;}

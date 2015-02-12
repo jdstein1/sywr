@@ -2,15 +2,15 @@
 (function() {
 	'use strict';
 
-	app.controller('cPlayerDetail', cPlayerDetail)
-	function cPlayerDetail($scope, $http, $route, $location) {
-		$scope.ctitle = 'cPlayerDetail';
+	app.controller('cCharacterDetail', cCharacterDetail)
+	function cCharacterDetail($scope, $http, $route, $location) {
+		$scope.ctitle = 'cCharacterDetail';
 		$scope.title = 'Player';
 		console.log('START', $scope.ctitle);
 
-		$scope.member = $route.current.params.member;
-  		console.log('$scope.member',$scope.member );
-  		console.log('$route.current.params.member',$route.current.params.member );
+		$scope.character = $route.current.params.character;
+  		console.log('$scope.character',$scope.character );
+  		console.log('$route.current.params.character',$route.current.params.character );
 
   		// $scope.player = sPlayerDetail.getMember();
 
@@ -33,10 +33,8 @@
 				$scope.myCharacter = $scope.details.characters[c];
 				console.log('$scope.myCharacter: ', $scope.myCharacter);
 				return $scope.myCharacter;
-
 			} else {
 				return $scope.myCharacter;
-
 			};
 		};
 
@@ -54,6 +52,6 @@
 		// };
 
 	}
-	// console.log('test cPlayerDetail:', angular.module('app').controller('cPlayerDetail'));
+	// console.log('test cCharacterDetail:', angular.module('app').controller('cCharacterDetail'));
 
 })();

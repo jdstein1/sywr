@@ -1,5 +1,5 @@
 <!-- Compare all characters -->
-<article class="{{ctitle}} bg-destiny">
+<article class="{{ctitle}} bg-destiny" ng-controller="cPlayers">
 <md-content class="md-padding">
 
 	<h1><span class="flaticon {{meta.icon}}"></span>{{title}}: {{member}}</h1>
@@ -15,31 +15,10 @@
 
 <md-card>
 <md-card-content layout="column" layout-sm="column">
-	<!-- <h3>Player Metadata</h3> -->
-	<div layout="row">
-	<ul flex>
-		<li>
-			<span class="label">membershipId</span>
-			<span>{{details.membershipId}}</span>
-		</li>
-		<li>
-			<span class="label">membershipType</span>
-			<span>{{details.membershipType}}</span>
-		</li>
-		<li>
-			<span class="label">grimoireScore</span>
-			<span>{{details.grimoireScore}}</span>
-		</li>
-	</ul>
-	</div>
-</md-card-content>
-</md-card>
-
-
-<md-card>
-<md-card-content layout="column" layout-sm="column">
 	<h3>Characters</h3>
 	<div layout="column">
+<md-card>
+<md-card-content layout="column" layout-sm="column">
 	<table ng-repeat="character in details.characters | orderBy: $index: false" style="width:100%;">
 		<thead>
 			<tr>
@@ -84,24 +63,46 @@
 					</table>
 				</td>
 				<td>
-					<md-button flex class="md-primary" ng-disabled="false" ng-click="displayCharacter($index)">Display</md-button>
-					<label flex class="md-primary md-button"><input type="checkbox" ng-disabled="true">Select</label>
+					<md-button flex aria-label="Display" class="md-primary" ng-disabled="false" ng-click="displayCharacter($index)">Display</md-button>
+					<md-checkbox flex aria-label="Select" class="md-primary md-button" ng-disabled="true">Select</md-checkbox>
 				</td>
 			</tr>
 		</thead>
 	</table>
+</md-card-content>
+</md-card>
+	</div>
+
+	<md-button class="md-primary" href="#/players/{{member}}/characters">Compare All</md-button>
+	<md-button class="md-primary" ng-disabled="true" ng-click="compareCharacter($index)">Compare Selected</md-button>
+</md-card-content>
+</md-card>
+
+<md-divider></md-divider>
+
+<md-card>
+<md-card-content layout="column" layout-sm="column">
+	<h3>Metadata</h3>
+	<div layout="row">
+	<ul flex>
+		<li>
+			<span class="label">membershipId</span>
+			<span>{{details.membershipId}}</span>
+		</li>
+		<li>
+			<span class="label">membershipType</span>
+			<span>{{details.membershipType}}</span>
+		</li>
+		<li>
+			<span class="label">grimoireScore</span>
+			<span>{{details.grimoireScore}}</span>
+		</li>
+	</ul>
 	</div>
 </md-card-content>
 </md-card>
 
-
-<md-card>
-<md-card-content layout="row" layout-sm="column">
-	<md-button flex class=" md-primary" href="#/players/{{member}}/characters">Compare All</md-button>
-	<md-button flex class=" md-primary" ng-disabled="true" ng-click="compareCharacter($index)">Compare Selected</md-button>
-</md-card-content>
-</md-card>
-
+<md-divider></md-divider>
 
 <md-card>
 <md-card-content layout="column" layout-sm="column">

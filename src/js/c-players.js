@@ -29,6 +29,33 @@
 		};
 		// console.log('$scope.members: ', $scope.members);
 
+		$scope.getImgPath = function (type,id) {
+			console.log('START getImgPath');
+			var urlBase = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + '/';
+			switch (type) {
+				case 'avatar':
+					var urlPath = 'img/profile/avatars/';
+					break;
+				case 'background':
+					var urlPath = 'img/UserThemes/';
+					break;
+				default:
+					var urlPath = 'img/';
+					break;
+			}
+			return urlBase + urlPath + imgPath;
+		};
+
+		$scope.getCharImgPath = function (file) {
+			// console.log('START getCharBackgroundPath');
+			// var backgroundPath = $scope.details.characters[i].backgroundPath;
+			// Response.data.characters[i].backgroundPath
+			// http://www.bungie.net/common/destiny_content/icons/b491d0f19048e1bb9fa4dbd70c2b4346.jpg
+			// http://www.bungie.net/common/destiny_content/icons/780a86ed4beb6022b776490ccd0ffd2f.jpg
+			var path = constBungieUrl.protocol[0] + '://' + constBungieUrl.domain + file;
+			return path;
+		};
+
 		$scope.getPlayerBackgroundPath = function (id) {
 			console.log('START getPlayerBackgroundPath');
 			// http://www.bungie.net/img/UserThemes/Destiny3/header.jpg

@@ -43,7 +43,7 @@ article ul dd,
 article ol dd,
 article dl dd {
   list-style-type: none;
-  padding: 0 0;
+  padding: 0 0.5em;
   margin: 0 0;
 }
 article ul {
@@ -154,7 +154,7 @@ table tr th {
 }
 .label {
   color: rgba(0, 0, 0, 0.75);
-  padding-right: 0.5em;
+  padding-right: 0.25em;
   width: 8em;
   height: 1em;
   line-height: 1em;
@@ -163,6 +163,10 @@ table tr th {
 }
 .label:after {
   content: ":";
+}
+.label.small {
+  width: auto;
+  float: none;
 }
 .strong,
 .strong:before,

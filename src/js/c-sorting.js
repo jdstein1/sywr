@@ -18,7 +18,7 @@
 				'des':false
 			},{
 				'type':'rank',
-				'tag':'rank',
+				'tag':'status',
 				'class':'',
 				'def':true,
 				'asc':false,

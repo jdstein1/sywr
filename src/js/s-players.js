@@ -25,46 +25,64 @@
 		// console.log('myData', myData);
 
 		var myMemberData = [{
-			"id":"8310647",
+			"name":"Jeff",
+			"id":{
+				"profile":8310647,
+				"member":4611686018438629701
+			},
 			"handle":"SarcasticWatchr",
 			"rank":2,
-			"name":"Jeff",
 			"github":"jdstein1",
 			"blog":"http://dragonize.wordpress.com/"
 		},{
-			"id":"7037048",
+			"name":"John",
+			"id":{
+				"profile":7037048,
+				"member":4611686018430431557
+			},
 			"handle":"Spacewolf 024",
 			"rank":3,
-			"name":"John",
 			"github":"spacewolf024",
 			"blog":"http://www.blogspot.com/"
 		},{
-			"id":"7666141",
+			"name":"Kras",
+			"id":{
+				"profile":7666141,
+				"member":4611686018438009209
+			},
 			"handle":"kras07",
 			"rank":3,
-			"name":"Kras",
 			"github":"Krasio07",
 			"blog":"http://kweek13.blogspot.com/"
 		},{
-			"id":"8162353",
+			"name":"Vikas",
+			"id":{
+				"profile":8162353,
+				"member":4611686018439072542
+			},
 			"handle":"SameMussel62767",
 			"rank":1,
-			"name":"Vikas",
-			"github":"",
+			"github":"vikaschoudhry",
 			"blog":"http://www.blogspot.com/"
 		},{
-			"id":"3892477",
+			"name":"Tanner",
+			"id":{
+				"profile":3892477,
+				"member":4611686018429615609
+			},
 			"handle":"Tanman2391",
 			"rank":4,
-			"name":"Tanner",
 			"github":"tanman2391",
 			"blog":"http://www.blogspot.com/"
 		},{
-			"id":"9856625",
+			"name":"Kaleb",
+			"id":{
+				"profile":9856625,
+				"member":4611686018442935061
+			},
 			"handle":"SassiestLeech10",
 			"rank":0,
-			"name":"Kaleb",
-			"github":"",
+			"github":"kmroggenkamp",
 			"blog":"http://www.blogspot.com/"
 		}];
 
