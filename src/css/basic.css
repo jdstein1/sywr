@@ -127,6 +127,9 @@ table tr td .label {
 table tr th {
   text-align: right;
 }
+.infoBoxClan li {
+  padding: 0 1em;
+}
 .description ul li {
   list-style-type: disc;
 }

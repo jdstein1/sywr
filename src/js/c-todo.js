@@ -1,4 +1,4 @@
-// c-sorting.js
+// c-todos.js
 (function() {
 	'use strict';
 
@@ -8,7 +8,10 @@
 		$scope.title = 'Todos';
 		console.log('START', $scope.ctitle);
 
-		var myTodos = {};
+  // $scope.sTodos = sTodos;
+  // console.log('$scope.sTodos: ',$scope.sTodos);
+
+			var myTodos = {};
 			$http.get('data/todo.json')
 				.success(function (data) {
 					console.log('sTodo.getTodos -- success:', data);

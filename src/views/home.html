@@ -10,7 +10,7 @@
 	</div>
 
 	<!-- START ABOUT THE PLAYERS -->
-	<md-card>
+	<md-card class="infoBoxClan">
 		<!-- <img src="img/destiny/destiny-conceptart-characters-classes.jpg" alt="Destiny Character Classes" width="100%"> -->
 		<md-card-content>
 			<div ng-controller="cClan" layout="row" layout-sm="column" layout-align="center center">
@@ -44,7 +44,7 @@
 		<md-card-content>
 		<div ng-model="sortOrderChoice" layout="row" layout-sm="column" layout-align="center center">
 			<!-- <div>Sort by:</div> -->
-			<md-button ng-repeat="option in sortOptions" aria-label="{{option.type}}" class="md-primary" 
+			<md-button ng-repeat="option in sortOptions" aria-label="{{option.type}}" class="md-primary btn-small" 
 				ng-class="{'def':option.def, 'asc':option.asc, 'des':option.des}" 
 				ng-click="sortOrderToggle2(option.type, $index)">
 				<span class="flaticon right" 

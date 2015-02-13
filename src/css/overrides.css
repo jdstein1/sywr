@@ -20,8 +20,26 @@
 		font-style:normal;
 		margin: 0;
 	}
-	.md-button, [class^="flaticon-"], [class*=" flaticon-"] {
-		float:left;line-height:36px; height:48px; overflow: hidden; margin: 0;
+	.md-button, 
+	[class^="flaticon-"], [class*=" flaticon-"] {
+		height:44px;
+		line-height:36px;
+		overflow: hidden;
+		margin: 0;
+		float:left;
+	}
+	.btn-small [class^="flaticon-"]:before, .btn-small [class*=" flaticon-"]:before,
+	.btn-small [class^="flaticon-"]:after, .btn-small [class*=" flaticon-"]:after {   
+		font-size:24px;
+	}
+	.md-button.btn-small, 
+	.btn-small [class^="flaticon-"], .btn-small [class*=" flaticon-"] {
+		/*font-size:30px;*/
+		height:32px;
+		line-height:24px;
+		float:left;
+		overflow: hidden;
+		margin: 0;
 	}
 	.md-button {margin:0.125em;}
 	[class^="flaticon-"]+span, [class*=" flaticon-"]+span {

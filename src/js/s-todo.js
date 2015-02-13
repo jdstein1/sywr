@@ -7,8 +7,8 @@
 		var stitle = 'sTodo';
 		console.log('START', stitle);
 
-		var myTodos = {};
-		// this.getTodos = function() {
+		var getTodos = function() {
+			var myTodos = {};
 			$http.get('data/todo.json')
 				.success(function (data) {
 					console.log('sTodo.getTodos -- success:', data);
@@ -20,11 +20,12 @@
 					myTodos = 'no data';
 					// return myTodos;
 				});
-			// return myTodos;
-		// };
+			return myTodos;
+		};
 		// console.log('sTodo', sTodo);
 		// return sTodo;
 		// return myTodos;
+		return getTodos();
 		// console.log('myTodos', myTodos);
 
 	}
