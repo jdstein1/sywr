@@ -42,19 +42,6 @@
 	<md-card>
 		<h3>Players</h3>
 		<md-card-content>
-		<div ng-model="sortOrderChoice" layout="row" layout-sm="column" layout-align="center center">
-			<!-- <div>Sort by:</div> -->
-			<md-button ng-repeat="option in sortOptions" aria-label="{{option.type}}" class="md-primary btn-small" 
-				ng-class="{'def':option.def, 'asc':option.asc, 'des':option.des}" 
-				ng-click="sortOrderToggle2(option.type, $index)">
-				<span class="flaticon right" 
-					ng-class="{'flaticon-drop27':option.asc, 'flaticon-drop25':option.des, 'flaticon-show7':option.def}"></span>
-				<span>{{option.tag}}</span>
-			</md-button>
-			<md-button aria-label="Clear" class="md-accent" 
-				ng-click="sortClear()">Clear</md-button>
-		</div>
-		</md-card-content>
 
 	<div ng-controller="cPlayers">
 	<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
@@ -62,24 +49,17 @@
 			<md-item-content layout="row" layout-sm="column" class="row-{{item.id.profile}} player-row">
 				<div flex>
 					<big><b>{{item.handle}}</b></big><br>
-					<ul>
-						<li><big><b>{{item.name}}</b></big></li>
-						<li><b>ID:</b> {{item.id.profile}}</li>
-						<li><b>Status:</b> {{rankDefinitions[item.rank]}}</li>
-					</ul>
-				</div>
-				<div flex>
-					<md-button flex class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
+					<span>{{item.name}}</span>
 				</div>
 				<div>
-					<md-button flex class="md-primary link outbound github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
-					<md-button flex class="md-primary link outbound bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
-					<md-button flex class="md-primary link json" href="api/{{item.api}}.php" target="_blank">Raw JSON</md-button>
+					<md-button class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
 				</div>
 			</md-item-content>
 		</md-card-content>
 	</md-card>
 	</div>
+
+		</md-card-content>
 	</md-card>
 
 <md-divider></md-divider>

@@ -1,7 +1,7 @@
 <md-toolbar md-scroll-shrink>
 	<div class="md-toolbar-tools" layout="row" layout-align="center center">
 
-		<md-button aria-label="{{headerMenu.name}}" class="left" ng-click="toggleNav('menu','left')">
+		<md-button aria-label="{{headerMenu.name}}" class="left" ng-disabled="false" ng-click="toggleNav('menu','left')">
 			<span class="{{headerMenu.icon}}"></span>
 		</md-button>
 
@@ -11,7 +11,7 @@
 
 		<h1 flex><a href="#/">{{constClan.title.plain}}</a></h1>
 
-		<md-button aria-label="{{headerSettings.name}}" class="right" ng-click="toggleNav('settings','right')">
+		<md-button aria-label="{{headerSettings.name}}" class="right" ng-disabled="true" ng-click="toggleNav('settings','right')">
 			<span class="{{headerSettings.icon}}"></span>
 		</md-button>
 

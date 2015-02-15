@@ -92,12 +92,37 @@ Angular Material dependencies:
 		"console":"Xbox",
 		"profile":"Profile"
 		});
-	// app.config(['$mdThemingProvider', function ($mdThemingProvider) {
-	// 		$mdThemingProvider.theme('default')
-	// 			.primaryColor('teal')
-	// 			.accentColor('orange');
-	// 	}
-	// ]);
+	app.config(['$mdThemingProvider', function ($mdThemingProvider) {
+		$mdThemingProvider.theme('default')
+			.primaryPalette('indigo')
+			.accentPalette('light-blue')
+			.warnPalette('amber')
+			.backgroundPalette('grey');
+		}
+	]);
+	app.config(['$mdThemingProvider', function ($mdThemingProvider) {
+		$mdThemingProvider.theme('sywr')
+			.primaryPalette('blue-grey')
+			.accentPalette('blue')
+			.warnPalette('red')
+			.backgroundPalette('grey');
+		}
+	]);
+	app.config(function($mdThemingProvider) {
+		var blueGreyDarkMap = $mdThemingProvider.extendPalette('blue-grey', {
+			'contrastDefaultColor':'dark',
+			'contrastDarkColors':undefined,
+			'contrastLightColors':undefined
+		});
+		$mdThemingProvider.definePalette('blue-grey-dark', blueGreyDarkMap);
+		$mdThemingProvider.theme('sywr-dark')
+			// .primaryPalette('blue-grey-dark')
+			.primaryPalette('blue-grey')
+			.accentPalette('blue')
+			.warnPalette('red')
+			.backgroundPalette('blue-grey');
+		}
+	);
 	app.config(['$routeProvider', function ($routeProvider) {
 		$routeProvider.
 			when('/', {

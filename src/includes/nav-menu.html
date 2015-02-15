@@ -6,7 +6,7 @@
 		<md-list layout="column">
 			<!-- <h3>menu</h3> -->
 			<md-item ng-repeat="item in menuItems | orderBy : orderNav : reverseNav">
-				<md-button aria-label="{{item.name}}" class="md-primary" href="#/{{item.path}}">
+				<md-button aria-label="{{item.name}}" class="md-accent md-hue-2" ng-disabled="{{!item.enable}}" ng-click="toggleNav('menu',direction)"href="#/{{item.path}}">
 					<span class="{{item.icon}}"></span>
 					{{item.name}}
 				</md-button>

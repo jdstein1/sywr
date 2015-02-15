@@ -19,7 +19,7 @@
 			"name":"Players",
 			"order":51,
 			"enable":true,
-			"icon":"flaticon-framed1",
+			"icon":"flaticon-users25",
 			"path":"players",
 			"action":"menu",
 			"tags":["players","members","people"],
@@ -41,7 +41,7 @@
 			"tags":["character","pc","avatar"]
 		},{
 			"name":"Games",
-			"order":7,
+			"order":53,
 			"enable":false,
 			"icon":"flaticon-gamepad3",
 			"path":"games",
@@ -52,7 +52,7 @@
 			]
 		},{
 			"name":"Compare",
-			"order":8,
+			"order":60,
 			"enable":false,
 			"icon":"flaticon-swap3",
 			"path":"compare",
@@ -60,7 +60,7 @@
 			"tags":["compare","comparison"]
 		},{
 			"name":"Environments",
-			"order":9,
+			"order":55,
 			"enable":false,
 			"icon":"flaticon-map102",
 			"path":"items",
@@ -78,7 +78,7 @@
 			]
 		},{
 			"name":"Items",
-			"order":10,
+			"order":54,
 			"enable":false,
 			"icon":"flaticon-list88",
 			"path":"items",
@@ -104,7 +104,7 @@
 			"name":"Clan",
 			"order":50,
 			"enable":true,
-			"icon":"flaticon-users25",
+			"icon":"flaticon-waving",
 			"path":"clan",
 			"action":"menu",
 			"tags":["clan","group","members"]
@@ -118,12 +118,19 @@
 			"tags":["todo","todos","tasks"]
 		},{
 			"name":"Feedback",
-			"order":4,
+			"order":98,
 			"enable":true,
 			"icon":"flaticon-chat75",
 			"path":"feedback",
 			"action":"menu",
 			"tags":["form","feedback","gripes","complaints","suggestions"]
+		},{
+			"name":"Test",
+			"order":1000,
+			"enable":true,
+			"icon":"flaticon-bug18",
+			"path":"test",
+			"action":"menu"
 		}];
 		return menuItems;
 	}
