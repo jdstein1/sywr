@@ -32,14 +32,19 @@
 	</section>
 	<footer ng-include="'includes/footer.html'"></footer>
 
-	<!-- LIB FILES CDN:  jQuery -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+	<!-- START LIB RESOURCES -->
 
 	<!-- LIB FILES CDN:  HammerJS -->
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script> -->
 
 	<!-- LIB FILES LOCAL:  AngularJS -->
 	<script src="bower_components/angular/angular.min.js"></script>
+
+	<!-- LIB FILES LOCAL:  AngularJS Modules -->
+	<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+	<script src="bower_components/angular-route/angular-route.min.js"></script>
+	<!-- <script src="bower_components/angular-resource/angular-resource.min.js"></script> -->
+	<!-- <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script> -->
 	<script src="bower_components/angular-aria/angular-aria.min.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.min.js"></script>
 	<!-- <script src="bower_components/angular/angular-messages.min.js"></script> -->
@@ -47,18 +52,28 @@
 	<script src="bower_components/showdown/compressed/showdown.js"></script>
 	<script src="bower_components/angular-markdown-filter/markdown.js"></script>
 
-	<!-- LIB FILES CDN:  AngularJS -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script> -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-aria.js"></script> -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.js"></script> -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-messages.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.js"></script>
-
 	<!-- LIB FILES LOCAL:  Angular Material JS -->
 	<script src="bower_components/angular-material/angular-material.js"></script>
 
 	<!-- LIB FILES CDN:  Angular Material JS -->
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.6.1/angular-material.js"></script> -->
+
+	<!-- set options before less.js script -->
+	<!-- <script>
+	  less = {
+	    env: "development",
+	    async: true
+	  };
+	</script> -->
+	<!-- LIB FILES CDN:  LessCSS -->
+	<!-- <script src="lib/less/less-1.4.1.min.js"></script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script> -->
+
+	<!-- LIB FILES CDN:  ThreeJS -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/threejs/r69/three.min.js"></script> -->
+
+	<!-- END LIB RESOURCES -->
+	<!-- START CUSTOM APP -->
 
 	<!-- AngularJS Custom App -->
 	<script src="js/app.js"></script>
@@ -111,19 +126,7 @@
 	<!-- <script src="js/s-sorting.js"></script> -->
 	<script src="js/d-sorting.js"></script>
 
-	<!-- set options before less.js script -->
-	<!-- <script>
-	  less = {
-	    env: "development",
-	    async: true
-	  };
-	</script> -->
-	<!-- LIB FILES CDN:  LessCSS -->
-	<!-- <script src="lib/less/less-1.4.1.min.js"></script> -->
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.2.0/less.min.js"></script> -->
-
-	<!-- LIB FILES CDN:  ThreeJS -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/threejs/r69/three.min.js"></script> -->
+	<!-- END CUSTOM APP -->
 
 </body>
 </html>
