@@ -1,6 +1,10 @@
 <md-sidenav class="md-sidenav-{{direction}}" md-component-id="menu" md-is-open="sidenavOpen">
 	<md-toolbar class="" layout="row" layout-align="center center">
-		<h1 flex class="md-toolbar-tools">Menu</h1>
+
+		<md-button aria-label="{{headerMenu.name}}" class="left" ng-disabled="false" ng-click="toggleNav('menu','left')">
+			<span class="{{headerMenu.icon}}"></span>Menu
+		</md-button>
+
 	</md-toolbar>
 	<md-content class="" layout="column">
 		<md-list layout="column">

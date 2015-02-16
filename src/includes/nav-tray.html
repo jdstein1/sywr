@@ -1,6 +1,10 @@
 <md-sidenav class="md-sidenav-{{direction}}" md-component-id="settings" md-is-open="sidenavOpen">
 	<md-toolbar class="" layout="row" layout-align="center center">
-		<h1 flex class="md-toolbar-tools">Settings</h1>
+
+		<md-button aria-label="{{headerSettings.name}}" class="right" ng-disabled="false" ng-click="toggleNav('settings','right')">
+			<span class="{{headerSettings.icon}}"></span>Settings
+		</md-button>
+
 	</md-toolbar>
 	<md-content class="" layout="column">
 		<md-list layout="column">

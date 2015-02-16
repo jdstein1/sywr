@@ -21,7 +21,7 @@
 			"enable":true,
 			"icon":"flaticon-users25",
 			"path":"players",
-			"action":"menu",
+			"action":"submenu",
 			"tags":["players","members","people"],
 			"submenu":[
 				{"name":"Jeff"},
@@ -58,24 +58,6 @@
 			"path":"compare",
 			"action":"menu",
 			"tags":["compare","comparison"]
-		},{
-			"name":"Environments",
-			"order":55,
-			"enable":false,
-			"icon":"flaticon-map102",
-			"path":"items",
-			"action":"menu",
-			"tags":["maps","locations","environments"],
-			"submenu":[{
-				"name":"Destiny",
-				"submenu":[
-					{"name":"Earth"},
-					{"name":"Moon"},
-					{"name":"Venus"},
-					{"name":"Mars"},
-					{"name":"Reef"}
-				]}
-			]
 		},{
 			"name":"Items",
 			"order":54,
@@ -135,6 +117,134 @@
 		return menuItems;
 	}
 	// console.log('test sMenuNav:', angular.module('app').service('sMenuNav'));
+
+	app.service('sMenuDestiny', sMenuDestiny)
+	function sMenuDestiny() {
+		var stitle = 'sMenuDestiny';
+		console.log('START', stitle);
+
+		var destinyItems = [{
+			"name":"Environments",
+			"order":1,
+			"enable":false,
+			"icon":"flaticon-map102",
+			"path":"items",
+			"action":"submenu",
+			"tags":["maps","locations","environments"],
+			"submenu":[
+				{"name":"Tower"},
+				{"name":"Earth"},
+				{"name":"Moon"},
+				{"name":"Venus"},
+				{"name":"Mars"},
+				{"name":"Reef"}
+			]
+		},{
+			"name":"Merchants",
+			"order":2,
+			"enable":false,
+			"icon":"flaticon-painter14",
+			"path":"colors",
+			"action":"url",
+			"tags":["merchants","sellers","stores","buyers","traders"],
+			"url":"http://destiny.wikia.com/wiki/Tower",
+			"submenu":[{
+					"class":"Unknown",
+					"role":"Agent of the Nine",
+					"name":"Xur",
+					"action":"url",
+					"url":"http://destiny.wikia.com/wiki/X%C3%BBr"
+				},{
+					"class":"Hunter",
+					"role":"vanguard",
+					"name":"Cayde-6",
+					"action":"menu"
+				},{
+					"class":"Titan",
+					"role":"vanguard",
+					"name":"Commander Zavala",
+					"action":"menu"
+				},{
+					"class":"Warlock",
+					"role":"vanguard",
+					"name":"Ikora Rey",
+					"action":"menu"
+				},{
+					"class":"Crucible",
+					"role":"Quartermaster",
+					"name":"Arcite 99-40",
+					"action":"menu"
+				},{
+					"class":"Crucible",
+					"role":"Handler",
+					"name":"Lord Shaxx",
+					"action":"menu"
+				}]
+		},{
+			"name":"Activities",
+			"order":3,
+			"enable":false,
+			"icon":"flaticon-underline7",
+			"path":"fonts",
+			"action":"submenu",
+			"tags":["activities","pve","pvp","missions"],
+			"submenu":[
+				{"name":"Patrol"},
+				{"name":"Story"},
+				{"name":"Strike"},
+				{"name":"Raid"},
+				{"name":"Crucible"},
+				{"name":"Bounty"}
+			]
+		},{
+			"name":"Factions",
+			"order":4,
+			"enable":false,
+			"icon":"flaticon-emoticon117",
+			"path":"icons",
+			"action":"submenu",
+			"tags":["factions","groups","clubs","fraternities","cults"],
+			"submenu":[
+				{"name":"Future War Cult"},
+				{"name":"Dead Orbit"},
+				{"name":"New Monarchy"},
+				{"name":"Vanguard"}
+			]
+		},{
+			"name":"Elementals",
+			"order":4,
+			"enable":false,
+			"icon":"flaticon-emoticon117",
+			"path":"icons",
+			"action":"submenu",
+			"tags":["elementals","burn","elements"],
+			"submenu":[
+				{"name":"Arc"},
+				{"name":"Solar"},
+				{"name":"Void"}
+			]
+		},{
+			"name":"Species",
+			"order":4,
+			"enable":false,
+			"icon":"flaticon-emoticon117",
+			"path":"icons",
+			"action":"submenu",
+			"tags":["species","races","groups","creeds"],
+			"submenu":[
+				{"name":"Human"},
+				{"name":"Awoken"},
+				{"name":"Exo"},
+				{"name":"Fallen"},
+				{"name":"Hive"},
+				{"name":"Vex"},
+				{"name":"Cabal"},
+				{"name":"Ahamkara"}
+			]
+		}];
+		return destinyItems;
+	}
+	// console.log('test sMenuDestiny:', angular.module('app').service('sMenuDestiny'));
 
 	app.service('sMenuSettings', sMenuSettings)
 	function sMenuSettings() {
