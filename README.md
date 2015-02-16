@@ -41,6 +41,12 @@ Install these apps to get up and running:
 * Mac OS X // Install [GitHub GUI](http://mac.github.com/)
 * Windows // Install [GitHub GUI](http://windows.github.com/)
 
+#### for NodeJS and package management
+
+* Install [NodeJS](http://nodejs.org/)
+* Install [NPM](https://www.npmjs.com/)
+* Install [Bower](http://bower.io/)
+
 #### for running a PHP server
 
 * Mac OS X // Install [MAMP](http://www.mamp.info/)

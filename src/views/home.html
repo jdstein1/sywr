@@ -44,19 +44,26 @@
 		<md-card-content>
 
 	<div ng-controller="cPlayers">
-	<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
-		<md-card-content>
-			<md-item-content layout="row" layout-sm="column" class="row-{{item.id.profile}} player-row">
-				<div flex>
-					<big><b>{{item.handle}}</b></big><br>
-					<span>{{item.name}}</span>
-				</div>
-				<div>
-					<md-button class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
-				</div>
-			</md-item-content>
-		</md-card-content>
-	</md-card>
+		<p>member:{{member.name}}</p>
+
+		<select name="players" id="players" ng-model="member" ng-options="item.handle for item in members track by item.id.profile">
+			<option value="">choose</option>
+		</select>
+
+		<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
+			<md-card-content>
+				<md-item-content layout="row" layout-sm="column" class="row-{{item.id.profile}} player-row">
+					<div flex>
+						<big><b>{{item.handle}}</b></big><br>
+						<span>{{item.name}}</span>
+					</div>
+					<div>
+						<md-button class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
+					</div>
+				</md-item-content>
+			</md-card-content>
+		</md-card>
+
 	</div>
 
 		</md-card-content>
