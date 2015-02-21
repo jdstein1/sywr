@@ -19,23 +19,6 @@
 		var stitle = 'sDataItemDetails';
 		console.log('START', stitle);
 
-		// var myData = {};
-		// $scope.getMember = function() {
-		// 	$http.get('members/'+$route.current.params.member+'.php')
-		// 		.success(function (data) {
-		// 			console.log('sDataItemDetails.getMember -- success');
-		// 			myData = data;
-		// 		}).error(function () {
-		// 			console.log('sDataItemDetails.getMember -- error');
-		// 			myData = 'no data';
-		// 		});
-		// 	return myData;
-		// };
-		// console.log('sDataItemDetails', sDataItemDetails);
-		// return sDataItemDetails;
-        // return myData;
-		// console.log('myData', myData);
-
 	}
 	// console.log('test sDataItemDetails:', angular.module('app').service('sDataItemDetails'));
 

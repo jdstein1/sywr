@@ -7,23 +7,6 @@
 		var stitle = 'sPlayers';
 		console.log('START', stitle);
 
-		// var myData = {};
-		// this.getMember = function() {
-		// 	$http.get('data/'+$route.current.params.member+'.php')
-		// 		.success(function (data) {
-		// 			console.log('sPlayerDetail.getMember -- success');
-		// 			myData = data;
-		// 		}).error(function () {
-		// 			console.log('sPlayerDetail.getMember -- error');
-		// 			myData = 'no data';
-		// 		});
-		// 	return myData;
-		// };
-		// console.log('sPlayerDetail', sPlayerDetail);
-		// return sPlayerDetail;
-		// return myData;
-		// console.log('myData', myData);
-
 		var myMemberData = [{
 			"name":"Jeff",
 			"id":{
