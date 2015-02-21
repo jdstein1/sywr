@@ -92,7 +92,7 @@ Pass more than one account ID or character ID in order to populate a player/char
 #### Status: DONE
 #### Priority: 3
 
-* Player info API
+* Member by User ID info API
 	* [http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true](http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true)
 
 

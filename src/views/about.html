@@ -28,10 +28,57 @@
 
 			<h3>API Test</h3>
 			<p>Test getting data through PHP from Bungie...</p>
-			<ul>
-				<li><a href="data/api.php">API</a></li>
-				<li><a href="data/api2.php">API2</a></li>
-			</ul>
+			<dl ng-controller="cClan">
+				<dt>Clan</dt>
+				<dd>
+				<ul>
+				<li><a href="api/clan.php">Static</a></li>
+				</ul>
+				</dd>
+			</dl>
+			<dl ng-controller="cClan">
+				<dt>Bungie account</dt>
+				<dd>
+				<ul>
+				<li><a href="api/jeff-bungie.php">Jeff, Static</a></li>
+				<li><a href="api/member-bungie.php">Dynamic</a></li>
+				</ul>
+				</dd>
+			</dl>
+			<dl ng-controller="cClan">
+				<dt>Destiny account</dt>
+				<dd>
+				<ul>
+				<li><a href="api/api.php">Version 1, Static</a></li>
+				<li><a href="api/api2.php">Version 2, Static</a></li>
+				<li><a href="api/kras-destiny.php">Kras, Static</a></li>
+				<li><a href="api/jeff-destiny.php">Jeff, Static</a></li>
+				<li><a href="api/tanner-destiny.php">Tanner, Static</a></li>
+				<li><a href="api/john-destiny.php">John, Static</a></li>
+				<li><a href="api/kaleb-destiny.php">Kaleb, Static</a></li>
+				<li><a href="api/vikas-destiny.php">Vikas, Static</a></li>
+				<li><a href="api/member-destiny.php">Dynamic</a></li>
+				</ul>
+				</dd>
+			</dl>
+			<dl ng-controller="cClan">
+				<dt>Item hash</dt>
+				<dd>
+				<ul>
+				<li><a href="api/regime-hash.php">SUROS Regime, Static</a></li>
+				<li><a href="api/item-hash.php">Dynamic</a></li>
+				</ul>
+				</dd>
+			</dl>
+			<dl ng-controller="cClan">
+				<dt>Activity</dt>
+				<dd>
+				<ul>
+				<li><a href="api/jeff-activity.php">Jeff / Warlock / Story, Static</a></li>
+				<li><a href="api/activity.php">Dynamic</a></li>
+				</ul>
+				</dd>
+			</dl>
 
 		</md-card-content>
 	</md-card>

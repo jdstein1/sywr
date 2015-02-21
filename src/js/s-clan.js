@@ -2,63 +2,32 @@
 (function() {
 	'use strict';
 
-	app.service('sPlayers', sPlayers)
-	function sPlayers() {
-		var stitle = 'sPlayers';
+	app.service('sClan', sClan)
+	function sClan($http) {
+		var stitle = 'sClan';
 		console.log('START', stitle);
 
+		var myClanId = 519979;
+
 		var myData = {};
-		var getClan = function() {
+		// this.getClan = function() {
 			$http.get('api/clan.php')
 				.success(function (data) {
-					console.log('sPlayerDetail.getClan -- success');
+					console.log('sClan.getClan -- success');
 					myData = data;
 				}).error(function () {
-					console.log('sPlayerDetail.getClan -- error');
+					console.log('sClan.getClan -- error');
 					// get backup data at /data/clan.json
 					myData = 'no data';
 				});
 			return myData;
-		};
-		// console.log('sPlayerDetail', sPlayerDetail);
-		// return sPlayerDetail;
+		// };
+		// console.log('sClan', sClan);
+		// return sClan;
 		// return myData;
 		// console.log('myData', myData);
 
-		var myMemberData = [{
-			"id":"8310647",
-			"handle":"SarcasticWatchr",
-			"name":"Jeff",
-			"github":"jdstein1",
-			"website":"http://dragonize.wordpress.com/"
-		},{
-			"id":"7037048",
-			"handle":"Spacewolf 024",
-			"name":"John",
-			"github":"spacewolf024",
-			"website":"http://www.blogspot.com/"
-		},{
-			"id":"7666141",
-			"handle":"kras07",
-			"name":"Kras",
-			"github":"Krasio07",
-			"website":"http://kweek13.blogspot.com/"
-		},{
-			"id":"3892477",
-			"handle":"Tanman2391",
-			"name":"Tanner",
-			"github":"tanman2391",
-			"website":"http://www.blogspot.com/"
-		}];
-
-		for (var i = 0; i < myMemberData.length; i++) {
-			myMemberData[i].api = myMemberData[i].name.toLowerCase();
-
-		};
-
-		console.log('myMemberData: ', myMemberData);
-		return myMemberData;
 	}
-	// console.log('test sPlayers:', angular.module('app').service('sPlayers'));
+	// console.log('test sClan:', angular.module('app').service('sClan'));
 
 })();

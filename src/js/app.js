@@ -78,7 +78,6 @@ Angular Material dependencies:
 //     * http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170
 // * API - Clan
 //     * http://www.bungie.net/Platform/Group/519979/MembersV3/?lc=en&fmt=true&lcin=true&currentPage=1
-// * API - Clan
 //     * http://www.bungie.net/Platform/Group/519979/Members/?lc=en&fmt=true&lcin=true&currentPage=1
 // * API - Member Profile
 //     * http://www.bungie.net/Platform/User/GetBungieNetUserById/8310647/?lc=en&fmt=true&lcin=true

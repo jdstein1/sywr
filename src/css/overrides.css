@@ -57,3 +57,5 @@
 	.md-sidenav-right .md-button span.text {}
 	.md-sidenav-left .md-button span.icon,
 	.md-sidenav-right .md-button span.icon {}
+
+.md-button.md-sywr-theme:not([disabled]):hover, .md-button.md-sywr-theme:not([disabled]):focus {background: transparent !important;}
