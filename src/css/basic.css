@@ -1,6 +1,12 @@
 /*basic.less*/
 /* variables */
 /* mixins */
+.boxShadowOut {
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.5);
+}
+.boxShadowIn {
+  box-shadow: inset 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.5);
+}
 /* operations */
 /* functions */
 /* Basic Styles */
@@ -102,10 +108,19 @@ nav ul li:hover ul {
   display: block;
 }
 table,
+thead,
+tbody,
+tfoot,
 tr,
 th,
 td {
   border-collapse: separate;
+  border: 1px solid red;
+  margin: 2px;
+  padding: 2px;
+}
+table {
+  width: 100%;
 }
 table h1,
 table h2,
@@ -114,6 +129,27 @@ table h4,
 table h5,
 table h6 {
   margin: 0 !important;
+}
+table thead,
+table tbody,
+table tfoot,
+table tr {
+  width: 100%;
+}
+table thead {
+  background: rgba(255, 0, 255, 0.25);
+  border-color: magenta;
+}
+table tbody {
+  background: rgba(0, 255, 255, 0.25);
+  border-color: cyan;
+}
+table tfoot {
+  background: rgba(255, 255, 0, 0.25);
+  border-color: yellow;
+}
+table tr {
+  border-color: green;
 }
 table tr th,
 table tr td {
@@ -126,6 +162,7 @@ table tr td .label {
 }
 table tr th {
   text-align: right;
+  border-color: blue;
 }
 .infoBoxClan li {
   padding: 0 1em;

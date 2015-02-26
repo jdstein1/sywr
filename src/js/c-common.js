@@ -5,10 +5,10 @@
 	app.controller('cMain', cMain)
 	function cMain($scope, $log, $timeout, $mdSidenav, constClan, constProtocol, constFileTypes, constBungieUrl, sHeaderMenu, sHeaderSettings) {
 		$scope.ctitle = 'cMain';
+		$scope.title = 'Main';
 		console.log('START', $scope.ctitle);
 
 		$scope.constClan = constClan;
-		$scope.title = constClan.title.plain;
 		$scope.constProtocol = constProtocol;
 		$scope.constFileTypes = constFileTypes;
 		$scope.constBungieUrl = constBungieUrl;

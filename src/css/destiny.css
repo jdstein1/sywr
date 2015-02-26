@@ -7,39 +7,6 @@
 /* elemental colors */
 /* character classes */
 /* character races */
-.emblemBox {
-  color: white !important;
-}
-.emblemBox img,
-.emblemBox ul,
-.emblemBox ol,
-.emblemBox dl {
-  float: left;
-}
-.emblemBox hr {
-  border: none;
-  height: 0;
-}
-.emblemBox .emblem {
-  border: 1px solid white;
-  padding: 0;
-  margin: 4px;
-}
-.progessBox {
-  height: 1em;
-}
-.progessBox .progressBar {
-  height: 1em;
-}
-.progessBox .progressBar .progressIndicator {
-  height: 1em;
-}
-.prestige .flaticon {
-  float: left !important;
-}
-.grimoire .flaticon {
-  float: right !important;
-}
 /* rarity colors */
 .basic {
   background: lightgrey;
@@ -124,4 +91,81 @@
 .leg,
 .greaves {
   content: "leg";
+}
+/* consumables */
+/* mission types */
+/* patrol types */
+/* CHARACTER EMBLEM */
+.spiffBox table,
+.spiffBox thead,
+.spiffBox tbody,
+.spiffBox tfoot,
+.spiffBox tr,
+.spiffBox th,
+.spiffBox td {
+  border-collapse: collapse;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.spiffBox {
+  width: 100%;
+  color: white !important;
+  margin-bottom: 1em;
+}
+.spiffBox img,
+.spiffBox ul,
+.spiffBox ol,
+.spiffBox dl {
+  float: left;
+}
+.spiffBox hr {
+  border: none;
+  height: 0;
+}
+.spiffBox .emblemBox {
+  padding: 0.5em 0.5em 1em;
+}
+.spiffBox .emblemBox .emblem {
+  border: 5px outset rgba(204, 204, 204, 0.5);
+  padding: 0;
+  margin: 0;
+  height: 90px;
+  width: 90px;
+}
+.spiffBox .nameBox {
+  padding: 0.5em;
+  text-align: left;
+}
+.spiffBox .levelBox {
+  padding: 0.5em;
+  text-align: right;
+}
+.spiffBox .levelBox .level {
+  font-size: 3em;
+}
+.spiffBox .progressBox {
+  width: 100%;
+}
+.spiffBox .progressBox .progressBar {
+  height: 1em;
+  background: rgba(255, 255, 255, 0.25);
+}
+.spiffBox .progressBox .progressBar .progressIndicator {
+  height: 1em;
+}
+.spiffBox .actionBox {
+  width: 100%;
+  padding: 0.5em;
+}
+.prestige:before,
+.grimoire:before {
+  content: "\2605";
+  font-size: 0.55em;
+  line-height: 1;
+  padding: 0 0 1em 0;
+  margin: 0;
+}
+.grimoire:before {
+  content: "\2630";
 }

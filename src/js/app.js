@@ -136,6 +136,9 @@ Angular Material dependencies:
 			when('/blog', {
 				templateUrl: 'views/blog.html', 
 				controller: 'cBlog'}).
+			when('/feedback', {
+				templateUrl: 'views/feedback.html', 
+				controller: 'cFeedback'}).
 			when('/clan', {
 				templateUrl: 'views/clan.html', 
 				controller: 'cClan'}).
@@ -148,12 +151,6 @@ Angular Material dependencies:
 			// when('/compare/:type', {
 				// templateUrl: 'views/compare/type.html', 
 				// controller: 'cCompareDetail'}).
-			when('/environment', {
-				templateUrl: 'views/environment.html', 
-				controller: 'cEnvironment'}).
-			when('/feedback', {
-				templateUrl: 'views/feedback.html', 
-				controller: 'cFeedback'}).
 			// GAMES
 			when('/games', {
 				templateUrl: 'views/games.html', 
@@ -161,6 +158,9 @@ Angular Material dependencies:
 			when('/games/:game', {
 				templateUrl: 'views/games/game.html', 
 				controller: 'cGameDetail'}).
+			when('/games/:game/environments/:environment', {
+				templateUrl: 'views/environment.html', 
+				controller: 'cGameEnvironment'}).
 			// ITEMS
 			when('/items', {
 				templateUrl: 'views/items.html', 
@@ -175,7 +175,8 @@ Angular Material dependencies:
 			when('/players/:member', {
 				templateUrl: 'views/players/player.html', 
 				controller: 'cPlayerDetail'}).
-			when('/players/:member/characters', {
+			// CHARACTERS
+			when('/players/:member/character', {
 				templateUrl: 'views/characters/compare.html', 
 				controller: 'cPlayerDetail'}).
 			when('/players/:member/characters/:character', {
