@@ -106,17 +106,21 @@ Use Activity APIs to get data like kills, hours played, activities completed.
 
 ### Bungie/Destiny Activity History APIs:
 
+* All (mode=0)
+	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009238334533/?lc=en&fmt=true&lcin=true&mode=0&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009238334533/?lc=en&fmt=true&lcin=true&mode=0&count=20&page=0&definitions=true)
+* N/A (mode=1)
 * Story (mode=2)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=2&count=20&page=0&definitions=true)
-* Strike (mode=18)
-	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true)
-* Raid (mode=4)
+* Strikes (mode=3)
+	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=3&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=3&count=20&page=0&definitions=true)
+* Raids (mode=4)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=4&count=20&page=0&definitions=true)
 * Crucible & Medals (mode=5)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=5&count=20&page=0&definitions=true)
 * Patrol (mode=6)
 	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=6&count=20&page=0&definitions=true)
-
+* Strike (mode=18)
+	* [http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true](http://www.bungie.net/Platform/Destiny/Stats/ActivityHistory/1/4611686018438629701/2305843009240408744/?lc=en&fmt=true&lcin=true&mode=18&count=20&page=0&definitions=true)
 
 
 ## Hash Converter
