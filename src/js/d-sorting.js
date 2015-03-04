@@ -54,8 +54,7 @@
 			controller: function ($scope) {
 				console.log('dSorting $scope: ', $scope);
 
-
-				$scope.sortOptionsArr = {
+				$scope.sortOptionsGroup = {
 					'todo':[{
 						'type':'assignee',
 						'tag':'assignee',
@@ -108,8 +107,8 @@
 						'des':false
 					}],
 					'other':[{
-						'type':'assignee',
-						'tag':'assignee',
+						'type':'misc',
+						'tag':'misc',
 						'class':'',
 						'def':true,
 						'asc':false,
@@ -117,9 +116,9 @@
 					}]
 				};
 
-				console.log('dSorting $scope.sortOptionsArr.todo: ', $scope.sortOptionsArr.todo);
+				console.log('dSorting $scope.sortOptionsGroup.todo: ', $scope.sortOptionsGroup.todo);
 
-				$scope.sortOptions = $scope.sortOptionsArr.todo;
+				$scope.sortOptions = $scope.sortOptionsGroup.todo;
 
 				$scope.sortOrderChoice = $scope.sortOptions[0].type;
 				console.log('dSorting $scope.sortOrderChoice: ', $scope.sortOrderChoice);

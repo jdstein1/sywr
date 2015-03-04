@@ -74,7 +74,7 @@
 
 		};
 
-		console.log('myMemberData: ', myMemberData);
+		// console.log('myMemberData: ', myMemberData);
 		return myMemberData;
 	}
 	// console.log('test sPlayers:', angular.module('app').service('sPlayers'));

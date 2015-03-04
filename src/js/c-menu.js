@@ -14,9 +14,9 @@
 		$scope.reverseNav = false;
 
 		$scope.menuItems = sMenuNav;
-		console.log('$scope.menuItems', $scope.menuItems);
+		// console.log('$scope.menuItems', $scope.menuItems);
 		$scope.settingsItems = sMenuSettings;
-		console.log('$scope.settingsItems', $scope.settingsItems);
+		// console.log('$scope.settingsItems', $scope.settingsItems);
 
 		// for (var i = $scope.menuItems.length - 1; i >= 0; i--) {
 			// console.log('$scope.menuItems[i].order decrement: ', $scope.menuItems[i].order);
