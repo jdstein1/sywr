@@ -1,23 +1,29 @@
 {"todos":{
 	"description":"Things left to do in order to make this a decent protfolio piece:",
+	"meta":[
+		{"assignee": ["Unassigned","Jeff","John","Kaleb","Kras","Tanner","Vikas"]},
+		{"priority": ["SUPER HIGH","HIGH","MEDIUM","LOW"]},
+		{"status": ["NOT STARTED","IN PROGRESS","ON HOLD","DONE"]}
+	],
+	"icons":[
+		{"assignee": ["flaticon-help19","flaticon-","flaticon-","flaticon-","flaticon-","flaticon-","flaticon-"]},
+		{"priority": ["flaticon-cell10","flaticon-high22","flaticon-medium5","flaticon-low34"]},
+		{"status": ["flaticon-rounded56","flaticon-play107","flaticon-round55","flaticon-circle108"]}
+	],
 	"items":[{
 			"title":"Feedback Form",
-			"assignee":  "Jeff",
-			"meta":{
-				"status": 1,
-				"priority": 1
-			},
+			"assignee": 1,
+			"status": 1,
+			"priority": 1,
 			"description":[
 				"Make the feedback form submit the data to an email address.",
 				"Use GDocs form?"
 			]
 		},{
 			"title":"Build Manager",
-			"assignee":  "???",
-			"meta":{
-				"status": 0,
-				"priority": 2
-			},
+			"assignee": 0,
+			"status": 0,
+			"priority": 2,
 			"description":[
 				"We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) ) to do the following:",
 				"* Run JSHint/JSLint on scripts",
@@ -26,51 +32,41 @@
 			]
 		},{
 			"title":"Custom Icons",
-			"assignee":  "Jeff",
-			"meta":{
-				"status": 2,
-				"priority": 3
-			},
+			"assignee": 1,
+			"status": 2,
+			"priority": 3,
 			"description":[
 				"Create a set of icons for specific games and their symbols for character classes, acheivements, mission types, etc."
 			]
 		},{
 			"title":"Better background Images",
-			"assignee":  "Jeff",
-			"meta":{
-				"status": 0,
-				"priority": 2
-			},
+			"assignee": 1,
+			"status": 0,
+			"priority": 2,
 			"description":[
 				"Slice up the current background images so they make a more solid-colored field."
 			]
 		},{
 			"title":"Custom Theme",
-			"assignee":  "Jeff",
-			"meta":{
-				"status": 0,
-				"priority": 3
-			},
+			"assignee": 1,
+			"status": 0,
+			"priority": 3,
 			"description":[
 				"Customize the basic Material Design theme to provide a unique look and feel."
 			]
 		},{
 			"title":"Multiple API call",
-			"assignee":  "Kras & John",
-			"meta":{
-				"status": 1,
-				"priority": 1
-			},
+			"assignee": 2,
+			"status": 1,
+			"priority": 1,
 			"description":[
 				"Pass more than one account ID or character ID in order to populate a player/character comparison page."
 			]
 		},{
 			"title":"Link to Clan & Profile pages",
-			"assignee": "Jeff",
-			"meta":{
-				"status": 3,
-				"priority": 0
-			},
+			"assignee": 1,
+			"status": 3,
+			"priority": 0,
 			"description":[
 				"Example:",
 				"### Bungie/Destiny URLs",
@@ -79,11 +75,9 @@
 			]
 		},{
 			"title":"Use API to populate Clan pages",
-			"assignee": "Jeff",
-			"meta":{
-				"status": 1,
-				"priority": 0
-			},
+			"assignee": 1,
+			"status": 1,
+			"priority": 0,
 			"description":[
 				"Example:",
 				"### Bungie/Destiny APIs",
@@ -92,11 +86,9 @@
 			]
 		},{
 			"title":"Use API to populate Player pages",
-			"assignee": "Jeff",
-			"meta":{
-				"status": 3,
-				"priority": 0
-			},
+			"assignee": 1,
+			"status": 3,
+			"priority": 0,
 			"description":[
 				"Example:",
 				"### Player info API",
@@ -104,11 +96,9 @@
 			]
 		},{
 			"title":"Use API to populate Activity pages",
-			"assignee": "Kras",
-			"meta":{
-				"status": 0,
-				"priority": 1
-			},
+			"assignee": 4,
+			"status": 0,
+			"priority": 1,
 			"description":[
 				"Use Activity APIs to get data like kills, hours played, activities completed.",
 				"### Bungie/Destiny Activity History APIs:",
@@ -120,22 +110,18 @@
 			]
 		},{
 			"title":"Hash Converter",
-			"assignee":  "Tanner",
-			"meta":{
-				"status": 1,
-				"priority": 1
-			},
+			"assignee": 5,
+			"status": 1,
+			"priority": 1,
 			"description":[
 				"Make a local JSON record of most common hash conversions.  For example:"
 			]
 
 		},{
 			"title":"Item Info Lookup",
-			"assignee":  "John",
-			"meta":{
-				"status": 0,
-				"priority": 2
-			},
+			"assignee": 3,
+			"status": 0,
+			"priority": 2,
 			"description":[
 				"Use this API to look up inventory item data:",
 				"* Item info API: [http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170](http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170)"

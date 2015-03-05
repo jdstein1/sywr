@@ -127,7 +127,7 @@ Angular Material dependencies:
 			when('/', {
 				templateUrl: 'views/home.html', 
 				controller: 'cHome'}).
-			when('/todo', {
+			when('/todos', {
 				templateUrl: 'views/todo.html', 
 				controller: 'cTodo'}).
 			when('/about', {

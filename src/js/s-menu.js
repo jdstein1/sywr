@@ -95,7 +95,7 @@
 			"order":99,
 			"enable":true,
 			"icon":"flaticon-check51",
-			"path":"todo",
+			"path":"todos",
 			"action":"menu",
 			"tags":["todo","todos","tasks"]
 		},{

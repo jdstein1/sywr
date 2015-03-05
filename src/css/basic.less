@@ -4,10 +4,21 @@
 // example:
 // @nice-blue: #5B83AD;
 
+@inert: #999;
+@neutral: #999;
+@hold: #999;
+
 @danger: #f00;
 @warning: #f90;
+
 @normal: #090;
-@neutral: #99f;
+@progress: #090;
+
+@done: #36f;
+
+@white: rgba(255,255,255,0.95);
+@grey: rgba(127,127,127,0.95);
+@black: rgba(0,0,0,0.95);
 
 /* mixins */
 // example:
@@ -21,7 +32,7 @@
 /* operations */
 // example:
 // color: #888 / 4;
-// background-color: @base-color + #111;
+// background-color:@base-color + #111;
 // height: 100% / 2 + @filler;
 
 /* functions */
@@ -151,9 +162,6 @@ table {
 		}
 	}
 }
-.todos {
-	li, dt, dd {padding:0.25em;border-radius:0.25em;}
-}
 .helper {font-size: 0.875em; color: rgba(0,0,0,0.5); background: rgba(0,0,0,0.125); display: block; width: 100%; text-align: center;}
 .sorting {
 	width:100%;
@@ -162,6 +170,7 @@ table {
 	td {}
 }
 .todos {
+	// li, dt, dd {padding:0.25em;border-radius:0.25em;}
 	b {border-bottom:2px solid #ddd; text-transform:lowercase;}
 	 span:before, 
 	 span:after {color:#999;}
@@ -171,19 +180,23 @@ table {
 	}
 	.status {
 		// & span:before {content:"\2665";}
-		// & span:after {content:"";}
-	}
-	.status0 span:after {
-		// content:"\2606";
-	}
-	.status1 span:after {
-		// content:"\261b";
-	}
-	.status2 span:after {
-		// content:"\2620";
-	}
-	.status3 span:after {
-		// content:"\2605";
+		// & b:before {
+		// 	border-radius:0.25em; padding:0.125em 0.25em; margin:0.25em 0.25em 0; 
+		// 	border:1px solid @grey;
+		// 	background:@white; color:@black;
+		// 	font-size: 1.5em; 
+		// 	line-height: 0;
+		// 	width: 1em; height: 1em;
+		// 	text-align: center;
+		// }
+		&.status0 b {color:@neutral;}
+		// &.status0 b:before {content:"\025FC";}
+		&.status1 b {color:@progress;}
+		// &.status1 b:before {content:"\025B8";}
+		&.status2 b {color:@hold;}
+		// &.status2 b:before {content:"\02758\02758";}
+		&.status3 b {color:@done;}
+		// &.status3 b:before {content:"\02713";}
 	}
 	.priority {
 		// & span:before {content:"\2666";}
@@ -193,6 +206,18 @@ table {
 	.priority1 {color:@warning;}
 	.priority2 {color:@normal;}
 	.priority3 {color:@neutral;}
+	.todosMeta {
+		position: relative;
+		li, dt, dd {
+			position: relative;
+			// float:left;
+			padding:0 0.25em; margin:0.25em;
+			overflow: visible;
+			border-radius:0.25em;
+			background:rgba(0,0,0,0.0675); color:@black;
+			// .label{width:40%;}
+		}
+	}
 }
 .asc {
 	// background:#fee;
@@ -221,16 +246,17 @@ table {
 	}
 }
 .label {
-	color:#808080;
-	padding-right:0.25em;
+	color: @grey;
+	padding:0 0.25em;
 	// font-size:0.875em;
-	// width: 8em;
-	width: auto;
-	height: 1em;
-	line-height: 1em;
-	text-align: right;
-	float: left;
-	&:after {content: ":";}
+	// width:8em;
+	width:auto;
+	// height:1em;
+	// line-height:1em;
+	text-align:right;
+	float:left;
+	&:after {content:":";}
+	&.right {text-align:left; float:right;}
 }
 .label.small {width: auto; float: none;}
 .strong, .strong:before, .strong:after {font-weight: 700 !important;}

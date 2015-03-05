@@ -46,109 +46,53 @@
 
 		return {
 			restrict:'AE',
-			scope:{
-				options:'=',
-				sortingOptions:'@'
-				// sortClass:'@'
-			},
-			controller: function ($scope) {
-				console.log('dSorting $scope: ', $scope);
+			// scope:false,
+			// scope:{options:'='},
+			scope:{options:'@'},
+			controller: function ($scope, $rootScope, sSorting, sSortingMisc, sSortingTodo, sSortingPlayers) {
+				console.log('dSorting $scope.options: ', $scope.options);
 
-				$scope.sortOptionsGroup = {
-					'todo':[{
-						'type':'assignee',
-						'tag':'assignee',
-						'class':'',
-						'def':true,
-						'asc':false,
-						'des':false
-					},{
-						'type':'status',
-						'tag':'status',
-						'class':'',
-						'def':true,
-						'asc':false,
-						'des':false
-					},{
-						'type':'priority',
-						'tag':'priority',
-						'class':'',
-						'def':true,
-						'asc':false,
-						'des':false
-					}],
-					'players':[{
-						'type':'name',
-						'tag':'name',
-						'class':'',
-						'def':true,
-						'asc':false,
-						'des':false
-					},{
-						'type':'rank',
-						'tag':'status',
-						'class':'',
-						'def':true,
-						'asc':false,
-						'des':false
-					},{
-						'type':'handle',
-						'tag':'handle',
-						'class':'',
-						'def':true,
-						'asc':false,
-						'des':false
-					},{
-						'type':'id',
-						'tag':'account id',
-						'class':'',
-						'def':true,
-						'asc':false,
-						'des':false
-					}],
-					'other':[{
-						'type':'misc',
-						'tag':'misc',
-						'class':'',
-						'def':true,
-						'asc':false,
-						'des':false
-					}]
-				};
+				// set sorting options based on "options" param...
+				switch ($scope.options) {
+					case "todo":
+						$scope.sortOptions = sSortingTodo;
+						break;
+					case "players":
+						$scope.sortOptions = sSortingPlayers;
+						break;
+					default:
+						$scope.sortOptions = sSortingMisc;
+						break;
+				}
+				$rootScope.sortOrderChoice = $scope.sortOptions[0].type;
+				console.log('dSorting $rootScope.sortOrderChoice: ', $rootScope.sortOrderChoice);
 
-				console.log('dSorting $scope.sortOptionsGroup.todo: ', $scope.sortOptionsGroup.todo);
-
-				$scope.sortOptions = $scope.sortOptionsGroup.todo;
-
-				$scope.sortOrderChoice = $scope.sortOptions[0].type;
-				console.log('dSorting $scope.sortOrderChoice: ', $scope.sortOrderChoice);
-
-				$scope.sortCleared = true;
+				$rootScope.sortCleared = true;
 				$scope.sortClear = function () {
-					console.log('sortClear: ', $scope.sortCleared);
+					console.log('sortClear: ', $rootScope.sortCleared);
 					for (var i = 0; i < $scope.sortOptions.length; i++) {
 						// console.log('$scope.sortOptions[i]: ', $scope.sortOptions[i]);
 						$scope.sortOptions[i].asc = false;
 						$scope.sortOptions[i].des = false;
 						$scope.sortOptions[i].def = true;
 					};
-					$scope.sortOrderChoice = $scope.sortOptions[0];
-					$scope.sortReverse = false;
-					$scope.sortCleared = true;
+					$rootScope.sortOrderChoice = $scope.sortOptions[0];
+					$rootScope.sortReverse = false;
+					$rootScope.sortCleared = true;
 				};
 
 				$scope.sortOrderToggle2 = function (type, i) {
 					console.log('sortOrderToggle2:', type);
 					if ($scope.sortOptions[i].asc === $scope.sortOptions[i].des) {
 						console.log('sortOrderToggle2:', type +'; both off or both on.  sort in ascending.');
-						$scope.sortOrderChoice = type;
+						$rootScope.sortOrderChoice = type;
 						$scope.sortOptions[i].asc = !$scope.sortOptions[i].asc;
 						$scope.sortOptions[i].def = false;
 					} else {
 						console.log('sortOrderToggle2:', type +'; flip asc & des.');
 						// console.log('$scope.sortOptions[i].asc: ', $scope.sortOptions[i].asc);
 						// console.log('$scope.sortOptions[i].des: ', $scope.sortOptions[i].des);
-						$scope.sortOrderChoice = type;
+						$rootScope.sortOrderChoice = type;
 						$scope.sortOptions[i].asc = !$scope.sortOptions[i].asc;
 						$scope.sortOptions[i].des = !$scope.sortOptions[i].des;
 						$scope.sortOptions[i].def = false;
@@ -161,8 +105,9 @@
 						// 	$scope.sortOptions[i].class = "def";						
 						// }
 					};
-					$scope.sortReverse=!$scope.sortReverse;
-					// console.log('$scope.sortOptions[i].class: ', $scope.sortOptions[i].class);
+					$rootScope.sortReverse=!$rootScope.sortReverse;
+					// return $rootScope.sortReverse;
+					// return $scope.sortOrderChoice;
 				};
 
 			},

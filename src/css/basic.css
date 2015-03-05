@@ -176,12 +176,6 @@ table tr th {
 .description ul li ul li ul li {
   list-style-type: circle;
 }
-.todos li,
-.todos dt,
-.todos dd {
-  padding: 0.25em;
-  border-radius: 0.25em;
-}
 .helper {
   font-size: 0.875em;
   color: rgba(0, 0, 0, 0.5);
@@ -208,6 +202,18 @@ table tr th {
 .todos span:after {
   color: #999;
 }
+.todos .status.status0 b {
+  color: #999999;
+}
+.todos .status.status1 b {
+  color: #009900;
+}
+.todos .status.status2 b {
+  color: #999999;
+}
+.todos .status.status3 b {
+  color: #3366ff;
+}
 .todos .priority0 {
   color: #ff0000;
 }
@@ -218,7 +224,21 @@ table tr th {
   color: #009900;
 }
 .todos .priority3 {
-  color: #9999ff;
+  color: #999999;
+}
+.todos .todosMeta {
+  position: relative;
+}
+.todos .todosMeta li,
+.todos .todosMeta dt,
+.todos .todosMeta dd {
+  position: relative;
+  padding: 0 0.25em;
+  margin: 0.25em;
+  overflow: visible;
+  border-radius: 0.25em;
+  background: rgba(0, 0, 0, 0.0675);
+  color: rgba(0, 0, 0, 0.95);
 }
 .link.outbound {
   background: rgba(127, 0, 127, 0.125);
@@ -237,16 +257,18 @@ table tr th {
   border: 1px solid rgba(0, 255, 127, 0.5);
 }
 .label {
-  color: #808080;
-  padding-right: 0.25em;
+  color: rgba(127, 127, 127, 0.95);
+  padding: 0 0.25em;
   width: auto;
-  height: 1em;
-  line-height: 1em;
   text-align: right;
   float: left;
 }
 .label:after {
   content: ":";
+}
+.label.right {
+  text-align: left;
+  float: right;
 }
 .label.small {
   width: auto;

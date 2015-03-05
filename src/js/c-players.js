@@ -6,6 +6,8 @@
 	function cPlayers($scope, $http, $route, $location, constProtocol, constBungieUrl, constLogo, sPlayers) {
 		$scope.ctitle = 'cPlayers';
 		console.log('START', $scope.ctitle);
+		$scope.title = 'Players';
+		$scope.description = 'Players';
 
 		// console.log('$scope.meta.icon', $scope.meta.icon);
 
