@@ -1,25 +1,6 @@
 // destiny.less
 
-/* variables */
-// example:
-// @nice-blue: #5B83AD;
-
-/* mixins */
-// example:
-// .border {
-//   border-bottom: solid 2px black;
-// }
-
-/* operations */
-// example:
-// color: #888 / 4;
-// background-color: @base-color + #111;
-// height: 100% / 2 + @filler;
-
-/* functions */
-// example:
-// @link-color:        #428bca; // sea blue
-// @link-color-hover:  darken(@link-color, 10%);
+@import "mixins";
 
 /* Official Destiny colors */
 // PMS 2925C
@@ -69,22 +50,22 @@
 
 /* character classes */
 .warlock {
-	content:"warlock";
-/* subclasses */
+	&:before {content:"warlock";}
+	/* subclasses */
 	// &.arc {.arc()}
 	&.solar, &.sunsinger {.solar()}
 	&.void, &.voidwalker {.void()}
 }
 .hunter {
-	content:"hunter";
-/* subclasses */
+	&:before {content:"hunter";}
+	/* subclasses */
 	&.arc, &.bladedancer {.arc()}
 	&.solar, &.gunslinger {.solar()}
 	// &.void {.void()}
 }
 .titan {
-	content:"titan";
-/* subclasses */
+	&:before {content:"titan";}
+	/* subclasses */
 	&.arc, &.striker {.arc()}
 	// &.solar {.solar()}
 	&.void, &.defender {.void()}
@@ -115,64 +96,14 @@
 
 /* consumables */
 
-/* mission types */
+/* activity types */
+
+/* Page Background Images */
+.icon-group-* {
+	background-size: 100% auto;
+	background-attachment: fixed;
+	background: rgba(255,255,255,0.75) url('../img/destiny/icons/destiny-icon-tower.png') repeat center top;
+	md-content {background: rgba(255,255,255,0.75);}
+}
 
 /* patrol types */
-
-/* CHARACTER EMBLEM */
-.spiffBox table, 
-.spiffBox thead, .spiffBox tbody, .spiffBox tfoot, 
-.spiffBox tr, .spiffBox th, .spiffBox td {
-	border-collapse: collapse;
-	border: none;
-	margin: 0;
-	padding: 0;
-}
-.spiffBox {
-	width: 100%;
-	color:white !important;
-	margin-bottom: 1em;
-	table {}
-	img, ul, ol, dl {float: left;}
-	hr {border:none; height:0;}
-	dl, ul, ol {}
-	dt, dd, li {}
-	.emblemBox {
-		padding: 0.5em 0.5em 1em;
-		.emblem {
-			border: 5px outset rgba(204,204,204,0.5);
-			// box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.5);
-			padding: 0; margin: 0; height:90px; width:90px;
-		}
-	}
-	.nameBox {
-		padding: 0.5em;
-		text-align:left;
-	}
-	.levelBox {
-		padding: 0.5em;
-		text-align:right;
-		.level {font-size: 3em;}
-	}
-	.progressBox {
-		width: 100%;
-		// padding: 0.5em 0;
-		.progressBar {
-			height:1em;
-			background:rgba(255,255,255,0.25);
-			.progressIndicator {
-				height:1em;
-			}
-		}
-	}
-	.actionBox {
-		width: 100%;
-		padding: 0.5em;
-		// background:rgba(0,0,0,0.75);
-	}
-}
-.prestige:before, 
-.grimoire:before {content:"\2605"; font-size:0.55em; line-height:1; padding: 0 0 1em 0; margin: 0;}
-// .prestige .flaticon {float:left !important;}
-.grimoire:before {content:"\2630";}
-// .grimoire .flaticon {float:right !important;}

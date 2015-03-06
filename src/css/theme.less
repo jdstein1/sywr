@@ -1,48 +1,9 @@
 // theme.less
 
-/* variables */
-// example:
-// @nice-blue: #5B83AD;
+@import "mixins";
 
-// @8310647: #831064;
-// @7037048: #703704;
-// @7666141: #766614;
-// @3892477: #389247;
-// @8162353: #816235;
-
-@playerRow: #831064;
-
-@8310647: #831064;
-@7037048: spin(@8310647, 60);
-@7666141: spin(@8310647, 120);
-@3892477: spin(@8310647, 180);
-@8162353: spin(@8310647, 240);
-@9856625: spin(@8310647, 300);
-
-/* mixins */
-// example:
-// .border {
-//   border-bottom: solid 2px black;
-// }
-
-/* operations */
-// example:
-// color: #888 / 4;
-// background-color: @base-color + #111;
-// height: 100% / 2 + @filler;
-
-/* functions */
-// example:
-// @link-color:        #428bca; // sea blue
-// @link-color-hover:  darken(@link-color, 10%);
-
-/* generic backgrounds */
-.gradient-linear-white-trans {
-	background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0.75) 50%,rgba(255,255,255,1) 100%);
-}
-.gradient-radial-teal-grey {
-	background: radial-gradient(ellipse at center, rgba(135,224,253,1) 25%,rgba(83,203,241,1) 50%,rgba(5,171,224,1) 100%); /* W3C */
-}
+article md-card {background: rgba(255,255,255,0.75);}
+article md-content {background: rgba(255,255,255,0.75);}
 
 /* Page Background Images */
 .bg-destiny {
@@ -67,10 +28,6 @@
 	.bg-destiny;
 	background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
 }
-
-article md-card {background: rgba(255,255,255,0.75);}
-article md-content {background: rgba(255,255,255,0.75);}
-
 article.cHome {
 	// .bg-destiny();
 	// .classes-banners();
@@ -135,3 +92,61 @@ article.cTodo {
 // .bg-7666141 {background: @7666141+#ccc;}
 // .bg-3892477 {background: @3892477+#ccc;}
 // .bg-8162353 {background: @8162353+#ccc;}
+
+/* CHARACTER EMBLEM */
+.spiffBox table, 
+.spiffBox thead, .spiffBox tbody, .spiffBox tfoot, 
+.spiffBox tr, .spiffBox th, .spiffBox td {
+	border-collapse: collapse;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.spiffBox {
+	width: 100%;
+	color:white !important;
+	margin-bottom: 1em;
+	table {}
+	img, ul, ol, dl {float: left;}
+	hr {border:none; height:0;}
+	dl, ul, ol {}
+	dt, dd, li {}
+	.emblemBox {
+		padding: 0.5em 0.5em 1em;
+		.emblem {
+			border: 5px outset rgba(204,204,204,0.5);
+			// box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.5);
+			padding: 0; margin: 0; height:90px; width:90px;
+		}
+	}
+	.nameBox {
+		padding: 0.5em;
+		text-align:left;
+	}
+	.levelBox {
+		padding: 0.5em;
+		text-align:right;
+		.level {font-size: 3em;}
+	}
+	.progressBox {
+		width: 100%;
+		// padding: 0.5em 0;
+		.progressBar {
+			height:1em;
+			background:rgba(255,255,255,0.25);
+			.progressIndicator {
+				height:1em;
+			}
+		}
+	}
+	.actionBox {
+		width: 100%;
+		padding: 0.5em;
+		// background:rgba(0,0,0,0.75);
+	}
+}
+.prestige:before, 
+.grimoire:before {content:"\2605"; font-size:0.55em; line-height:1; padding: 0 0 1em 0; margin: 0;}
+// .prestige .flaticon {float:left !important;}
+.grimoire:before {content:"\2630";}
+// .grimoire .flaticon {float:right !important;}

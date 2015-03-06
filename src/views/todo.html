@@ -37,20 +37,19 @@
 					<ul class="todosMeta" layout="row" layout-sm="column" layout-align="center center">
 						<li flex class="assignee assignee{{item.assignee}}">
 							<span class="label">assignee</span>
-							<md-button class="md-raised md-fab" aria-label="{{convertMeta('assignee',item.assignee)}}" 
-							style="position:absolute; top:-1em; right:0.5em;"><span class="{{convertIcon('assignee',item.assignee)}}"></span></md-button>
+							<md-button class="md-raised" aria-label="{{convertMeta('assignee',item.assignee)}}" style="position:absolute; top:-1em; right:0.25em;">
+								<span class="{{convertIcon('assignee',item.assignee)}}"></span>
+							</md-button>
 							<b>{{convertMeta('assignee',item.assignee)}}</b>
 						</li>
 						<li flex class="status status{{item.status}}">
 							<span class="label">status</span>
-							<md-button class="md-raised md-fab" aria-label="{{convertMeta('status',item.status)}}" 
-							style="position:absolute; top:-1em; right:0.5em;"><span class="{{convertIcon('status',item.status)}}"></span></md-button>
+							<md-button class="md-raised" aria-label="{{convertMeta('status',item.status)}}" style="position:absolute; top:-1em; right:0.25em;"><span class="{{convertIcon('status',item.status)}}"></span></md-button>
 							<b>{{convertMeta('status',item.status)}}</b>
 						</li>
 						<li flex class="priority priority{{item.priority}}">
 							<span class="label">priority</span>
-							<md-button class="md-raised md-fab" aria-label="{{convertMeta('priority',item.priority)}}" 
-							style="position:absolute; top:-1em; right:0.5em;"><span class="{{convertIcon('priority',item.priority)}}"></span></md-button>
+							<md-button class="md-raised" aria-label="{{convertMeta('priority',item.priority)}}" style="position:absolute; top:-1em; right:0.25em;"><span class="{{convertIcon('priority',item.priority)}}"></span></md-button>
 							<b>{{convertMeta('priority',item.priority)}}</b>
 						</li>
 						<!-- <li ng-repeat="(key, value) in item.meta" class="{{key}} {{key}}{{value}}">

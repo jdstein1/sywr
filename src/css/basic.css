@@ -9,6 +9,14 @@
 }
 /* operations */
 /* functions */
+/* generic backgrounds */
+.gradient-linear-white-trans {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.75) 50%, #ffffff 100%);
+}
+.gradient-radial-teal-grey {
+  background: radial-gradient(ellipse at center, #87e0fd 25%, #53cbf1 50%, #05abe0 100%);
+  /* W3C */
+}
 /* Basic Styles */
 body {
   font-size: 1em;
@@ -202,29 +210,74 @@ table tr th {
 .todos span:after {
   color: #999;
 }
-.todos .status.status0 b {
+.todos .assignee b {
+  z-index: 1000;
+}
+.todos .assignee.assignee0 b,
+.todos .assignee.assignee0 span:before {
   color: #999999;
 }
-.todos .status.status1 b {
-  color: #009900;
+.todos .assignee.assignee1 b,
+.todos .assignee.assignee1 span:before {
+  color: #831064;
 }
-.todos .status.status2 b {
-  color: #999999;
+.todos .assignee.assignee2 b,
+.todos .assignee.assignee2 span:before {
+  color: #832f10;
 }
-.todos .status.status3 b {
-  color: #3366ff;
+.todos .assignee.assignee3 b,
+.todos .assignee.assignee3 span:before {
+  color: #648310;
 }
-.todos .priority0 {
+.todos .assignee.assignee4 b,
+.todos .assignee.assignee4 span:before {
+  color: #10832f;
+}
+.todos .assignee.assignee5 b,
+.todos .assignee.assignee5 span:before {
+  color: #106483;
+}
+.todos .assignee.assignee6 b,
+.todos .assignee.assignee6 span:before {
+  color: #2f1083;
+}
+.todos .status b {
+  z-index: 1000;
+}
+.todos .status.status0 b,
+.todos .status.status0 span:before {
+  color: #666666;
+}
+.todos .status.status1 b,
+.todos .status.status1 span:before {
+  color: #339966;
+}
+.todos .status.status2 b,
+.todos .status.status2 span:before {
+  color: #996633;
+}
+.todos .status.status3 b,
+.todos .status.status3 span:before {
+  color: #336699;
+}
+.todos .priority b {
+  z-index: 1000;
+}
+.todos .priority.priority0 b,
+.todos .priority.priority0 span:before {
   color: #ff0000;
 }
-.todos .priority1 {
-  color: #ff9900;
+.todos .priority.priority1 b,
+.todos .priority.priority1 span:before {
+  color: #ff6600;
 }
-.todos .priority2 {
-  color: #009900;
+.todos .priority.priority2 b,
+.todos .priority.priority2 span:before {
+  color: #ffcc00;
 }
-.todos .priority3 {
-  color: #999999;
+.todos .priority.priority3 b,
+.todos .priority.priority3 span:before {
+  color: #33cc33;
 }
 .todos .todosMeta {
   position: relative;

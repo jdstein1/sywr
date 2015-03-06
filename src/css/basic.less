@@ -1,44 +1,6 @@
 /*basic.less*/
 
-/* variables */
-// example:
-// @nice-blue: #5B83AD;
-
-@inert: #999;
-@neutral: #999;
-@hold: #999;
-
-@danger: #f00;
-@warning: #f90;
-
-@normal: #090;
-@progress: #090;
-
-@done: #36f;
-
-@white: rgba(255,255,255,0.95);
-@grey: rgba(127,127,127,0.95);
-@black: rgba(0,0,0,0.95);
-
-/* mixins */
-// example:
-// .border {
-//   border-bottom: solid 2px black;
-// }
-
-.boxShadowOut{box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.5);}
-.boxShadowIn{box-shadow: inset 0 0.25em 0.5em 0 rgba(0,0,0,0.5);}
-
-/* operations */
-// example:
-// color: #888 / 4;
-// background-color:@base-color + #111;
-// height: 100% / 2 + @filler;
-
-/* functions */
-// example:
-// @link-color:        #428bca; // sea blue
-// @link-color-hover:  darken(@link-color, 10%);
+@import "mixins";
 
 /* Basic Styles */
 html {}
@@ -177,6 +139,14 @@ table {
 	.assignee {
 		// & span:before {content:"\2660";}
 		// & span:after {content:"";}
+		b {z-index: 1000;}
+		&.assignee0 b, &.assignee0 span:before {color:@inert;}
+		&.assignee1 b, &.assignee1 span:before {color:@8310647;}
+		&.assignee2 b, &.assignee2 span:before {color:@7037048;}
+		&.assignee3 b, &.assignee3 span:before {color:@7666141;}
+		&.assignee4 b, &.assignee4 span:before {color:@3892477;}
+		&.assignee5 b, &.assignee5 span:before {color:@8162353;}
+		&.assignee6 b, &.assignee6 span:before {color:@9856625;}
 	}
 	.status {
 		// & span:before {content:"\2665";}
@@ -189,23 +159,25 @@ table {
 		// 	width: 1em; height: 1em;
 		// 	text-align: center;
 		// }
-		&.status0 b {color:@neutral;}
+		b {z-index: 1000;}
+		&.status0 b, &.status0 span:before {color:@neutral;}
 		// &.status0 b:before {content:"\025FC";}
-		&.status1 b {color:@progress;}
+		&.status1 b, &.status1 span:before {color:@progress;}
 		// &.status1 b:before {content:"\025B8";}
-		&.status2 b {color:@hold;}
+		&.status2 b, &.status2 span:before {color:@hold;}
 		// &.status2 b:before {content:"\02758\02758";}
-		&.status3 b {color:@done;}
+		&.status3 b, &.status3 span:before {color:@done;}
 		// &.status3 b:before {content:"\02713";}
 	}
 	.priority {
 		// & span:before {content:"\2666";}
 		// & span:after {content:"";}
+		b {z-index: 1000;}
+		&.priority0 b, &.priority0 span:before {color:@danger;}
+		&.priority1 b, &.priority1 span:before {color:@warning;}
+		&.priority2 b, &.priority2 span:before {color:@caution;}
+		&.priority3 b, &.priority3 span:before {color:@low;}
 	}
-	.priority0 {color:@danger;}
-	.priority1 {color:@warning;}
-	.priority2 {color:@normal;}
-	.priority3 {color:@neutral;}
 	.todosMeta {
 		position: relative;
 		li, dt, dd {
