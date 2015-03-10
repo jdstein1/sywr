@@ -43,7 +43,7 @@ ul, ol, dl {
 }
 
 article {
-	* {overflow:hidden;} // kind of a dangerous global rule...
+	// * {overflow:hidden;} // kind of a dangerous global rule...
 	// padding: 1em;
 	// h1, h2, h3, h4, h5, h6 {padding: 0.5em 0 0.25em;}
 	ul, ol, dl {
@@ -113,6 +113,11 @@ table {
 		td {}
 	}
 }
+form {}
+fieldset {
+	label {width:100%;}
+	input, select, textarea {width:100%;}
+}
 .infoBoxClan {
 	li {padding:0 1em;;}
 }
@@ -135,12 +140,33 @@ table {
 .todos {
 	// li, dt, dd {padding:0.25em;border-radius:0.25em;}
 	b {border-bottom:2px solid #ddd; text-transform:lowercase;}
-	 span:before, 
-	 span:after {color:#999;}
+	.todosMeta {
+		position: relative;
+		min-width:250px;
+		li, dt, dd {
+			position: relative;
+			// float:left;
+			padding:0.5em; margin:0.5em 0;
+			overflow: visible;
+			border-radius:0.25em;
+			background:rgba(0,0,0,0.0675); color:@black;
+			// .label{width:40%;}
+			&:nth-child(odd) {
+				// background:rgba(0,0,255,0.0675);
+				.md-button {}
+			}
+			&:nth-child(even) {
+				background:transparent;
+				border:1px solid @greylight !important;
+				.md-button {}
+			}
+		}
+	}
 	.assignee {
 		// & span:before {content:"\2660";}
 		// & span:after {content:"";}
 		b {z-index: 1000;}
+		.md-button {position:absolute; top:-0.5em; right:0.5em;}
 		&.assignee0 b, &.assignee0 span:before {}
 		&.assignee1 b, &.assignee1 span:before {color:@8310647;}
 		&.assignee2 b, &.assignee2 span:before {color:@7037048;}
@@ -161,31 +187,21 @@ table {
 		// 	text-align: center;
 		// }
 		b {z-index: 1000;}
-		&.status0 b, &.status0 span:before {}
-		&.status1 b, &.status1 span:before {color:@progress;}
-		&.status2 b, &.status2 span:before {color:@hold;}
-		&.status3 b, &.status3 span:before {color:@done;}
+		.md-button {position:absolute; top:-0.5em; right:0.5em;}
+		// &.status0 b, &.status0 span:before {}
+		// &.status1 b, &.status1 span:before {color:@progress;}
+		// &.status2 b, &.status2 span:before {color:@hold;}
+		// &.status3 b, &.status3 span:before {color:@done;}
 	}
 	.priority {
 		// & span:before {content:"\2666";}
 		// & span:after {content:"";}
 		b {z-index: 1000;}
+		.md-button {position:absolute; top:-0.5em; right:0.5em;}
 		&.priority0 b, &.priority0 span:before {}
-		&.priority1 b, &.priority1 span:before {color:@caution;}
+		&.priority1 b, &.priority1 span:before {color:@progress;}
 		&.priority2 b, &.priority2 span:before {color:@warning;}
 		&.priority3 b, &.priority3 span:before {color:@danger;}
-	}
-	.todosMeta {
-		position: relative;
-		li, dt, dd {
-			position: relative;
-			// float:left;
-			padding:0 0.25em; margin:0.25em;
-			overflow: visible;
-			border-radius:0.25em;
-			background:rgba(0,0,0,0.0675); color:@black;
-			// .label{width:40%;}
-		}
 	}
 }
 .asc {
@@ -219,7 +235,7 @@ table {
 	}
 }
 .label {
-	color: @grey;
+	color: @greydark;
 	padding:0 0.25em;
 	// font-size:0.875em;
 	// width:8em;

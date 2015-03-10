@@ -19,11 +19,11 @@
 				myTodos = data.todos;
 				// return myTodos;
 				$scope.todos = myTodos;
-				console.log('$scope.todos', $scope.todos);
-				console.log('$scope.todos.description: ',$scope.todos.description);
-				console.log('$scope.todos.meta: ',$scope.todos.meta);
-				console.log('$scope.todos.meta[1]: ',$scope.todos.meta[1]);
-				console.log('$scope.todos.meta[1].priority: ',$scope.todos.meta[1].priority);
+				// console.log('$scope.todos', $scope.todos);
+				// console.log('$scope.todos.description: ',$scope.todos.description);
+				// console.log('$scope.todos.meta: ',$scope.todos.meta);
+				// console.log('$scope.todos.meta[1]: ',$scope.todos.meta[1]);
+				// console.log('$scope.todos.meta[1].priority: ',$scope.todos.meta[1].priority);
 			}).error(function () {
 				console.log('sTodo.getTodos -- error');
 				// get backup data at /data/clan.json
@@ -60,6 +60,14 @@
 				default:
 					break;
 			}
+		};
+		$scope.testOptions = false;
+		$scope.modelAssignee = 'null';
+		$scope.modelPriority = 'null';
+		$scope.modelStatus = 'null';
+		$scope.fChangeStatus = function (status,id) {
+			console.log('fChangeStatus', status+':'+$scope.todos.meta[2].status[status]);
+			console.log('fChangeStatus', id+':'+$scope.todos.items[id].title);
 		};
 
 	}

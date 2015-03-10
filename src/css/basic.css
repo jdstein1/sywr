@@ -45,9 +45,6 @@ body p,
 html p {
   line-height: 1.4;
 }
-article * {
-  overflow: hidden;
-}
 article ul,
 article ol,
 article dl {
@@ -167,6 +164,14 @@ table tr th {
   text-align: right;
   border-color: blue;
 }
+fieldset label {
+  width: 100%;
+}
+fieldset input,
+fieldset select,
+fieldset textarea {
+  width: 100%;
+}
 .infoBoxClan li {
   padding: 0 1em;
 }
@@ -201,12 +206,34 @@ table tr th {
   border-bottom: 2px solid #ddd;
   text-transform: lowercase;
 }
-.todos span:before,
-.todos span:after {
-  color: #999;
+.todos .todosMeta {
+  position: relative;
+  min-width: 250px;
+}
+.todos .todosMeta li,
+.todos .todosMeta dt,
+.todos .todosMeta dd {
+  position: relative;
+  padding: 0.5em;
+  margin: 0.5em 0;
+  overflow: visible;
+  border-radius: 0.25em;
+  background: rgba(0, 0, 0, 0.0675);
+  color: rgba(0, 0, 0, 0.95);
+}
+.todos .todosMeta li:nth-child(even),
+.todos .todosMeta dt:nth-child(even),
+.todos .todosMeta dd:nth-child(even) {
+  background: transparent;
+  border: 1px solid rgba(191, 191, 191, 0.95) !important;
 }
 .todos .assignee b {
   z-index: 1000;
+}
+.todos .assignee .md-button {
+  position: absolute;
+  top: -0.5em;
+  right: 0.5em;
 }
 .todos .assignee.assignee1 b,
 .todos .assignee.assignee1 span:before {
@@ -235,24 +262,22 @@ table tr th {
 .todos .status b {
   z-index: 1000;
 }
-.todos .status.status1 b,
-.todos .status.status1 span:before {
-  color: #339966;
-}
-.todos .status.status2 b,
-.todos .status.status2 span:before {
-  color: #996633;
-}
-.todos .status.status3 b,
-.todos .status.status3 span:before {
-  color: #336699;
+.todos .status .md-button {
+  position: absolute;
+  top: -0.5em;
+  right: 0.5em;
 }
 .todos .priority b {
   z-index: 1000;
 }
+.todos .priority .md-button {
+  position: absolute;
+  top: -0.5em;
+  right: 0.5em;
+}
 .todos .priority.priority1 b,
 .todos .priority.priority1 span:before {
-  color: #ffcc00;
+  color: #339966;
 }
 .todos .priority.priority2 b,
 .todos .priority.priority2 span:before {
@@ -262,22 +287,8 @@ table tr th {
 .todos .priority.priority3 span:before {
   color: #ff0000;
 }
-.todos .todosMeta {
-  position: relative;
-}
-.todos .todosMeta li,
-.todos .todosMeta dt,
-.todos .todosMeta dd {
-  position: relative;
-  padding: 0 0.25em;
-  margin: 0.25em;
-  overflow: visible;
-  border-radius: 0.25em;
-  background: rgba(0, 0, 0, 0.0675);
-  color: rgba(0, 0, 0, 0.95);
-}
 .label {
-  color: rgba(127, 127, 127, 0.95);
+  color: rgba(63, 63, 63, 0.95);
   padding: 0 0.25em;
   width: auto;
   text-align: right;

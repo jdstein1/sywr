@@ -8,54 +8,59 @@
 	<!-- START SORTING -->
 	<div ng-controller="cSorting">
 
-		<!-- <md-card>
-			<md-card-content>
-				<div ng-model="sortOrderChoiceTodo" layout="row" layout-sm="column" layout-align="center center">
-					<div>Sort by:</div>
-					<md-button ng-repeat="option in sortOptions" aria-label="{{option.type}}" class="md-primary btn-small" 
-						ng-class="{'def':option.def, 'asc':option.asc, 'des':option.des}" 
-						ng-click="sortOrderToggle2(option.type, $index)">
-						<span class="flaticon right" 
-							ng-class="{'flaticon-drop27':option.asc, 'flaticon-drop25':option.des, 'flaticon-show7':option.def}"></span>
-						<span>{{option.tag}}</span>
-					</md-button>
-					<md-button aria-label="Clear" class="" 
-						ng-click="sortClear()">Clear</md-button>
-				</div>
-			</md-card-content>
-		</md-card> -->
-
 		<d-sorting options="todo"> sorting </d-sorting>
+
+		<fieldset ng-disabled="!testOptions">
+			<legend>Edit</legend>
+			<div layout="row">
+				<fieldset flex>
+					<label>All Assignee:</label>
+					<select ng-options="label for label in todos.meta[0].assignee" ng-model="modelAssignee"></select>
+					{{modelAssignee}}
+				</fieldset>
+				<fieldset flex>
+					<label>All Priority:</label>
+					<select ng-options="label for label in todos.meta[1].priority" ng-model="modelPriority"></select>
+					{{modelPriority}}
+				</fieldset>
+				<fieldset flex>
+					<label>All Status:</label>
+					<select ng-options="label for label in todos.meta[2].status" ng-model="modelStatus"></select>
+					{{modelStatus}}
+				</fieldset>
+			</div>
+		</fieldset>
 
 		<div ng-controller="cPlayers">
 			<md-card ng-repeat="item in todos.items | orderBy: sortOrderChoice: sortReverse" class="todos">
 				<md-card-content class="md-padding">
-				<div layout="column">
-					<h2>{{item.title}}</h2>
-					<ul class="todosMeta" layout="row" layout-sm="column" layout-align="center center">
-						<li flex class="assignee assignee{{item.assignee}}">
-							<span class="label">assignee</span>
-							<md-button class="md-raised" aria-label="{{convertMeta('assignee',item.assignee)}}" style="position:absolute; top:-1em; right:0.25em;">
-								<span class="{{convertIcon('assignee',item.assignee)}}"></span>
-							</md-button>
-							<b>{{convertMeta('assignee',item.assignee)}}</b>
-						</li>
-						<li flex class="status status{{item.status}}">
-							<span class="label">status</span>
-							<md-button class="md-raised" aria-label="{{convertMeta('status',item.status)}}" style="position:absolute; top:-1em; right:0.25em;"><span class="{{convertIcon('status',item.status)}}"></span></md-button>
-							<b>{{convertMeta('status',item.status)}}</b>
-						</li>
-						<li flex class="priority priority{{item.priority}}">
-							<span class="label">priority</span>
-							<md-button class="md-raised" aria-label="{{convertMeta('priority',item.priority)}}" style="position:absolute; top:-1em; right:0.25em;"><span class="{{convertIcon('priority',item.priority)}}"></span></md-button>
-							<b>{{convertMeta('priority',item.priority)}}</b>
-						</li>
-						<!-- <li ng-repeat="(key, value) in item.meta" class="{{key}} {{key}}{{value}}">
-							<span class="{{item.icon}}"></span>
-							<span class="label">{{key}}</span> <b>{{convertMeta(key,value)}}</b></li> -->
-					</ul>
-					<div>
-						<span class="description" ng-repeat="line in item.description" ng-bind-html="line | markdown">{{line}}</span>
+				<big>{{item.title}}</big>
+				<div layout="row" layout-sm="column">
+						<ul class="todosMeta">
+							<li flex class="assignee assignee{{item.assignee}}">
+								<span class="label">assignee</span>
+								<md-button class="md-primary" aria-label="{{convertMeta('assignee',item.assignee)}}">
+									<span class="{{convertIcon('assignee',item.assignee)}}"></span>
+								</md-button>
+								<b>{{convertMeta('assignee',item.assignee)}}</b>
+							</li>
+							<li flex class="status status{{item.status}}">
+								<span class="label">status</span>
+								<md-button class="md-primary md-raised" aria-label="{{convertMeta('status',item.status)}}"><span class="{{convertIcon('status',item.status)}}"></span></md-button>
+								<b ng-click="fChangeStatus(item.status, item.id)">{{convertMeta('status',item.status)}}</b>
+								<select ng-disabled="!testOptions" ng-options="label for label in todos.meta[2].status" ng-model="item.status"></select>
+							</li>
+							<li flex class="priority priority{{item.priority}}">
+								<span class="label">priority</span>
+								<md-button class="md-primary" aria-label="{{convertMeta('priority',item.priority)}}"><span class="{{convertIcon('priority',item.priority)}}"></span></md-button>
+								<b>{{convertMeta('priority',item.priority)}}</b>
+							</li>
+							<!-- <li ng-repeat="(key, value) in item.meta" class="{{key}} {{key}}{{value}}">
+								<span class="{{item.icon}}"></span>
+								<span class="label">{{key}}</span> <b>{{convertMeta(key,value)}}</b></li> -->
+						</ul>
+					<div class="" style="padding-left:1em;margin:1em;border-left:1px solid lightgrey;">
+						<p class="description" ng-repeat="line in item.description" ng-bind-html="line | markdown">{{line}}</p>
 					</div>
 				</div>
 				</md-card-content>

@@ -12,6 +12,7 @@
 	],
 	"items":[{
 			"title":"Feedback Form",
+			"id":0,
 			"assignee": 1,
 			"status": 1,
 			"priority": 3,
@@ -21,6 +22,7 @@
 			]
 		},{
 			"title":"Build Manager",
+			"id":1,
 			"assignee": 0,
 			"status": 0,
 			"priority": 2,
@@ -32,6 +34,7 @@
 			]
 		},{
 			"title":"Custom Icons",
+			"id":2,
 			"assignee": 1,
 			"status": 2,
 			"priority": 1,
@@ -40,6 +43,7 @@
 			]
 		},{
 			"title":"Better background Images",
+			"id":3,
 			"assignee": 1,
 			"status": 0,
 			"priority": 2,
@@ -48,6 +52,7 @@
 			]
 		},{
 			"title":"Custom Theme",
+			"id":4,
 			"assignee": 1,
 			"status": 0,
 			"priority": 1,
@@ -56,6 +61,7 @@
 			]
 		},{
 			"title":"Multiple API call",
+			"id":5,
 			"assignee": 2,
 			"status": 1,
 			"priority": 3,
@@ -64,6 +70,7 @@
 			]
 		},{
 			"title":"Link to Clan & Profile pages",
+			"id":6,
 			"assignee": 1,
 			"status": 3,
 			"priority": 2,
@@ -75,6 +82,7 @@
 			]
 		},{
 			"title":"Use API to populate Clan pages",
+			"id":7,
 			"assignee": 1,
 			"status": 1,
 			"priority": 3,
@@ -86,6 +94,7 @@
 			]
 		},{
 			"title":"Use API to populate Player pages",
+			"id":8,
 			"assignee": 1,
 			"status": 3,
 			"priority": 3,
@@ -96,6 +105,7 @@
 			]
 		},{
 			"title":"Use API to populate Activity pages",
+			"id":9,
 			"assignee": 4,
 			"status": 0,
 			"priority": 2,
@@ -110,6 +120,7 @@
 			]
 		},{
 			"title":"Hash Converter",
+			"id":10,
 			"assignee": 5,
 			"status": 1,
 			"priority": 2,
@@ -119,6 +130,7 @@
 
 		},{
 			"title":"Item Info Lookup",
+			"id":11,
 			"assignee": 3,
 			"status": 0,
 			"priority": 1,

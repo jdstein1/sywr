@@ -15,125 +15,78 @@
 
   <md-content class="md-padding">
 
-    <md-content style="height: 600px;">
-
-  <md-toolbar md-scroll-shrink class="md-padding md-primary md-hue-2">
-    <h2 class="md-toolbar-tools">
-      <span>{{title}}</span>
-    </h2>
-  </md-toolbar>
-
-    <h2>Material Design List</h2>
-    <p>Testing various directives, themes, options...</p>
-
-      <md-list>
-    	<md-subheader>To Do List</md-subheader>
-        <md-item ng-repeat="item in todos">
-          <md-item-content>
-            <div class="md-tile-left">
-  			<md-switch ng-model="item.done" aria-label="Status">
-  				{{item.done}}
-  			</md-switch>
-            	<!-- img url:  {{item.face}} -->
-              <!-- <img ng-src="{{item.face}}" alt="{{item.who}}" class="face"> -->
-            </div>
-            <div class="md-tile-content">
-              <h3>{{item.what}}</h3>
-              <h4>{{item.who}}</h4>
-              <p>
-                {{item.notes}}
-              </p>
-            </div>
-          </md-item-content>
-          <md-divider inset></md-divider>
-        </md-item>
-      </md-list>
-    	<md-subheader>Input, Color</md-subheader>
-    	<md-input-container>
-    	  <label>Color</label>
-    	  <input type="text" ng-model="color" required md-maxlength="10">
-    	</md-input-container>
-    </md-content>
-
     <md-card md-theme="default">
-    <md-card-content>
-    <md-subheader>Buttons</md-subheader>
-    <section layout="row" layout-sm="column" layout-align="center center">
-      <md-button>Button</md-button>
-      <md-button class="md-primary">Primary</md-button>
-      <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
-      <md-button ng-disabled="true" class="md-primary">Primary (Disabled)</md-button>
-    </section>
-    </md-card-content>
-    </md-card>
 
-    <md-card md-theme="default">
-    <md-card-content>
-    <md-subheader>Buttons, Raised</md-subheader>
-    <section layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="md-raised">Button</md-button>
-      <md-button class="md-raised md-primary">Primary</md-button>
-      <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
-      <md-button class="md-raised md-warn">Warn</md-button>
-      <!-- <div class="label">Raised</div> -->
-    </section>
-    </md-card-content>
-    </md-card>
+      <md-card-content>
+      <md-subheader>Buttons</md-subheader>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button>Button</md-button>
+        <md-button class="md-primary">Primary</md-button>
+        <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
+        <md-button ng-disabled="true" class="md-primary">Primary (Disabled)</md-button>
+      </section>
+      </md-card-content>
 
-    <md-card md-theme="default">
-    <md-card-content>
-    <md-subheader>Buttons, Images</md-subheader>
-    <section layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="md-fab" aria-label="Carnage_Zone.png">
-        <md-icon icon="lib/brands/bungie/iconography/Carnage_Zone.png" style="width: 44px; height: 44px;"></md-icon>
-      </md-button>
-      <md-button class="md-fab md-primary" aria-label="Septagon.png">
-        <md-icon icon="lib/brands/bungie/iconography/Septagon.png" style=""></md-icon>
-      </md-button>
-      <md-button class="md-fab md-accent" aria-label="Shield_Crest.png">
-        <md-icon icon="lib/brands/bungie/iconography/Shield_Crest.png" style=""></md-icon>
-      </md-button>
-      <md-button class="md-fab md-warn" aria-label="Swordburst_Crest.png">
-        <md-icon icon="lib/brands/bungie/iconography/Swordburst_Crest.png" style=""></md-icon>
-      </md-button>
-    </section>
-    </md-card-content>
-    </md-card>
+      <md-card-content>
+      <md-subheader>Buttons, Raised</md-subheader>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button class="md-raised">Button</md-button>
+        <md-button class="md-raised md-primary">Primary</md-button>
+        <md-button class="md-raised md-accent">Accent</md-button>
+        <md-button class="md-raised md-warn">Warn</md-button>
+        <!-- <div class="label">Raised</div> -->
+      </section>
+      </md-card-content>
 
-    <md-card md-theme="default">
-    <md-card-content>
-    <md-subheader>Buttons, Text</md-subheader>
-    <section layout="row" layout-sm="column" layout-align="center center">
-      <md-button>More Info</md-button>
-      <md-button>Cancel</md-button>
-      <md-button>RSVP</md-button>
-    </section>
-    </md-card-content>
-    </md-card>
+      <md-card-content>
+      <md-subheader>Buttons, Images</md-subheader>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button class="md-fab" aria-label="Carnage_Zone.png">
+          <md-icon icon="lib/brands/bungie/iconography/Carnage_Zone.png" style="width: 44px; height: 44px;"></md-icon>
+        </md-button>
+        <md-button class="md-fab md-primary" aria-label="Septagon.png">
+          <md-icon icon="lib/brands/bungie/iconography/Septagon.png" style=""></md-icon>
+        </md-button>
+        <md-button class="md-fab md-accent" aria-label="Shield_Crest.png">
+          <md-icon icon="lib/brands/bungie/iconography/Shield_Crest.png" style=""></md-icon>
+        </md-button>
+        <md-button class="md-fab md-warn" aria-label="Swordburst_Crest.png">
+          <md-icon icon="lib/brands/bungie/iconography/Swordburst_Crest.png" style=""></md-icon>
+        </md-button>
+      </section>
+      </md-card-content>
 
-    <md-card md-theme="default">
-    <md-card-content>
-    <md-subheader>Buttons, Themed (Default)</md-subheader>
-    <section layout="row" layout-sm="column" layout-align="center center">
-      <md-button class="">None</md-button>
-      <md-button class="md-primary">Primary</md-button>
-      <md-button class="md-accent">Accent</md-button>
-      <md-button class="md-warn">Warn</md-button>
-    </section>
-    <section layout="row" layout-sm="column" layout-align="center center">
-      Raised:
-      <md-button class="md-raised ">None</md-button>
-      <md-button class="md-raised md-primary">Primary</md-button>
-      <md-button class="md-raised md-accent">Accent</md-button>
-      <md-button class="md-raised md-warn">Warn</md-button>
-    </section>
-    <section layout="row" layout-sm="column" layout-align="center center">
-      Hue 2: <md-button class="md-raised md-hue-2">None Hue 2</md-button>
-      <md-button class="md-raised md-primary md-hue-2">Primary Hue 2</md-button>
-      <md-button class="md-raised md-accent md-hue-2">Accent Hue 2</md-button>
-      <md-button class="md-raised md-warn md-hue-2">Warn Hue 2</md-button>
-    </section>
-    </md-card-content>
+      <md-card-content>
+      <md-subheader>Buttons, Themed (Default)</md-subheader>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button class="">None</md-button>
+        <md-button class="md-primary">Primary</md-button>
+        <md-button class="md-accent">Accent</md-button>
+        <md-button class="md-warn">Warn</md-button>
+      </section>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        Raised:
+        <md-button class="md-raised ">None</md-button>
+        <md-button class="md-raised md-primary">Primary</md-button>
+        <md-button class="md-raised md-accent">Accent</md-button>
+        <md-button class="md-raised md-warn">Warn</md-button>
+      </section>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button ng-disabled="true" class="md-raised">Button</md-button>
+        <md-button ng-disabled="true" class="md-raised md-primary">Primary</md-button>
+        <md-button ng-disabled="true" class="md-raised md-accent">Accent</md-button>
+        <md-button ng-disabled="true" class="md-raised md-warn">Warn</md-button>
+        <!-- <div class="label">Raised</div> -->
+      </section>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        <span>Hue 2: </span>
+        <md-button class="md-raised md-hue-2">None Hue 2</md-button>
+        <md-button class="md-raised md-primary md-hue-2">Primary Hue 2</md-button>
+        <md-button class="md-raised md-accent md-hue-2">Accent Hue 2</md-button>
+        <md-button class="md-raised md-warn md-hue-2">Warn Hue 2</md-button>
+      </section>
+      </md-card-content>
+
     </md-card>
 
     <md-card md-theme="sywr">
@@ -146,14 +99,22 @@
       <md-button class="md-warn">Warn</md-button>
     </section>
     <section layout="row" layout-sm="column" layout-align="center center">
-      Raised:
+      <span>Raised:</span>
       <md-button class="md-raised ">None</md-button>
       <md-button class="md-raised md-primary">Primary</md-button>
       <md-button class="md-raised md-accent">Accent</md-button>
       <md-button class="md-raised md-warn">Warn</md-button>
     </section>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button ng-disabled="true" class="md-raised">Button</md-button>
+        <md-button ng-disabled="true" class="md-raised md-primary">Primary</md-button>
+        <md-button ng-disabled="true" class="md-raised md-accent">Accent</md-button>
+        <md-button ng-disabled="true" class="md-raised md-warn">Warn</md-button>
+        <!-- <div class="label">Raised</div> -->
+      </section>
     <section layout="row" layout-sm="column" layout-align="center center">
-      Hue 2: <md-button class="md-raised md-hue-2">None Hue 2</md-button>
+      <span>Hue 2:</span>
+      <md-button class="md-raised md-hue-2">None Hue 2</md-button>
       <md-button class="md-raised md-primary md-hue-2">Primary Hue 2</md-button>
       <md-button class="md-raised md-accent md-hue-2">Accent Hue 2</md-button>
       <md-button class="md-raised md-warn md-hue-2">Warn Hue 2</md-button>
@@ -163,7 +124,7 @@
 
     <md-card md-theme="sywr-dark">
     <md-card-content>
-    <md-subheader>Buttons, Themed (SYWR)</md-subheader>
+    <md-subheader>Buttons, Themed (SYWR-Dark)</md-subheader>
     <section layout="row" layout-sm="column" layout-align="center center">
       <md-button class="">None</md-button>
       <md-button class="md-primary">Primary</md-button>
@@ -171,14 +132,22 @@
       <md-button class="md-warn">Warn</md-button>
     </section>
     <section md-theme="sywr-dark" layout="row" layout-sm="column" layout-align="center center">
-      Raised:
+      <span>Raised:</span>
       <md-button class="md-raised ">None</md-button>
       <md-button class="md-raised md-primary">Primary</md-button>
       <md-button class="md-raised md-accent">Accent</md-button>
       <md-button class="md-raised md-warn">Warn</md-button>
     </section>
+      <section layout="row" layout-sm="column" layout-align="center center">
+        <md-button ng-disabled="true" class="md-raised">Button</md-button>
+        <md-button ng-disabled="true" class="md-raised md-primary">Primary</md-button>
+        <md-button ng-disabled="true" class="md-raised md-accent">Accent</md-button>
+        <md-button ng-disabled="true" class="md-raised md-warn">Warn</md-button>
+        <!-- <div class="label">Raised</div> -->
+      </section>
     <section md-theme="sywr-dark" layout="row" layout-sm="column" layout-align="center center">
-      Hue 2: <md-button class="md-raised md-hue-2">None Hue 2</md-button>
+      <span>Hue 2:</span>
+      <md-button class="md-raised md-hue-2">None Hue 2</md-button>
       <md-button class="md-raised md-primary md-hue-2">Primary Hue 2</md-button>
       <md-button class="md-raised md-accent md-hue-2">Accent Hue 2</md-button>
       <md-button class="md-raised md-warn md-hue-2">Warn Hue 2</md-button>
@@ -211,6 +180,46 @@
     </section>
     </md-card-content>
     </md-card>
+
+    <md-content style="height: 600px;">
+
+  <md-toolbar md-scroll-shrink class="md-padding md-primary md-hue-2">
+    <h2 class="md-toolbar-tools">
+      <span>{{title}}</span>
+    </h2>
+  </md-toolbar>
+
+    <h2>Material Design List</h2>
+    <p>Testing various directives, themes, options...</p>
+
+      <md-list>
+      <md-subheader>To Do List</md-subheader>
+        <md-item ng-repeat="item in todos">
+          <md-item-content>
+            <div class="md-tile-left">
+        <md-switch ng-model="item.done" aria-label="Status">
+          {{item.done}}
+        </md-switch>
+              <!-- img url:  {{item.face}} -->
+              <!-- <img ng-src="{{item.face}}" alt="{{item.who}}" class="face"> -->
+            </div>
+            <div class="md-tile-content">
+              <h3>{{item.what}}</h3>
+              <h4>{{item.who}}</h4>
+              <p>
+                {{item.notes}}
+              </p>
+            </div>
+          </md-item-content>
+          <md-divider inset></md-divider>
+        </md-item>
+      </md-list>
+      <md-subheader>Input, Color</md-subheader>
+      <md-input-container>
+        <label>Color</label>
+        <input type="text" ng-model="color" required md-maxlength="10">
+      </md-input-container>
+    </md-content>
 
   </md-content>
 
