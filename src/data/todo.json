@@ -2,19 +2,19 @@
 	"description":"Things left to do in order to make this a decent protfolio piece:",
 	"meta":[
 		{"assignee": ["Unassigned","Jeff","John","Kaleb","Kras","Tanner","Vikas"]},
-		{"priority": ["SUPER HIGH","HIGH","MEDIUM","LOW"]},
+		{"priority": ["LOW","MEDIUM","HIGH","SUPER HIGH"]},
 		{"status": ["NOT STARTED","IN PROGRESS","ON HOLD","DONE"]}
 	],
 	"icons":[
 		{"assignee": ["flaticon-help19","flaticon-birthday20","flaticon-bug18","flaticon-landscape10","flaticon-emoticon117","flaticon-android12","flaticon-good4"]},
-		{"priority": ["flaticon-cell10","flaticon-high22","flaticon-medium5","flaticon-low34"]},
+		{"priority": ["flaticon-low34","flaticon-medium5","flaticon-high22","flaticon-cell10"]},
 		{"status": ["flaticon-rounded56","flaticon-play107","flaticon-round55","flaticon-circle108"]}
 	],
 	"items":[{
 			"title":"Feedback Form",
 			"assignee": 1,
 			"status": 1,
-			"priority": 1,
+			"priority": 3,
 			"description":[
 				"Make the feedback form submit the data to an email address.",
 				"Use GDocs form?"
@@ -34,7 +34,7 @@
 			"title":"Custom Icons",
 			"assignee": 1,
 			"status": 2,
-			"priority": 3,
+			"priority": 1,
 			"description":[
 				"Create a set of icons for specific games and their symbols for character classes, acheivements, mission types, etc."
 			]
@@ -50,7 +50,7 @@
 			"title":"Custom Theme",
 			"assignee": 1,
 			"status": 0,
-			"priority": 3,
+			"priority": 1,
 			"description":[
 				"Customize the basic Material Design theme to provide a unique look and feel."
 			]
@@ -58,7 +58,7 @@
 			"title":"Multiple API call",
 			"assignee": 2,
 			"status": 1,
-			"priority": 1,
+			"priority": 3,
 			"description":[
 				"Pass more than one account ID or character ID in order to populate a player/character comparison page."
 			]
@@ -66,7 +66,7 @@
 			"title":"Link to Clan & Profile pages",
 			"assignee": 1,
 			"status": 3,
-			"priority": 0,
+			"priority": 2,
 			"description":[
 				"Example:",
 				"### Bungie/Destiny URLs",
@@ -77,7 +77,7 @@
 			"title":"Use API to populate Clan pages",
 			"assignee": 1,
 			"status": 1,
-			"priority": 0,
+			"priority": 3,
 			"description":[
 				"Example:",
 				"### Bungie/Destiny APIs",
@@ -88,7 +88,7 @@
 			"title":"Use API to populate Player pages",
 			"assignee": 1,
 			"status": 3,
-			"priority": 0,
+			"priority": 3,
 			"description":[
 				"Example:",
 				"### Player info API",
@@ -98,7 +98,7 @@
 			"title":"Use API to populate Activity pages",
 			"assignee": 4,
 			"status": 0,
-			"priority": 1,
+			"priority": 2,
 			"description":[
 				"Use Activity APIs to get data like kills, hours played, activities completed.",
 				"### Bungie/Destiny Activity History APIs:",
@@ -112,7 +112,7 @@
 			"title":"Hash Converter",
 			"assignee": 5,
 			"status": 1,
-			"priority": 1,
+			"priority": 2,
 			"description":[
 				"Make a local JSON record of most common hash conversions.  For example:"
 			]
@@ -121,7 +121,7 @@
 			"title":"Item Info Lookup",
 			"assignee": 3,
 			"status": 0,
-			"priority": 2,
+			"priority": 1,
 			"description":[
 				"Use this API to look up inventory item data:",
 				"* Item info API: [http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170](http://www.bungie.net/Platform/Destiny/Manifest/InventoryItem/3658182170)"

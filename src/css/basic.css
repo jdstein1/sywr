@@ -141,20 +141,15 @@ table h6 {
 table thead,
 table tbody,
 table tfoot,
-table tr {
+table tr,
+table th,
+table td {
   width: 100%;
 }
-table thead {
-  background: rgba(255, 0, 255, 0.25);
-  border-color: magenta;
-}
-table tbody {
-  background: rgba(0, 255, 255, 0.25);
-  border-color: cyan;
-}
+table thead,
+table tbody,
 table tfoot {
-  background: rgba(255, 255, 0, 0.25);
-  border-color: yellow;
+  border: 1px solid white;
 }
 table tr {
   border-color: green;
@@ -213,10 +208,6 @@ table tr th {
 .todos .assignee b {
   z-index: 1000;
 }
-.todos .assignee.assignee0 b,
-.todos .assignee.assignee0 span:before {
-  color: #999999;
-}
 .todos .assignee.assignee1 b,
 .todos .assignee.assignee1 span:before {
   color: #831064;
@@ -244,10 +235,6 @@ table tr th {
 .todos .status b {
   z-index: 1000;
 }
-.todos .status.status0 b,
-.todos .status.status0 span:before {
-  color: #666666;
-}
 .todos .status.status1 b,
 .todos .status.status1 span:before {
   color: #339966;
@@ -263,21 +250,17 @@ table tr th {
 .todos .priority b {
   z-index: 1000;
 }
-.todos .priority.priority0 b,
-.todos .priority.priority0 span:before {
-  color: #ff0000;
-}
 .todos .priority.priority1 b,
 .todos .priority.priority1 span:before {
-  color: #ff6600;
+  color: #ffcc00;
 }
 .todos .priority.priority2 b,
 .todos .priority.priority2 span:before {
-  color: #ffcc00;
+  color: #ff6600;
 }
 .todos .priority.priority3 b,
 .todos .priority.priority3 span:before {
-  color: #33cc33;
+  color: #ff0000;
 }
 .todos .todosMeta {
   position: relative;
@@ -292,22 +275,6 @@ table tr th {
   border-radius: 0.25em;
   background: rgba(0, 0, 0, 0.0675);
   color: rgba(0, 0, 0, 0.95);
-}
-.link.outbound {
-  background: rgba(127, 0, 127, 0.125);
-  border: 1px solid rgba(127, 0, 127, 0.5);
-}
-.link.outbound.bungie {
-  background: rgba(255, 0, 127, 0.125);
-  border: 1px solid rgba(255, 0, 127, 0.5);
-}
-.link.outbound.github {
-  background: rgba(127, 0, 255, 0.125);
-  border: 1px solid rgba(127, 0, 255, 0.5);
-}
-.link.json {
-  background: rgba(0, 255, 127, 0.125);
-  border: 1px solid rgba(0, 255, 127, 0.5);
 }
 .label {
   color: rgba(127, 127, 127, 0.95);

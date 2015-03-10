@@ -98,10 +98,11 @@ tr, th, td {
 table {
 	width:100%;
 	h1, h2, h3, h4, h5, h6 {margin:0 !important;}
-	thead, tbody, tfoot, tr {width:100%;}
-	thead {background: rgba(255,0,255,0.25); border-color: magenta;}
-	tbody {background: rgba(0,255,255,0.25); border-color: cyan;}
-	tfoot {background: rgba(255,255,0,0.25); border-color: yellow;}
+	thead, tbody, tfoot, tr, th, td {width:100%;}
+	thead, tbody, tfoot {border:1px solid white;}
+	// thead {background: rgba(255,0,255,0.125); border-color: magenta;}
+	// tbody {background: rgba(0,255,255,0.125); border-color: cyan;}
+	// tfoot {background: rgba(255,255,0,0.125); border-color: yellow;}
 	tr {
 		border-color:green;
 		th, td {
@@ -140,7 +141,7 @@ table {
 		// & span:before {content:"\2660";}
 		// & span:after {content:"";}
 		b {z-index: 1000;}
-		&.assignee0 b, &.assignee0 span:before {color:@inert;}
+		&.assignee0 b, &.assignee0 span:before {}
 		&.assignee1 b, &.assignee1 span:before {color:@8310647;}
 		&.assignee2 b, &.assignee2 span:before {color:@7037048;}
 		&.assignee3 b, &.assignee3 span:before {color:@7666141;}
@@ -160,23 +161,19 @@ table {
 		// 	text-align: center;
 		// }
 		b {z-index: 1000;}
-		&.status0 b, &.status0 span:before {color:@neutral;}
-		// &.status0 b:before {content:"\025FC";}
+		&.status0 b, &.status0 span:before {}
 		&.status1 b, &.status1 span:before {color:@progress;}
-		// &.status1 b:before {content:"\025B8";}
 		&.status2 b, &.status2 span:before {color:@hold;}
-		// &.status2 b:before {content:"\02758\02758";}
 		&.status3 b, &.status3 span:before {color:@done;}
-		// &.status3 b:before {content:"\02713";}
 	}
 	.priority {
 		// & span:before {content:"\2666";}
 		// & span:after {content:"";}
 		b {z-index: 1000;}
-		&.priority0 b, &.priority0 span:before {color:@danger;}
-		&.priority1 b, &.priority1 span:before {color:@warning;}
-		&.priority2 b, &.priority2 span:before {color:@caution;}
-		&.priority3 b, &.priority3 span:before {color:@low;}
+		&.priority0 b, &.priority0 span:before {}
+		&.priority1 b, &.priority1 span:before {color:@caution;}
+		&.priority2 b, &.priority2 span:before {color:@warning;}
+		&.priority3 b, &.priority3 span:before {color:@danger;}
 	}
 	.todosMeta {
 		position: relative;
@@ -207,13 +204,17 @@ table {
 }
 .link {
 	&.outbound {
-		background: rgba(127, 0, 127, 0.125); border: 1px solid rgba(127, 0, 127, 0.5);
+		// background: rgba(127, 0, 127, 0.125); border: 1px solid rgba(127, 0, 127, 0.5);
+		&.bungie {
+			// background: rgba(255, 0, 127, 0.125); border: 1px solid rgba(255, 0, 127, 0.5);
+		}
+		&.github {
+			// background: rgba(127, 0, 255, 0.125); border: 1px solid rgba(127, 0, 255, 0.5);
+		}
 		&:after {}
-		&.bungie {background: rgba(255, 0, 127, 0.125); border: 1px solid rgba(255, 0, 127, 0.5);;}
-		&.github {background: rgba(127, 0, 255, 0.125); border: 1px solid rgba(127, 0, 255, 0.5);;}
 	}
 	&.json {
-		background: rgba(0, 255, 127, 0.125); border: 1px solid rgba(0, 255, 127, 0.5);
+		// background: rgba(0, 255, 127, 0.125); border: 1px solid rgba(0, 255, 127, 0.5);
 		&:after {}
 	}
 }

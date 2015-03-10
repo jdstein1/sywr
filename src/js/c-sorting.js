@@ -3,7 +3,7 @@
 	'use strict';
 
 	app.controller('cSorting', cSorting)
-	function cSorting($scope, $rootScope, $http, $route, $location, sSortingTodo, sSortingPlayers, sSorting) {
+	function cSorting($scope, $rootScope, $http, $route, $location, sSortingMisc, sSortingTodo, sSortingPlayers, sSorting) {
 		$scope.ctitle = 'cSorting';
 		console.log('START', $scope.ctitle);
 

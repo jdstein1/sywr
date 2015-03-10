@@ -119,7 +119,6 @@ article md-content {
   padding: 0.5em 0.5em 1em;
 }
 .spiffBox .emblemBox .emblem {
-  border: 5px outset rgba(204, 204, 204, 0.5);
   padding: 0;
   margin: 0;
   height: 90px;
@@ -149,6 +148,9 @@ article md-content {
 .spiffBox .actionBox {
   width: 100%;
   padding: 0.5em;
+}
+.prestige {
+  color: #fc0;
 }
 .prestige:before,
 .grimoire:before {
