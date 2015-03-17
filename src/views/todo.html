@@ -10,55 +10,97 @@
 
 		<d-sorting options="todo"> sorting </d-sorting>
 
-		<fieldset ng-disabled="!testOptions">
+		<fieldset ng-disabled="testOptions">
 			<legend>Edit</legend>
-			<div layout="row">
-				<fieldset flex>
-					<label>All Assignee:</label>
-					<select ng-options="label for label in todos.meta[0].assignee" ng-model="modelAssignee"></select>
-					{{modelAssignee}}
-				</fieldset>
-				<fieldset flex>
-					<label>All Priority:</label>
-					<select ng-options="label for label in todos.meta[1].priority" ng-model="modelPriority"></select>
-					{{modelPriority}}
-				</fieldset>
-				<fieldset flex>
-					<label>All Status:</label>
-					<select ng-options="label for label in todos.meta[2].status" ng-model="modelStatus"></select>
-					{{modelStatus}}
-				</fieldset>
+			<div layout="row" layout-sm="column">
+				<div flex>
+					<!-- <label>All Assignee:</label> -->
+					<select ng-options="$index as label for label in todos.meta[0].assignee" ng-model="filterChoice.assignee">
+						<option value="">choose ASSIGNEE...</option>
+					</select>
+					{{filterChoice.assignee}}
+				</div>
+				<div flex>
+					<!-- <label>All Status:</label> -->
+					<select ng-options="$index as label for label in todos.meta[2].status" ng-model="filterChoice.status">
+						<option value="">choose STATUS...</option>
+					</select>
+					{{filterChoice.status}}
+				</div>
+				<div flex>
+					<!-- <label>All Priority:</label> -->
+					<select ng-options="$index as label for label in todos.meta[1].priority" ng-model="filterChoice.priority">
+						<option value="">choose PRIORITY...</option>
+					</select>
+					{{filterChoice.priority}}
+				</div>
 			</div>
 		</fieldset>
 
+		<!-- <label for="">Description Text</label><input type="text" ng-model="filterChoice"><br> -->
+		<label for="">Description Text</label><input type="text" ng-model="filterChoice.$"><br>
+		<label for="">Assignee</label><input type="text" ng-model="filterChoice.assignee"><br>
+		<label for="">Status</label><input type="text" ng-model="filterChoice.status"><br>
+		<label for="">Priority</label><input type="text" ng-model="filterChoice.priority"><br>
+
 		<div ng-controller="cPlayers">
-			<md-card ng-repeat="item in todos.items | orderBy: sortOrderChoice: sortReverse" class="todos">
+			<md-card ng-repeat="item in todos.items | orderBy : sortOrderChoice : sortReverse | filter : filterChoice : false" class="todos">
 				<md-card-content class="md-padding">
 				<big>{{item.title}}</big>
 				<div layout="row" layout-sm="column">
-						<ul class="todosMeta">
-							<li flex class="assignee assignee{{item.assignee}}">
-								<span class="label">assignee</span>
-								<md-button class="md-primary" aria-label="{{convertMeta('assignee',item.assignee)}}">
-									<span class="{{convertIcon('assignee',item.assignee)}}"></span>
-								</md-button>
-								<b>{{convertMeta('assignee',item.assignee)}}</b>
-							</li>
-							<li flex class="status status{{item.status}}">
-								<span class="label">status</span>
-								<md-button class="md-primary md-raised" aria-label="{{convertMeta('status',item.status)}}"><span class="{{convertIcon('status',item.status)}}"></span></md-button>
-								<b ng-click="fChangeStatus(item.status, item.id)">{{convertMeta('status',item.status)}}</b>
-								<select ng-disabled="!testOptions" ng-options="label for label in todos.meta[2].status" ng-model="item.status"></select>
-							</li>
-							<li flex class="priority priority{{item.priority}}">
-								<span class="label">priority</span>
-								<md-button class="md-primary" aria-label="{{convertMeta('priority',item.priority)}}"><span class="{{convertIcon('priority',item.priority)}}"></span></md-button>
-								<b>{{convertMeta('priority',item.priority)}}</b>
-							</li>
-							<!-- <li ng-repeat="(key, value) in item.meta" class="{{key}} {{key}}{{value}}">
-								<span class="{{item.icon}}"></span>
-								<span class="label">{{key}}</span> <b>{{convertMeta(key,value)}}</b></li> -->
-						</ul>
+					<ul class="todosMeta">
+						<li flex class="assignee assignee{{item.assignee}}">
+							<span class="label">assignee</span>
+							<md-button class="md-primary" aria-label="{{convertMeta('assignee',item.assignee)}}">
+								<span class="{{convertIcon('assignee',item.assignee)}}"></span>
+							</md-button>
+							<b>{{convertMeta('assignee',item.assignee)}}</b>
+							{{item.assignee}}
+							<a href="" ng-click="changeAssignee=!changeAssignee" class="editLink">edit</a>
+							<ng-switch on="changeAssignee">
+								<div ng-switch-when="true">
+									<select style="width:100%;" ng-disabled="testOptions" ng-options="label for label in todos.meta[0].assignee" ng-model="item.assignee">
+										<option value="">choose...</option>
+									</select>
+								</div>
+							</ng-switch>
+						</li>
+						<li flex class="status status{{item.status}}">
+							<span class="label">status</span>
+							<md-button class="md-primary md-raised" aria-label="{{convertMeta('status',item.status)}}">
+								<span class="{{convertIcon('status',item.status)}}"></span>
+							</md-button>
+							<b ng-click="fChangeStatus(item.status, item.id)">{{convertMeta('status',item.status)}}</b>
+							{{item.status}}
+							<a href="" ng-click="changeStatus=!changeStatus" class="editLink">edit</a>
+							<ng-switch on="changeStatus">
+								<div ng-switch-when="true">
+									<select style="width:100%;" ng-disabled="testOptions" ng-options="label for label in todos.meta[2].status" ng-model="item.status">
+										<option value="">choose...</option>
+									</select>
+								</div>
+							</ng-switch>
+						</li>
+						<li flex class="priority priority{{item.priority}}">
+							<span class="label">priority</span>
+							<md-button class="md-primary" aria-label="{{convertMeta('priority',item.priority)}}">
+								<span class="{{convertIcon('priority',item.priority)}}"></span>
+							</md-button>
+							<b>{{convertMeta('priority',item.priority)}}</b>
+							{{item.priority}}
+							<a href="" ng-click="changePriority=!changePriority" class="editLink">edit</a>
+							<ng-switch on="changePriority">
+								<div ng-switch-when="true">
+									<select style="width:100%;" ng-disabled="testOptions" ng-options="label for label in todos.meta[1].priority" ng-model="item.priority">
+										<option value="">choose...</option>
+									</select>
+								</div>
+							</ng-switch>
+						</li>
+						<!-- <li ng-repeat="(key, value) in item.meta" class="{{key}} {{key}}{{value}}">
+							<span class="{{item.icon}}"></span>
+							<span class="label">{{key}}</span> <b>{{convertMeta(key,value)}}</b></li> -->
+					</ul>
 					<div class="" style="padding-left:1em;margin:1em;border-left:1px solid lightgrey;">
 						<p class="description" ng-repeat="line in item.description" ng-bind-html="line | markdown">{{line}}</p>
 					</div>

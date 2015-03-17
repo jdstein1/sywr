@@ -65,6 +65,7 @@
 						break;
 				}
 				$rootScope.sortOrderChoice = $scope.sortOptions[0].type;
+				// $rootScope.filterChoice = '';
 				console.log('dSorting $rootScope.sortOrderChoice: ', $rootScope.sortOrderChoice);
 
 				$rootScope.sortCleared = true;

@@ -205,10 +205,18 @@ fieldset textarea {
 .todos b {
   border-bottom: 2px solid #ddd;
   text-transform: lowercase;
+  z-index: 1000;
+}
+.todos .md-button {
+  float: left;
+  margin: -0.75em 0.25em 0;
+}
+.todos .editLink {
+  float: right;
 }
 .todos .todosMeta {
   position: relative;
-  min-width: 250px;
+  min-width: 40%;
 }
 .todos .todosMeta li,
 .todos .todosMeta dt,
@@ -221,19 +229,21 @@ fieldset textarea {
   background: rgba(0, 0, 0, 0.0675);
   color: rgba(0, 0, 0, 0.95);
 }
+.todos .todosMeta li .label,
+.todos .todosMeta dt .label,
+.todos .todosMeta dd .label {
+  width: 5em;
+  text-align: right;
+}
 .todos .todosMeta li:nth-child(even),
 .todos .todosMeta dt:nth-child(even),
 .todos .todosMeta dd:nth-child(even) {
   background: transparent;
   border: 1px solid rgba(191, 191, 191, 0.95) !important;
 }
-.todos .assignee b {
-  z-index: 1000;
-}
-.todos .assignee .md-button {
-  position: absolute;
-  top: -0.5em;
-  right: 0.5em;
+.todos .assignee.assignee0 b,
+.todos .assignee.assignee0 span:before {
+  color: #999999;
 }
 .todos .assignee.assignee1 b,
 .todos .assignee.assignee1 span:before {
@@ -258,22 +268,6 @@ fieldset textarea {
 .todos .assignee.assignee6 b,
 .todos .assignee.assignee6 span:before {
   color: #2f1083;
-}
-.todos .status b {
-  z-index: 1000;
-}
-.todos .status .md-button {
-  position: absolute;
-  top: -0.5em;
-  right: 0.5em;
-}
-.todos .priority b {
-  z-index: 1000;
-}
-.todos .priority .md-button {
-  position: absolute;
-  top: -0.5em;
-  right: 0.5em;
 }
 .todos .priority.priority1 b,
 .todos .priority.priority1 span:before {

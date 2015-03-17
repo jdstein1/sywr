@@ -61,6 +61,11 @@
 					break;
 			}
 		};
+
+		$scope.changeAssignee = false;
+		$scope.changeStatus = false;
+		$scope.changePriority = false;
+
 		$scope.testOptions = false;
 		$scope.modelAssignee = 'null';
 		$scope.modelPriority = 'null';
