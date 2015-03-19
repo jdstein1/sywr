@@ -67,9 +67,16 @@ article md-content {
 .weapon-hardlight md-content {
   background: rgba(255, 255, 255, 0.75);
 }
-.player-row,
-.row-8310647 {
+.player-row {
+  border-left: 0.5em solid #808080;
+}
+.player-row .avatar {
+  margin-right: 1em;
+}
+.player-row .handleBox {
   padding-left: 1em;
+}
+.row-8310647 {
   border-left: 0.5em solid #e976ca;
 }
 .row-7037048 {

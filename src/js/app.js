@@ -139,9 +139,6 @@ Angular Material dependencies:
 			when('/feedback', {
 				templateUrl: 'views/feedback.html', 
 				controller: 'cFeedback'}).
-			when('/clan', {
-				templateUrl: 'views/clan.html', 
-				controller: 'cClan'}).
 			when('/compare', {
 				templateUrl: 'views/compare.html', 
 				controller: 'cPlayers'}).

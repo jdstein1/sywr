@@ -54,11 +54,14 @@ article.cTodo {
 // md-card-content:nth-of-type(3) .player-row {background: spin(@playerRow+#999, 180)}
 // md-card-content:nth-of-type(4) .player-row {background: spin(@playerRow+#999, 270)}
 
-.player-row,
+.player-row {
+	border-left: 0.5em solid #808080;
+	.avatar {margin-right:1em;}
+	.handleBox {padding-left:1em;}
+	.buttonBox {}
+}
 .row-8310647 {
-	padding-left:1em;
 	border-left: 0.5em solid spin(@playerRow+#666, 0);
-	// background: @playerRow+#aaa;
 }
 .row-7037048 {
 	border-left: 0.5em solid spin(@playerRow+#666, 60);

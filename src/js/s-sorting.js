@@ -79,13 +79,6 @@
 				'asc':false,
 				'des':false
 			},{
-				'type':'rank',
-				'tag':'status',
-				'class':'',
-				'def':true,
-				'asc':false,
-				'des':false
-			},{
 				'type':'handle',
 				'tag':'handle',
 				'class':'',
@@ -93,8 +86,15 @@
 				'asc':false,
 				'des':false
 			},{
-				'type':'id',
+				'type':'id.profile',
 				'tag':'id',
+				'class':'',
+				'def':true,
+				'asc':false,
+				'des':false
+			},{
+				'type':'rank',
+				'tag':'status',
 				'class':'',
 				'def':true,
 				'asc':false,
@@ -104,6 +104,38 @@
 
 	}
 	// console.log('test sSortingPlayers:', angular.module('app').service('sSortingPlayers'));
+
+	app.service('sSortingClan', sSortingClan)
+	function sSortingClan() {
+		var stitle = 'sSortingClan';
+		console.log('START', stitle);
+
+		var sortOptionsPlayers = [{
+				'type':'user.name',
+				'tag':'Name',
+				'class':'',
+				'def':true,
+				'asc':false,
+				'des':false
+			},{
+				'type':'user.xboxDisplayName',
+				'tag':'Gamer tag',
+				'class':'',
+				'def':true,
+				'asc':false,
+				'des':false
+			},{
+				'type':'membershipId',
+				'tag':'ID',
+				'class':'',
+				'def':true,
+				'asc':false,
+				'des':false
+			}];
+		return sortOptionsPlayers;
+
+	}
+	// console.log('test sSortingClan:', angular.module('app').service('sSortingClan'));
 
 	app.service('sSorting', sSorting)
 	function sSorting() {

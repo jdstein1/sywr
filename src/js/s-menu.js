@@ -83,14 +83,6 @@
 			"action":"menu",
 			"tags":["blog","news"]
 		},{
-			"name":"Clan",
-			"order":50,
-			"enable":true,
-			"icon":"flaticon-waving",
-			"path":"clan",
-			"action":"menu",
-			"tags":["clan","group","members"]
-		},{
 			"name":"Todos",
 			"order":99,
 			"enable":true,

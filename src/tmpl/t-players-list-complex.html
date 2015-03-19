@@ -1,0 +1,84 @@
+<!-- START SORTING -->
+<d-sorting options="clan"> sorting </d-sorting>
+
+<md-card ng-controller="cClan">
+	<md-card-content>
+
+		<h3>Players</h3>
+
+		<!-- <h4>dataClan FULL</h4> -->
+		<!-- <p>{{dataClan[0]}}</p> -->
+
+		<!-- <md-divider></md-divider> -->
+
+		<!-- <h4>dataClan USER</h4> -->
+		<!-- <p>{{dataClan[0].user}}</p> -->
+
+		<!-- <md-divider></md-divider> -->
+
+		<!-- <h4>dataClan LIST</h4> -->
+		<div layout="column" layout-sm="column">
+			<md-card flex ng-repeat="item in dataClan | orderBy:sortOrderChoice:sortReverse">
+				<md-card-content class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}">
+					<md-item-content layout="row" layout-sm="column" class="row-{{item.membershipId}} player-row">
+						<img class="avatar" style="width:100px;height:100px;float:left;" src="" ng-src="http://www.bungie.net/{{item.user.profilePicturePath}}" alt="{{item.user.displayName}} avatar">
+						<div flex layout="row" layout-sm="row">
+						<ul flex>
+							<li ng-class="{'probie':hasPendingApplication}">
+<ul>
+	<li>
+		<span class=""><b>{{item.user.name}}</b></span>
+		<!-- <ul>
+			<li><span class="small">{{item.user.displayName}}</span></li>
+			<li><span class="small">{{item.user.psnDisplayName}}</span></li>
+			<li><span class="small">{{item.user.fbDisplayName}}</span></li>
+		</ul> -->
+	</li>
+	<li>
+		<big>{{item.user.xboxDisplayName}}</big>
+	</li>
+	<!-- <li class="small">
+		<span class="">groupId</span>
+		<b>{{item.groupId}}</b>
+	</li> -->
+	<li class="small">
+		<span class="">id</span>
+		<b>{{item.membershipId}}</b>
+	</li>
+	<!-- <li class="small">
+		<span class="">uniqueName</span>
+		<b>{{item.user.uniqueName}}</b>
+	</li> -->
+	<!-- <li class="small">
+		<span class="">profile</span><br>
+		<ul>
+			<li>
+				<span class="">first accessed</span>
+				<b>{{item.user.firstAccessPretty}}</b>
+			</li>
+			<li>
+				<span class="">last updated</span>
+				<b>{{item.user.lastUpdatePretty}}</b>
+			</li>
+		</ul>
+	</li> -->
+</ul>
+							</li>
+						</ul>
+						<div flex>
+	<p class="small">
+		<span class="">member since</span><br>
+		<b>{{item.approvalDatePretty}}</b>
+	</p>
+						</div>
+						</div>
+						<div class="buttonBox">
+							<md-button class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
+						</div>
+					</md-item-content>
+				</md-card-content>
+			</md-card>
+		</div>
+
+	</md-card-content>
+</md-card>

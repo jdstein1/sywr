@@ -11,7 +11,7 @@
 		<d-sorting options="todo"> sorting </d-sorting>
 
 		<fieldset ng-disabled="testOptions">
-			<legend>Edit</legend>
+			<legend>Filter</legend>
 			<div layout="row" layout-sm="column">
 				<div flex>
 					<!-- <label>All Assignee:</label> -->
@@ -36,12 +36,11 @@
 				</div>
 			</div>
 		</fieldset>
-
-		<!-- <label for="">Description Text</label><input type="text" ng-model="filterChoice"><br> -->
-		<label for="">Description Text</label><input type="text" ng-model="filterChoice.$"><br>
-		<label for="">Assignee</label><input type="text" ng-model="filterChoice.assignee"><br>
-		<label for="">Status</label><input type="text" ng-model="filterChoice.status"><br>
-		<label for="">Priority</label><input type="text" ng-model="filterChoice.priority"><br>
+		<fieldset>
+			<legend>Filter</legend>
+			<label for="search">Description Text</label>
+			<input name="search" type="text" ng-model="filterChoice.$">
+		</fieldset>
 
 		<div ng-controller="cPlayers">
 			<md-card ng-repeat="item in todos.items | orderBy : sortOrderChoice : sortReverse | filter : filterChoice : false" class="todos">

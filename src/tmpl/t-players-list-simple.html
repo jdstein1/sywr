@@ -1,0 +1,31 @@
+<!-- START SORTING -->
+<d-sorting options="players"> sorting </d-sorting>
+
+<md-card ng-controller="cPlayers">
+	<md-card-content>
+
+		<h3>Players</h3>
+
+		<!-- <p>member:{{member.name}}</p> -->
+		<!-- <select name="players" id="players" ng-model="member" ng-options="item.handle for item in members track by item.id.profile"> -->
+			<!-- <option value="">choose</option> -->
+		<!-- </select> -->
+		<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
+			<md-card-content>
+				<md-item-content layout="row" layout-sm="column" class="row-{{item.id.profile}} player-row">
+					<div flex class="handleBox">
+						<b>{{item.name}}</b><br><big>{{item.handle}}</big>
+						<br>
+						<small><span class="">id</span> <b>{{item.id.profile}}</b></small>
+						<br>
+						<small><span class="">status</span> <b>{{item.rank}}:{{rankDefinitions[item.rank]}}</b></small>
+					</div>
+					<div class="buttonBox">
+						<md-button class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
+					</div>
+				</md-item-content>
+			</md-card-content>
+		</md-card>
+
+	</md-card-content>
+</md-card>

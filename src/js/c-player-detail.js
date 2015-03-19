@@ -3,10 +3,13 @@
 	'use strict';
 
 	app.controller('cPlayerDetail', cPlayerDetail)
-	function cPlayerDetail($scope, $http, $route, $location) {
+	function cPlayerDetail($scope, $http, $route, $location, sPlayerDetail) {
 		$scope.ctitle = 'cPlayerDetail';
 		$scope.title = 'Player';
 		console.log('START', $scope.ctitle);
+
+		console.log('sPlayerDetail: ', sPlayerDetail);
+		console.log('sPlayerDetail.getMember(): ', sPlayerDetail.getMember());
 
 		$scope.member = $route.current.params.member;
   		console.log('$scope.member',$scope.member );

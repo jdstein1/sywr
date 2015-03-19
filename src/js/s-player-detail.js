@@ -8,8 +8,10 @@
 		console.log('START', stitle);
 
 		var myData = {};
-		this.getMember = function() {
-			$http.get('data/'+$route.current.params.member+'-destiny.php')
+		// var member = $route.current.params.member;
+		var member = 'jeff';
+		this.getMember = function(member) {
+			$http.get('data/'+member+'-destiny.php')
 				.success(function (data) {
 					console.log('sPlayerDetail.getMember -- success');
 					myData = data;

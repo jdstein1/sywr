@@ -24,6 +24,11 @@
 			$mdSidenav(type).toggle();
 		};
 
+		$scope.convertDate = function (glob) {
+			var arr = glob.split('T');
+			console.log('arr: ',arr);
+		};
+
 	}
 	// console.log('test cTitle:', angular.module('app').controller('cTitle'));
 

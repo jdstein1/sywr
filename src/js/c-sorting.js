@@ -82,7 +82,7 @@
 
 		$rootScope.sortCleared = true;
 		$scope.sortClear = function () {
-			console.log('sortClear: ', $rootScope.sortCleared);
+			console.log('cSorting sortClear: ', $rootScope.sortCleared);
 			for (var i = 0; i < $scope.sortOptions.length; i++) {
 				// console.log('$scope.sortOptions[i]: ', $scope.sortOptions[i]);
 				$scope.sortOptions[i].asc = false;

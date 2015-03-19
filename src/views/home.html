@@ -1,7 +1,5 @@
 <article class="{{ctitle}} bg-destiny" ng-controller="cSorting">
-<md-content class="">
-
-	<!-- <d-title> page title directive</d-title> -->
+<md-content class="" ng-controller="cClan">
 
 	<div layout="column" class="" style="text-align:center; padding:1em;">
 		<span>a</span>
@@ -14,62 +12,34 @@
 		<!-- <img src="img/destiny/destiny-conceptart-characters-classes.jpg" alt="Destiny Character Classes" width="100%"> -->
 		<md-card-content>
 			<div ng-controller="cClan" layout="row" layout-sm="column" layout-align="center center">
-				<!-- <h3 flex>{{metadata.title.plain}}</h3> -->
+				<!-- <h3 flex>{{constClan.title.plain}}</h3> -->
 				<ul layout="row">
 					<li>
 						<span class="label small">platform</span>
-						<span>{{metadata.console}}</span>
+						<span>{{constClan.console}}</span>
 					</li>
 					<li>
 						<span class="label small">ID</span>
-						<span>{{metadata.id}}</span>
+						<span>{{constClan.id}}</span>
 					</li>
 					<li>
 						<span class="label small">link</span>
-						<span><a href="{{myClanUrl}}" target="_blank">{{metadata.title.abbr}}</a></span>
+						<span><a href="{{myClanUrl}}" target="_blank">{{constClan.title.abbr}}</a></span>
 					</li>
 				</ul>
 			</div>
 		</md-card-content>
 	</md-card>
 
-<md-divider></md-divider>
+	<md-divider></md-divider>
 
+	<div ng-include="'tmpl/t-players-list-complex.html'"></div>
 
-	<!-- START SORTING -->
-	<!-- <d-sorting>test</d-sorting> -->
-	<!-- <d-sorting options="['name','handle','id']"></d-sorting> -->
-	<md-card>
-		<h3>Players</h3>
-		<md-card-content>
+	<md-divider></md-divider>
 
-	<div ng-controller="cPlayers">
-		<p>member:{{member.name}}</p>
+	<div ng-include="'tmpl/t-players-list-simple.html'"></div>
 
-		<select name="players" id="players" ng-model="member" ng-options="item.handle for item in members track by item.id.profile">
-			<option value="">choose</option>
-		</select>
-
-		<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
-			<md-card-content>
-				<md-item-content layout="row" layout-sm="column" class="row-{{item.id.profile}} player-row">
-					<div flex>
-						<big><b>{{item.handle}}</b></big><br>
-						<span>{{item.name}}</span>
-					</div>
-					<div>
-						<md-button class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
-					</div>
-				</md-item-content>
-			</md-card-content>
-		</md-card>
-
-	</div>
-
-		</md-card-content>
-	</md-card>
-
-<md-divider></md-divider>
+	<md-divider></md-divider>
 
 	<div layout="row">
 		<md-card flex>
