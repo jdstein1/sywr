@@ -31,41 +31,32 @@ article md-content {
 .bg-destiny md-content {
   background: rgba(255, 255, 255, 0.75);
 }
-.classes-banners {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: rgba(255, 255, 255, 0.75) url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-banners-classes.png');
+.classes-banner-hunter {
+  background-image: url('../img/destiny/destiny-emblem-hunter.png');
 }
-.classes-banners md-content {
-  background: rgba(255, 255, 255, 0.75);
+.classes-banner-titan {
+  background-image: url('../img/destiny/destiny-emblem-titan.png');
+}
+.classes-banner-warlock {
+  background-image: url('../img/destiny/destiny-emblem-warlock.png');
+}
+.banners-titan {
+  background-image: url('../img/destiny/destiny-emblem-banners-titan.png');
+}
+.banners-warlock {
+  background-image: url('../img/destiny/destiny-emblem-banners-warlock.png');
+}
+.banners-hunter {
+  background-image: url('../img/destiny/destiny-emblem-banners-hunter.jpg');
 }
 .classes-concepts {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: rgba(255, 255, 255, 0.75) url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');
 }
-.classes-concepts md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
 .conceptart-erismorn {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: rgba(255, 255, 255, 0.75) url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
 }
-.conceptart-erismorn md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
 .weapon-hardlight {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: rgba(255, 255, 255, 0.75) url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
-}
-.weapon-hardlight md-content {
-  background: rgba(255, 255, 255, 0.75);
 }
 .player-row {
   border-left: 0.5em solid #808080;

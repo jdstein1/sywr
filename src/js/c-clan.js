@@ -108,14 +108,17 @@
 				// convert APPROVAL date using moment.js:
 				data.Response.results[i].approvalDateISO = moment(data.Response.results[i].approvalDate).toISOString();
 				data.Response.results[i].approvalDatePretty = moment(data.Response.results[i].approvalDate).format('MMM Do YYYY');
+				// data.Response.results[i].approvalDatePretty = moment(data.Response.results[i].approvalDate).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
 
 				// convert FIRST ACCESS date using moment.js:
 				data.Response.results[i].user.firstAccessISO = moment(data.Response.results[i].user.firstAccess).toISOString();
-				data.Response.results[i].user.firstAccessPretty = moment(data.Response.results[i].user.firstAccess).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
+				data.Response.results[i].user.firstAccessPretty = moment(data.Response.results[i].user.firstAccess).format('MMM Do YYYY');
+				// data.Response.results[i].user.firstAccessPretty = moment(data.Response.results[i].user.firstAccess).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
 
 				// convert LAST UPDATE date using moment.js:
 				data.Response.results[i].user.firstAccessISO = moment(data.Response.results[i].user.lastUpdate).toISOString();
-				data.Response.results[i].user.lastUpdatePretty = moment(data.Response.results[i].user.lastUpdate).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
+				data.Response.results[i].user.lastUpdatePretty = moment(data.Response.results[i].user.lastUpdate).format('MMM Do YYYY');
+				// data.Response.results[i].user.lastUpdatePretty = moment(data.Response.results[i].user.lastUpdate).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
 
 			};
 

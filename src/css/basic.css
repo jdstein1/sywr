@@ -283,17 +283,26 @@ fieldset textarea {
 }
 .label {
   color: rgba(63, 63, 63, 0.95);
-  padding: 0 0.25em;
+  padding: 0;
   width: auto;
   text-align: right;
   float: left;
 }
-.label:after {
+.label.left {
+  text-align: right;
+  float: left;
+}
+.label.left:after {
   content: ":";
+  padding-right: 0.25em;
 }
 .label.right {
   text-align: left;
   float: right;
+}
+.label.right:before {
+  content: ":";
+  padding-left: 0.25em;
 }
 .label.small {
   width: auto;
@@ -309,18 +318,27 @@ fieldset textarea {
 .small:after {
   font-size: 0.875em !important;
   line-height: 1 !important;
-  height: 1em !important;
 }
 .normal,
 .normal:before,
 .normal:after {
   font-size: 1em !important;
   line-height: 1 !important;
-  height: 1em !important;
 }
 .showMenu span {
   color: red !important;
 }
 .overflowHidden {
   overflow: hidden;
+}
+.dates b {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+.dates .label {
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 0.25em;
 }

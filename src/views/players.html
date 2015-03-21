@@ -39,13 +39,13 @@
 								<li><b>Status:</b> {{rankDefinitions[item.rank]}}</li>
 							</ul>
 						</div>
-						<div flex>
-							<md-button class="md-primary md-raised" href="#/players/{{item.api}}">Player Details</md-button>
-							<md-button flex class="md-raised link json" href="api/{{item.api}}.php" target="_blank">Raw JSON</md-button>
+						<div>
+							<md-button class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
+							<md-button flex class="md-warn link json" href="api/{{item.api}}.php" target="_blank">Raw JSON</md-button>
 						</div>
 						<div>
-							<md-button flex class="md-accent md-raised link outbound github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
-							<md-button flex class="md-accent md-raised link outbound bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
+							<md-button flex class="md-accent link outbound github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
+							<md-button flex class="md-accent link outbound bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
 						</div>
 					</md-item-content>
 				</md-card-content>
