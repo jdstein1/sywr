@@ -9,13 +9,13 @@
 
 		// console.log('$location.$$path: ',$location.$$path);
 		// set sort options based on location path...
-		if ($location.$$path === '/players') {
-			$scope.sortOptions = sSortingPlayers;
-		} else if ($location.$$path === '/todos') {
-			$scope.sortOptions = sSortingTodo;
-		} else {
-			$scope.sortOptions = sSortingMisc;
-		};
+		// if ($location.$$path === '/players') {
+		// 	$scope.sortOptions = sSortingPlayers;
+		// } else if ($location.$$path === '/todos') {
+		// 	$scope.sortOptions = sSortingTodo;
+		// } else {
+		// 	$scope.sortOptions = sSortingMisc;
+		// };
 
 		console.log('$scope.sortOptions:', $scope.sortOptions);
 		console.log('Object.keys($scope.sortOptions):', Object.keys($scope.sortOptions));

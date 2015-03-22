@@ -122,11 +122,16 @@ Angular Material dependencies:
 			.backgroundPalette('blue-grey');
 		}
 	);
-	app.config(['$routeProvider', function ($routeProvider) {
+	app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+		// $locationProvider.hashPrefix();
+		// $locationProvider.html5Mode(true);
 		$routeProvider.
 			when('/', {
 				templateUrl: 'views/home.html', 
 				controller: 'cHome'}).
+			when('/sitemap', {
+				templateUrl: 'views/sitemap.html', 
+				controller: 'cSitemap'}).
 			when('/todos', {
 				templateUrl: 'views/todo.html', 
 				controller: 'cTodo'}).

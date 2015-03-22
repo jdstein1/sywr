@@ -13,53 +13,32 @@ article md-content {background: rgba(255,255,255,0.75);}
 	md-content {background: rgba(255,255,255,0.75);}
 }
 // emblems
-.classes-banner-hunter {
-	background-image: url('../img/destiny/destiny-emblem-hunter.png');
-}
-.classes-banner-titan {
-	background-image: url('../img/destiny/destiny-emblem-titan.png');
-}
-.classes-banner-warlock {
-	background-image: url('../img/destiny/destiny-emblem-warlock.png');
-}
+.bg-emblem-hunter {background-image: url('../img/destiny/destiny-emblem-hunter.png');}
+.bg-emblem-titan {background-image: url('../img/destiny/destiny-emblem-titan.png');}
+.bg-emblem-warlock {background-image: url('../img/destiny/destiny-emblem-warlock.png');}
 // banners
-.banners-titan {
-	background-image: url('../img/destiny/destiny-emblem-banners-titan.png');
-}
-.banners-warlock {
-	background-image: url('../img/destiny/destiny-emblem-banners-warlock.png');
-}
-.banners-hunter {
-	background-image: url('../img/destiny/destiny-emblem-banners-hunter.jpg');
-}
+.bg-banner-titan {background-image: url('../img/destiny/destiny-emblem-banners-titan.png');}
+.bg-banner-warlock {background-image: url('../img/destiny/destiny-emblem-banners-warlock.png');}
+.bg-banner-hunter {background-image: url('../img/destiny/destiny-emblem-banners-hunter.jpg');}
 // concept art
-.classes-banners {
-	background-image: url('../img/destiny/destiny-conceptart-banners-classes.jpg');
-}
-.classes-concepts {
-	background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');
-}
-.conceptart-erismorn {
-	background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
-}
-.weapon-hardlight {
-	background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
-}
-article.cHome {
-	// .classes-banners();
-}
-article.cMembers {
-	// .classes-concepts();
-}
-article.cGames {
-	// .conceptart-erismorn();
-}
-article.cItems {
-	// .weapon-hardlight();
-}
-article.cTodo {
-	// .weapon-hardlight();
-}
+.bg-banners {background-image: url('../img/destiny/destiny-conceptart-banners-classes.jpg');}
+.bg-concepts {background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');}
+.bg-conceptart-erismorn {background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');}
+.bg-weapon-hardlight {background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');}
+// backgrounds based on controller
+article.cHome {.bg-destiny();.bg-banners();}
+article.cSitemap {.bg-destiny();.bg-concepts();}
+article.cTodo {.bg-destiny();}
+article.cAbout {.bg-destiny();.bg-emblem-warlock();}
+article.cBlog {.bg-destiny();.bg-emblem-titan();}
+article.cFeedback {.bg-destiny();.bg-emblem-hunter();}
+article.cGames {.bg-destiny();.bg-conceptart-erismorn();}
+article.cPlayers {.bg-destiny();.bg-banner-hunter();}
+article.cPlayerDetail {.bg-destiny();.bg-banner-warlock();}
+article.cCharacters {.bg-destiny();.bg-banner-titan();}
+article.cCharacterDetail {.bg-destiny();}
+article.cItems {.bg-destiny();.bg-conceptart-erismorn();}
+article.cItemDetail {.bg-destiny();.bg-weapon-hardlight();}
 
 // md-card-content .player-row {background: @playerRow+#999}
 // md-card-content:nth-of-type(2) .player-row {background: spin(@playerRow+#999, 90)}

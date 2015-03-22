@@ -40,6 +40,24 @@
 	}
 	// console.log('test cAbout:', angular.module('app').controller('cAbout'));
 
+	app.controller('cSitemap', cSitemap)
+	function cSitemap($scope) {
+		$scope.ctitle = 'cSitemap';
+		$scope.title = 'Sitemap';
+		console.log('START', $scope.ctitle);
+
+		$scope.Sitemap = [
+			{
+				"name":"Home",
+				"url":"/"
+			},{
+				"name":"Home",
+				"url":"/"
+			}
+		]
+	}
+	// console.log('test cSitemap:', angular.module('app').controller('cSitemap'));
+
 	app.controller('cBlog', cBlog)
 	function cBlog($scope) {
 		$scope.ctitle = 'cBlog';

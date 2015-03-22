@@ -8,16 +8,15 @@
 		$scope.title = 'Player';
 		console.log('START', $scope.ctitle);
 
-		console.log('sPlayerDetail: ', sPlayerDetail);
-		console.log('sPlayerDetail.getMember(): ', sPlayerDetail.getMember());
-
 		$scope.member = $route.current.params.member;
   		console.log('$scope.member',$scope.member );
   		console.log('$route.current.params.member',$route.current.params.member );
 
+		console.log('sPlayerDetail.getMember($scope.member): ', sPlayerDetail.getMember($scope.member));
+
   		// $scope.player = sPlayerDetail.getMember();
 
-		$http.get('api/'+$route.current.params.member+'-destiny.php')
+		$http.get('api/'+$scope.member+'-destiny.php')
 			.success(function (data) {
 			console.log('sPlayerDetail.getMember -- success');
 			console.log('data: ', data);

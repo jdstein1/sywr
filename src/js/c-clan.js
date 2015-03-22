@@ -13,7 +13,7 @@
 		console.log('$scope.myClanUrl:', $scope.myClanUrl);
 
 		$scope.convertId = function (id) {
-			console.log('START convertId: ',id);
+			console.log('START convertId id: ',id);
 			switch (id) {
 				case '8310647':
 					var name = 'Jeff';
@@ -37,7 +37,7 @@
 					var name = 'unknown';
 					break;
 			}
-			console.log('START convertId: ',name);
+			console.log('convertId name: ',name);
 			return name;
 		};
 
@@ -103,7 +103,7 @@
 				// };
 
 				data.Response.results[i].user.name = $scope.convertId(data.Response.results[i].membershipId);
-				console.log('convertId name: ',data.Response.results[i].user.name);
+				data.Response.results[i].user.api = $scope.convertId(data.Response.results[i].membershipId).toLowerCase();
 
 				// convert APPROVAL date using moment.js:
 				data.Response.results[i].approvalDateISO = moment(data.Response.results[i].approvalDate).toISOString();

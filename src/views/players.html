@@ -6,9 +6,9 @@
 	<!-- <p>{{longDescription}}</p> -->
 
 	<!-- START SORTING -->
-	<div ng-controller="cSorting">
+	<div>
 
-		<!-- <md-card>
+		<!-- <md-card ng-controller="cSorting">
 			<md-card-content>
 			<div ng-model="sortOrderChoicePlayers" layout="row" layout-sm="column" layout-align="center center">
 				<div>Sort by:</div>
@@ -27,7 +27,7 @@
 
 		<d-sorting options="players"> sorting </d-sorting>
 
-		<div ng-controller="cPlayers">
+		<div>
 			<md-card ng-repeat="item in members | orderBy:sortOrderChoice:sortReverse">
 				<md-card-content>
 					<md-item-content layout="row" layout-sm="column" class="row-{{item.id.profile}} player-row">

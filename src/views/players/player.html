@@ -20,19 +20,19 @@
 <md-card>
 <md-card-content layout="column" layout-sm="column">
 	<div class="spiffBox" ng-repeat="character in details.characters | orderBy: $index: false">
-		<div class="" style="background: transparent url({{getCharImgPath(character.backgroundPath)}}) top right no-repeat; background-size:cover;">
+		<div class="">
 			<table>
 				<thead>
 					<tr>
 						<td><h4>character {{$index}}</h4></td>
 					</tr>
 				</thead>
-				<tbody>
+				<tbody style="background: transparent url({{getCharImgPath(character.backgroundPath)}}) top right no-repeat; background-size:cover;">
 				<tr layout="row">
-					<td class="emblemBox">
+					<td class="emblemBox" style="width:150px;">
 						<img class="emblem" ng-src="{{getCharImgPath(character.emblemPath)}}" border="0" />
 					</td>
-					<td class="nameBox" flex>
+					<td class="nameBox" style="width:100%;">
 						<h2>
 							<span class="label">classHash</span>
 							<span>{{character.characterBase.classHash}}</span>
@@ -42,7 +42,7 @@
 						<span class="label">genderHash</span>
 						<span>{{character.characterBase.genderHash}}</span>
 					</td>
-					<td class="levelBox">
+					<td class="levelBox" style="width:200px;">
 						<h1 class="level" ng-class="{'prestige':character.isPrestigeLevel}">
 							<!-- <span class="flaticon flaticon-rate normal" aria-label="Character Level" ng-show="character.isPrestigeLevel"></span> -->
 							<span class="label">characterLevel</span>

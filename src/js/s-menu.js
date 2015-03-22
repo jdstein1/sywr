@@ -18,7 +18,7 @@
 		},{
 			"name":"Players",
 			"order":51,
-			"enable":true,
+			"enable":false,
 			"icon":"flaticon-users25",
 			"path":"players",
 			"action":"submenu",
@@ -34,7 +34,7 @@
 		},{
 			"name":"Characters",
 			"order":52,
-			"enable":true,
+			"enable":false,
 			"icon":"flaticon-framed1",
 			"path":"players",
 			"action":"menu",

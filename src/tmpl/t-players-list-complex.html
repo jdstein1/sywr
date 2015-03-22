@@ -25,8 +25,8 @@
 		<b>{{item.membershipId}}</b>
 	</li>
 </ul>
-	<md-button class="md-accent github" href="https://www.github.com/{{item.github}}" target="_blank">GitHub</md-button>
-	<md-button class="md-accent bungie" href="{{item.url}}" target="_blank">Bungie</md-button>
+	<!-- <md-button class="md-accent github" href="https://www.github.com/{{item.user.github}}" target="_blank">GitHub</md-button> -->
+	<!-- <md-button class="md-accent bungie" href="{{item.user.bungie}}" target="_blank">Bungie</md-button> -->
 <ul flex class="dates">
 	<li class="small">
 		<span class="label">member since</span>
@@ -42,7 +42,7 @@
 	</li> -->
 </ul>
 <div flex class="buttonBox">
-	<md-button class="md-primary" href="#/players/{{item.api}}">Player Details</md-button>
+	<md-button class="md-primary" href="#/players/{{item.user.api}}">Player Details</md-button>
 </div>
 					</md-item-content>
 				<!-- </md-card-content> -->

@@ -24,13 +24,13 @@
 </head>
 <body ng-class="{'overflowHidden':sidenavOpen}" md-theme="sywr">
 
-	<header ng-include="'includes/header.html'"></header>
-	<nav ng-include="'includes/nav-tray.html'" ng-controller="cMenu"></nav>
-	<nav ng-include="'includes/nav-menu.html'" ng-controller="cMenu"></nav>
+	<header ng-include="'views/includes/header.html'"></header>
+	<nav ng-include="'views/includes/nav-tray.html'" ng-controller="cMenu"></nav>
+	<nav ng-include="'views/includes/nav-menu.html'" ng-controller="cMenu"></nav>
 	<section ng-view>
 		<!-- <p class="helper">Main content goes here</p> -->
 	</section>
-	<footer ng-include="'includes/footer.html'"></footer>
+	<footer ng-include="'views/includes/footer.html'"></footer>
 
 	<!-- START LIB RESOURCES -->
 
@@ -121,7 +121,7 @@
 	<!-- <script src="js/d-player-detail.js"></script> -->
 
 	<!-- Sorting Module -->
-	<script src="js/c-sorting.js"></script>
+	<!-- <script src="js/c-sorting.js"></script> -->
 	<script src="js/s-sorting.js"></script>
 	<script src="js/d-sorting.js"></script>
 
