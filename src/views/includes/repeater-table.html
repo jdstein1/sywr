@@ -23,21 +23,21 @@
 			<td ng-repeat="(key,value) in character.characterBase.peerView">
 			<table>
 				<tr>
-					<th>child: {{key}}:</th>
+					<th>{{key}}:</th>
 					<td ng-repeat="(key,value) in value">
 						<table>
 							<tr>
-								<th>grand-child: {{key}}:</th>
+								<th>{{key}}:</th>
 								<td ng-repeat="(key,value) in value">
 								<ng-switch on="key">
 									<table ng-switch-when="dyes">
 										<tr>
-											<th>dyes--<br>great-grand-child: {{key}}:</th>
+											<th>dyes--<br>{{key}}:</th>
 											<td ng-repeat="(key,value) in value">
 												<table>
 													<tr>
-														<th>great-great-grand-child: {{key}}:</th>
-														<td ng-repeat="(key,value) in value" ng-include="'includes/repeater-table.html'"></td>
+														<th>{{key}}:</th>
+														<td ng-repeat="(key,value) in value" ng-include="'views/includes/repeater-table.html'"></td>
 													</tr>
 												</table>
 											</td>
@@ -45,10 +45,10 @@
 									</table>
 									<table ng-switch-default>
 										<tr>
-											<th>great-grand-child: {{key}}:</th>
+											<th>{{key}}:</th>
 											<td>{{value}}</td>
 										</tr>
-										<tr ng-repeat="(key,value) in value" ng-include="'includes/repeater-table.html'"></tr>
+										<tr ng-repeat="(key,value) in value" ng-include="'views/includes/repeater-table.html'"></tr>
 									</table>
 								</ng-switch>
 								</td>
@@ -62,7 +62,7 @@
 	<tr ng-switch-when="customization">
 			<!-- <th>customization--{{key}}:</th> -->
 			<th>{{character.characterBase.customization}}</th>
-			<td ng-repeat="(key,value) in character.characterBase.customization" ng-include="'includes/repeater-table.html'"></td>
+			<td ng-repeat="(key,value) in character.characterBase.customization" ng-include="'views/includes/repeater-table.html'"></td>
 	</tr>
 	<tr ng-switch-default>
 			<th>default--{{key}}:</th>

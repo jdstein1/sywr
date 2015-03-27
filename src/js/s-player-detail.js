@@ -11,7 +11,7 @@
 		// var member = $route.current.params.member;
 		var member = 'jeff';
 		this.getMember = function(member) {
-			$http.get('data/'+member+'-destiny.php')
+			$http.get('api/'+member+'-destiny.php')
 				.success(function (data) {
 					console.log('sPlayerDetail.getMember -- success');
 					myData = data;

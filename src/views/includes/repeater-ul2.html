@@ -2,26 +2,26 @@
 	<ul ng-switch-when="stats">{{key}}
 		<li ng-repeat="(key,value) in character.characterBase.stats">
 			<ul>{{key}}
-				<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
+				<li ng-repeat="(key,value) in value" ng-include="'views/includes/repeater-ul.html'"></li>
 			</ul>
 		</li>
 	</ul>
 	<ul ng-switch-when="peerView">{{key}}
 		<li ng-repeat="(key,value) in character.characterBase.peerView">
-			<ul>child: {{key}}
+			<ul>{{key}}
 				<li ng-repeat="(key,value) in value">
-					<ul>grand-child: {{key}}:
+					<ul>{{key}}:
 						<li ng-repeat="(key,value) in value">
 						<ng-switch on="key">
-							<ul ng-switch-when="dyes">great-grand-child: {{key}}:
+							<ul ng-switch-when="dyes">{{key}}:
 								<li ng-repeat="(key,value) in value">
-									<ul>great-great-grand-child: {{key}}:
-										<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
+									<ul>{{key}}:
+										<li ng-repeat="(key,value) in value" ng-include="'views/includes/repeater-ul.html'"></li>
 									</ul>
 								</li>
 							</ul>
-							<ul ng-switch-default>great-grand-child: {{key}}: <b>{{value}}</b>
-								<li ng-repeat="(key,value) in value" ng-include="'repeater.html'"></li>
+							<ul ng-switch-default>{{key}}: <b>{{value}}</b>
+								<li ng-repeat="(key,value) in value" ng-include="'views/includes/repeater-ul.html'"></li>
 							</ul>
 						</ng-switch>
 						</li>
@@ -31,7 +31,7 @@
 		</li>
 	</ul>
 	<ul ng-switch-when="customization">{{key}}
-		<li ng-repeat="(key,value) in character.characterBase.customization" ng-include="'repeater.html'">{{key}}: <b>{{value}}</b></li>
+		<li ng-repeat="(key,value) in character.characterBase.customization" ng-include="'views/includes/repeater-ul.html'">{{key}}: <b>{{value}}</b></li>
 	</ul>
 	<ul ng-switch-default>
 		<li>{{key}}: <b>{{value}}</b></li>

@@ -4,22 +4,13 @@
 
 	<h1><span class="flaticon {{meta.icon}}"></span>{{title}}: {{member}}</h1>
 
-	<!-- <h3>{{details.clanName}} ({{details.clanTag}})</h3> -->
-	<!-- <h2>details:</h2> -->
-	<!-- <table>
-		<tr ng-repeat="(key,value) in details">
-			<th>{{key}}</th>
-			<td>{{value}}</td>
-		</tr>
-	</table> -->
-
 <md-card>
 <md-card-content layout="column" layout-sm="column">
 	<h3>Characters</h3>
 	<div layout="column">
-<md-card>
-<md-card-content layout="column" layout-sm="column">
-	<div class="spiffBox" ng-repeat="character in details.characters | orderBy: $index: false">
+<md-card ng-repeat="character in details.characters | orderBy: $index: false">
+<!-- <md-card-content layout="column" layout-sm="column"> -->
+	<div class="spiffBox">
 		<div class="">
 			<table>
 				<thead>
@@ -79,11 +70,11 @@
 			</table>
 		</div>
 	</div>
-</md-card-content>
+<!-- </md-card-content> -->
 </md-card>
 	</div>
 
-	<md-button class="md-primary" href="#/players/{{member}}/characters">Compare All</md-button>
+	<md-button class="md-primary" href="#/{{member}}/all">Compare All</md-button>
 	<md-button class="md-primary" ng-disabled="true" ng-click="compareCharacter($index)">Compare Selected</md-button>
 </md-card-content>
 </md-card>
