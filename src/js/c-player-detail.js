@@ -47,7 +47,7 @@
 			console.log('$scope.displayCharacter $location: ', $location);
 			console.log('$scope.displayCharacter $location.path(): ', $location.path());
 			$scope.getMyCharacter(index);
-			$location.path( '/players/' + $scope.member + '/characters/' + index );
+			$location.path( '/' + $scope.member + '/' + index );
 			// return $location.path();
 		};
 
