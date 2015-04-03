@@ -74,18 +74,22 @@ Angular Material dependencies:
 			when('/test', {
 				templateUrl: 'views/test.html', 
 				controller: 'cTest'}).
-			// PLAYER
+			// DISPLAY ONE PLAYER
 			when('/:member', {
-				templateUrl: 'views/players/player.html', 
+				templateUrl: 'views/players/detail.html', 
 				controller: 'cPlayerDetail'}).
-			// ALL PLAYER CHARACTERS
+			// COMPARE ALL PLAYERS
 			when('/:member/all', {
-				templateUrl: 'views/characters/compare.html', 
-				controller: 'cCharacterAll'}).
-			// ONE PLAYER CHARACTER
+				templateUrl: 'views/players/all.html', 
+				controller: 'cPlayerAll'}).
+			// DISPLAY ONE PLAYER CHARACTER
 			when('/:member/:character', {
-				templateUrl: 'views/characters/display.html', 
+				templateUrl: 'views/characters/detail.html', 
 				controller: 'cCharacterDetail'}).
+			// COMPARE ALL PLAYER CHARACTERS
+			when('/:member/all', {
+				templateUrl: 'views/characters/all.html', 
+				controller: 'cCharacterAll'}).
 			otherwise({redirectTo: '/'});
 		}
 	]);
