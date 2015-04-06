@@ -74,6 +74,12 @@ Angular Material dependencies:
 			when('/test', {
 				templateUrl: 'views/test.html', 
 				controller: 'cTest'}).
+			when('/test/players', {
+				templateUrl: 'views/test-players.html', 
+				controller: 'cHome'}).
+			when('/loadout', {
+				templateUrl: 'views/loadout.html', 
+				controller: 'cLoadout'}).
 			// DISPLAY ONE PLAYER
 			when('/:member', {
 				templateUrl: 'views/players/detail.html', 
@@ -82,11 +88,11 @@ Angular Material dependencies:
 			when('/:member/all', {
 				templateUrl: 'views/players/all.html', 
 				controller: 'cPlayerAll'}).
-			// DISPLAY ONE PLAYER CHARACTER
+			// DISPLAY ONE CHARACTER
 			when('/:member/:character', {
 				templateUrl: 'views/characters/detail.html', 
 				controller: 'cCharacterDetail'}).
-			// COMPARE ALL PLAYER CHARACTERS
+			// COMPARE ALL CHARACTERS
 			when('/:member/all', {
 				templateUrl: 'views/characters/all.html', 
 				controller: 'cCharacterAll'}).

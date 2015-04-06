@@ -16,174 +16,129 @@
   background: radial-gradient(ellipse at center, #87e0fd 25%, #53cbf1 50%, #05abe0 100%);
   /* W3C */
 }
-article md-card {
-  background: rgba(255, 255, 255, 0.75);
-}
 article md-content {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.5);
+}
+article md-card {
+  background: rgba(255, 255, 255, 0.85);
 }
 /* Page Background Images */
 .bg-destiny {
   background-size: 100% auto;
   background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
+  background: white url('../img/destiny/destiny-emblems-all.png') repeat center top;
 }
 .bg-destiny md-content {
   background: rgba(255, 255, 255, 0.75);
 }
-.bg-emblem-hunter {
-  background-image: url('../img/destiny/destiny-emblem-hunter.png');
+.emblem-all {
+  background-image: url('../img/destiny/destiny-emblems-all.png');
 }
-.bg-emblem-titan {
-  background-image: url('../img/destiny/destiny-emblem-titan.png');
+.emblem-hunter {
+  background-image: url('../img/destiny/destiny-emblems-hunter.png');
 }
-.bg-emblem-warlock {
-  background-image: url('../img/destiny/destiny-emblem-warlock.png');
+.emblem-titan {
+  background-image: url('../img/destiny/destiny-emblems-titan.png');
 }
-.bg-banner-titan {
-  background-image: url('../img/destiny/destiny-emblem-banners-titan.png');
+.emblem-warlock {
+  background-image: url('../img/destiny/destiny-emblems-warlock.png');
 }
-.bg-banner-warlock {
-  background-image: url('../img/destiny/destiny-emblem-banners-warlock.png');
+.banners-all {
+  background-image: url('../img/destiny/destiny-banners-all.jpg');
 }
-.bg-banner-hunter {
-  background-image: url('../img/destiny/destiny-emblem-banners-hunter.jpg');
+.banners-titan {
+  background-image: url('../img/destiny/destiny-banners-titan.png');
 }
-.bg-banners {
-  background-image: url('../img/destiny/destiny-conceptart-banners-classes.jpg');
+.banners-warlock {
+  background-image: url('../img/destiny/destiny-banners-warlock.png');
 }
-.bg-concepts {
-  background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');
+.banners-hunter {
+  background-image: url('../img/destiny/destiny-banners-hunter.jpg');
 }
-.bg-conceptart-erismorn {
-  background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
+.banners-classes {
+  background-image: url('../img/destiny/destiny-concepts-banners-classes.jpg');
 }
-.bg-weapon-hardlight {
+.concepts-classes {
+  background-image: url('../img/destiny/destiny-concepts-characters-classes.jpg');
+}
+.concepts-eris {
+  background-image: url('../img/destiny/destiny-concepts-eris.jpg');
+}
+.weapon-hardlight {
   background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
-}
-article.cHome {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-conceptart-banners-classes.jpg');
-}
-article.cHome md-content {
-  background: rgba(255, 255, 255, 0.75);
 }
 article.cSitemap {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-conceptart-characters-classes.jpg');
-}
-article.cSitemap md-content {
-  background: rgba(255, 255, 255, 0.75);
+  background-image: url('../img/destiny/destiny-banners-titan.png');
 }
 article.cTodo {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-}
-article.cTodo md-content {
-  background: rgba(255, 255, 255, 0.75);
+  background-image: url('../img/destiny/destiny-concepts-characters-classes.jpg');
 }
 article.cAbout {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-emblem-warlock.png');
-}
-article.cAbout md-content {
-  background: rgba(255, 255, 255, 0.75);
+  background-image: url('../img/destiny/destiny-banners-warlock.png');
 }
 article.cBlog {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-emblem-titan.png');
-}
-article.cBlog md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
-article.cFeedback {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-emblem-hunter.png');
-}
-article.cFeedback md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
-article.cGames {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
-}
-article.cGames md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
-article.cPlayers {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-emblem-banners-hunter.jpg');
-}
-article.cPlayers md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
-article.cPlayerDetail {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-emblem-banners-warlock.png');
-}
-article.cPlayerDetail md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
-article.cCharacters {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-emblem-banners-titan.png');
-}
-article.cCharacters md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
-article.cCharacterDetail {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-}
-article.cCharacterDetail md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
-article.cItems {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
-  background-image: url('../img/destiny/destiny-conceptart-erismorn.jpg');
-}
-article.cItems md-content {
-  background: rgba(255, 255, 255, 0.75);
-}
-article.cItemDetail {
-  background-size: 100% auto;
-  background-attachment: fixed;
-  background: white url('../img/destiny/destiny-banners-classes.png') repeat center top;
   background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');
 }
-article.cItemDetail md-content {
-  background: rgba(255, 255, 255, 0.75);
+article.cFeedback {
+  background-image: url('../img/destiny/destiny-banners-hunter.jpg');
 }
+article.cTest {
+  background-image: url('../img/destiny/destiny-concepts-eris.jpg');
+}
+article.cPlayerDetail.warlock {
+  background-image: url('../img/destiny/destiny-emblems-warlock.png');
+}
+article.cPlayerDetail.hunter {
+  background-image: url('../img/destiny/destiny-emblems-hunter.png');
+}
+article.cPlayerDetail.titan {
+  background-image: url('../img/destiny/destiny-emblems-titan.png');
+}
+/* PLAYER INFO BOX */
 .player-row {
   border-left: 0.5em solid #808080;
 }
-.player-row .avatar {
-  margin-right: 1em;
+.player-row .avatarBox {
+  width: 100px;
+  position: relative;
+  margin: 0 0.25em;
+}
+.player-row .avatarBox .avatar {
+  width: 100px;
+  height: auto;
+  position: relative;
+  z-index: 1;
 }
 .player-row .handleBox {
   padding-left: 1em;
+}
+.player-row .names {
+  margin: 0 0.5em;
+}
+.player-row .names li {
+  display: block;
+  float: none;
+  clear: both;
+}
+.player-row .names .probie b:before {
+  content: "probie";
+  background: pink;
+  color: purple;
+}
+.player-row .names .founder i:before {
+  content: "founder";
+  background: orange;
+  color: red;
+}
+.player-row .names .rated s:before {
+  content: "rated";
+  background: lavender;
+  color: blue;
+}
+.player-row .names .member u:before {
+  content: "member";
+  background: yellow;
+  color: green;
 }
 .row-8310647 {
   border-left: 0.5em solid #e976ca;
@@ -203,7 +158,7 @@ article.cItemDetail md-content {
 .row-9856625 {
   border-left: 0.5em solid #9576e9;
 }
-/* CHARACTER EMBLEM */
+/* CHARACTER INFO BOX */
 .spiffBox table,
 .spiffBox thead,
 .spiffBox tbody,
@@ -230,9 +185,6 @@ article.cItemDetail md-content {
 .spiffBox hr {
   border: none;
   height: 0;
-}
-.spiffBox .emblemBox {
-  padding: 0.5em 0.5em 1em;
 }
 .spiffBox .emblemBox .emblem {
   padding: 0;

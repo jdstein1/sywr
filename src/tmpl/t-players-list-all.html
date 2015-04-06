@@ -1,0 +1,86 @@
+<div ng-controller="cClan">
+<md-card flex class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}" 
+ng-repeat="item in dataClan | orderBy:sortOrderChoice:sortReverse">
+<!-- <md-card-content class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}"> -->
+<md-item-content layout="row" layout-sm="column" class="row-{{item.membershipId}} player-row">
+<div class="avatarBox" style="">
+	<img class="avatar" style="width:100px;height:100px;position:relative; z-index:1;" src="" ng-src="http://www.bungie.net/{{item.user.profilePicturePath}}" alt="{{item.user.displayName}} avatar">
+	<!-- <b style="color:white; position: absolute; bottom:0; right:0; z-index:2;">{{item.user.name}}</b> -->
+	<h3 style="">{{item.user.name}}</h3>
+</div>
+<ul flex class="names">
+	<!-- <li>
+		<span class="label left">name</span>
+		<b>{{item.user.name}}</b>
+	</li> -->
+	<li>
+		<span class="label left">about</span>
+		<b>{{item.user.about}}</b>
+	</li>
+	<li>
+		<span class="label left">followers</span>
+		<b>{{item.user.followerCount}}</b>
+	</li>
+	<li>
+		<span class="label left">following</span>
+		<b>{{item.user.followingUserCount}}</b>
+	</li>
+	<li ng-class="{'probie':item.hasPendingApplication,'rated':item.hasRated,'founder':item.isOriginalFounder,'member':item.isMember}">
+		<span class="label left">status</span>
+		<b></b>
+		<i></i>
+		<s></s>
+		<u></u>
+	</li>
+	<li>
+		<span class="label left">displayName</span>
+		<b>{{item.user.displayName}}</b>
+	</li>
+	<li>
+		<span class="label left">xboxDisplayName</span>
+		<b>{{item.user.xboxDisplayName}}</b>
+	</li>
+	<li>
+		<span class="label left">psnDisplayName</span>
+		<b>{{item.user.psnDisplayName}}</b>
+	</li>
+	<li>
+		<span class="label left">fbDisplayName</span>
+		<b>{{item.user.fbDisplayName}}</b>
+	</li>
+	<li class="small">
+		<span class="label left">id</span>
+		<b>{{item.membershipId}}</b>
+	</li>
+</ul>
+<ul flex class="dates">
+	<li class="small">
+		<span class="label left">first accessed</span>
+		<b>{{item.user.firstAccess}}</b>
+		<!-- <b>{{item.user.firstAccessPretty}}</b> -->
+	</li>
+	<li class="small">
+		<span class="label left">member since</span>
+		<b>{{item.approvalDate}}</b>
+		<!-- <b>{{item.approvalDatePretty}}</b> -->
+	</li>
+	<li class="small">
+		<span class="label left">last updated</span>
+		<b>{{item.user.lastUpdate}}</b>
+		<!-- <b>{{item.user.lastUpdatePretty}}</b> -->
+	</li>
+	<li class="small">
+		<b>github: {{item.user.github}}</b>
+	</li>
+	<li class="small">
+		<b>bungie: {{item.user.bungie}}</b>
+	</li>
+</ul>
+<div style="padding:1em;" layout="column">
+	<!-- <md-button class="md-accent github" href="https://www.github.com/{{item.user.github}}" target="_blank">GitHub</md-button> -->
+	<!-- <md-button class="md-accent bungie" href="{{item.user.bungie}}" target="_blank">Bungie</md-button> -->
+	<md-button class="md-primary md-raised" href="#/{{item.user.api}}">Player Details</md-button>
+</div>
+</md-item-content>
+</md-card>
+</div>

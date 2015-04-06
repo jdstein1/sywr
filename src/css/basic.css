@@ -68,16 +68,13 @@ article dl dd {
 }
 article ul {
   list-style-type: disc;
-  border: 1px solid cyan;
 }
 article ul ul {
   list-style-type: square;
-  border: 1px solid yellow;
   padding: 0 0 0.5em 0;
 }
 article ul ul ul {
   list-style-type: circle;
-  border: 1px solid magenta;
 }
 article ol {
   list-style-type: decimal-leading-zero;
@@ -288,8 +285,6 @@ fieldset textarea {
   color: rgba(63, 63, 63, 0.95);
   padding: 0;
   width: auto;
-  text-align: right;
-  float: left;
 }
 .label.left {
   text-align: right;

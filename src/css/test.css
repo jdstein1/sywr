@@ -1,17 +1,17 @@
 /*test.css*/
 
-header {background: #ccf;}
-nav {background: #cfc;}
+/*header {background: #ccf;}*/
+/*nav {background: #cfc;}*/
 
-section {background: #eee;}
-aside {background: #ddd;}
-div {background: #ccc;}
+/*section {background: #eee;}*/
+/*aside {background: #ddd;}*/
+/*div {background: #ccc;}*/
 
-footer {background: #fcc;}
+/*footer {background: #fcc;}*/
 
-.spiffBox {background:rgba(0,0,255,0.25);}
-.emblemBox {background:rgba(255,0,0,0.25);}
-.nameBox {background:rgba(0,255,0,0.25);}
-.levelBox {background:rgba(0,127,127,0.25);}
-.progressBox {background:rgba(127,127,0,0.25);}
-.actionBox {background:rgba(127,0,127,0.25);}
+.spiffBox {background:rgba(0,0,255,0.125);}
+.emblemBox {background:rgba(255,0,0,0.125);}
+.nameBox {background:rgba(0,255,0,0.125);}
+.levelBox {background:rgba(0,127,127,0.125);}
+.progressBox {background:rgba(127,127,0,0.125);}
+.actionBox {background:rgba(127,0,127,0.125);}

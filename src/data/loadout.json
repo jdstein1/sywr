@@ -1,0 +1,34 @@
+{"todos":{
+	"description":"Loadout for character...",
+	"meta":[
+		{"weapons": [{"primary":[]},{"special":[]},{"heavy":[]}]},
+		{"armor": [{"head":[]},{"arms":[]},{"chest":[]},{"legs":[]}]},
+		{"consumables": []}
+	],
+	"weapons":[
+			{
+				"title":"Universal Remote",
+				"id":0,
+				"assignee": 1,
+				"status": 1,
+				"priority": 3,
+				"description":[
+					"Make the feedback form submit the data to an email address.",
+					"Use GDocs form?"
+				]
+			},{
+				"title":"Build Manager",
+				"id":1,
+				"assignee": 0,
+				"status": 0,
+				"priority": 2,
+				"description":[
+					"We will soon use a build system ( [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/) ) to do the following:",
+					"* Run JSHint/JSLint on scripts",
+					"* Minify JS",
+					"* Convert LessCSS to CSS"
+				]
+			}
+		]
+	}
+}
