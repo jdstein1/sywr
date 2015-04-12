@@ -10,35 +10,41 @@
 
 		$scope.constClan = constClan;
 		$scope.myClanUrl = constProtocol[0] + '://' + constBungieUrl.domain + '/' + constBungieUrl.lang + '/' + constBungieUrl.clan + '/' + constBungieUrl.console + '/' + $scope.constClan.id;
-		console.log('$scope.myClanUrl:', $scope.myClanUrl);
+		// console.log('$scope.myClanUrl:', $scope.myClanUrl);
 
+		var extra = {};
 		$scope.convertId = function (id) {
-			console.log('START convertId id: ',id);
+			// console.log('START convertId id: ',id);
 			switch (id) {
 				case '8310647':
-					var name = 'Jeff';
+						extra.name = 'Jeff', 
+						extra.github = "jdstein1";
 					break;
 				case '7037048':
-					var name = 'John';
+						extra.name = 'John', 
+						extra.github = "spacewolf024";
 					break;
 				case '7666141':
-					var name = 'Kras';
+						extra.name = 'Kras', 
+						extra.github = "Krasio07";
 					break;
 				case '8162353':
-					var name = 'Vikas';
+						extra.name = 'Vikas', 
+						extra.github = "vikaschoudhry";
 					break;
 				case '3892477':
-					var name = 'Tanner';
+						extra.name = 'Tanner', 
+						extra.github = "tanman2391";
 					break;
 				case '9856625':
-					var name = 'Kaleb';
+						extra.name = 'Kaleb', 
+						extra.github = "kmroggenkamp";
 					break;
 				default:
-					var name = 'unknown';
 					break;
 			}
-			console.log('convertId name: ',name);
-			return name;
+			// console.log('convertId name: ',name);
+			return extra;
 		};
 
 		// $scope.sClan = sClan;
@@ -102,23 +108,26 @@
 				// 	console.log('arr: ',arr);
 				// };
 
-				data.Response.results[i].user.name = $scope.convertId(data.Response.results[i].membershipId);
-				data.Response.results[i].user.api = $scope.convertId(data.Response.results[i].membershipId).toLowerCase();
+				var myExtra = $scope.convertId(data.Response.results[i].membershipId);
+
+				data.Response.results[i].user.name = myExtra.name;
+				data.Response.results[i].user.api = myExtra.name.toLowerCase();
+				data.Response.results[i].user.github = myExtra.github;
 
 				// convert APPROVAL date using moment.js:
 				data.Response.results[i].approvalDateISO = moment(data.Response.results[i].approvalDate).toISOString();
 				data.Response.results[i].approvalDatePretty = moment(data.Response.results[i].approvalDate).format('MMM Do YYYY');
-				// data.Response.results[i].approvalDatePretty = moment(data.Response.results[i].approvalDate).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
+				data.Response.results[i].approvalDateVerbose = moment(data.Response.results[i].approvalDate).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
 
 				// convert FIRST ACCESS date using moment.js:
 				data.Response.results[i].user.firstAccessISO = moment(data.Response.results[i].user.firstAccess).toISOString();
 				data.Response.results[i].user.firstAccessPretty = moment(data.Response.results[i].user.firstAccess).format('MMM Do YYYY');
-				// data.Response.results[i].user.firstAccessPretty = moment(data.Response.results[i].user.firstAccess).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
+				data.Response.results[i].user.firstAccessVerbose = moment(data.Response.results[i].user.firstAccess).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
 
 				// convert LAST UPDATE date using moment.js:
-				data.Response.results[i].user.firstAccessISO = moment(data.Response.results[i].user.lastUpdate).toISOString();
+				data.Response.results[i].user.lastUpdateISO = moment(data.Response.results[i].user.lastUpdate).toISOString();
 				data.Response.results[i].user.lastUpdatePretty = moment(data.Response.results[i].user.lastUpdate).format('MMM Do YYYY');
-				// data.Response.results[i].user.lastUpdatePretty = moment(data.Response.results[i].user.lastUpdate).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
+				data.Response.results[i].user.lastUpdateVerbose = moment(data.Response.results[i].user.lastUpdate).format('dddd, MMMM Do YYYY, HH:mm:ss ZZ');
 
 			};
 

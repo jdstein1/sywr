@@ -93,30 +93,36 @@ nav {
 	}
 }
 
-table, 
-thead, tbody, tfoot, 
-tr, th, td {
-	border-collapse: separate;
-	border: 1px solid red;
-	margin: 2px;
-	padding: 2px;
-}
-
 table {
 	width:100%;
 	h1, h2, h3, h4, h5, h6 {margin:0 !important;}
-	thead, tbody, tfoot, tr, th, td {width:100%;}
-	thead, tbody, tfoot {border:1px solid white;}
+	thead, tbody, tfoot, tr, th, td {
+		border-collapse: separate;
+		border: 1px solid red;
+		margin: 2px;
+		padding: 2px;
+	}
+	thead, tbody, tfoot, tr {width:100%;}
+	thead, tbody, tfoot {
+		// border:1px solid white;
+		// display: table-row-group;
+	}
 	// thead {background: rgba(255,0,255,0.125); border-color: magenta;}
 	// tbody {background: rgba(0,255,255,0.125); border-color: cyan;}
 	// tfoot {background: rgba(255,255,0,0.125); border-color: yellow;}
 	tr {
-		border-color:green;
+		// display: table-row;
+		// border-color:green;
 		th, td {
-			vertical-align: top; overflow: hidden;
+			// display: table-cell;
+			vertical-align: top; 
+			overflow: hidden;
 			.label {display: none;}
 		}
-		th {text-align: right; border-color:blue;}
+		th {
+			text-align: right; 
+			// border-color:blue;
+		}
 		td {}
 	}
 }
@@ -143,72 +149,6 @@ fieldset {
 	th, td {padding:0.5em 1em;}
 	th {text-align:right;}
 	td {}
-}
-.todos {
-	// li, dt, dd {padding:0.25em;border-radius:0.25em;}
-	b {border-bottom:2px solid #ddd; text-transform:lowercase; z-index: 1000;}
-	.md-button {float:left; margin:-0.75em 0.25em 0;}
-	.editLink {float:right;}
-	.todosMeta {
-		position: relative;
-		min-width:40%;
-		li, dt, dd {
-			position: relative;
-			// float:left;
-			padding:0.5em; margin:0.5em 0;
-			overflow: visible;
-			border-radius:0.25em;
-			background:rgba(0,0,0,0.0675); color:@black;
-			.label{width:5em; text-align: right;}
-			&:nth-child(odd) {
-				// background:rgba(0,0,255,0.0675);
-				.md-button {}
-			}
-			&:nth-child(even) {
-				background:transparent;
-				border:1px solid @greylight !important;
-				.md-button {}
-			}
-		}
-	}
-	.assignee {
-		// & span:before {content:"\2660";}
-		// & span:after {content:"";}
-		// .md-button {position:absolute; top:-0.5em; right:0.5em;}
-		&.assignee0 b, &.assignee0 span:before {color:@inert;}
-		&.assignee1 b, &.assignee1 span:before {color:@8310647;}
-		&.assignee2 b, &.assignee2 span:before {color:@7037048;}
-		&.assignee3 b, &.assignee3 span:before {color:@7666141;}
-		&.assignee4 b, &.assignee4 span:before {color:@3892477;}
-		&.assignee5 b, &.assignee5 span:before {color:@8162353;}
-		&.assignee6 b, &.assignee6 span:before {color:@9856625;}
-	}
-	.status {
-		// & span:before {content:"\2665";}
-		// & b:before {
-		// 	border-radius:0.25em; padding:0.125em 0.25em; margin:0.25em 0.25em 0; 
-		// 	border:1px solid @grey;
-		// 	background:@white; color:@black;
-		// 	font-size: 1.5em; 
-		// 	line-height: 0;
-		// 	width: 1em; height: 1em;
-		// 	text-align: center;
-		// }
-		// .md-button {position:absolute; top:-0.5em; left:0.5em;}
-		// &.status0 b, &.status0 span:before {}
-		// &.status1 b, &.status1 span:before {color:@progress;}
-		// &.status2 b, &.status2 span:before {color:@hold;}
-		// &.status3 b, &.status3 span:before {color:@done;}
-	}
-	.priority {
-		// & span:before {content:"\2666";}
-		// & span:after {content:"";}
-		// .md-button {position:absolute; top:-0.5em; right:0.5em;}
-		&.priority0 b, &.priority0 span:before {}
-		&.priority1 b, &.priority1 span:before {color:@progress;}
-		&.priority2 b, &.priority2 span:before {color:@warning;}
-		&.priority3 b, &.priority3 span:before {color:@danger;}
-	}
 }
 .asc {
 	// background:#fee;

@@ -1,16 +1,17 @@
 <md-card>
-	<p>Inside the directive</p>
-	<md-card-content>
+	<!-- <p>Inside the directive</p> -->
+	<!-- <md-card-content>
 		<ul>
-			<li>items.length:  {{items.length}}</li>
+			<li>dataClan.length:  {{dataClan.length}}</li>
 			<li>sortOrderChoice:  {{sortOrderChoice}}</li>
 			<li>sortReverse:  {{sortReverse}}</li>
 			<li>sortClear:  {{sortClear}}</li>
 			<li>sortOrderToggle2:  {{sortOrderToggle2}}</li>
 		</ul>
-	</md-card-content>
-	<md-card-content ng-repeat="item in items | orderBy:sortOrderChoice:sortReverse" class="">
+	</md-card-content> -->
+	<md-card-content ng-repeat="item in dataClan">
 		<md-item-content layout="row" class="border-{{item.id}} bg-{{item.id}}">
+			<!-- {{item}} -->
 			<div flex>
 				id: <b>{{item.id}}</b>
 			</div>

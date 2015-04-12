@@ -1,0 +1,47 @@
+<div>
+
+	<d-sorting options="clan"> sorting </d-sorting>
+
+	<md-card class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}">
+
+		<md-card-content class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}" ng-repeat="item in dataClan | orderBy:sortOrderChoice:sortReverse">
+
+			<md-item-content layout="row" layout-sm="column" class="row-{{item.membershipId}} player-row">
+				<div class="avatarBox">
+					<img class="avatar" src="" ng-src="http://www.bungie.net/{{item.user.profilePicturePath}}" alt="{{item.user.displayName}} avatar">
+					<!-- <b class="name" style="">{{item.user.name}}</b> -->
+				</div>
+				<div class="handleBox" flex>
+					<ul flex class="names">
+						<li class="name" ng-class="{'probie':hasPendingApplication}">
+							<b>{{item.user.name}}</b>
+							<!-- <b>{{item.user.displayName}}</b> -->
+							<!-- <b>{{item.user.psnDisplayName}}</b> -->
+							<!-- <b>{{item.user.fbDisplayName}}</b> -->
+						</li>
+						<li>
+							<big class="">{{item.user.xboxDisplayName}}</big>
+						</li>
+						<li class="small">
+							<span class="label left">id</span>
+							<b>{{item.membershipId}}</b>
+						</li>
+					<!-- </ul> -->
+					<!-- <ul flex class="dates"> -->
+						<!-- <li class="small"><span class="label">first accessed</span><b>{{item.user.firstAccessPretty}}</b></li> -->
+						<li class="small"><span class="label">since</span><b>{{item.approvalDatePretty}}</b></li>
+						<!-- <li class="small"><span class="label">updated</span><b>{{item.user.lastUpdatePretty}}</b></li> -->
+					</ul>
+				</div>
+				<div class="actionBox">
+					<md-button class="md-primary" href="#/{{item.user.api}}">Player Details</md-button>
+					<md-button class="md-primary md-raised github" href="https://www.github.com/{{item.user.github}}" target="_blank">GitHub</md-button>
+					<md-button class="md-primary md-raised bungie" href="{{item.user.bungie}}" target="_blank">Bungie</md-button>
+				</div>
+			</md-item-content>
+
+		</md-card-content>
+
+	</md-card>
+
+</div>

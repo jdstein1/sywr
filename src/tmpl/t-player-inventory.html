@@ -1,0 +1,22 @@
+
+<md-card>
+<md-card-content layout="column" layout-sm="column">
+	<h3>Inventory</h3>
+	<div layout="row">
+	<ul flex>
+		<li>
+			<span class="strong">buckets</span>
+		</li>
+		<!-- <li>{{details.inventory.buckets}}</li> -->
+		<li ng-repeat="(key,value) in details.inventory.buckets"><span class="label">{{key}}</span> <span>{{value}}</span></li>
+	</ul>
+	<ul flex>
+		<li>
+			<span class="strong">currencies</span>
+		</li>
+		<!-- <li>{{details.inventory.currencies}}</li> -->
+		<li ng-repeat="(key,value) in details.inventory.currencies[0]"><span class="label">{{key}}</span> <span>{{value}}</span></li>
+	</ul>
+	</div>
+</md-card-content>
+</md-card>

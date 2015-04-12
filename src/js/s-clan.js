@@ -10,18 +10,20 @@
 		this.getClan = function() {
 		// return {
 		// 	get: function() {
-var myDataInner = {};
-var myDataOuter = {};
-$http.get('api/clan.php')
-	.success(function (data) {
-		console.log('sClan.getClan SUCCESS -- data.Response.results: ',data.Response.results);
-		var myDataInner = data.Response.results;
-		console.log('sClan.getClan SUCCESS -- myDataInner: ',myDataInner);
-		return myDataInner;
-	}).error(function () {
-		console.log('sClan.getClan ERROR',data.Response.results);
-		// get backup data at /data/clan.json
-	});
+
+			var myDataInner = {};
+			var myDataOuter = {};
+			$http.get('api/clan.php')
+				.success(function (data) {
+					console.log('sClan.getClan SUCCESS -- data.Response.results: ',data.Response.results);
+					var myDataInner = data.Response.results;
+					console.log('sClan.getClan SUCCESS -- myDataInner: ',myDataInner);
+					return myDataInner;
+				}).error(function () {
+					console.log('sClan.getClan ERROR',data.Response.results);
+					// get backup data at /data/clan.json
+				});
+
 			// }
 		console.log('sClan.getClan -- myDataInner: ',myDataInner);
 			myDataOuter = myDataInner;

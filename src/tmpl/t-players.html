@@ -1,10 +1,3 @@
-<!-- START SORTING -->
-<d-sorting options="clan"> sorting </d-sorting>
-
-<div ng-controller="cClan">
-	<!-- <md-card-content> -->
-		<!-- <h3>Players</h3> -->
-		<!-- <div layout="column" layout-sm="column"> -->
 			<md-card flex class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}" 
 				ng-repeat="item in dataClan | orderBy:sortOrderChoice:sortReverse">
 				<!-- <md-card-content class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}"> -->
@@ -50,6 +43,3 @@
 					</md-item-content>
 				<!-- </md-card-content> -->
 			</md-card>
-		<!-- </div> -->
-	<!-- </md-card-content> -->
-</div>
