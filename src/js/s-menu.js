@@ -8,12 +8,12 @@
 		console.log('START', stitle);
 
 		var menuItems = [{
-			"name":"Home",
+			"name":"Home/Players",
 			"order":1,
 			"enable":true,
 			"icon":"flaticon-home149",
 			"path":"",
-			"action":"menu",
+			"action":"route",
 			"tags":["home","main"]
 		},{
 			"name":"Players",
@@ -24,12 +24,12 @@
 			"action":"submenu",
 			"tags":["players","members","people"],
 			"submenu":[
-				{"name":"Jeff"},
-				{"name":"John"},
-				{"name":"Kaleb"},
-				{"name":"Kras"},
-				{"name":"Tanner"},
-				{"name":"Vikas"}
+				{"name":"Jeff","path":"jeff","action":"route"},
+				{"name":"John","path":"john","action":"route"},
+				{"name":"Kaleb","path":"kaleb","action":"route"},
+				{"name":"Kras","path":"kras","action":"route"},
+				{"name":"Tanner","path":"tanner","action":"route"},
+				{"name":"Vikas","path":"vikas","action":"route"}
 			]
 		},{
 			"name":"Characters",
@@ -37,7 +37,7 @@
 			"enable":false,
 			"icon":"flaticon-framed1",
 			"path":"players",
-			"action":"menu",
+			"action":"route",
 			"tags":["character","pc","avatar"]
 		},{
 			"name":"Games",
@@ -45,26 +45,18 @@
 			"enable":false,
 			"icon":"flaticon-gamepad3",
 			"path":"games",
-			"action":"menu",
+			"action":"route",
 			"tags":["games","videogames"],
 			"submenu":[
-				{"name":"Destiny"}
+				{"name":"Destiny","path":"destiny","action":"route"}
 			]
-		},{
-			"name":"Compare",
-			"order":60,
-			"enable":false,
-			"icon":"flaticon-swap3",
-			"path":"compare",
-			"action":"menu",
-			"tags":["compare","comparison"]
 		},{
 			"name":"Items",
 			"order":54,
 			"enable":false,
 			"icon":"flaticon-list88",
 			"path":"items",
-			"action":"menu",
+			"action":"route",
 			"tags":["item","items","gear","weapons","armor","consumables"]
 		},{
 			"name":"About",
@@ -72,7 +64,7 @@
 			"enable":true,
 			"icon":"flaticon-round52",
 			"path":"about",
-			"action":"menu",
+			"action":"route",
 			"tags":["about","info"]
 		},{
 			"name":"Blog",
@@ -80,7 +72,7 @@
 			"enable":false,
 			"icon":"flaticon-blogger12",
 			"path":"blog",
-			"action":"menu",
+			"action":"route",
 			"tags":["blog","news"]
 		},{
 			"name":"Todos",
@@ -88,15 +80,15 @@
 			"enable":true,
 			"icon":"flaticon-check51",
 			"path":"todos",
-			"action":"menu",
+			"action":"route",
 			"tags":["todo","todos","tasks"]
 		},{
 			"name":"Feedback",
 			"order":98,
-			"enable":true,
+			"enable":false,
 			"icon":"flaticon-chat75",
 			"path":"feedback",
-			"action":"menu",
+			"action":"route",
 			"tags":["form","feedback","gripes","complaints","suggestions"]
 		},{
 			"name":"Test",
@@ -124,12 +116,12 @@
 			"action":"submenu",
 			"tags":["maps","locations","environments"],
 			"submenu":[
-				{"name":"Tower"},
-				{"name":"Earth"},
-				{"name":"Moon"},
-				{"name":"Venus"},
-				{"name":"Mars"},
-				{"name":"Reef"}
+				{"name":"Tower","path":"tower","action":"route"},
+				{"name":"Earth","path":"earth","action":"route"},
+				{"name":"Moon","path":"moon","action":"route"},
+				{"name":"Venus","path":"venus","action":"route"},
+				{"name":"Mars","path":"mars","action":"route"},
+				{"name":"Reef","path":"reef","action":"route"}
 			]
 		},{
 			"name":"Merchants",
@@ -181,12 +173,12 @@
 			"action":"submenu",
 			"tags":["activities","pve","pvp","missions"],
 			"submenu":[
-				{"name":"Patrol"},
-				{"name":"Story"},
-				{"name":"Strike"},
-				{"name":"Raid"},
-				{"name":"Crucible"},
-				{"name":"Bounty"}
+				{"name":"Patrol","path":"patrol","action":"route"},
+				{"name":"Story","path":"story","action":"route"},
+				{"name":"Strike","path":"strike","action":"route"},
+				{"name":"Raid","path":"raid","action":"route"},
+				{"name":"Crucible","path":"crucible","action":"route"},
+				{"name":"Bounty","path":"bounty","action":"route"}
 			]
 		},{
 			"name":"Factions",
@@ -197,10 +189,10 @@
 			"action":"submenu",
 			"tags":["factions","groups","clubs","fraternities","cults"],
 			"submenu":[
-				{"name":"Future War Cult"},
-				{"name":"Dead Orbit"},
-				{"name":"New Monarchy"},
-				{"name":"Vanguard"}
+				{"name":"Future War Cult","path":"future-war-cult","action":"route"},
+				{"name":"Dead Orbit","path":"dead-orbit","action":"route"},
+				{"name":"New Monarchy","path":"new-monarchy","action":"route"},
+				{"name":"Vanguard","path":"vanguard","action":"route"}
 			]
 		},{
 			"name":"Elementals",
@@ -211,9 +203,9 @@
 			"action":"submenu",
 			"tags":["elementals","burn","elements"],
 			"submenu":[
-				{"name":"Arc"},
-				{"name":"Solar"},
-				{"name":"Void"}
+				{"name":"Arc","path":"arc","action":"route"},
+				{"name":"Solar","path":"solar","action":"route"},
+				{"name":"Void","path":"void","action":"route"}
 			]
 		},{
 			"name":"Species",
@@ -224,14 +216,14 @@
 			"action":"submenu",
 			"tags":["species","races","groups","creeds"],
 			"submenu":[
-				{"name":"Human"},
-				{"name":"Awoken"},
-				{"name":"Exo"},
-				{"name":"Fallen"},
-				{"name":"Hive"},
-				{"name":"Vex"},
-				{"name":"Cabal"},
-				{"name":"Ahamkara"}
+				{"name":"Human","path":"human","action":"route"},
+				{"name":"Awoken","path":"awoken","action":"route"},
+				{"name":"Exo","path":"exo","action":"route"},
+				{"name":"Fallen","path":"fallen","action":"route"},
+				{"name":"Hive","path":"hive","action":"route"},
+				{"name":"Vex","path":"vex","action":"route"},
+				{"name":"Cabal","path":"cabal","action":"route"},
+				{"name":"Ahamkara","path":"ahamkara","action":"route"}
 			]
 		}];
 		return destinyItems;
@@ -246,28 +238,35 @@
 		var settingsItems = [{
 			"name":"Theme",
 			"order":1,
-			"enable":false,
+			"enable":true,
 			"icon":"flaticon-visibility1",
 			"path":"theme",
 			"action":"theme"
 		},{
 			"name":"Fonts",
 			"order":3,
-			"enable":false,
+			"enable":true,
 			"icon":"flaticon-underline7",
 			"path":"fonts",
 			"action":"fonts"
 		},{
 			"name":"Colors",
 			"order":2,
-			"enable":false,
+			"enable":true,
 			"icon":"flaticon-painter14",
 			"path":"colors",
 			"action":"colors"
 		},{
+			"name":"Special",
+			"order":5,
+			"enable":false,
+			"icon":"flaticon-emoticon117",
+			"path":"special",
+			"action":"special"
+		},{
 			"name":"Icons",
 			"order":4,
-			"enable":false,
+			"enable":true,
 			"icon":"flaticon-emoticon117",
 			"path":"icons",
 			"action":"icons"

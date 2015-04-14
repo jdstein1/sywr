@@ -3,14 +3,16 @@
 @import "mixins";
 
 article md-content {background: rgba(255,255,255,0.5);}
-article md-card {background: rgba(255,255,255,0.85);}
+article md-card {background: rgba(255,255,255,0.95);}
 
 /* Page Background Images */
 .bg-destiny {
 	background-size: 100% auto;
 	background-attachment: fixed;
-	background: white url('../img/destiny/destiny-emblems-all.png') repeat center top;
-	md-content {background: rgba(255,255,255,0.75);}
+	// background-color: @theme-primary;
+	background: white url('../img/destiny/icons/destiny-icon-strike.png') repeat center top;
+	md-content {background: rgba(0,0,0,0.5);}
+	// md-content {background: rgba(255,255,255,0);}
 }
 // emblems
 .emblem-all {background-image: url('../img/destiny/destiny-emblems-all.png');}
@@ -28,25 +30,25 @@ article md-card {background: rgba(255,255,255,0.85);}
 .concepts-eris {background-image: url('../img/destiny/destiny-concepts-eris.jpg');}
 .weapon-hardlight {background-image: url('../img/destiny/destiny-weapon-hardlight.jpg');}
 // Backgrounds for Controllers
-article.cHome {}
-article.cSitemap {.banners-titan()}
-article.cTodo {.concepts-classes()}
-article.cAbout {.banners-warlock()}
-article.cBlog {.weapon-hardlight()}
-article.cFeedback {.banners-hunter()}
-article.cTest {.concepts-eris()}
-article.cPlayers {}
-article.cPlayerDetail {
-	&.warlock{.banners-warlock()}
-	&.hunter{.banners-hunter()}
-	&.titan{.banners-titan()}
-}
-article.cCharacters {}
-article.cCharacterDetail {
-	&.warlock{.emblem-warlock()}
-	&.hunter{.emblem-hunter()}
-	&.titan{.emblem-titan()}
-}
+// article.cHome {.emblem-all()}
+// article.cSitemap {.banners-titan()}
+// article.cTodo {.concepts-classes()}
+// article.cAbout {.banners-warlock()}
+// article.cBlog {.weapon-hardlight()}
+// article.cFeedback {.banners-hunter()}
+// article.cTest {.concepts-eris()}
+// article.cPlayers {}
+// article.cPlayerDetail {
+	// &.warlock{.banners-warlock()}
+	// &.hunter{.banners-hunter()}
+	// &.titan{.banners-titan()}
+// }
+// article.cCharacters {}
+// article.cCharacterDetail {
+	// &.warlock{.emblem-warlock()}
+	// &.hunter{.emblem-hunter()}
+	// &.titan{.emblem-titan()}
+// }
 
 // md-card-content .player-row {background: @playerRow+#999}
 // md-card-content:nth-of-type(2) .player-row {background: spin(@playerRow+#999, 90)}
@@ -86,7 +88,7 @@ article.cCharacterDetail {
 		}
 	}
 	.handleBox {padding-left:0.5em; z-index: 2;}
-	.actionBox {padding:1em;}
+	.actionBox {padding:0;}
 	.names {
 		margin:0;
 		li {display:block; float:none; clear:both;}

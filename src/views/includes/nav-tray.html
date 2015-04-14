@@ -9,7 +9,7 @@
 	<md-content class="" layout="column">
 		<md-list layout="column">
 			<!-- <h3>settings</h3> -->
-			<md-item ng-repeat="item in settingsItems | orderBy : orderNav : reverseNav">
+			<md-item ng-repeat="item in settingsItems | filter : filterEnable | orderBy : orderNav : reverseNav">
 				<md-button aria-label="{{item.name}}" class="md-primary" ng-disabled="{{!item.enable}}" ng-click="toggleNav('settings',direction)" href="#/{{item.path}}">
 					<span class="{{item.icon}}"></span>
 					{{item.name}}

@@ -13,6 +13,8 @@
 		$scope.orderNav = 'order';
 		$scope.reverseNav = false;
 
+		$scope.filterEnable = {'enable':true};
+
 		$scope.menuItems = sMenuNav;
 		// console.log('$scope.menuItems', $scope.menuItems);
 		$scope.settingsItems = sMenuSettings;
