@@ -87,17 +87,29 @@ article md-card {background: rgba(255,255,255,0.95);}
 			position: absolute; bottom:0; left:0; right:0; z-index:2;
 		}
 	}
-	.handleBox {padding-left:0.5em; z-index: 2;}
-	.actionBox {padding:0;}
-	.names {
-		margin:0;
-		li {display:block; float:none; clear:both;}
-		li big {padding:0.05em 0.75em; margin:0.5em 0 0.5em -0.75em; line-height: 1.4; font-size: 1.8em;}
-		.probie b:before {content:"probie";background:pink;color:purple;}
-		.founder i:before {content:"founder";background:orange;color:red;}
-		.rated s:before {content:"rated";background:lavender;color:blue;}
-		.member u:before {content:"member";background:yellow;color:green;}
+	.handleBox {
+		padding-left:0.5em; z-index: 2;
+		.names {
+			margin:0;
+			li {display:block; float:none; clear:both;}
+			li big {padding:0.05em 0.75em; margin:0.5em 0 0.5em -0.75em; line-height: 1.4; font-size: 1.8em;}
+			.probie b:before {content:"probie";background:pink;color:purple;}
+			.founder i:before {content:"founder";background:orange;color:red;}
+			.rated s:before {content:"rated";background:lavender;color:blue;}
+			.member u:before {content:"member";background:yellow;color:green;}
+			.name {}
+			.handle {
+				a {
+					text-decoration: none;
+					color:black;
+					big {
+						&:after {content:"\ffeb";margin-left: 0.25em;}
+					}
+				}
+			}
+		}
 	}
+	.actionBox {padding:0;}
 }
 .row-8310647 {
 	// border-left: 0.5em solid spin(@playerRow+#666, 0);
