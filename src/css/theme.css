@@ -17,10 +17,36 @@
   /* W3C */
 }
 article md-content {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+article md-content .label {
+  color: rgba(0, 0, 0, 0.95);
 }
 article md-card {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+article md-card .label {
+  color: rgba(63, 63, 63, 0.95);
+}
+article md-content.md-sywr-dark-theme {
+  background: rgba(0, 0, 0, 0.5) !important;
+  color: white !important;
+}
+article md-content.md-sywr-dark-theme a {
+  color: #f44336;
+}
+article md-content.md-sywr-dark-theme .label {
+  color: rgba(255, 255, 255, 0.95);
+}
+article md-card.md-sywr-dark-theme {
+  background: rgba(63, 63, 63, 0.95) !important;
+  color: white !important;
+}
+article md-card.md-sywr-dark-theme a {
+  color: #f44336;
+}
+article md-card.md-sywr-dark-theme .label {
+  color: rgba(191, 191, 191, 0.95);
 }
 /* Page Background Images */
 .bg-destiny {
@@ -134,12 +160,12 @@ article md-card {
   text-decoration: none;
   color: black;
 }
+.player-row .handleBox .names .handle a big {
+  white-space: nowrap;
+}
 .player-row .handleBox .names .handle a big:after {
   content: "\ffeb";
   margin-left: 0.25em;
-}
-.player-row .actionBox {
-  padding: 0;
 }
 .row-8310647 b.name,
 .row-8310647 .names big {
@@ -185,22 +211,25 @@ article md-card {
 }
 /* CHARACTER INFO BOX */
 .testing .spiffBox {
-  background: rgba(0, 0, 255, 0.25);
+  background: rgba(0, 0, 255, 0.125);
 }
 .testing .emblemBox {
-  background: rgba(255, 0, 0, 0.25);
+  background: rgba(255, 0, 0, 0.125);
 }
 .testing .nameBox {
-  background: rgba(0, 255, 0, 0.25);
+  background: rgba(0, 255, 0, 0.125);
 }
 .testing .levelBox {
-  background: rgba(0, 127, 127, 0.25);
+  background: rgba(0, 127, 127, 0.125);
 }
 .testing .progressBox {
-  background: rgba(127, 127, 0, 0.25);
+  background: rgba(127, 127, 0, 0.125);
 }
-.testing .actionBox {
-  background: rgba(127, 0, 127, 0.25);
+.testing .deetsBox {
+  background: rgba(0, 255, 255, 0.125);
+}
+.testing .medalsBox {
+  background: rgba(255, 0, 255, 0.125);
 }
 .spiffBox table,
 .spiffBox thead,
@@ -214,12 +243,22 @@ article md-card {
   margin: 0;
   padding: 0;
 }
+.actionsBox {
+  width: 100%;
+  padding: 0.25em;
+}
 .spiffBox {
   width: 100%;
-  margin-bottom: 1em;
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+.spiffBox table {
+  width: 100%;
 }
 .spiffBox td {
   color: white !important;
+}
+.spiffBox .label {
+  display: none;
 }
 .spiffBox img,
 .spiffBox ul,
@@ -232,26 +271,29 @@ article md-card {
   height: 0;
 }
 .spiffBox .emblemBox {
-  height: 90px;
   width: 90px;
+  height: auto;
 }
+.spiffBox .emblemBox img,
 .spiffBox .emblemBox .emblem {
   padding: 0;
   margin: 0;
-  height: 100%;
-  width: 100%;
+  width: 90px;
+  height: auto;
 }
 .spiffBox .nameBox {
   padding: 0.5em;
   text-align: left;
-  width: 100%;
+  width: auto;
 }
 .spiffBox .levelBox {
   padding: 0.5em;
+  width: 90px;
   text-align: right;
 }
 .spiffBox .levelBox .level {
   font-size: 3em;
+  line-height: 1;
 }
 .spiffBox .progressBox {
   width: 100%;
@@ -262,8 +304,13 @@ article md-card {
 }
 .spiffBox .progressBox .progressBar .progressIndicator {
   height: 1em;
+  background: rgba(255, 204, 0, 0.75);
 }
-.spiffBox .actionBox {
+.spiffBox .deetsBox {
+  width: 100%;
+  padding: 0.5em;
+}
+.spiffBox .medalsBox {
   width: 100%;
   padding: 0.5em;
 }

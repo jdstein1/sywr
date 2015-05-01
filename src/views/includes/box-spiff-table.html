@@ -1,0 +1,46 @@
+<table>
+	<!-- <colgroup> -->
+		<!-- <col span="1" style="border:2px solid #99f;"> -->
+		<!-- <col span="1" style="border:2px solid #9f9;"> -->
+		<!-- <col span="2" style="border:2px solid #f99;"> -->
+	<!-- </colgroup> -->
+	<tbody>
+		<tr>
+			<td class="emblemBox">
+				<img class="emblem" ng-src="{{getCharImgPath(character.emblemPath)}}" border="0" />
+			</td>
+			<td class="nameBox">
+				<h2>
+					<span class="label">classHash</span>
+					<span>{{character.characterBase.classHash}}</span>
+				</h2>
+				<span class="label">raceHash</span>
+				<span>{{character.characterBase.raceHash}}</span>
+				<span class="label">genderHash</span>
+				<span>{{character.characterBase.genderHash}}</span>
+			</td>
+			<td class="levelBox">
+				<h1 class="level" ng-class="{'prestige':character.isPrestigeLevel}">
+					<!-- <span class="flaticon flaticon-rate normal" aria-label="Character Level" ng-show="character.isPrestigeLevel"></span> -->
+					<span class="label">characterLevel</span>
+					<span>{{character.characterLevel}}</span>
+				</h1>
+				<!-- <hr> -->
+				<h4 class="grimoire">
+					<!-- <span class="flaticon flaticon-copy31 normal" aria-label="Grimoire"></span> -->
+					<span class="label">grimoireScore</span>
+					<span>{{details.grimoireScore}}</span>
+				</h4>
+			</td>
+		</tr>
+		<tr>
+			<td class="progressBox" colspan="3">
+				<div class="progressBar">
+					<div class="progressIndicator" style="width:{{character.percentToNextLevel}}%;"></div>
+					<span class="label">percentToNextLevel</span>
+					<span class="label right">{{character.percentToNextLevel}}%</span>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

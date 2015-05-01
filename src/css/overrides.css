@@ -39,7 +39,7 @@
 		/*line-height:24px;*/
 		float:left;
 		overflow: hidden;
-		margin: 0;
+		/*margin: 0;*/
 	}
 	.md-button {margin:0.125em;}
 	[class^="flaticon-"]+span, [class*=" flaticon-"]+span {
@@ -58,4 +58,4 @@
 	.md-sidenav-left .md-button span.icon,
 	.md-sidenav-right .md-button span.icon {}
 
-.md-button.md-sywr-theme:not([disabled]):hover, .md-button.md-sywr-theme:not([disabled]):focus {background: transparent !important;}
+/*.md-button.md-sywr-theme:not([disabled]):hover, .md-button.md-sywr-theme:not([disabled]):focus {background: transparent !important;}*/

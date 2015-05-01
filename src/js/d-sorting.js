@@ -1,4 +1,4 @@
-/*d-sorting.js*/
+// d-sorting.js
 (function() {
 	'use strict';
 

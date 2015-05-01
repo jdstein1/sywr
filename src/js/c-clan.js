@@ -1,4 +1,4 @@
-/*c-clan.js*/
+// c-clan.js
 (function() {
 	'use strict';
 
@@ -7,6 +7,8 @@
 		$scope.ctitle = 'cClan';
 		$scope.title = 'Clan';
 		console.log('START', $scope.ctitle);
+
+		$scope.itemUserFilter = '';
 
 		$scope.constClan = constClan;
 		$scope.myClanUrl = constProtocol[0] + '://' + constBungieUrl.domain + '/' + constBungieUrl.lang + '/' + constBungieUrl.clan + '/' + constBungieUrl.console + '/' + $scope.constClan.id;
@@ -17,28 +19,34 @@
 			// console.log('START convertId id: ',id);
 			switch (id) {
 				case '8310647':
-						extra.name = 'Jeff', 
+						extra.name = 'Jeff';
 						extra.github = "jdstein1";
+						extra.medals = ["boomer-duty","3x32"];
 					break;
 				case '7037048':
-						extra.name = 'John', 
+						extra.name = 'John';
 						extra.github = "spacewolf024";
+						extra.medals = ["raid-crota-solo"];
 					break;
 				case '7666141':
-						extra.name = 'Kras', 
+						extra.name = 'Kras';
 						extra.github = "Krasio07";
+						extra.medals = ["raid-crota-solo","3x32"];
 					break;
 				case '8162353':
-						extra.name = 'Vikas', 
+						extra.name = 'Vikas';
 						extra.github = "vikaschoudhry";
+						extra.medals = ["ghost"];
 					break;
 				case '3892477':
-						extra.name = 'Tanner', 
+						extra.name = 'Tanner';
 						extra.github = "tanman2391";
+						extra.medals = ["pvp-rage"];
 					break;
 				case '9856625':
-						extra.name = 'Kaleb', 
+						extra.name = 'Kaleb';
 						extra.github = "kmroggenkamp";
+						extra.medals = ["fast-learner"];
 					break;
 				default:
 					break;
@@ -113,6 +121,7 @@
 				data.Response.results[i].user.name = myExtra.name;
 				data.Response.results[i].user.api = myExtra.name.toLowerCase();
 				data.Response.results[i].user.github = myExtra.github;
+				data.Response.results[i].user.medals = myExtra.medals;
 
 				// convert APPROVAL date using moment.js:
 				data.Response.results[i].approvalDateISO = moment(data.Response.results[i].approvalDate).toISOString();

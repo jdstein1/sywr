@@ -1,0 +1,29 @@
+<div ng-controller="cClan">
+	<md-card>
+		<div layout="column" class="" style="text-align:center; padding:0.5em;">
+			<span>a</span>
+			<img ng-src="{{constLogo.destiny.path}}{{constLogo.destiny.hz.bk}}" alt="{{constLogo.destiny.alt}}" class="" style="width:200px; margin:0 auto;">
+			<span>clan</span>
+		</div>
+		<md-card md-theme="sywr-dark">
+			<div class="infoBoxClan">
+				<div layout="row" layout-sm="column" layout-align="center center">
+					<ul layout="row">
+						<li>
+							<span class="label small">platform</span>
+							<span>{{constClan.console}}</span>
+						</li>
+						<li>
+							<span class="label small">ID</span>
+							<span>{{constClan.id}}</span>
+						</li>
+						<li>
+							<span class="label small">link</span>
+							<span><a href="{{myClanUrl}}" target="_blank">{{constClan.title.abbr}}</a></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</md-card>
+	</md-card>
+</div>

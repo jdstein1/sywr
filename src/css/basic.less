@@ -29,6 +29,7 @@ footer {}
 body p, html p {line-height:1.4;}
 
 h1, h2, h3, h4, h5, h6 {}
+h1, h2, h3, h4, h5, h6 {margin:0 !important;}
 // h1 {font-size: 3em}
 // h2 {font-size: 2em}
 // h3 {font-size: 1.5em}
@@ -95,7 +96,6 @@ nav {
 
 table {
 	width:100%;
-	h1, h2, h3, h4, h5, h6 {margin:0 !important;}
 	thead, tbody, tfoot, tr, th, td {
 		border-collapse: separate;
 		border: 1px solid red;
@@ -117,7 +117,6 @@ table {
 			// display: table-cell;
 			vertical-align: top; 
 			overflow: hidden;
-			.label {display: none;}
 		}
 		th {
 			text-align: right; 
@@ -182,7 +181,6 @@ fieldset {
 	}
 }
 .label {
-	color: @greydark;
 	padding:0;
 	// width:8em;
 	width:auto;
