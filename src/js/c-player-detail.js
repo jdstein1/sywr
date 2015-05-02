@@ -9,12 +9,12 @@
 		console.log('START', $scope.ctitle);
 
 		$scope.member = $route.current.params.member;
-  		console.log('$scope.member',$scope.member );
-  		console.log('$route.current.params.member',$route.current.params.member );
+		console.log('$scope.member',$scope.member );
+		console.log('$route.current.params.member',$route.current.params.member );
 
 		console.log('sPlayerDetail.getMember($scope.member): ', sPlayerDetail.getMember($scope.member));
 
-  		// $scope.player = sPlayerDetail.getMember();
+		// $scope.player = sPlayerDetail.getMember();
 
 		$http.get('api/'+$scope.member+'-destiny.php')
 			.success(function (data) {
