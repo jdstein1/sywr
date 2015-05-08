@@ -167,6 +167,15 @@ article md-card.md-sywr-dark-theme .label {
   content: "\ffeb";
   margin-left: 0.25em;
 }
+.player-row .deetsBox {
+  width: 100%;
+  padding: 0.5em;
+}
+.player-row .medalsBox {
+  width: 100%;
+  padding: 0.5em;
+  text-align: right;
+}
 .row-8310647 b.name,
 .row-8310647 .names big {
   background-color: rgba(233, 118, 202, 0.75) !important;
@@ -211,25 +220,25 @@ article md-card.md-sywr-dark-theme .label {
 }
 /* CHARACTER INFO BOX */
 .testing .spiffBox {
-  background: rgba(0, 0, 255, 0.125);
+  background: rgba(0, 0, 255, 0.125) !important;
 }
 .testing .emblemBox {
-  background: rgba(255, 0, 0, 0.125);
+  background: rgba(255, 0, 0, 0.125) !important;
 }
 .testing .nameBox {
-  background: rgba(0, 255, 0, 0.125);
+  background: rgba(0, 255, 0, 0.125) !important;
 }
 .testing .levelBox {
-  background: rgba(0, 127, 127, 0.125);
+  background: rgba(0, 127, 127, 0.125) !important;
 }
 .testing .progressBox {
-  background: rgba(127, 127, 0, 0.125);
+  background: rgba(127, 127, 0, 0.125) !important;
 }
 .testing .deetsBox {
-  background: rgba(0, 255, 255, 0.125);
+  background: rgba(0, 255, 255, 0.125) !important;
 }
 .testing .medalsBox {
-  background: rgba(255, 0, 255, 0.125);
+  background: rgba(255, 0, 255, 0.125) !important;
 }
 .spiffBox table,
 .spiffBox thead,
@@ -305,14 +314,6 @@ article md-card.md-sywr-dark-theme .label {
 .spiffBox .progressBox .progressBar .progressIndicator {
   height: 1em;
   background: rgba(255, 204, 0, 0.75);
-}
-.spiffBox .deetsBox {
-  width: 100%;
-  padding: 0.5em;
-}
-.spiffBox .medalsBox {
-  width: 100%;
-  padding: 0.5em;
 }
 .prestige {
   color: #fc0;

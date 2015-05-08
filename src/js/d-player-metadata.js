@@ -23,7 +23,7 @@
 			controller: function ($scope) {
 				console.log('$scope: ', $scope);
 			},
-			templateUrl: 'tmpl/t-player-metadata.html'
+			templateUrl: './views/tmpl/t-player-metadata.html'
 		};
 
 	}

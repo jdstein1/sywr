@@ -1,0 +1,354 @@
+.got-medals {
+}
+.medal {
+  font-family: "roboto", "open sans", sans-serif;
+  font-size: 1.5em;
+  z-index:3;
+  /*background-color: #ffffff;*/
+  /* background: -webkit-linear-gradient(top, rgb(206,206,206) 0%, rgb(206,206,206) 67%, rgb(10,14,10) 67%, rgb(0,0,0) 100%); */
+  /*background-image: linear-gradient(0deg, transparent 50%, rgba(255, 0, 0, 0.5) 50%, rgba(255, 0, 0, 0.75)), linear-gradient(90deg, transparent 50%, rgba(0, 0, 255, 0.5) 50%, rgba(0, 0, 255, 0.75)), linear-gradient(180deg, transparent 50%, rgba(0, 255, 0, 0.5) 50%, rgba(0, 255, 0, 0.75));*/
+  /*padding: 0.5em;*/
+  /*margin: 0 0.5em 0 0;*/
+  /*border: green 1px solid;*/
+  /*border-radius: 4px;*/
+  color: grey;
+  height: 100%;
+  width: 100%;
+  /*display: inline-block;*/
+  /*list-style: none;*/
+  font-size: 2em;
+  text-align: center;
+  position: absolute;
+  overflow: visible;
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
+}
+.medal:before,
+.medal:after {
+  z-index:2;
+  background: rgba(0,0,0,0.75);
+  content: "label";
+  position: absolute;
+  top: 1.25em;
+  left: 0;
+  bottom: auto;
+  right: 0;
+  line-height: 1;
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+.medal:after {
+  z-index:1;
+  background: transparent;
+  content: "ico";
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: -0.35em;
+  font-size: 4em;
+}
+.medal.gold {
+  color: gold;
+}
+.medal.cadetblue {
+  color: cadetblue;
+}
+.medal.royalblue {
+  color: royalblue;
+}
+.medal.blue {
+  color: blue;
+}
+.medal.green {
+  color: green;
+}
+.medal.lime {
+  color: lime;
+}
+.medal.salmon {
+  color: salmon;
+}
+.medal.red {
+  color: red;
+}
+.medal.crimson {
+  color: crimson;
+}
+.medal.purple {
+  color: darkorchid;
+}
+.medal.indigo {
+  color: indigo;
+  text-shadow: 0 0.25em 0.5em rgba(255, 255, 255, 0.75);
+}
+.medal.violet {
+  color: violet;
+}
+.medal.orange {
+  color: orange;
+}
+.medal.cyan {
+  color: cyan;
+}
+.medal.yellow {
+  color: yellow;
+}
+.medal.magenta {
+  color: magenta;
+}
+.medal.black {
+  color: black;
+  text-shadow: 0 0.25em 0.5em rgba(255, 255, 255, 0.75);
+}
+.medal.grey {
+  color: grey;
+}
+.medal.white {
+  color: white;
+}
+.medal.heart:before {
+  content: "heart";
+}
+.medal.heart:after {
+  content: "\02665";
+}
+.medal.diamond:before {
+  content: "diamond";
+}
+.medal.diamond:after {
+  content: "\02666";
+}
+.medal.spade:before {
+  content: "spade";
+}
+.medal.spade:after {
+  content: "\02660";
+}
+.medal.club:before {
+  content: "club";
+}
+.medal.club:after {
+  content: "\02663";
+}
+.medal.clover:before {
+  content: "clover";
+}
+.medal.clover:after {
+  content: "\02618";
+}
+.medal.skull:before {
+  content: "skull";
+}
+.medal.skull:after {
+  content: "\02620";
+}
+.medal.yinyang:before {
+  content: "yinyang";
+}
+.medal.yinyang:after {
+  content: "\0262f";
+}
+.medal.sun:before {
+  content: "sun";
+}
+.medal.sun:after {
+  content: "\02600";
+}
+.medal.umbrella:before {
+  content: "umbrella";
+}
+.medal.umbrella:after {
+  content: "\02602";
+}
+.medal.star:before {
+  content: "star";
+}
+.medal.star:after {
+  content: "\02605";
+}
+.medal.cloud:before {
+  content: "cloud";
+}
+.medal.cloud:after {
+  content: "\02601";
+}
+.medal.phone:before {
+  content: "phone";
+}
+.medal.phone:after {
+  content: "\0260e";
+}
+.medal.peace:before {
+  content: "peace";
+}
+.medal.peace:after {
+  content: "\0262e";
+}
+.medal.grid:before {
+  content: "grid";
+}
+.medal.grid:after {
+  content: "\02756";
+}
+.medal.dharma:before {
+  content: "dharma";
+}
+.medal.dharma:after {
+  content: "\02638";
+}
+.medal.square:before {
+  content: "square";
+}
+.medal.square:after {
+  content: "\025FC";
+}
+.medal.target:before {
+  content: "target";
+}
+.medal.target:after {
+  content: "\02316";
+}
+.medal.solar:before {
+  content: "solar";
+}
+.medal.solar:after {
+  content: "\02731";
+}
+.medal.arc:before {
+  content: "arc";
+}
+.medal.arc:after {
+  content: "\02736";
+}
+.medal.void:before {
+  content: "void";
+}
+.medal.void:after {
+  content: "\02756";
+}
+.medal.x:before {
+  content: "xxx";
+}
+.medal.x:after {
+  content: "\02716";
+}
+.medal.radioactive:before {
+  content: "radioactive";
+}
+.medal.radioactive:after {
+  content: "\02622";
+}
+.medal.biohazard:before {
+  content: "biohazard";
+}
+.medal.biohazard:after {
+  content: "\02623";
+}
+.medal.caduceus:before {
+  content: "caduceus";
+}
+.medal.caduceus:after {
+  content: "\02624";
+}
+.medal.aesculapius:before {
+  content: "aesculapius";
+}
+.medal.aesculapius:after {
+  content: "\02695";
+}
+.medal.scales:before {
+  content: "scales";
+}
+.medal.scales:after {
+  content: "\02696";
+}
+.medal.atomic:before {
+  content: "atomic";
+}
+.medal.atomic:after {
+  content: "\0269b";
+}
+.medal.recycle:before {
+  content: "recycle";
+}
+.medal.recycle:after {
+  content: "\0267B";
+}
+.medal.swords:before {
+  content: "swords";
+}
+.medal.swords:after {
+  content: "\02694";
+}
+.medal.nova:before {
+  content: "nova";
+}
+.medal.nova:after {
+  content: "\02726";
+}
+.medal.sakura:before {
+  content: "sakura";
+}
+.medal.sakura:after {
+  content: "\02740";
+}
+.medal.mercury:before {
+  content: "mercury";
+}
+.medal.mercury:after {
+  content: "\0263F";
+}
+.medal.venus:before {
+  content: "venus";
+}
+.medal.venus:after {
+  content: "\02640";
+}
+.medal.earth:before {
+  content: "earth";
+}
+.medal.earth:after {
+  content: "\02641";
+}
+.medal.mars:before {
+  content: "mars";
+}
+.medal.mars:after {
+  content: "\02642";
+}
+.medal.jupiter:before {
+  content: "jupiter";
+}
+.medal.jupiter:after {
+  content: "\02643";
+}
+.medal.saturn:before {
+  content: "saturn";
+}
+.medal.saturn:after {
+  content: "\02644";
+}
+.medal.uranus:before {
+  content: "uranus";
+}
+.medal.uranus:after {
+  content: "\02645";
+}
+.medal.neptune:before {
+  content: "neptune";
+}
+.medal.neptune:after {
+  content: "\02646";
+}
+.medal.pluto:before {
+  content: "pluto";
+}
+.medal.pluto:after {
+  content: "\02647";
+}
+.text-shadow-black {
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.75);
+}
+.text-shadow-white {
+  text-shadow: 0 0.25em 0.5em rgba(255, 255, 255, 0.75);
+}

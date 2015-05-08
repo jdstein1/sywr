@@ -1,7 +1,7 @@
-<div class="medalsBox">
-	<ul>
-		<li ng-repeat="item in item.user.medals" class="shield">
-			<span class="medal {{item}}">{{item}}</span>
-		</li>
-	</ul>
-</div>
+<ul class="got-shields" style="font-size:6px;">
+	<li ng-repeat="medal in item.user.medals" class="">
+		<div class="shield {{medal.background}} got-medals">
+			<div class="medal {{medal.medal}} {{medal.color}}">{{medal.name}}</div>
+		</div>
+	</li>
+</ul>

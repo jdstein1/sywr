@@ -1,0 +1,33 @@
+{
+	"medals":[
+		{
+			"name":"raid-crota-solo",
+			"medal":"star",
+			"rarity":"exotic"
+		},{
+			"name":"raid-vog-solo",
+			"medal":"star",
+			"rarity":"exotic"
+		},{
+			"name":"ghost",
+			"medal":"star",
+			"rarity":"common"
+		},{
+			"name":"pvp-rage",
+			"medal":"star",
+			"rarity":"rare"
+		},{
+			"name":"fast-learner",
+			"medal":"star",
+			"rarity":"uncommon"
+		},{
+			"name":"boomer-duty",
+			"medal":"star",
+			"rarity":"rare"
+		},{
+			"name":"3x32",
+			"medal":"star",
+			"rarity":"legendary"
+		}
+	]
+}

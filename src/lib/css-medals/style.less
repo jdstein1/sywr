@@ -1,0 +1,180 @@
+body {background:#cfc;}
+.got-medals {
+  list-style:none;
+  padding:1em 0 0 1em;
+  margin:0;
+  background:#fcc;
+}
+.medal {
+  font-family:"roboto","open sans",sans-serif;
+  background-color:rgba(255,255,255,1);
+/* background: -webkit-linear-gradient(top, rgb(206,206,206) 0%, rgb(206,206,206) 67%, rgb(10,14,10) 67%, rgb(0,0,0) 100%); */
+  background-image:
+    linear-gradient(0deg, transparent 50%, rgba(255, 0, 0, 0.5) 50%, rgba(255, 0, 0, 0.75)),
+    linear-gradient(90deg, transparent 50%, rgba(0, 0, 255, 0.5) 50%, rgba(0, 0, 255, 0.75)),
+    linear-gradient(180deg, transparent 50%, rgba(0, 255, 0, 0.5) 50%, rgba(0, 255, 0, 0.75))
+    ;
+  padding:0.5em;
+  margin:0 0.5em 0 0;
+  border:green 1px solid;
+  border-radius:4px;
+  color:grey;
+  height:6em;
+  width:6em;
+  display:inline-block;
+  list-style:none;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  .text-shadow-black();
+
+  &:before, &:after {
+    background:transparent; 
+    content:"label"; position:absolute; top:0; left:0; bottom:auto; right:0; font-size:1.5em; line-height:1; padding:0.125em; text-align:center;
+  }
+  &:after {
+    content:"ico"; top:auto; left:0; right:0; bottom:0; font-size:4em;
+  }
+
+  &.gold {color:gold;}
+  &.cadetblue {color:cadetblue;}
+  &.royalblue {color:royalblue;}
+  &.blue {color:blue;}
+  &.green {color:green;}
+  &.lime {color:lime;}
+  &.salmon {color:salmon;}
+  &.red {color:red;}
+  &.crimson {color:crimson;}
+  &.purple {color:darkorchid;}
+  &.indigo {color:indigo;.text-shadow-white();}
+  &.violet {color:violet;}
+  &.orange {color:orange;}
+  &.cyan {color:cyan;}
+  &.yellow {color:yellow;}
+  &.magenta {color:magenta;}
+  &.black {color:black;.text-shadow-white();}
+  &.grey {color:grey;}
+  &.white {color:white;}
+  
+  &.heart:before {content:"heart";}
+  &.heart:after {content:"\02665";}
+
+  &.diamond:before {content:"diamond";}
+  &.diamond:after {content:"\02666";}
+
+  &.spade:before {content:"spade";}
+  &.spade:after {content:"\02660";}
+
+  &.club:before {content:"club";}
+  &.club:after {content:"\02663";}
+
+  &.clover:before {content:"clover";}
+  &.clover:after {content:"\02618";}
+
+  &.skull:before {content:"skull";}
+  &.skull:after {content:"\02620";}
+
+  &.yinyang:before {content:"yinyang";}
+  &.yinyang:after {content:"\0262f";}
+
+  &.sun:before {content:"sun";}
+  &.sun:after {content:"\02600";}
+
+  &.umbrella:before {content:"umbrella";}
+  &.umbrella:after {content:"\02602";}
+
+  &.star:before {content:"star";}
+  &.star:after {content:"\02605";}
+
+  &.cloud:before {content:"cloud";}
+  &.cloud:after {content:"\02601";}
+
+  &.phone:before {content:"phone";}
+  &.phone:after {content:"\0260e";}
+
+  &.peace:before {content:"peace";}
+  &.peace:after {content:"\0262e";}
+
+  &.grid:before {content:"grid";}
+  &.grid:after {content:"\02756";}
+
+  &.dharma:before {content:"dharma";}
+  &.dharma:after {content:"\02638";}
+
+  &.square:before {content:"square";}
+  &.square:after {content:"\025FC";}
+
+  &.target:before {content:"target";}
+  &.target:after {content:"\02316";}
+  
+  &.solar:before {content:"solar";}
+  &.solar:after {content:"\02731";}
+
+  &.arc:before {content:"arc";}
+  &.arc:after {content:"\02736";}
+
+  &.void:before {content:"void";}
+  &.void:after {content:"\02756";} 
+  
+  &.x:before {content:"xxx";}
+  &.x:after {content:"\02716";}
+
+  &.radioactive:before {content:"radioactive";}
+  &.radioactive:after {content:"\02622";}
+
+  &.biohazard:before {content:"biohazard";}
+  &.biohazard:after {content:"\02623";}
+
+  &.caduceus:before {content:"caduceus";}
+  &.caduceus:after {content:"\02624";}
+
+  &.aesculapius:before {content:"aesculapius";}
+  &.aesculapius:after {content:"\02695";}
+
+  &.scales:before {content:"scales";}
+  &.scales:after {content:"\02696";}
+
+  &.atomic:before {content:"atomic";}
+  &.atomic:after {content:"\0269b";}
+
+  &.recycle:before {content:"recycle";}
+  &.recycle:after {content:"\0267B";} 
+  
+  &.swords:before {content:"swords";}
+  &.swords:after {content:"\02694";} 
+  
+  &.nova:before {content:"nova";}
+  &.nova:after {content:"\02726";} 
+  
+  &.sakura:before {content:"sakura";}
+  &.sakura:after {content:"\02740";} 
+
+  &.mercury:before {content:"mercury";}
+  &.mercury:after {content:"\0263F";}
+
+  &.venus:before {content:"venus";}
+  &.venus:after {content:"\02640";}
+
+  &.earth:before {content:"earth";}
+  &.earth:after {content:"\02641";}
+
+  &.mars:before {content:"mars";}
+  &.mars:after {content:"\02642";}
+
+  &.jupiter:before {content:"jupiter";}
+  &.jupiter:after {content:"\02643";}
+
+  &.saturn:before {content:"saturn";}
+  &.saturn:after {content:"\02644";}
+
+  &.uranus:before {content:"uranus";}
+  &.uranus:after {content:"\02645";}
+
+  &.neptune:before {content:"neptune";}
+  &.neptune:after {content:"\02646";}
+
+  &.pluto:before {content:"pluto";}
+  &.pluto:after {content:"\02647";}
+}
+.text-shadow-black {text-shadow:0 0.25em 0.5em rgba(0,0,0,0.75);}
+.text-shadow-white {text-shadow:0 0.25em 0.5em rgba(255,255,255,0.75);}

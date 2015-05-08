@@ -23,7 +23,7 @@
 			controller: function ($scope) {
 				console.log('$scope: ', $scope);
 			},
-			templateUrl: 'tmpl/t-player-inventory.html'
+			templateUrl: './views/tmpl/t-player-inventory.html'
 		};
 
 	}

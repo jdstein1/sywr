@@ -18,11 +18,11 @@
 				console.log('START dPlayers -- $element: ', $element);
 			},
 			// template: '<md-card ng-repeat="item in dataClan"><md-card-content>user: {{item.user}}</md-card-content></md-card>'
-			// templateUrl: 'tmpl/t-players.html'
-			// templateUrl: 'tmpl/t-players-basic.html'
-			// templateUrl: 'tmpl/t-players-simple.html'
-			templateUrl: 'tmpl/t-players-pretty.html'
-			// templateUrl: 'tmpl/t-players-all.html'
+			// templateUrl: './views/tmpl/t-players.html'
+			// templateUrl: './views/tmpl/t-players-basic.html'
+			// templateUrl: './views/tmpl/t-players-simple.html'
+			templateUrl: './views/tmpl/t-players-pretty.html'
+			// templateUrl: './views/tmpl/t-players-all.html'
 		};
 
 	}

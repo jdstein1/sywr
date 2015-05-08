@@ -12,7 +12,16 @@
 
 		$scope.constClan = constClan;
 		$scope.myClanUrl = constProtocol[0] + '://' + constBungieUrl.domain + '/' + constBungieUrl.lang + '/' + constBungieUrl.clan + '/' + constBungieUrl.console + '/' + $scope.constClan.id;
-		// console.log('$scope.myClanUrl:', $scope.myClanUrl);
+
+		$http.get('data/medals.json')
+			.success(function (data) {
+			console.log('medals -- success');
+			console.log('medals data: ', data);
+			$scope.dataMedals = data.medals;
+			console.log('medals $scope.dataMedals: ', $scope.dataMedals);
+		}).error(function () {
+			console.log('medals -- error');
+		});
 
 		var extra = {};
 		$scope.convertId = function (id) {
@@ -75,7 +84,7 @@
 		$http.get('api/clan.php')
 			.success(function (data) {
 			console.log('sPlayerDetail.getMember -- success');
-			console.log('data: ', data);
+			// console.log('data: ', data);
 
 			// moment.locale('en-ca');
 
@@ -100,21 +109,6 @@
 			// console.log('UTC offset hours ---- '+ moment().utcOffset()/60);
 
 			for (var i = data.Response.results.length - 1; i >= 0; i--) {
-
-				// // convert First acces date using .split():
-				// var newFirstAccess = data.Response.results[i].user.firstAccess.split('T');
-				// // console.log('newFirstAccess: ',newFirstAccess);
-				// data.Response.results[i].user.firstAccess = newFirstAccess;
-
-				// // convert Last Update date using .split():
-				// var newLastUpdate = data.Response.results[i].user.lastUpdate.split('T');
-				// // console.log('newLastUpdate: ',newLastUpdate);
-				// data.Response.results[i].user.lastUpdate = newLastUpdate;
-
-				// $scope.convertDate = function (glob) {
-				// 	var arr = glob.split('T');
-				// 	console.log('arr: ',arr);
-				// };
 
 				var myExtra = $scope.convertId(data.Response.results[i].membershipId);
 
@@ -144,7 +138,8 @@
 			console.log('$scope.dataClan: ', $scope.dataClan);
 		}).error(function () {
 			console.log('sPlayerDetail.getMember -- error');
-			$scope.dataClan = 'no data';
+
+			$scope.dataClan = '';
 			console.log('$scope.dataClan: ', $scope.dataClan);
 		});
 
