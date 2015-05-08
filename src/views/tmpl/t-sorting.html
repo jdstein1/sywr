@@ -6,15 +6,23 @@
 			<div flex layout="row" layout-sm="row" layout-align="center center">
 				<md-button aria-label="{{option.type}}" class="md-primary md-raised btn-small" 
 					ng-repeat="option in sortOptions" 
-					ng-class="{'def':option.def, 'asc':option.asc, 'des':option.des}" 
-					ng-click="sortOrderToggle(option.type, $index)">
+					ng-click="sortOrderToggle(option.type, $index)" 
+					ng-class="{
+						'def':option.def, 
+						'asc':option.asc, 
+						'des':option.des
+					}">
 					<span class="flaticon right" 
-						ng-class="{'flaticon-drop27':option.asc, 'flaticon-drop25':option.des, 'flaticon-show7':option.def}"></span>
+						ng-class="{
+							'flaticon-drop27':option.asc, 
+							'flaticon-drop25':option.des, 
+							'flaticon-show7':option.def
+						}"></span>
 					<span>{{option.tag}}</span>
 				</md-button>
 			</div>
-			<md-button aria-label="Clear" class="md-warn md-raised" 
-				ng-click="sortClear()" hide-sm>Clear</md-button>
+			<md-button hide-sm aria-label="Clear" class="md-warn md-raised" 
+				ng-click="sortClear()">Clear</md-button>
 		</div>
 	</md-card-content>
 </md-card>
