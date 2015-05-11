@@ -11,9 +11,9 @@
 			transclude:true,
 			scope:'=',
 			link: function (scope, elem, attrs) {
-				console.log('scope: ', scope);
-				console.log('elem: ', elem);
-				console.log('attrs: ', attrs);
+				// console.log('scope: ', scope);
+				// console.log('elem: ', elem);
+				// console.log('attrs: ', attrs);
 			},
 			// compile: function (scope, elem, attrs) {
 			// 	console.log('scope: ', scope);
@@ -21,7 +21,7 @@
 			// 	console.log('attrs: ', attrs);
 			// },
 			controller: function ($scope) {
-				console.log('$scope: ', $scope);
+				// console.log('$scope: ', $scope);
 			},
 			templateUrl: './views/tmpl/t-player-metadata.html'
 		};

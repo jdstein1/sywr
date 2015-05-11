@@ -81,19 +81,19 @@ Angular Material dependencies:
 				templateUrl: 'views/loadout.html', 
 				controller: 'cLoadout'}).
 			// DISPLAY ONE PLAYER
-			when('/:member', {
+			when('/:player', {
 				templateUrl: 'views/players/detail.html', 
 				controller: 'cPlayerDetail'}).
 			// COMPARE ALL PLAYERS
-			when('/:member/all', {
+			when('/:player/all', {
 				templateUrl: 'views/players/all.html', 
 				controller: 'cPlayerAll'}).
 			// DISPLAY ONE CHARACTER
-			when('/:member/:character', {
+			when('/:player/:character', {
 				templateUrl: 'views/characters/detail.html', 
 				controller: 'cCharacterDetail'}).
 			// COMPARE ALL CHARACTERS
-			when('/:member/all', {
+			when('/:player/all', {
 				templateUrl: 'views/characters/all.html', 
 				controller: 'cCharacterAll'}).
 			otherwise({redirectTo: '/'});

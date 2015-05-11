@@ -8,9 +8,9 @@
 		$scope.title = 'Player';
 		console.log('START', $scope.ctitle);
 
-		$scope.member = $route.current.params.member;
+		$scope.member = $route.current.params.player;
 		console.log('$scope.member',$scope.member );
-		console.log('$route.current.params.member',$route.current.params.member );
+		console.log('$route.current.params.player',$route.current.params.player );
 
 		console.log('sPlayerDetail.getMember($scope.member): ', sPlayerDetail.getMember($scope.member));
 

@@ -8,7 +8,7 @@
 		$scope.title = 'Player';
 		console.log('START', $scope.ctitle);
 
-		$scope.member = $route.current.params.member;
+		$scope.member = $route.current.params.player;
   		// console.log('$scope.member',$scope.member );
 
 		$scope.character = $route.current.params.character;

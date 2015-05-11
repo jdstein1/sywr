@@ -8,7 +8,7 @@
 		console.log('START', stitle);
 
 		var myData = {};
-		// var member = $route.current.params.member;
+		// var member = $route.current.params.player;
 		var member = 'jeff';
 		this.getMember = function(member) {
 			$http.get('api/'+member+'-destiny.php')

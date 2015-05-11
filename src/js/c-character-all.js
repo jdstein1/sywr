@@ -14,7 +14,7 @@
 
   		// $scope.player = sPlayerDetail.getMember();
 
-		$http.get('api/'+$route.current.params.member+'-destiny.php')
+		$http.get('api/'+$route.current.params.player+'-destiny.php')
 			.success(function (data) {
 			console.log('sPlayerDetail.getMember -- success');
 			console.log('data: ', data);
