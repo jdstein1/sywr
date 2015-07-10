@@ -1,0 +1,14 @@
+<div ng-controller="cPlayerAll">
+	<!-- <caption>character {{$index}}</caption> -->
+	<!-- <img src="" ng-src="{{getCharImgPath(character.backgroundPath)}}" alt="" style="width:100%; height:auto; position: absolute;"> -->
+	<div layout="row" layout-sm="column" style="background: transparent url('{{getCharImgPath(character.backgroundPath)}}') top right no-repeat; background-size:cover;">
+		<div class="spiffBox" layout="column">
+			<!-- <div ng-include="'views/includes/box-spiff-table.html'"></div> -->
+			<div ng-include="'views/includes/box-spiff-div.html'"></div>
+		</div>
+		<div ng-if="displayActions" class="actionsBox" layout="column" layout-sm="row" layout-align-sm="center center">
+			<md-button aria-label="Display" class="md-primary md-raised" ng-disabled="false" ng-click="displayCharacter($index)">Display</md-button>
+			<md-checkbox aria-label="Select" class="md-accent md-raised md-button" ng-disabled="false">Select</md-checkbox>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,106 @@
+<!-- Compare all characters -->
+<article class="{{ctitle}} bg-destiny">
+<md-content class="md-padding">
+
+	<h2>{{title}}  <u>{{member}}</u></h2>
+	<h1><span class="flaticon {{meta.icon}}"></span>All Characters</h1>
+
+	<d-player-metadata> metadata </d-player-metadata>
+
+	<md-divider></md-divider>
+
+	<d-player-inventory> inventory </d-player-inventory>
+
+	<md-card>
+	<md-card-content layout="column" layout-sm="column">
+		<div layout="row">
+		<table ng-repeat="character in details.characters | orderBy: $index: false" style="width:auto;">
+			<thead>
+				<tr>
+					<td style="font-size:0.75em;">
+						<div ng-include="'views/includes/character-badge.html'"> badge </div>
+					</td>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- <tr ng-repeat="(key, value) in character.characterBase">
+					<th>{{key}}</th>
+					<td>{{value}}</td>
+				</tr>
+				<tr>
+					<td><hr></td>
+					<td><hr></td>
+				</tr> -->
+				<tr>
+					<td layout="column">
+						<ul>
+							<li>
+								<span class="label">powerLevel</span>
+								<b>{{character.characterBase.powerLevel}}</b>
+							</li>
+							<li>
+								<span class="label">characterLevel</span>
+								<b>{{character.characterLevel}}</b>
+							</li>
+							<li>
+								<span class="label">baseCharacterLevel</span>
+								<b>{{character.baseCharacterLevel}}</b>
+							</li>
+							<li>
+								<span class="label">isPrestigeLevel</span>
+								<b>{{character.isPrestigeLevel}}</b>
+							</li>
+							<li>
+								<span class="label">raceHash</span>
+								<b>{{character.characterBase.raceHash}}</b>
+							</li>
+							<li>
+								<span class="label">genderHash</span>
+								<b>{{character.characterBase.genderHash}}</b>
+							</li>
+							<li>
+								<span class="label">classHash</span>
+								<b>{{character.characterBase.classHash}}</b>
+							</li>
+							<li>
+								<span class="label">emblemHash</span>
+								<b>{{character.emblemHash}}</b>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<span class="label">percentToNextLevel</span>
+								<b>{{character.percentToNextLevel}}%</b>
+							</li>
+							<li ng-repeat="(key, value) in character.levelProgression">
+								<span class="label">{{key}}</span>
+								<b>{{value}}</b>
+							</li>
+						</ul>
+						<ul>
+							<li ng-repeat="(key,value) in character.characterBase" ng-include="'views/includes/repeater-ul.html'">
+							<!-- <li ng-repeat="(key,value) in character.characterBase" ng-include="'views/includes/repeater-ul.html'"></li> -->
+						</ul>
+
+						<!-- <h4>table repeat</h4>
+						<table>
+							<tbody>
+								<tr ng-repeat="(key,value) in character.characterBase" ng-include="'views/includes/repeater-table.html'">{{character.characterBase}} :: ({{key}},{{value}})</tr>
+							</tbody>
+						</table> -->
+
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td><hr></td>
+				</tr>
+			</tfoot>
+		</table>
+		</div>
+	</md-card-content>
+	</md-card>
+
+</md-content>
+</article>

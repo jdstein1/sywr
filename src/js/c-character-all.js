@@ -12,6 +12,8 @@
   		console.log('$scope.character',$scope.character );
   		console.log('$route.current.params.character',$route.current.params.character );
 
+  		$scope.displayActions = false;
+
   		// $scope.player = sPlayerDetail.getMember();
 
 		$http.get('api/'+$route.current.params.player+'-destiny.php')

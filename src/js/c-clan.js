@@ -3,6 +3,7 @@
 	'use strict';
 
 	app.controller('cClan', cClan)
+
 	function cClan($scope, $http, constProtocol, constBungieUrl, constClan) {
 		$scope.ctitle = 'cClan';
 		$scope.title = 'Clan';

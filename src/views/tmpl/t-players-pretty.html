@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="cClan">
 	<d-sorting options="clan"> sorting </d-sorting>
 	<!-- <fieldset> -->
 		<!-- <input type="text" ng-model="itemUserFilter.$" placeholder="any"> -->
@@ -22,7 +22,7 @@
 									<!-- <b>{{item.user.fbDisplayName}}</b> -->
 								</li>
 								<li class="handle">
-									<a href="#/{{item.user.api}}"><big>{{item.user.xboxDisplayName}}</big></a>
+									<a href="#/player/{{item.user.api}}"><big>{{item.user.xboxDisplayName}}</big></a>
 									<!-- <span class="flaticon-airplane106"></span>  -->
 								</li>
 								<li class="small">

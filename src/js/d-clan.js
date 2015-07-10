@@ -12,8 +12,8 @@
 			transclude:true,
 			scope:'=',
 			link: function (scope, element, attrs) {
-                console.log('START dClan -- element: ', element);
-            },
+				console.log('START dClan -- element: ', element);
+			},
 			controller: function ($scope, $element, $attrs) {
 				console.log('START dClan -- $element: ', $element);
 			},

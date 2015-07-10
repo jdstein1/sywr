@@ -8,6 +8,8 @@
 		$scope.title = 'Main';
 		console.log('START', $scope.ctitle);
 
+		$scope.displayActions = true;
+
 		$scope.constClan = constClan;
 		$scope.constProtocol = constProtocol;
 		$scope.constFileTypes = constFileTypes;

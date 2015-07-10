@@ -2,12 +2,12 @@
 (function() {
 	'use strict';
 
-	app.controller('cPlayers', cPlayers)
-	function cPlayers($scope, $http, $route, $location, constProtocol, constBungieUrl, constLogo, sPlayers) {
-		$scope.ctitle = 'cPlayers';
+	app.controller('cPlayerAll', cPlayerAll)
+	function cPlayerAll($scope, $http, $route, $location, constProtocol, constBungieUrl, constLogo, sPlayers) {
+		$scope.ctitle = 'cPlayerAll';
 		console.log('START', $scope.ctitle);
-		$scope.title = 'Players';
-		$scope.description = 'Players';
+		$scope.title = 'All Players';
+		$scope.description = 'All Players';
 
 		// console.log('$scope.meta.icon', $scope.meta.icon);
 
@@ -72,6 +72,6 @@
 		};
 
 	}
-	// console.log('test cPlayers:', angular.module('app').controller('cPlayers'));
+	// console.log('test cPlayerAll:', angular.module('app').controller('cPlayerAll'));
 
 })();

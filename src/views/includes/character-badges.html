@@ -1,0 +1,11 @@
+<md-card ng-controller="cPlayerAll">
+	<md-card-content layout="column">
+		<div ng-repeat="character in details.characters | orderBy: $index: false" style="position:relative; overflow:hidden; margin-bottom:0.5em;">
+			<div ng-include="'views/includes/character-badge.html'"> badge </div>
+		</div>
+	</md-card-content>
+	<md-card-content layout="row" layout-align="end center" layout-align-sm="center center">
+		<md-button class="md-primary md-raised" href="#/player/{{member}}/character/all">Compare All</md-button>
+		<md-button class="md-accent md-raised" ng-disabled="false" ng-click="compareCharacter($index)">Compare Selected</md-button>
+	</md-card-content>
+</md-card>

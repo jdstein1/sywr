@@ -2,6 +2,9 @@
 <article class="{{ctitle}} bg-destiny">
 <md-content class="md-padding">
 
+	<h2>{{title}}  <u>{{member}}</u></h2>
+	<h1><span class="flaticon {{meta.icon}}"></span>All Characters</h1>
+
 	<h1>
 		<span class="flaticon {{meta.icon}}"></span>Player: {{member}}<br>
 		<span class="flaticon {{meta.icon}}"></span>Character: {{character}}
@@ -30,11 +33,11 @@
 	<ul flex>
 		<li>
 			<span class="label">clanName</span>
-			<span>{{details.clanName}}</span>
+			<b>{{details.clanName}}</b>
 		</li>
 		<li>
 			<span class="label">clanTag</span>
-			<span>{{details.clanTag}}</span>
+			<b>{{details.clanTag}}</b>
 		</li>
 	</ul>
 	<ul flex>
@@ -43,15 +46,15 @@
 		</li>
 		<li>
 			<span class="label">membershipId</span>
-			<span>{{details.membershipId}}</span>
+			<b>{{details.membershipId}}</b>
 		</li>
 		<li>
 			<span class="label">membershipType</span>
-			<span>{{details.membershipType}}</span>
+			<b>{{details.membershipType}}</b>
 		</li>
 		<li>
 			<span class="label">grimoireScore</span>
-			<span>{{details.grimoireScore}}</span>
+			<b>{{details.grimoireScore}}</b>
 		</li>
 	</ul>
 	</div>
@@ -63,14 +66,14 @@
 			<span class="strong">buckets</span>
 		</li>
 		<li>{{details.inventory.buckets}}</li>
-		<li ng-repeat="(key,value) in details.inventory.buckets"><span class="label">{{key}}</span> <span>{{value}}</span></li>
+		<li ng-repeat="(key,value) in details.inventory.buckets"><span class="label">{{key}}</span> <b>{{value}}</span></b>
 	</ul>
 	<ul flex>
 		<li>
 			<span class="strong">currencies</span>
 		</li>
 		<li>{{details.inventory.currencies}}</li>
-		<li ng-repeat="(key,value) in details.inventory.currencies[0]"><span class="label">{{key}}</span> <span>{{value}}</span></li>
+		<li ng-repeat="(key,value) in details.inventory.currencies[0]"><span class="label">{{key}}</span> <b>{{value}}</span></b>
 	</ul>
 	</div>
 </md-card-content>
@@ -96,45 +99,45 @@
 					<ul>
 						<li>
 							<span class="label">powerLevel</span>
-							<span>{{myCharacter.characterBase.powerLevel}}</span>
+							<b>{{myCharacter.characterBase.powerLevel}}</b>
 						</li>
 						<li>
 							<span class="label">characterLevel</span>
-							<span>{{myCharacter.characterLevel}}</span>
+							<b>{{myCharacter.characterLevel}}</b>
 						</li>
 						<li>
 							<span class="label">baseCharacterLevel</span>
-							<span>{{myCharacter.baseCharacterLevel}}</span>
+							<b>{{myCharacter.baseCharacterLevel}}</b>
 						</li>
 						<li>
 							<span class="label">isPrestigeLevel</span>
-							<span>{{myCharacter.isPrestigeLevel}}</span>
+							<b>{{myCharacter.isPrestigeLevel}}</b>
 						</li>
 						<li>
 							<span class="label">raceHash</span>
-							<span>{{myCharacter.characterBase.raceHash}}</span>
+							<b>{{myCharacter.characterBase.raceHash}}</b>
 						</li>
 						<li>
 							<span class="label">genderHash</span>
-							<span>{{myCharacter.characterBase.genderHash}}</span>
+							<b>{{myCharacter.characterBase.genderHash}}</b>
 						</li>
 						<li>
 							<span class="label">classHash</span>
-							<span>{{myCharacter.characterBase.classHash}}</span>
+							<b>{{myCharacter.characterBase.classHash}}</b>
 						</li>
 						<li>
 							<span class="label">emblemHash</span>
-							<span>{{myCharacter.emblemHash}}</span>
+							<b>{{myCharacter.emblemHash}}</b>
 						</li>
 					</ul>
 					<ul>
 						<li>
 							<span class="label">percentToNextLevel</span>
-							<span>{{myCharacter.percentToNextLevel}}%</span>
+							<b>{{myCharacter.percentToNextLevel}}%</b>
 						</li>
 						<li ng-repeat="(key, value) in myCharacter.levelProgression">
 							<span class="label">{{key}}</span>
-							<span>{{value}}</span>
+							<b>{{value}}</b>
 						</li>
 					</ul>
 					<ul>

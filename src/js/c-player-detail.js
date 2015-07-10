@@ -5,7 +5,7 @@
 	app.controller('cPlayerDetail', cPlayerDetail)
 	function cPlayerDetail($scope, $http, $route, $location, sPlayerDetail) {
 		$scope.ctitle = 'cPlayerDetail';
-		$scope.title = 'Player';
+		$scope.title = 'Player Details';
 		console.log('START', $scope.ctitle);
 
 		$scope.member = $route.current.params.player;
@@ -44,10 +44,10 @@
 
 		$scope.displayCharacter = function (index) {
 			console.log('$scope.displayCharacter: ', index);
-			console.log('$scope.displayCharacter $location: ', $location);
-			console.log('$scope.displayCharacter $location.path(): ', $location.path());
+			// console.log('$scope.displayCharacter $location: ', $location);
+			// console.log('$scope.displayCharacter $location.path(): ', $location.path());
 			$scope.getMyCharacter(index);
-			$location.path( '/' + $scope.member + '/' + index );
+			$location.path( '/player/' + $scope.member + '/character/' + index );
 			// return $location.path();
 		};
 
