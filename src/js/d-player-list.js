@@ -12,10 +12,12 @@
 			transclude:true,
 			scope:'=', // sortOrderChoice & sortReverse are connected, NO items
 			link: function (scope, element, attrs) {
-                console.log('START dPlayerList -- element: ', element);
+                console.log('START dPlayerList link');
+				// console.log('START dPlayerList -- element: ', element);
             },
 			controller: function ($scope, $element, $attrs) {
-				console.log('START dPlayerList -- $element: ', $element);
+				console.log('START dPlayerList controller');
+				// console.log('START dPlayerList -- $element: ', $element);
 			},
 			// template: '<md-card ng-repeat="item in dataClan"><md-card-content>user: {{item.user}}</md-card-content></md-card>'
 			// templateUrl: './views/tmpl/t-players.html'

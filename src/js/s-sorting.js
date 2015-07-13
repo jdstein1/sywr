@@ -111,13 +111,13 @@
 		console.log('START', stitle);
 
 		var sortOptionsPlayers = [{
-				'type':'user.name',
-				'tag':'Name',
-				'class':'',
-				'def':true,
-				'asc':false,
-				'des':false
-			},{
+			// 	'type':'user.name',
+			// 	'tag':'Name',
+			// 	'class':'',
+			// 	'def':true,
+			// 	'asc':false,
+			// 	'des':false
+			// },{
 				'type':'user.xboxDisplayName',
 				'tag':'Gamer tag',
 				'class':'',

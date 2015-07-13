@@ -8,16 +8,20 @@
 		$scope.title = 'Player Details';
 		console.log('START', $scope.ctitle);
 
-		$scope.member = $route.current.params.player;
-		console.log('$scope.member',$scope.member );
+		$scope.memberid = $route.current.params.player;
+		console.log('$scope.memberid',$scope.memberid );
 		console.log('$route.current.params.player',$route.current.params.player );
 
-		console.log('sPlayerDetail.getMember($scope.member): ', sPlayerDetail.getMember($scope.member));
+		console.log('sPlayerDetail.getMember($scope.memberid): ', sPlayerDetail.getMember($scope.memberid));
 
 		// $scope.player = sPlayerDetail.getMember();
 
-		$http.get('api/'+$scope.member+'-destiny.php')
-			.success(function (data) {
+		// $http.get('api/'+$scope.memberid+'-destiny.php')
+		$http({
+		    url: "api/member-destiny.php",
+		    method: "GET",
+		    params: {membershipId: $scope.memberid}
+		}).success(function (data) {
 			console.log('sPlayerDetail.getMember -- success');
 			console.log('data: ', data);
 			$scope.details = data.Response.data;
@@ -47,7 +51,7 @@
 			// console.log('$scope.displayCharacter $location: ', $location);
 			// console.log('$scope.displayCharacter $location.path(): ', $location.path());
 			$scope.getMyCharacter(index);
-			$location.path( '/player/' + $scope.member + '/character/' + index );
+			$location.path( '/player/' + $scope.memberid + '/character/' + index );
 			// return $location.path();
 		};
 

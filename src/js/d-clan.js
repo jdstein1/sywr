@@ -12,10 +12,12 @@
 			transclude:true,
 			scope:'=',
 			link: function (scope, element, attrs) {
-				console.log('START dClan -- element: ', element);
+				console.log('START dClan link: ');
+				// console.log('START dClan -- element: ', element);
 			},
 			controller: function ($scope, $element, $attrs) {
-				console.log('START dClan -- $element: ', $element);
+				console.log('START dClan controller: ');
+				// console.log('START dClan -- $element: ', $element);
 			},
 			// template: '<md-card ng-repeat="item in dataClan"><md-card-content>user: {{item.user}}</md-card-content></md-card>'
 			// templateUrl: './views/tmpl/t-players.html'

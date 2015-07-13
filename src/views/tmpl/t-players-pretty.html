@@ -1,4 +1,4 @@
-<div ng-controller="cClan">
+<div>
 	<d-sorting options="clan"> sorting </d-sorting>
 	<!-- <fieldset> -->
 		<!-- <input type="text" ng-model="itemUserFilter.$" placeholder="any"> -->
@@ -7,12 +7,12 @@
 	<md-card class="" ng-repeat="item in dataClan | orderBy:sortOrderChoice:sortReverse">
 		<md-card-content>
 			<md-item class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}">
-				<md-item-content class="row-{{item.membershipId}} player-row"layout="row" layout-align="start center" layout-sm="column" layout-align-sm="start center">
+				<md-item-content class="row-{{item.membershipId}} player-row" layout="row" layout-align="start center" layout-sm="column" layout-align-sm="start center">
 					<div layout="row" layout-align="start center" layout-sm="row" layout-align-sm="start center" style="width:100%;">
-						<div class="avatarBox">
+						<div ng-include="'views/includes/avatar.html'"></div>
+						<!-- <div class="avatarBox">
 							<img class="avatar" src="" ng-src="http://www.bungie.net/{{item.user.profilePicturePath}}" alt="{{item.user.displayName}} avatar">
-							<!-- <b class="name" style="">{{item.user.name}}</b> -->
-						</div>
+						</div> -->
 						<div class="handleBox" flex>
 							<ul flex class="names">
 								<li class="name" ng-class="{'probie':hasPendingApplication}">
@@ -22,9 +22,13 @@
 									<!-- <b>{{item.user.fbDisplayName}}</b> -->
 								</li>
 								<li class="handle">
-									<a href="#/player/{{item.user.api}}"><big>{{item.user.xboxDisplayName}}</big></a>
+									<!-- <a href="#/player/{{item.user.api}}"> -->
+									<a href="#/player/{{item.membershipId}}">
+										<big style="background:{{item.user.userColor}} !important;">{{item.user.xboxDisplayName}}</big>
+									</a>
 									<!-- <span class="flaticon-airplane106"></span>  -->
 								</li>
+								<li>member {{$index+1}} of {{clanLength}}</li>
 								<li class="small">
 									<span class="label left">id</span>
 									<b>{{item.membershipId}}</b>

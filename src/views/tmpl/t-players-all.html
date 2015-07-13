@@ -1,7 +1,7 @@
 <md-card flex class="{{item.user.userTitleDisplay}} {{item.user.profileThemeName}} locale-{{item.user.locale}}" ng-repeat="item in dataClan | orderBy:sortOrderChoice:sortReverse">
 	<md-item-content layout="row" layout-sm="column" class="row-{{item.membershipId}} player-row">
 		<div class="avatarBox" style="">
-			<img class="avatar" style="width:100px;height:100px;position:relative; z-index:1;" src="" ng-src="http://www.bungie.net/{{item.user.profilePicturePath}}" alt="{{item.user.displayName}} avatar">
+			<img class="avatar" style="width:100px;height:100px;position:relative; z-index:1;" src="" ng-src="{{item.user.profilePicturePath}}" alt="{{item.user.displayName}} avatar">
 			<!-- <b style="color:white; position: absolute; bottom:0; right:0; z-index:2;">{{item.user.name}}</b> -->
 			<h3 style="">{{item.user.name}}</h3>
 		</div>

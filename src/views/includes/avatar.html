@@ -1,0 +1,5 @@
+<div class="avatarBox">
+	<img ng-if="item.user.avatarRelative===true" class="avatar" src="" ng-src="http://www.bungie.net/{{item.user.profilePicturePath}}" alt="{{item.user.displayName}} avatar">
+	<img ng-if="item.user.avatarRelative===false" class="avatar" src="" ng-src="{{item.user.profilePicturePath}}" alt="{{item.user.displayName}} avatar">
+	<!-- <b class="name" style="">{{item.user.name}}</b> -->
+</div>

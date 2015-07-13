@@ -4,7 +4,7 @@
 
 	app.controller('cClan', cClan)
 
-	function cClan($scope, $http, constProtocol, constBungieUrl, constClan) {
+	function cClan($rootScope, $scope, $http, constProtocol, constBungieUrl, constClan) {
 		$scope.ctitle = 'cClan';
 		$scope.title = 'Clan';
 		console.log('START', $scope.ctitle);
@@ -85,7 +85,10 @@
 		$http.get('api/clan.php')
 			.success(function (data) {
 			console.log('sPlayerDetail.getMember -- success');
-			// console.log('data: ', data);
+			console.log('data: ', data);
+
+			$rootScope.clanLength = data.Response.results.length;
+			console.log('$rootScope.clanLength: ', $rootScope.clanLength);
 
 			// moment.locale('en-ca');
 
@@ -111,12 +114,111 @@
 
 			for (var i = data.Response.results.length - 1; i >= 0; i--) {
 
-				var myExtra = $scope.convertId(data.Response.results[i].membershipId);
+				// Add extra manually derived values to clan data...
+				// var myExtra = $scope.convertId(data.Response.results[i].membershipId);
+				// data.Response.results[i].user.name = myExtra.name;
+				// data.Response.results[i].user.api = myExtra.name.toLowerCase();
+				// data.Response.results[i].user.github = myExtra.github;
+				// data.Response.results[i].user.medals = myExtra.medals;
 
-				data.Response.results[i].user.name = myExtra.name;
-				data.Response.results[i].user.api = myExtra.name.toLowerCase();
-				data.Response.results[i].user.github = myExtra.github;
-				data.Response.results[i].user.medals = myExtra.medals;
+				// Dynamically generate user's color...
+
+				// METHOD 1
+				// Based on an arbitrary initial value, the color for each memeber is assigned by dividing the color wheel into n (n = number of members = length of clan array) equal slices and using the color at each degree value.
+				// Set initial RGBa color:
+				var userColorDefaultRGBa = {
+					type:'rgba', 
+					r:255, 
+					g:149, 
+					b:0, 
+					a:0.5
+				};
+				// console.log('xyz userColorDefaultRGBa: ', userColorDefaultRGBa);
+				// Set initial HSLa color:
+				var userColorDefaultHSLa = {
+					type:'hsla', 
+					h:35, 
+					s:100, 
+					l:50, 
+					a:0.5
+				};
+				// console.log('xyz userColorDefaultHSLa: ', userColorDefaultHSLa);
+				// Spin color around the color wheel:
+				var colorSpin = function (t,n) {
+					console.log('pdq colorSpin -- t:'+t+' // n:'+n);
+					if (t === 'rgba') {
+						// console.log('pdq rgba');
+						n = n + ((255/$rootScope.clanLength) * i);
+						if (n > 255) {
+							n = n - 255;
+							console.log('pdq rgba over');
+						} else {
+							console.log('pdq rgba under');
+						}
+					} else if (t === 'hsla') {
+						// console.log('pdq hsla');
+						n = n + ((360/$rootScope.clanLength) * i);
+						if (n > 360) {
+							n = n - 360;
+							console.log('pdq hsla over');
+						} else {
+							console.log('pdq hsla under');
+						}
+					} else {
+						console.log('pdq error');
+					};
+					// console.log('c: ', c);
+					console.log('n: ', Math.floor(n));
+					return Math.floor(n);
+					// return n;
+				};
+				// console.log('xyz colorSpin: ', colorSpin(75));
+				// Make color string in CSS format:
+				var colorMake = function (c) {
+					console.log('START colorMake: ', c);
+					switch (c.type) {
+						case "rgba":
+							console.log('type:  RGBa --', c.type);
+							data.Response.results[i].user.userColor = ''+c.type+
+								'('+colorSpin(c.type,c.r)+
+								','+colorSpin(c.type,c.g)+
+								','+colorSpin(c.type,c.b)+
+								','+c.a+')';
+							break;
+						case "hsla":
+							console.log('type:  HSLa --', c.type);
+							data.Response.results[i].user.userColor = ''+c.type+
+								'('+colorSpin(c.type,c.h)+
+								','+c.s+
+								'%,'+c.l+
+								'%,'+c.a+')';
+							break;
+						default:
+							console.log('type:  MISC --', c.type);
+					}
+					// console.log('data.Response.results['+i+'].user.userColor: ', data.Response.results[i].user.userColor);
+					return data.Response.results[i].user.userColor;
+				};
+				// console.log('xyz colorMake RGBa: ', colorMake(userColorDefaultRGBa));
+				// colorMake(userColorDefaultRGBa);
+				// console.log('xyz colorMake HSLa: ', colorMake(userColorDefaultHSLa));
+				colorMake(userColorDefaultHSLa);
+
+				// METHOD 2
+				// Use memberId as seed for color.
+
+				// Handle avatar pictures that have relative and non-relative paths...
+				if (data.Response.results[i].user.profilePicturePath) {
+					var avatar = data.Response.results[i].user.profilePicturePath;
+					// console.log(data.Response.results[i].user.profilePicturePath);
+					if (avatar.indexOf('http') >= 0) {
+						data.Response.results[i].user.avatarRelative = false;
+					} else {
+						data.Response.results[i].user.avatarRelative = true;
+					}
+				} else {
+					return false;
+				}
 
 				// convert APPROVAL date using moment.js:
 				data.Response.results[i].approvalDateISO = moment(data.Response.results[i].approvalDate).toISOString();
